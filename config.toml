@@ -1,9 +1,10 @@
-baseURL = "http://www.example.com"
+baseURL = "https://42maxims.github.io/"
 title = "Minimo"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
 theme = "minimo"
+publishDir = "docs"
 
 disqusShortname = ""
 googleAnalytics = ""
