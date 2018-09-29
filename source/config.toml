@@ -23,7 +23,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "Maxims for Life"
+description = "Rules for Life"
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -34,7 +34,7 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
-holder = "42maxims cc"
+holder = "42maxims"
 startYear = "2018"
 suffix = ""
 
@@ -95,7 +95,7 @@ username = "MunifTanjim"
 repository = "minimo"
 
 [params.search]
-client = "" # algolia / fuse / lunr
+client = "fuse" # algolia / fuse / lunr
 
 [params.search.algolia]
 appId = ""

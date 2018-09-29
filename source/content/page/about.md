@@ -10,4 +10,4 @@ A Maxim is a short statement of a general truth, principle, or rule for behaviou
 42 Maxims is a collection of the most important Maxims for life.
 
 
-Contributions are welcome as pull requests to github.com/42maxims/42maxims.github.io
+Contributions are welcome as pull requests to [github.com/42maxims/42maxims.github.io]
