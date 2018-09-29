@@ -1,12 +1,12 @@
 ---
 title: About
-description: What does Minimo even means?!
+description: What is 42 Maxims?
 menu: main
 weight: -210
 ---
 
-Mínimo is a Spanish word that roughly translate to Minimal.
+A Maxim is a short statement of a general truth, principle, or rule for behaviour.
 
-Minimo is a minimalist theme for Hugo.
+42Maxims.github.io is a collection of the most important Maxims for life.
 
-Minimo keeps the focus on your content and lets it shine!
+Note: Contributions are welcome as pull requests to https://github.com/42maxims/42maxims.github.io
