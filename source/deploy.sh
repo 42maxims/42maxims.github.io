@@ -8,7 +8,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Go To Public folder
 cd ../
 # Add changes to git.
-git add .
+git add --all .
 
 # Commit changes.
 msg="rebuilding site `date`"
