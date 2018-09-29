@@ -23,7 +23,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "A collection of the most important Maxims for life"
+description = "Maxims for Life"
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -112,10 +112,6 @@ tag = "tags"
 page = "/:slug/"
 
 [[menu.main]]
-name = "ABOUT"
-weight = -10
-identifier = "repository"
-url = "https://github.com/MunifTanjim/minimo"
 
 [blackfriday]
 hrefTargetBlank = true
