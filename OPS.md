@@ -1,17 +1,36 @@
 # Operations
-- **Hosting:** GitHub Pages, user site `42maxims.github.io`, branch `master`, root folder (legacy build, `.nojekyll`). Free.
-- **Accounts (names only, no secrets here):** GitHub `42maxims` (owner, anonymous project account); Google account for the same identity. Credentials are held by the project owner, not in this repo.
-- **CI:** GitHub Actions (`.github/workflows/ci.yml`): runs tests and checks the committed HTML matches `build.py` output. Free for public repos.
-- **Domain:** 42maxims.com chosen, not bought. Needs the project owner's approval.
-- **Deploy:** push to `master`; Pages publishes within a few minutes.
-- **Approvals needed from the project owner:** spend, domain, concept definitions/merges, scoring constants.
+_Owner: COO-42maxims. Accounts listed by name only; no secrets in this repo._
+
+## Services and costs
+- **Hosting:** GitHub Pages user site `42maxims.github.io`, branch `master`, repo root (legacy build, `.nojekyll`). Free.
+- **CI:** GitHub Actions `.github/workflows/ci.yml`: runs tests and checks committed HTML matches `build.py` output. Free.
+- **Domain:** 42maxims.com chosen, not bought (issue #5). Cost: €0 today.
+- **Data sources:** public texts (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Wikisource), Wikiquote/Wikipedia for probable labels, Quote Investigator for misattributions. No scheduled refresh; content is added in batches.
+
+## Accounts and identity
+- GitHub account `42maxims` (anonymous project account), commit identity **Max Ims** `<37961849+42maxims@users.noreply.github.com>`.
+- The box is shared and its `gh` CLI holds two accounts. The default must stay on the other (portfolio) account. For this repo only: `gh auth switch -u 42maxims` right before a push or issue/PR action, then switch back to the default account immediately after.
+- Never commit with any other identity, and never add personal names to the repo.
+
+## Build, test, deploy
+```
+python3 build.py                        # regenerate HTML + data/generated/
+python3 -m unittest discover -s tests   # must print OK
+git -c user.name="Max Ims" -c user.email=37961849+42maxims@users.noreply.github.com commit -am "..."
+gh auth switch -u 42maxims && git push origin master && gh auth switch -u <default account>
+```
+Pushing to `master` deploys; check `gh api repos/42maxims/42maxims.github.io/pages/builds/latest` reads `built`, then curl the home page and one maxim page for 200.
+
+## Claude Code
+- `~/.local/bin/claude -p "<brief>"` (always the full path). Node 22 via nvm: `unset NPM_CONFIG_PREFIX` first.
+- Brief it as the expert curator; it must follow CLAUDE.md (never fabricate, honest labels, short attributed modern quotes). Work in small batches; build, test, commit and verify after each.
+
+## Approvals
+- **COO-42maxims may:** add/relabel quotes, add voices/sources, fix bugs, merge roadmap-aligned PRs (including outside contributors' after review), close duplicates, open issues.
+- **Needs the project owner:** spend of any kind, domains, outreach/newsletters/social posts, new bots, sharing user data, scoring-constant changes, new concepts that change The 42 materially, and any history rewrite or force-push.
 
 ## Content pipeline
-Owner: COO-42maxims (after handover); until then the portfolio agent. The project owner approves new concepts, concept merges and scoring changes.
-1. **Discover**: pick a concept from ROADMAP/seed notes (`SEED-NOTES` themes: Peterson, Watts, Confucius, Buddhism, Christianity, Descartes, popular sayings) or an open issue.
-2. **Source**: find exact wording at a primary or reputable source; fetch the URL and confirm text.
-3. **Label**: set `ver`, `rel`, `conf` per CLAUDE.md rules.
-4. **Build & test**: `python3 build.py && python3 -m unittest discover tests`.
-5. **PR**: small batches; PR description lists each quote, its source URL and label, and change to The 42 rankings. CI must pass.
-6. **Approve & merge**: the project owner for new concepts; quotes on existing concepts may be merged by the owner. Merge to `master` deploys.
-Priority now: get more maxims to 2+ independent traditions so they leave "Emerging"; upgrade `probable` quotes by checking primary texts.
+1. Pick an open issue or a weak maxim (Emerging, or quotes labelled probable).
+2. Source exact wording at a primary or reputable source; fetch the URL and confirm the text.
+3. Label `ver`, `rel`, `conf` per CLAUDE.md. Attach voice and source slugs.
+4. Build and test; one small batch per commit or PR; note ranking changes to The 42.

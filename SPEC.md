@@ -1,6 +1,6 @@
 # 42 Maxims: Product & Build Spec
 
-**Owner:** the project owner (anonymous) · **Maintainer identity:** Max Ims (GitHub `42maxims`) · **Build lead:** Devsy (dev-manager bot) briefing Claude Code
+**Owner:** the project owner (anonymous) · **Maintainer identity:** Max Ims (GitHub `42maxims`) · **Operator:** COO-42maxims (app operating officer bot) briefing Claude Code
 **Repo:** `42maxims/42maxims.github.io` · **Live:** https://42maxims.github.io · **Status:** v0.2, rewritten to match the site as built (2026-10-14)
 **Working name:** 42 Maxims. "42" is the brand and the size of the main list (The 42), not a limit on the catalogue.
 
@@ -235,7 +235,7 @@ MoralRank(c) = 100 × r_c / max(r)
 ## 8. Agent pipeline
 
 ### 8.1 Built (manual, agent-assisted)
-Agents (Claude Code, briefed by Devsy) follow the content workflow in CLAUDE.md and OPS.md: pick a maxim, find exact wording at a primary or reputable source, fetch the URL to confirm, set `ver`/`rel`/`conf`, add voice and source entries, run `python3 build.py && python3 -m unittest discover tests`, and open a small PR. The project owner approves new maxims, merges and scoring changes.
+Agents (Claude Code, briefed by COO-42maxims) follow the content workflow in CLAUDE.md and OPS.md: pick a maxim, find exact wording at a primary or reputable source, fetch the URL to confirm, set `ver`/`rel`/`conf`, add voice and source entries, run `python3 build.py && python3 -m unittest discover tests`, and open a small PR. The project owner approves new maxims, merges and scoring changes.
 
 ### 8.2 Planned (automated)
 ```
@@ -307,7 +307,7 @@ SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  CLAUDE.md  CONTRIBUTING.md  README.md
 | Domain purchase and DNS | Project owner |
 | Any spend (paid services, LLM/embedding budget, newsletter tier, print) | Project owner |
 | Quotes added to existing maxims | Maintainer may merge once CI passes |
-| Code PRs (site, pipeline) | Devsy reviews; project owner for anything touching data policy |
+| Code PRs (site, pipeline) | COO-42maxims reviews; project owner for anything touching data policy |
 
 ---
 

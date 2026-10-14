@@ -1,14 +1,17 @@
 # Decisions log
-- 2026-10-14 Name "42 Maxims"; domain 42maxims.com (later; not bought).
-- 2026-10-14 Host on GitHub Pages with simple tools; publish directly to `master`.
-- 2026-10-14 Anonymous author (account 42maxims, "Max Ims"); accept pull requests.
-- 2026-10-14 English first; AI-assisted translations for non-English sources, clearly labelled; other languages later.
-- 2026-10-14 Include modern/living thinkers with short attributed quotes.
-- 2026-10-14 Ranking: SPEC diversity-over-count scoring (3.0 per tradition, 1.5 per era, derives_from at 0.5).
-- 2026-10-14 Voice: warm and reflective.
-- 2026-10-14 Own content licensed CC BY-SA 4.0.
-- 2026-10-14 M0 built as plain Python + static HTML (not Astro/Cloudflare) to keep tools simple; 2018 Hugo draft kept at tag `draft-2018`.
-- Roadmap-aligned PRs may be merged by the portfolio agent; deploys, spend and domain need the project owner.
-- 2026-10-14 Main list renamed "The 42" (top 42 maxims). Maxim page = seed expression (oldest era, best verified; override with `seed`) + all related expressions; near-duplicates go under an existing maxim, not new ones.
-- 2026-10-14 Score shown with formula plus plain-words bullets explaining each term.
-- 2026-10-14 Peterson rule titles cited via Wikipedia (probable); the Guardian "digested read" is a parody, so it isn't used as a source.
+- 2026-10-14 Name "42 Maxims"; domain 42maxims.com later (not bought; needs owner approval).
+- 2026-10-14 Host on GitHub Pages with simple tools (plain Python + static HTML, not Astro/Cloudflare); publish directly to `master`. 2018 Hugo draft kept at tag `draft-2018`.
+- 2026-10-14 **Anonymity:** published under the anonymous GitHub account `42maxims` with commit identity "Max Ims"; contributions welcome via pull requests. On the shared box, `gh` is switched to `42maxims` only for this repo's pushes and switched back afterwards. No personal names in the repo.
+- 2026-10-14 Own content licensed **CC BY-SA 4.0**; quoted texts keep their own licences/credits.
+- 2026-10-14 **English first**; AI-assisted translations allowed for non-English sources, always labelled; other site languages later.
+- 2026-10-14 **Modern thinkers** included, with short attributed quotes only.
+- 2026-10-14 **Ranking:** SPEC diversity-over-count scoring (3.0 per tradition, 1.5 per period, derives_from at 0.5); constants change only with owner approval.
+- 2026-10-14 **Voice:** warm and reflective; never rank traditions or thinkers.
+- 2026-10-14 Main list named **"The 42"**: the 42 highest-ranked maxims shared by 2+ traditions. Others appear under Emerging with a reason chip; a `hold` flag keeps weakly attested maxims (80/20) out.
+- 2026-10-14 Maxim page = **seed quote** (oldest period, best verified; `seed` overrides) then a scrolling list of related quotes; score shown as the **equation only**, with a "How this is scored" link to the Method page.
+- 2026-10-14 "Era" renamed **"period"**, each with a date range: Ancient (before 200 BCE), Classical (200 BCE–600 CE), Medieval (600–1500), Early modern (1500–1800), Modern (1800–1950), Contemporary (1950–today).
+- 2026-10-14 **Voice and source pages** with factual summaries and caution notes where authorship is thin or disputed.
+- 2026-10-14 Modern self-help/podcast voices attached to the older maxims they echo, with an "Echoes …" note; hero's journey (Campbell) placed under Courage rather than a new maxim.
+- 2026-10-14 Peterson rule titles cited via Wikipedia (probable); the Guardian "digested read" is satire and not used.
+- 2026-10-14 **History rewrite:** all commits rewritten with git filter-repo to remove the owner's real name and account, then force-pushed (master and `draft-2018`). A local bundle backup exists off-repo. Old SHAs may stay cached on GitHub until garbage-collected.
+- 2026-10-14 Handed over to **COO-42maxims**; roadmap-aligned PRs may be merged by the COO; deploy-affecting spend, domain and outreach need the owner.

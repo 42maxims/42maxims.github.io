@@ -1,4 +1,5 @@
 # Notes for AI agents working on this repo
+_Maintained by COO-42maxims. See OPS.md for gh account rules and approvals, ROADMAP.md for open issues._
 - Data lives in `data/maxims.json` (concepts, quotes, traditions), `data/voices.json` and `data/sources.json`; never hand-edit generated HTML or `data/generated/`. Run `python3 build.py` and commit the output.
 - Run `python3 -m unittest discover tests` before pushing. Scoring constants in `scoring.py` change only with the project owner's approval.
 - Every quote needs a `source` URL and an honest `ver` label (verified = checked against primary text/reputable translation; probable = secondary source only; unverified = scores 0). Never invent or "fix" quote wording.
