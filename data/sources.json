@@ -905,5 +905,129 @@
    "https://en.wikipedia.org/wiki/Oliver_Goldsmith",
    "https://quoteinvestigator.com/2014/05/27/rising/"
   ]
+ },
+ "gulag-archipelago": {
+  "title": "The Gulag Archipelago",
+  "voice": "aleksandr-solzhenitsyn",
+  "kind": "book",
+  "dates": "written 1958–1968; published 1973",
+  "tradition": "russian-literature",
+  "period": "contemporary",
+  "summary": "Solzhenitsyn's three-volume history of the Soviet forced-labour camp system, built from his own imprisonment and the testimony of many former prisoners. It was first published in Paris in 1973 and was not openly published in the Soviet Union until 1989.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Gulag_Archipelago"
+  ]
+ },
+ "live-not-by-lies": {
+  "title": "Live Not by Lies",
+  "voice": "aleksandr-solzhenitsyn",
+  "kind": "other",
+  "dates": "1974",
+  "tradition": "russian-literature",
+  "period": "contemporary",
+  "summary": "A short essay Solzhenitsyn released on 12 February 1974, the day of his arrest, just before he was exiled from the Soviet Union. It asks ordinary people not to overthrow anything, only to refuse, each personally, to take part in lies.",
+  "confidence": "solid",
+  "refs": [
+   "https://www.solzhenitsyncenter.org/live-not-by-lies",
+   "https://en.wikipedia.org/wiki/Aleksandr_Solzhenitsyn"
+  ]
+ },
+ "brothers-karamazov": {
+  "title": "The Brothers Karamazov",
+  "voice": "fyodor-dostoevsky",
+  "kind": "book",
+  "dates": "1879–1880",
+  "tradition": "russian-literature",
+  "period": "modern",
+  "summary": "Dostoevsky's last novel, first published in instalments in 1879–80. Through three brothers, their father's murder and the elder Zossima, it weighs faith and doubt, freedom and responsibility.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Brothers_Karamazov"
+  ]
+ },
+ "essays-of-montaigne": {
+  "title": "Essays",
+  "voice": "michel-de-montaigne",
+  "kind": "book",
+  "dates": "1580; expanded 1588",
+  "tradition": "renaissance-humanism",
+  "period": "early-modern",
+  "summary": "Montaigne's Essais, a collection of 107 essays in three books, first published in 1580 and expanded in 1588. Drawing on classical authors and his own experience, they range from friendship and solitude to death and the limits of knowledge.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Essays_(Montaigne)",
+   "https://plato.stanford.edu/entries/montaigne/"
+  ]
+ },
+ "spinoza-ethics": {
+  "title": "Ethics",
+  "voice": "baruch-spinoza",
+  "kind": "book",
+  "dates": "completed c. 1675; published 1677",
+  "tradition": "rationalism",
+  "period": "early-modern",
+  "summary": "Spinoza's main work, set out in the manner of geometry with definitions, propositions and proofs. It moves from God and nature to the human emotions and argues that freedom and blessedness come through understanding. It was published shortly after his death in 1677.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Ethics_(Spinoza_book)",
+   "https://plato.stanford.edu/entries/spinoza/"
+  ]
+ },
+ "groundwork-metaphysic-of-morals": {
+  "title": "Groundwork of the Metaphysic of Morals",
+  "voice": "immanuel-kant",
+  "kind": "book",
+  "dates": "1785",
+  "tradition": "enlightenment",
+  "period": "early-modern",
+  "summary": "A short work in which Kant seeks the supreme principle of morality and states it as the categorical imperative, including the formulas of universal law and of humanity as an end in itself. The public-domain English translation by T. K. Abbott is titled Fundamental Principles of the Metaphysic of Morals.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Groundwork_of_the_Metaphysics_of_Morals",
+   "https://plato.stanford.edu/entries/kant-moral/"
+  ]
+ },
+ "counsels-and-maxims": {
+  "title": "Counsels and Maxims",
+  "voice": "arthur-schopenhauer",
+  "kind": "book",
+  "dates": "1851",
+  "tradition": "german-philosophy",
+  "period": "modern",
+  "summary": "Practical advice on living well, part of the 'Aphorisms on the Wisdom of Life' in Schopenhauer's Parerga and Paralipomena (1851). T. Bailey Saunders published it in English under this title.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Parerga_and_Paralipomena",
+   "https://www.gutenberg.org/ebooks/10715"
+  ]
+ },
+ "twilight-of-the-idols": {
+  "title": "Twilight of the Idols",
+  "voice": "friedrich-nietzsche",
+  "kind": "book",
+  "dates": "written 1888; published 1889",
+  "tradition": "german-philosophy",
+  "period": "modern",
+  "summary": "A short book Nietzsche wrote in 1888 and published in January 1889, subtitled 'How to Philosophize with a Hammer'. It opens with a series of sharp aphorisms, 'Maxims and Arrows' (titled 'Maxims and Missiles' in Ludovici's translation), before turning to Socrates, morality and the culture of his day.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Twilight_of_the_Idols",
+   "https://plato.stanford.edu/entries/nietzsche/"
+  ]
+ },
+ "works-of-love": {
+  "title": "Works of Love",
+  "voice": "soren-kierkegaard",
+  "kind": "book",
+  "dates": "1847",
+  "tradition": "existentialism",
+  "period": "modern",
+  "summary": "A series of Christian reflections that Kierkegaard published under his own name in 1847. They take the command to love one's neighbour as their theme and ask what it means for love to be a duty and a deed.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Works_of_Love",
+   "https://plato.stanford.edu/entries/kierkegaard/"
+  ]
  }
 }

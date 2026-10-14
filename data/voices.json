@@ -661,5 +661,108 @@
    "https://en.wikipedia.org/wiki/Will_Durant",
    "https://en.wikiquote.org/wiki/Aristotle"
   ]
+ },
+ "aleksandr-solzhenitsyn": {
+  "name": "Aleksandr Solzhenitsyn",
+  "kind": "person",
+  "dates": "1918–2008",
+  "tradition": "russian-literature",
+  "period": "contemporary",
+  "summary": "Aleksandr Solzhenitsyn was a Russian novelist and historian. Arrested in 1945 while serving as a Red Army officer for criticising Stalin in private letters, he spent eight years in labour camps and later wrote about them in One Day in the Life of Ivan Denisovich (1962) and The Gulag Archipelago. He received the Nobel Prize in Literature in 1970, was expelled from the Soviet Union in 1974, and returned to Russia in 1994.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Aleksandr_Solzhenitsyn",
+   "https://www.nobelprize.org/prizes/literature/1970/solzhenitsyn/facts/"
+  ]
+ },
+ "fyodor-dostoevsky": {
+  "name": "Fyodor Dostoevsky",
+  "kind": "person",
+  "dates": "1821–1881",
+  "tradition": "russian-literature",
+  "period": "modern",
+  "summary": "Fyodor Dostoevsky was a Russian novelist whose books probe faith, doubt, guilt and freedom. Arrested in 1849 for belonging to a radical circle, he faced a mock execution and spent four years in a Siberian prison camp. His major novels include Crime and Punishment (1866), The Idiot, Demons and The Brothers Karamazov (1879–80).",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky"
+  ]
+ },
+ "michel-de-montaigne": {
+  "name": "Michel de Montaigne",
+  "kind": "person",
+  "dates": "1533–1592",
+  "tradition": "renaissance-humanism",
+  "period": "early-modern",
+  "summary": "Michel de Montaigne was a French writer of the Renaissance who, after retiring to his estate near Bordeaux, began writing short, searching pieces about himself and human nature. He called them essais, 'attempts', and so gave the essay its name; they were first published in 1580 and expanded in 1588. He also served as mayor of Bordeaux.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Michel_de_Montaigne",
+   "https://plato.stanford.edu/entries/montaigne/"
+  ]
+ },
+ "baruch-spinoza": {
+  "name": "Baruch Spinoza",
+  "kind": "person",
+  "dates": "1632–1677",
+  "tradition": "rationalism",
+  "period": "early-modern",
+  "summary": "Baruch (Benedictus de) Spinoza was a Dutch philosopher of Portuguese-Jewish descent, born in Amsterdam. Expelled from the city's Jewish community in 1656, he earned a modest living grinding lenses and wrote works that shaped modern philosophy, among them the Ethics, published after his death in 1677.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Baruch_Spinoza",
+   "https://plato.stanford.edu/entries/spinoza/"
+  ]
+ },
+ "immanuel-kant": {
+  "name": "Immanuel Kant",
+  "kind": "person",
+  "dates": "1724–1804",
+  "tradition": "enlightenment",
+  "period": "early-modern",
+  "summary": "Immanuel Kant was a German philosopher of the Enlightenment who lived and taught in Königsberg, Prussia, all his life. His Critique of Pure Reason (1781) and his moral philosophy, built on the 'categorical imperative' set out in the Groundwork of the Metaphysics of Morals (1785), are among the most influential works in Western thought.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Immanuel_Kant",
+   "https://plato.stanford.edu/entries/kant/"
+  ]
+ },
+ "arthur-schopenhauer": {
+  "name": "Arthur Schopenhauer",
+  "kind": "person",
+  "dates": "1788–1860",
+  "tradition": "german-philosophy",
+  "period": "modern",
+  "summary": "Arthur Schopenhauer was a German philosopher, born in Danzig, known for the pessimism of his main work, The World as Will and Representation (1818/1819). He was among the first Western philosophers to draw on Indian thought, and he found a wide readership late in life with the essays of Parerga and Paralipomena (1851).",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Arthur_Schopenhauer",
+   "https://plato.stanford.edu/entries/schopenhauer/"
+  ]
+ },
+ "friedrich-nietzsche": {
+  "name": "Friedrich Nietzsche",
+  "kind": "person",
+  "dates": "1844–1900",
+  "tradition": "german-philosophy",
+  "period": "modern",
+  "summary": "Friedrich Nietzsche was a German philosopher and classical scholar who became a professor at Basel at the age of 24. In books such as Thus Spoke Zarathustra and Twilight of the Idols he questioned inherited morality and religion and asked how life can be affirmed. A collapse in January 1889 ended his working life.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Friedrich_Nietzsche",
+   "https://plato.stanford.edu/entries/nietzsche/"
+  ]
+ },
+ "soren-kierkegaard": {
+  "name": "Søren Kierkegaard",
+  "kind": "person",
+  "dates": "1813–1855",
+  "tradition": "existentialism",
+  "period": "modern",
+  "summary": "Søren Kierkegaard was a Danish philosopher and Christian thinker from Copenhagen, often called the first existentialist. Many of his books, such as Either/Or and Fear and Trembling (both 1843), appeared under pseudonyms, while religious works like Works of Love (1847) were signed with his own name.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard",
+   "https://plato.stanford.edu/entries/kierkegaard/"
+  ]
  }
 }
