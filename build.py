@@ -70,6 +70,7 @@ td.s::before{content:"Moral Rank "}}
 .v-verified{background:var(--ok-bg);color:var(--ok-fg)}.v-probable{background:var(--warn-bg);color:var(--warn-fg)}
 .v-unverified{background:var(--grey-bg);color:var(--grey-fg)}.v-disputed,.v-misattributed{background:var(--bad-bg);color:var(--bad-fg)}
 code,.formula{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.88rem}
+.echoes{font-size:.85rem;color:var(--muted);font-style:italic;margin:.2rem 0 .3rem}
 .formula{display:block;padding:.75rem 1rem;background:var(--card);border-radius:.25rem;overflow-x:auto;margin:1rem 0}
 .terms{padding-left:1.2rem}.terms li{margin:.6rem 0}.val{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.85rem;color:var(--accent);white-space:nowrap}
 dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)}
@@ -166,6 +167,12 @@ def source_link(q):
     return f'<a href="{esc(q["source"])}">source</a>' if q["source"] else "no source yet"
 
 
+def echoes(q):
+    """Optional note naming the older saying a quote restates, e.g. "Epictetus, Enchiridion 5"."""
+    e = q.get("echoes", "").strip()
+    return f'<div class="echoes">Echoes {esc(e)}</div>' if e else ""
+
+
 def cite(q, up="../../"):
     return f'— {voice_link(q, up)}, {work_link(q, up)} · {source_link(q)} {pill(q["ver"])}'
 
@@ -174,7 +181,7 @@ def related(q, up="../../"):
     parts = [esc(TR[q["tradition"]]["name"]), ERA_LABEL.get(q["era"], q["era"]), f'relation: {q["rel"]}', pill(q["ver"]), source_link(q)]
     if q.get("translation"):
         parts.append(f'Translation: {esc(q["translation"])}')
-    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {voice_link(q, up)}, {work_link(q, up)}</div>'
+    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {voice_link(q, up)}, {work_link(q, up)}</div>{echoes(q)}'
             f'<div class="meta">{"".join(f"<span>{p}</span>" for p in parts)}</div></li>')
 
 
@@ -223,7 +230,7 @@ for c in D["concepts"]:
         si = seed_index(c, qs); s = qs[si]
         tr = f'<br>Translation: {esc(s["translation"])}' if s.get("translation") else ""
         body += (f'<figure class="seed"><blockquote>“{esc(s["text"])}”</blockquote>'
-                 f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}</figcaption></figure>')
+                 f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}{echoes(s)}</figcaption></figure>')
     body += f'<p class="summary">{esc(c["summary"])}</p>'
     if c.get("hold"):
         body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
@@ -258,7 +265,7 @@ def entry_quote(q, show_voice, show_work):
     parts = [pill(q["ver"]), source_link(q), f'Maxim: <a href="../../maxims/{c["slug"]}/">{esc(c["maxim"])}</a>']
     if q.get("translation"):
         parts.append(f'Translation: {esc(q["translation"])}')
-    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {who}, {where}</div>'
+    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {who}, {where}</div>{echoes(q)}'
             f'<div class="meta">{"".join(f"<span>{p}</span>" for p in parts)}</div></li>')
 
 

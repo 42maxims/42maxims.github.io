@@ -22,6 +22,7 @@
     "source": "URL where the exact wording can be read, or \"\" if none"}
    ```
    New tradition? Add it under `traditions` with `name` and, if it grew out of another, `derives_from`.
+   Optional `"echoes": "Marcus Aurelius, Meditations V.20"`: a short note (under 120 characters) naming the older saying a modern quote restates. It shows as a small "Echoes …" line under the quote on maxim, voice and source pages. Use it only when the debt is clear (the author cites it, or the wording plainly follows it); it does not affect scoring.
    `thinker` and `work` stay as display text (`work` holds the precise locus, e.g. "Meditations IV.24, tr. George Long"); `voice` and `source_id` link the quote to its voice and source pages.
 4. **Link a voice and a source** (see "Voices and sources" below): reuse an existing slug if there is one, otherwise add an entry.
 5. **Verify the source** (rules below), set `ver` honestly.
