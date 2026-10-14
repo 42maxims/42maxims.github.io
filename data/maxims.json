@@ -16,7 +16,10 @@
    "name": "Buddhism"
   },
   "stoicism": {
-   "name": "Stoicism"
+   "name": "Stoicism",
+   "derives_from": [
+    "greek-philosophy"
+   ]
   },
   "existentialism": {
    "name": "Existentialism / Absurdism"
@@ -44,6 +47,22 @@
   },
   "philosophy-history": {
    "name": "Popular philosophy"
+  },
+  "taoism": {
+   "name": "Taoism"
+  },
+  "greek-philosophy": {
+   "name": "Greek philosophy"
+  },
+  "hinduism": {
+   "name": "Hinduism"
+  },
+  "islam": {
+   "name": "Islam",
+   "derives_from": [
+    "judaism",
+    "christianity"
+   ]
   }
  },
  "concepts": [
@@ -85,7 +104,8 @@
    "summary": "Sisyphus pushes his boulder up the hill forever. The ancient myth was a punishment; the modern reading asks whether the effort itself can be enough.",
    "links": [
     "https://en.wikipedia.org/wiki/Sisyphus"
-   ]
+   ],
+   "seed": 0
   },
   {
    "slug": "leave-it-better",
@@ -121,7 +141,8 @@
    "slug": "happiness-and-expectations",
    "maxim": "Happiness is reality minus expectations.",
    "summary": "A popular modern formula. When expectations outrun reality, disappointment fills the gap; holding them lightly leaves room for contentment.",
-   "links": []
+   "links": [],
+   "seed": 2
   },
   {
    "slug": "mastery",
@@ -167,6 +188,55 @@
    "slug": "thoughts-shape-life",
    "maxim": "Your thoughts shape your life.",
    "summary": "What we dwell on becomes the lens we see through, and then the ground we stand on. Tending the mind is tending the life.",
+   "links": []
+  },
+  {
+   "slug": "moderation",
+   "maxim": "Seek the middle way; avoid extremes.",
+   "summary": "Too much and too little both lead us astray. Again and again the old teachers point to a balanced path between the extremes, harder to find than either, but steadier to walk.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Golden_mean_(philosophy)"
+   ]
+  },
+  {
+   "slug": "overcome-hatred-with-love",
+   "maxim": "Meet hatred with love and evil with good.",
+   "summary": "Answering harm with harm only keeps the wheel turning. Many traditions ask something harder and braver: to break the cycle by returning kindness, even to an enemy.",
+   "links": []
+  },
+  {
+   "slug": "know-yourself",
+   "maxim": "Know yourself.",
+   "summary": "Understanding the world begins close to home. To look honestly at our own motives, limits and ignorance is a lifelong task, and perhaps the beginning of every other kind of wisdom.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Know_thyself"
+   ],
+   "seed": 1
+  },
+  {
+   "slug": "humility",
+   "maxim": "Be humble; pride goes before a fall.",
+   "summary": "Those who lift themselves up tend to be brought low, while those who hold themselves lightly are trusted and remembered. Humility is not thinking less of ourselves, but seeing ourselves truly.",
+   "links": []
+  },
+  {
+   "slug": "master-your-anger",
+   "maxim": "Be slow to anger; master yourself.",
+   "summary": "Anger arrives quickly and leaves damage behind it. Real strength, these voices agree, lies less in overpowering others than in holding the reins of our own temper.",
+   "links": []
+  },
+  {
+   "slug": "remember-death",
+   "maxim": "Remember that you will die, and live well today.",
+   "summary": "Our days are numbered, and remembering it is not morbid but clarifying. Keeping death in view shrinks petty quarrels and turns us back towards what is good while we still can.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Memento_mori"
+   ]
+  },
+  {
+   "slug": "guard-your-tongue",
+   "maxim": "Speak kindly, or keep silent.",
+   "summary": "Words can heal or wound, and once spoken they cannot be taken back. A little restraint in speech spares others pain and spares us a good deal of trouble.",
    "links": []
   }
  ],
@@ -632,6 +702,500 @@
    "work": "Discourse on Method (1637), Part IV, tr. John Veitch",
    "source": "https://www.gutenberg.org/ebooks/59",
    "translation": "public-domain translation (Veitch)"
+  },
+  {
+   "concept": "life-is-suffering",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Man that is born of a woman is of few days and full of trouble.",
+   "thinker": "Book of Job",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Job 14:1 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "mastery",
+   "rel": "similar",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",
+   "thinker": "Paul the Apostle",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Colossians 3:23 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "mastery",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "Let right deeds be Thy motive, not the fruit which comes from them. And live in action! Labour!",
+   "thinker": "Krishna (Bhagavad Gita)",
+   "tradition": "hinduism",
+   "era": "axial",
+   "work": "Bhagavad Gita, ch. 2 (The Song Celestial), tr. Edwin Arnold",
+   "translation": "public-domain translation (Edwin Arnold)",
+   "source": "https://www.gutenberg.org/ebooks/2388"
+  },
+  {
+   "concept": "tell-the-truth",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Lying lips are abomination to the LORD: but they that deal truly are his delight.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 12:22 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "tell-the-truth",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Wherefore putting away lying, speak every man truth with his neighbour: for we are members one of another.",
+   "thinker": "Paul the Apostle",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Ephesians 4:25 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "tell-the-truth",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Speak the truth, do not yield to anger; give, if thou art asked for little; by these three steps thou wilt go near the gods.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 224, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "embrace-the-struggle",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "and so that which is a hindrance is made a furtherance to an act; and that which is an obstacle on the road helps us on this road.",
+   "thinker": "Marcus Aurelius",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Meditations, Book V.20, tr. George Long",
+   "translation": "public-domain translation (George Long)",
+   "source": "https://www.gutenberg.org/ebooks/15877"
+  },
+  {
+   "concept": "happiness-and-expectations",
+   "rel": "similar",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Demand not that events should happen as you wish; but wish them to happen as they do happen, and you will go on well.",
+   "thinker": "Epictetus",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Enchiridion VIII, tr. Thomas Wentworth Higginson",
+   "translation": "public-domain translation (Higginson)",
+   "source": "https://www.gutenberg.org/ebooks/45109"
+  },
+  {
+   "concept": "happiness-and-expectations",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "for I have learned, in whatsoever state I am, therewith to be content.",
+   "thinker": "Paul the Apostle",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Philippians 4:11 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "happiness-and-expectations",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "verified",
+   "text": "He who is satisfied with his lot is rich;",
+   "thinker": "Laozi",
+   "tradition": "taoism",
+   "era": "axial",
+   "work": "Tao Te Ching, ch. 33, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/216"
+  },
+  {
+   "concept": "golden-rule",
+   "rel": "similar",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "None of you will have faith till he wishes for his (Muslim) brother what he likes for himself.",
+   "thinker": "The Prophet Muhammad (narrated by Anas)",
+   "tradition": "islam",
+   "era": "medieval",
+   "work": "Sahih al-Bukhari 13",
+   "translation": "Muhsin Khan translation, as given on sunnah.com",
+   "source": "https://sunnah.com/bukhari:13"
+  },
+  {
+   "concept": "moderation",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Virtue then is in a sense a mean state, since it certainly has an aptitude for aiming at the mean.",
+   "thinker": "Aristotle",
+   "tradition": "greek-philosophy",
+   "era": "axial",
+   "work": "Nicomachean Ethics, Book II, ch. 6, tr. D. P. Chase",
+   "translation": "public-domain translation (Chase)",
+   "source": "https://www.gutenberg.org/ebooks/8438"
+  },
+  {
+   "concept": "moderation",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Perfect is the virtue which is according to the Constant Mean! Rare for a long time has been its practise among the people.",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 6.27 (Yong Ye), tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "moderation",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Avoiding both of these extremes, the middle way realized by the Tathagata — producing vision, producing knowledge — leads to calm, to direct knowledge, to self-awakening, to Unbinding.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammacakkappavattana Sutta (SN 56.11), tr. Thanissaro Bhikkhu",
+   "translation": "Thanissaro Bhikkhu (free distribution)",
+   "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+  },
+  {
+   "concept": "moderation",
+   "rel": "partial",
+   "conf": 0.5,
+   "ver": "verified",
+   "text": "Be not righteous over much; neither make thyself over wise: why shouldest thou destroy thyself?",
+   "thinker": "Qoheleth (the Preacher)",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Ecclesiastes 7:16 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "overcome-hatred-with-love",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "For hatred does not cease by hatred at any time: hatred ceases by love, this is an old rule.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 5, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "overcome-hatred-with-love",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "But I say unto you, Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you;",
+   "thinker": "Jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Matthew 5:44 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "overcome-hatred-with-love",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "If thine enemy be hungry, give him bread to eat; and if he be thirsty, give him water to drink:",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 25:21 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "overcome-hatred-with-love",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Turn away evil by what is better, and lo! he between whom and thyself was enmity, shall be as though he were a warm friend.",
+   "thinker": "The Qur'an",
+   "tradition": "islam",
+   "era": "medieval",
+   "work": "Qur'an 41:34 (Sura Fussilat, 'The Made Plain'), tr. J. M. Rodwell",
+   "translation": "public-domain translation (J. M. Rodwell)",
+   "source": "https://www.gutenberg.org/ebooks/2800"
+  },
+  {
+   "concept": "overcome-hatred-with-love",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "Let a man overcome anger by love, let him overcome evil by good; let him overcome the greedy by liberality, the liar by truth!",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 223, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "know-yourself",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "the unexamined life is not worth living",
+   "thinker": "Socrates (in Plato)",
+   "tradition": "greek-philosophy",
+   "era": "axial",
+   "work": "Plato, Apology 38a, tr. Benjamin Jowett",
+   "translation": "public-domain translation (Jowett)",
+   "source": "https://www.gutenberg.org/ebooks/1656"
+  },
+  {
+   "concept": "know-yourself",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "He who knows other men is discerning; he who knows himself is intelligent. He who overcomes others is strong; he who overcomes himself is mighty.",
+   "thinker": "Laozi",
+   "tradition": "taoism",
+   "era": "axial",
+   "work": "Tao Te Ching, ch. 33, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/216"
+  },
+  {
+   "concept": "know-yourself",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it;-- this is knowledge.",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 2.17 (Wei Zheng), tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "humility",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Pride goeth before destruction, and an haughty spirit before a fall.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 16:18 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "humility",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "And whosoever shall exalt himself shall be abased; and he that shall humble himself shall be exalted.",
+   "thinker": "Jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Matthew 23:12 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "humility",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "He is free from self-display, and therefore he shines; from self-assertion, and therefore he is distinguished; from self-boasting, and therefore his merit is acknowledged;",
+   "thinker": "Laozi",
+   "tradition": "taoism",
+   "era": "axial",
+   "work": "Tao Te Ching, ch. 22, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/216"
+  },
+  {
+   "concept": "master-your-anger",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "He that is slow to anger is better than the mighty; and he that ruleth his spirit than he that taketh a city.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 16:32 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "master-your-anger",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",
+   "thinker": "James",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "James 1:19 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "master-your-anger",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "He who holds back rising anger like a rolling chariot, him I call a real driver; other people are but holding the reins.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 222, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "master-your-anger",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger.",
+   "thinker": "The Prophet Muhammad (narrated by Abu Huraira)",
+   "tradition": "islam",
+   "era": "medieval",
+   "work": "Sahih al-Bukhari 6114",
+   "translation": "Muhsin Khan translation, as given on sunnah.com",
+   "source": "https://sunnah.com/bukhari:6114"
+  },
+  {
+   "concept": "master-your-anger",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Who give alms, alike in prosperity and in success, and who master their anger, and forgive others! God loveth the doers of good.",
+   "thinker": "The Qur'an",
+   "tradition": "islam",
+   "era": "medieval",
+   "work": "Qur'an 3:134 (Sura Al 'Imran), tr. J. M. Rodwell",
+   "translation": "public-domain translation (J. M. Rodwell)",
+   "source": "https://www.gutenberg.org/ebooks/2800"
+  },
+  {
+   "concept": "remember-death",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "Do not act as if thou wert going to live ten thousand years. Death hangs over thee. While thou livest, while it is in thy power, be good.",
+   "thinker": "Marcus Aurelius",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Meditations, Book IV.17, tr. George Long",
+   "translation": "public-domain translation (George Long)",
+   "source": "https://www.gutenberg.org/ebooks/15877"
+  },
+  {
+   "concept": "remember-death",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "So teach us to number our days, that we may apply our hearts unto wisdom.",
+   "thinker": "Psalms (attributed to Moses)",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Psalm 90:12 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "remember-death",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "The world does not know that we must all come to an end here;--but those who know it, their quarrels cease at once.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 6, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "guard-your-tongue",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "anybody who believes in Allah and the Last Day should talk what is good or keep quiet.",
+   "thinker": "The Prophet Muhammad (narrated by Abu Huraira)",
+   "tradition": "islam",
+   "era": "medieval",
+   "work": "Sahih al-Bukhari 6018",
+   "translation": "Muhsin Khan translation, as given on sunnah.com",
+   "source": "https://sunnah.com/bukhari:6018"
+  },
+  {
+   "concept": "guard-your-tongue",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Whoso keepeth his mouth and his tongue keepeth his soul from troubles.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 21:23 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "guard-your-tongue",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 18:21 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "guard-your-tongue",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Do not speak harshly to anybody; those who are spoken to will answer thee in the same way. Angry speech is painful, blows for blows will touch thee.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 133, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
   }
  ]
 }

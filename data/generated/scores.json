@@ -1,21 +1,21 @@
 {
  "golden-rule": {
-  "Q": 4.345,
-  "K": 3.445,
-  "T": 2.375,
-  "R": 2,
-  "E": 13.657232663804066,
-  "traditions": 3,
-  "moral_rank": 100.0
+  "Q": 4.9399999999999995,
+  "K": 4.04,
+  "T": 2.6725,
+  "R": 3,
+  "E": 16.30918425759873,
+  "traditions": 4,
+  "moral_rank": 98.4
  },
  "life-is-suffering": {
-  "Q": 0.9,
-  "K": 0.9,
-  "T": 0.9,
+  "Q": 1.75,
+  "K": 1.75,
+  "T": 1.75,
   "R": 1,
-  "E": 5.7905371842229085,
-  "traditions": 1,
-  "moral_rank": 42.4
+  "E": 9.084476567210775,
+  "traditions": 2,
+  "moral_rank": 54.8
  },
  "desire-is-the-root-of-suffering": {
   "Q": 2.29,
@@ -24,7 +24,7 @@
   "R": 2,
   "E": 9.53987017703244,
   "traditions": 2,
-  "moral_rank": 69.9
+  "moral_rank": 57.6
  },
  "be-present": {
   "Q": 1.996,
@@ -33,7 +33,7 @@
   "R": 2,
   "E": 10.365687938327486,
   "traditions": 3,
-  "moral_rank": 75.9
+  "moral_rank": 62.5
  },
  "take-care-of-yourself": {
   "Q": 0.57,
@@ -42,16 +42,16 @@
   "R": 1,
   "E": 4.4160590628872916,
   "traditions": 1,
-  "moral_rank": 32.3
+  "moral_rank": 26.6
  },
  "embrace-the-struggle": {
-  "Q": 0.54,
-  "K": 0.54,
-  "T": 0.54,
-  "R": 1,
-  "E": 4.286629339260491,
-  "traditions": 1,
-  "moral_rank": 31.4
+  "Q": 1.03,
+  "K": 1.03,
+  "T": 1.03,
+  "R": 2,
+  "E": 7.812924949562918,
+  "traditions": 2,
+  "moral_rank": 47.1
  },
  "leave-it-better": {
   "Q": 0.66,
@@ -60,7 +60,7 @@
   "R": 1,
   "E": 4.799221442832048,
   "traditions": 2,
-  "moral_rank": 35.1
+  "moral_rank": 29.0
  },
  "keep-it-simple": {
   "Q": 1.38,
@@ -69,7 +69,7 @@
   "R": 2,
   "E": 9.181834500130456,
   "traditions": 2,
-  "moral_rank": 67.2
+  "moral_rank": 55.4
  },
  "vital-few": {
   "Q": 0.48,
@@ -78,7 +78,7 @@
   "R": 1,
   "E": 4.024862410803575,
   "traditions": 1,
-  "moral_rank": 29.5
+  "moral_rank": 24.3
  },
  "peter-principle": {
   "Q": 0.54,
@@ -87,25 +87,25 @@
   "R": 1,
   "E": 4.286629339260491,
   "traditions": 1,
-  "moral_rank": 31.4
+  "moral_rank": 25.9
  },
  "happiness-and-expectations": {
-  "Q": 0.5599999999999999,
-  "K": 0.5599999999999999,
-  "T": 0.5599999999999999,
-  "R": 1,
-  "E": 4.373017298616234,
-  "traditions": 1,
-  "moral_rank": 32.0
+  "Q": 1.8849999999999998,
+  "K": 1.8849999999999998,
+  "T": 1.8849999999999998,
+  "R": 2,
+  "E": 11.08747792173466,
+  "traditions": 4,
+  "moral_rank": 66.9
  },
  "mastery": {
-  "Q": 1.46,
-  "K": 1.46,
-  "T": 0.9,
-  "R": 1,
-  "E": 6.308465947303729,
-  "traditions": 1,
-  "moral_rank": 46.2
+  "Q": 2.545,
+  "K": 2.545,
+  "T": 1.6875,
+  "R": 2,
+  "E": 10.923343773338473,
+  "traditions": 3,
+  "moral_rank": 65.9
  },
  "pursue-meaning": {
   "Q": 0.57,
@@ -114,7 +114,7 @@
   "R": 1,
   "E": 4.4160590628872916,
   "traditions": 1,
-  "moral_rank": 32.3
+  "moral_rank": 26.6
  },
  "growth-mindset": {
   "Q": 0.96,
@@ -123,7 +123,7 @@
   "R": 1,
   "E": 4.592740370355697,
   "traditions": 1,
-  "moral_rank": 33.6
+  "moral_rank": 27.7
  },
  "paradox-of-choice": {
   "Q": 0.48,
@@ -132,7 +132,7 @@
   "R": 1,
   "E": 4.024862410803575,
   "traditions": 1,
-  "moral_rank": 29.5
+  "moral_rank": 24.3
  },
  "a-time-for-everything": {
   "Q": 0.8,
@@ -141,16 +141,16 @@
   "R": 1,
   "E": 5.382213855902036,
   "traditions": 1,
-  "moral_rank": 39.4
+  "moral_rank": 32.5
  },
  "tell-the-truth": {
-  "Q": 0.57,
-  "K": 0.57,
-  "T": 0.57,
-  "R": 1,
-  "E": 4.4160590628872916,
-  "traditions": 1,
-  "moral_rank": 32.3
+  "Q": 3.17,
+  "K": 3.17,
+  "T": 2.7199999999999998,
+  "R": 3,
+  "E": 15.868365417287196,
+  "traditions": 4,
+  "moral_rank": 95.7
  },
  "thoughts-shape-life": {
   "Q": 1.5899999999999999,
@@ -159,6 +159,69 @@
   "R": 2,
   "E": 9.982609897003295,
   "traditions": 3,
-  "moral_rank": 73.1
+  "moral_rank": 60.2
+ },
+ "moderation": {
+  "Q": 2.8,
+  "K": 2.8,
+  "T": 2.8,
+  "R": 1,
+  "E": 12.90832111980049,
+  "traditions": 4,
+  "moral_rank": 77.9
+ },
+ "overcome-hatred-with-love": {
+  "Q": 4.21,
+  "K": 3.65,
+  "T": 2.725,
+  "R": 3,
+  "E": 16.236077173219556,
+  "traditions": 4,
+  "moral_rank": 97.9
+ },
+ "know-yourself": {
+  "Q": 2.2399999999999998,
+  "K": 2.2399999999999998,
+  "T": 2.2399999999999998,
+  "R": 1,
+  "E": 10.892236284513814,
+  "traditions": 3,
+  "moral_rank": 65.7
+ },
+ "humility": {
+  "Q": 2.65,
+  "K": 2.65,
+  "T": 2.2,
+  "R": 2,
+  "E": 12.52260922720437,
+  "traditions": 3,
+  "moral_rank": 75.5
+ },
+ "master-your-anger": {
+  "Q": 4.5,
+  "K": 4.5,
+  "T": 2.75,
+  "R": 3,
+  "E": 16.576068435798067,
+  "traditions": 4,
+  "moral_rank": 100.0
+ },
+ "remember-death": {
+  "Q": 2.41,
+  "K": 2.41,
+  "T": 2.41,
+  "R": 2,
+  "E": 13.009129760921429,
+  "traditions": 3,
+  "moral_rank": 78.5
+ },
+ "guard-your-tongue": {
+  "Q": 3.16,
+  "K": 2.6,
+  "T": 2.15,
+  "R": 2,
+  "E": 12.48796662393288,
+  "traditions": 3,
+  "moral_rank": 75.3
  }
 }
