@@ -318,6 +318,18 @@
    "maxim": "Let your actions match your words.",
    "summary": "Fine words cost little; what we do shows what we really believe. Living out what we say, quietly and first, is how trust is built, in others and in ourselves.",
    "links": []
+  },
+  {
+   "slug": "keep-learning",
+   "maxim": "Keep learning, all your life.",
+   "summary": "Learning is not a stage we finish but a way of staying awake to the world. Traditions far apart describe it as a quiet pleasure, the mark of someone wise enough to know there is always more to hear.",
+   "links": []
+  },
+  {
+   "slug": "listen-first",
+   "maxim": "Listen more than you speak.",
+   "summary": "Real listening is a kind of generosity, and a kind of humility too. When we assume the other person may know something we don't, conversations stop being contests and start teaching us.",
+   "links": []
   }
  ],
  "quotes": [
@@ -2004,6 +2016,83 @@
    "work": "James 1:22 (KJV)",
    "translation": "King James Version (public domain)",
    "source": "https://www.biblegateway.com/passage/?search=James+1%3A22&version=KJV"
+  },
+  {
+   "concept": "vital-few",
+   "rel": "similar",
+   "conf": 0.75,
+   "ver": "verified",
+   "text": "Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.",
+   "thinker": "Marcus Aurelius",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Meditations IV.24, tr. George Long",
+   "translation": "public-domain translation (George Long)",
+   "source": "https://www.gutenberg.org/ebooks/15877"
+  },
+  {
+   "concept": "vital-few",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "verified",
+   "text": "Martha, Martha, thou art careful and troubled about many things: But one thing is needful:",
+   "thinker": "Jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Luke 10:41-42 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.biblegateway.com/passage/?search=Luke+10%3A41-42&version=KJV"
+  },
+  {
+   "concept": "keep-learning",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Is it not pleasant to learn with a constant perseverance and application?",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 1.1 (Xue Er), tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "keep-learning",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "A wise man will hear, and will increase learning; and a man of understanding shall attain unto wise counsels:",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 1:5 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.biblegateway.com/passage/?search=Proverbs+1%3A5&version=KJV"
+  },
+  {
+   "concept": "listen-first",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "This is the reason why we have two ears and only one mouth, that we may hear more and speak less.",
+   "thinker": "Zeno of Citium",
+   "tradition": "stoicism",
+   "era": "axial",
+   "work": "As reported by Diogenes Laertius, Lives of Eminent Philosophers VII (Life of Zeno), tr. C. D. Yonge",
+   "translation": "public-domain translation (C. D. Yonge)",
+   "source": "https://www.gutenberg.org/ebooks/57342"
+  },
+  {
+   "concept": "listen-first",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "Assume that the person you are listening to might know something you don't.",
+   "thinker": "Jordan B. Peterson",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "12 Rules for Life (2018), Rule 9 (rule title); checked via Wikipedia, not the book",
+   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
   }
  ]
 }
