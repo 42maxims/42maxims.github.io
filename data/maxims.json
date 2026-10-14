@@ -378,6 +378,18 @@
    "maxim": "Make time for stillness.",
    "summary": "Much of our restlessness comes from never stopping. Contemplatives, philosophers and psalmists alike point to a quiet place within, always available, where we can rest, see clearly and return refreshed.",
    "links": []
+  },
+  {
+   "slug": "own-your-mistakes",
+   "maxim": "Admit your mistakes and put them right.",
+   "summary": "Everyone falls short; what matters is what we do next. Owning a fault, rather than hiding it, is the first step to mending it, and a mended fault can leave us brighter than before.",
+   "links": []
+  },
+  {
+   "slug": "get-back-up",
+   "maxim": "When you fall, get back up.",
+   "summary": "Falling is not the failure; staying down is. Traditions far apart in time and place honour the person who stumbles, gathers themselves, and rises again, as many times as it takes.",
+   "links": []
   }
  ],
  "quotes": [
@@ -2647,6 +2659,96 @@
    "era": "modern",
    "work": "Popular attribution to Leonardo; Quote Investigator finds no evidence he said it (earliest Leonardo attribution c. 2000). Closest early match: Clare Boothe Luce, Stuffed Shirts (1931): \"the height of sophistication is simplicity.\"",
    "source": "https://quoteinvestigator.com/2015/04/02/simple/"
+  },
+  {
+   "concept": "peter-principle",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "verified",
+   "text": "A man should say, I am not concerned that I have no place, I am concerned how I may fit myself for one.",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 4.14, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "growth-mindset",
+   "rel": "similar",
+   "conf": 0.75,
+   "ver": "verified",
+   "text": "If you can one day renovate yourself, do so from day to day. Yea, let there be daily renovation.",
+   "thinker": "The Great Learning (inscription of King Tang)",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "The Great Learning (Daxue), commentary ch. 2, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://en.wikisource.org/wiki/The_Chinese_Classics/Volume_1/The_Great_Learning"
+  },
+  {
+   "concept": "own-your-mistakes",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "To have faults and not to reform them,-- this, indeed, should be pronounced having faults.",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 15.29, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "own-your-mistakes",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "He that covereth his sins shall not prosper: but whoso confesseth and forsaketh them shall have mercy.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 28:13 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "own-your-mistakes",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "He whose evil deeds are covered by good deeds, brightens up this world, like the moon when freed from clouds.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 173, tr. F. Max Müller",
+   "translation": "public-domain translation (Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "get-back-up",
+   "rel": "expresses",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "For a just man falleth seven times, and riseth up again: but the wicked shall fall into mischief.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 24:16 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "get-back-up",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Our greatest glory is, not in never falling; but in rising every time we fall.",
+   "thinker": "Oliver Goldsmith (often misattributed to Confucius)",
+   "tradition": "english-poetry",
+   "era": "early-modern",
+   "work": "The Citizen of the World (1762), vol. 1, Letter VII. Spoken by Goldsmith's fictional Chinese narrator, who credits Confucius; the line is not found in Confucius's works (see Quote Investigator, https://quoteinvestigator.com/2014/05/27/rising/). Spelling modernised from the long s.",
+   "source": "https://archive.org/details/bim_eighteenth-century_the-citizen-of-the-world_goldsmith-oliver_1762_1_0"
   }
  ]
 }
