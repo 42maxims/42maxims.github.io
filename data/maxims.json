@@ -1,111 +1,637 @@
 {
-  "traditions": {
-    "confucianism": {"name": "Confucianism"},
-    "judaism": {"name": "Judaism"},
-    "christianity": {"name": "Christianity", "derives_from": ["judaism"]},
-    "buddhism": {"name": "Buddhism"},
-    "stoicism": {"name": "Stoicism"},
-    "existentialism": {"name": "Existentialism / Absurdism"},
-    "zen-western": {"name": "Western interpreters of Zen & Taoism"},
-    "modern-psychology": {"name": "Modern psychology & self-help"},
-    "scouting": {"name": "Scouting movement"},
-    "management": {"name": "Management & engineering"},
-    "popular": {"name": "Popular / anonymous sayings"}
+ "traditions": {
+  "confucianism": {
+   "name": "Confucianism"
   },
-  "concepts": [
-    {"slug": "golden-rule", "maxim": "Treat others as you would wish to be treated.",
-     "summary": "Perhaps the most widely shared rule for living. Long before these traditions could read one another, each arrived at the same quiet test: before you act, put yourself in the other person's place.",
-     "links": ["https://en.wikipedia.org/wiki/Golden_Rule"]},
-    {"slug": "life-is-suffering", "maxim": "Life contains suffering; begin by accepting it.",
-     "summary": "Not a counsel of despair, but a starting point. Naming the hardness of life honestly frees us to respond to it with courage rather than surprise.", "links": []},
-    {"slug": "desire-is-the-root-of-suffering", "maxim": "Craving is the root of suffering.",
-     "summary": "Much of our pain comes not from what happens, but from our grasping for things to be otherwise. Loosen the grip and the weight lightens.", "links": []},
-    {"slug": "be-present", "maxim": "Be present: the here and now is where life happens.",
-     "summary": "The past has gone and the future has not arrived. The present moment is the only place we can actually live, act and enjoy.", "links": []},
-    {"slug": "take-care-of-yourself", "maxim": "Treat yourself like someone you are responsible for helping.",
-     "summary": "We often care better for others than for ourselves. Extend the same kindness and discipline inward.", "links": []},
-    {"slug": "embrace-the-struggle", "maxim": "Find meaning in the struggle itself.",
-     "summary": "Sisyphus pushes his boulder up the hill forever. The ancient myth was a punishment; the modern reading asks whether the effort itself can be enough.", "links": ["https://en.wikipedia.org/wiki/Sisyphus"]},
-    {"slug": "leave-it-better", "maxim": "Leave things better than you found them.",
-     "summary": "A simple measure for a day, a campsite or a life: did the world come out a little ahead for your having passed through?", "links": []},
-    {"slug": "keep-it-simple", "maxim": "Keep it simple.",
-     "summary": "Complexity is costly and fragile. The simplest design that works is usually the one that lasts.", "links": ["https://en.wikipedia.org/wiki/KISS_principle"]},
-    {"slug": "vital-few", "maxim": "A few causes drive most results (the 80/20 rule).",
-     "summary": "Effort and outcome are rarely in proportion. Find the vital few things that matter and give them your best attention.", "links": ["https://en.wikipedia.org/wiki/Pareto_principle"]},
-    {"slug": "peter-principle", "maxim": "People rise to their level of incompetence.",
-     "summary": "A gently humbling observation about organisations: we tend to be promoted until we land in a role we no longer do well. Know your strengths.", "links": ["https://en.wikipedia.org/wiki/Peter_principle"]},
-    {"slug": "happiness-and-expectations", "maxim": "Happiness is reality minus expectations.",
-     "summary": "A popular modern formula. When expectations outrun reality, disappointment fills the gap; holding them lightly leaves room for contentment.", "links": []}
-  ],
-  "quotes": [
-    {"concept": "golden-rule", "rel": "expresses", "conf": 0.95, "ver": "verified",
-     "text": "What you do not want done to yourself, do not do to others.",
-     "thinker": "Confucius", "tradition": "confucianism", "era": "axial",
-     "work": "Analects 15 (Wei Ling Gong), tr. James Legge", "translation": "public-domain translation (Legge)",
-     "source": "https://www.gutenberg.org/cache/epub/4094/pg4094.txt"},
-    {"concept": "golden-rule", "rel": "expresses", "conf": 0.95, "ver": "verified",
-     "text": "That which is hateful to you do not do to another; that is the entire Torah, and the rest is its interpretation.",
-     "thinker": "Hillel the Elder", "tradition": "judaism", "era": "classical",
-     "work": "Babylonian Talmud, Shabbat 31a (William Davidson translation)", "translation": "Sefaria / William Davidson translation (CC BY-NC)",
-     "source": "https://www.sefaria.org/Shabbat.31a"},
-    {"concept": "golden-rule", "rel": "expresses", "conf": 0.95, "ver": "verified",
-     "text": "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",
-     "thinker": "Jesus", "tradition": "christianity", "era": "classical",
-     "work": "Matthew 7:12 (King James Version)", "translation": "KJV (public domain)",
-     "source": "https://www.biblegateway.com/passage/?search=Matthew+7%3A12&version=KJV"},
-    {"concept": "life-is-suffering", "rel": "expresses", "conf": 0.9, "ver": "verified",
-     "text": "Birth is stressful, aging is stressful, death is stressful; sorrow, lamentation, pain, distress, & despair are stressful.",
-     "thinker": "The Buddha", "tradition": "buddhism", "era": "axial",
-     "work": "Dhammacakkappavattana Sutta (SN 56.11), tr. Thanissaro Bhikkhu", "translation": "Thanissaro Bhikkhu (free distribution)",
-     "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"},
-    {"concept": "desire-is-the-root-of-suffering", "rel": "expresses", "conf": 0.9, "ver": "verified",
-     "text": "The noble truth of the origination of stress: the craving that makes for further becoming.",
-     "thinker": "The Buddha", "tradition": "buddhism", "era": "axial",
-     "work": "Dhammacakkappavattana Sutta (SN 56.11), tr. Thanissaro Bhikkhu", "translation": "Thanissaro Bhikkhu (free distribution)",
-     "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"},
-    {"concept": "be-present", "rel": "expresses", "conf": 0.9, "ver": "probable",
-     "text": "This is the real secret of life — to be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play.",
-     "thinker": "Alan Watts", "tradition": "zen-western", "era": "contemporary",
-     "work": "Attributed in The Essence of Alan Watts (1977), via Wikiquote; primary text not checked",
-     "source": "https://en.wikiquote.org/wiki/Alan_Watts"},
-    {"concept": "be-present", "rel": "similar", "conf": 0.8, "ver": "verified",
-     "text": "Our life is short; we must endeavour to gain the present time with best discretion and justice.",
-     "thinker": "Marcus Aurelius", "tradition": "stoicism", "era": "classical",
-     "work": "Meditations, Book IV, tr. Meric Casaubon", "translation": "public-domain translation (Casaubon)",
-     "source": "https://www.gutenberg.org/ebooks/2680"},
-    {"concept": "take-care-of-yourself", "rel": "expresses", "conf": 0.95, "ver": "verified",
-     "text": "Treat yourself like someone you are responsible for helping.",
-     "thinker": "Jordan B. Peterson", "tradition": "modern-psychology", "era": "contemporary",
-     "work": "12 Rules for Life (2018), Rule 2 — rule title as quoted in The Guardian's digested read",
-     "source": "https://www.theguardian.com/books/2018/jan/28/12-rules-for-life-an-antidote-to-chaos-by-jordan-b-peterson-digested-read"},
-    {"concept": "embrace-the-struggle", "rel": "expresses", "conf": 0.9, "ver": "probable",
-     "text": "One must imagine Sisyphus happy.",
-     "thinker": "Albert Camus", "tradition": "existentialism", "era": "contemporary",
-     "work": "The Myth of Sisyphus (1942), English translation; checked via Wikipedia, not the book",
-     "source": "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus"},
-    {"concept": "leave-it-better", "rel": "expresses", "conf": 0.9, "ver": "probable",
-     "text": "Leave this world a little better than you found it.",
-     "thinker": "Robert Baden-Powell", "tradition": "scouting", "era": "modern",
-     "work": "Last message to Scouts (published 1941); checked via Wikiquote, not the original",
-     "source": "https://en.wikiquote.org/wiki/Robert_Baden-Powell"},
-    {"concept": "keep-it-simple", "rel": "expresses", "conf": 0.8, "ver": "probable",
-     "text": "Keep it simple, stupid.",
-     "thinker": "Kelly Johnson (reported)", "tradition": "management", "era": "contemporary",
-     "work": "Reportedly coined at Lockheed Skunk Works; attribution per Wikipedia",
-     "source": "https://en.wikipedia.org/wiki/KISS_principle"},
-    {"concept": "vital-few", "rel": "expresses", "conf": 0.8, "ver": "probable",
-     "text": "For many outcomes, roughly 80% of consequences come from 20% of causes.",
-     "thinker": "Joseph M. Juran (after Vilfredo Pareto)", "tradition": "management", "era": "modern",
-     "work": "Pareto principle, as summarised by Wikipedia (paraphrase, not a direct quote)",
-     "source": "https://en.wikipedia.org/wiki/Pareto_principle"},
-    {"concept": "peter-principle", "rel": "expresses", "conf": 0.9, "ver": "probable",
-     "text": "In a hierarchy, every employee tends to rise to his level of incompetence.",
-     "thinker": "Laurence J. Peter", "tradition": "management", "era": "contemporary",
-     "work": "The Peter Principle (1969); checked via Wikipedia, not the book",
-     "source": "https://en.wikipedia.org/wiki/Peter_principle"},
-    {"concept": "happiness-and-expectations", "rel": "expresses", "conf": 0.7, "ver": "unverified",
-     "text": "Happiness equals reality minus expectations.",
-     "thinker": "Anonymous / popular saying", "tradition": "popular", "era": "contemporary",
-     "work": "Origin not established; widely circulated online", "source": ""}
-  ]
+  "judaism": {
+   "name": "Judaism"
+  },
+  "christianity": {
+   "name": "Christianity",
+   "derives_from": [
+    "judaism"
+   ]
+  },
+  "buddhism": {
+   "name": "Buddhism"
+  },
+  "stoicism": {
+   "name": "Stoicism"
+  },
+  "existentialism": {
+   "name": "Existentialism / Absurdism"
+  },
+  "zen-western": {
+   "name": "Western interpreters of Zen & Taoism"
+  },
+  "modern-psychology": {
+   "name": "Modern psychology & self-help"
+  },
+  "scouting": {
+   "name": "Scouting movement"
+  },
+  "management": {
+   "name": "Management & engineering"
+  },
+  "popular": {
+   "name": "Popular / anonymous sayings"
+  },
+  "rationalism": {
+   "name": "Rationalism"
+  },
+  "transcendentalism": {
+   "name": "Transcendentalism"
+  },
+  "philosophy-history": {
+   "name": "Popular philosophy"
+  }
+ },
+ "concepts": [
+  {
+   "slug": "golden-rule",
+   "maxim": "Treat others as you would wish to be treated.",
+   "summary": "Perhaps the most widely shared rule for living. Long before these traditions could read one another, each arrived at the same quiet test: before you act, put yourself in the other person's place.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Golden_Rule"
+   ]
+  },
+  {
+   "slug": "life-is-suffering",
+   "maxim": "Life contains suffering; begin by accepting it.",
+   "summary": "Not a counsel of despair, but a starting point. Naming the hardness of life honestly frees us to respond to it with courage rather than surprise.",
+   "links": []
+  },
+  {
+   "slug": "desire-is-the-root-of-suffering",
+   "maxim": "Craving is the root of suffering.",
+   "summary": "Much of our pain comes not from what happens, but from our grasping for things to be otherwise. Loosen the grip and the weight lightens.",
+   "links": []
+  },
+  {
+   "slug": "be-present",
+   "maxim": "Be present: the here and now is where life happens.",
+   "summary": "The past has gone and the future has not arrived. The present moment is the only place we can actually live, act and enjoy.",
+   "links": []
+  },
+  {
+   "slug": "take-care-of-yourself",
+   "maxim": "Treat yourself like someone you are responsible for helping.",
+   "summary": "We often care better for others than for ourselves. Extend the same kindness and discipline inward.",
+   "links": []
+  },
+  {
+   "slug": "embrace-the-struggle",
+   "maxim": "Find meaning in the struggle itself.",
+   "summary": "Sisyphus pushes his boulder up the hill forever. The ancient myth was a punishment; the modern reading asks whether the effort itself can be enough.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Sisyphus"
+   ]
+  },
+  {
+   "slug": "leave-it-better",
+   "maxim": "Leave things better than you found them.",
+   "summary": "A simple measure for a day, a campsite or a life: did the world come out a little ahead for your having passed through?",
+   "links": []
+  },
+  {
+   "slug": "keep-it-simple",
+   "maxim": "Keep it simple.",
+   "summary": "Complexity is costly and fragile. The simplest design that works is usually the one that lasts.",
+   "links": [
+    "https://en.wikipedia.org/wiki/KISS_principle"
+   ]
+  },
+  {
+   "slug": "vital-few",
+   "maxim": "A few causes drive most results (the 80/20 rule).",
+   "summary": "Effort and outcome are rarely in proportion. Find the vital few things that matter and give them your best attention.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Pareto_principle"
+   ]
+  },
+  {
+   "slug": "peter-principle",
+   "maxim": "People rise to their level of incompetence.",
+   "summary": "A gently humbling observation about organisations: we tend to be promoted until we land in a role we no longer do well. Know your strengths.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Peter_principle"
+   ]
+  },
+  {
+   "slug": "happiness-and-expectations",
+   "maxim": "Happiness is reality minus expectations.",
+   "summary": "A popular modern formula. When expectations outrun reality, disappointment fills the gap; holding them lightly leaves room for contentment.",
+   "links": []
+  },
+  {
+   "slug": "mastery",
+   "maxim": "Do your work wholeheartedly and with skill.",
+   "summary": "Whatever is in front of you, give it your full strength. Skill grows quietly out of repeated, careful effort, and in time it opens doors.",
+   "links": []
+  },
+  {
+   "slug": "pursue-meaning",
+   "maxim": "Pursue what is meaningful, not what is merely profitable.",
+   "summary": "Chase the thing that matters to you rather than the quick reward. A life built around meaning tends to carry its own momentum.",
+   "links": []
+  },
+  {
+   "slug": "growth-mindset",
+   "maxim": "Ability grows with effort; measure yourself against who you were yesterday.",
+   "summary": "Talents are a starting point, not a verdict. The useful comparison is with your own past self, and every honest effort moves the line.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Mindset_(book)"
+   ]
+  },
+  {
+   "slug": "paradox-of-choice",
+   "maxim": "More choice does not always mean more happiness.",
+   "summary": "An endless menu can leave us anxious and second-guessing. Sometimes choosing 'good enough' and letting go is the wiser path.",
+   "links": [
+    "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+   ]
+  },
+  {
+   "slug": "a-time-for-everything",
+   "maxim": "There is a time for everything; give your days a rhythm.",
+   "summary": "Life moves in seasons and cycles. A steady rhythm of rising, working, eating and resting makes room for everything else.",
+   "links": []
+  },
+  {
+   "slug": "tell-the-truth",
+   "maxim": "Tell the truth, or at least don't lie.",
+   "summary": "Honesty keeps our footing sure. Each small truth makes the world, and ourselves, a little easier to trust.",
+   "links": []
+  },
+  {
+   "slug": "thoughts-shape-life",
+   "maxim": "Your thoughts shape your life.",
+   "summary": "What we dwell on becomes the lens we see through, and then the ground we stand on. Tending the mind is tending the life.",
+   "links": []
+  }
+ ],
+ "quotes": [
+  {
+   "concept": "golden-rule",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "What you do not want done to yourself, do not do to others.",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 15 (Wei Ling Gong), tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/cache/epub/4094/pg4094.txt"
+  },
+  {
+   "concept": "golden-rule",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "That which is hateful to you do not do to another; that is the entire Torah, and the rest is its interpretation.",
+   "thinker": "Hillel the Elder",
+   "tradition": "judaism",
+   "era": "classical",
+   "work": "Babylonian Talmud, Shabbat 31a (William Davidson translation)",
+   "translation": "Sefaria / William Davidson translation (CC BY-NC)",
+   "source": "https://www.sefaria.org/Shabbat.31a"
+  },
+  {
+   "concept": "golden-rule",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",
+   "thinker": "Jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Matthew 7:12 (King James Version)",
+   "translation": "KJV (public domain)",
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+7%3A12&version=KJV"
+  },
+  {
+   "concept": "life-is-suffering",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Birth is stressful, aging is stressful, death is stressful; sorrow, lamentation, pain, distress, & despair are stressful.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammacakkappavattana Sutta (SN 56.11), tr. Thanissaro Bhikkhu",
+   "translation": "Thanissaro Bhikkhu (free distribution)",
+   "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+  },
+  {
+   "concept": "desire-is-the-root-of-suffering",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "The noble truth of the origination of stress: the craving that makes for further becoming.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammacakkappavattana Sutta (SN 56.11), tr. Thanissaro Bhikkhu",
+   "translation": "Thanissaro Bhikkhu (free distribution)",
+   "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+  },
+  {
+   "concept": "be-present",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "probable",
+   "text": "This is the real secret of life — to be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play.",
+   "thinker": "Alan Watts",
+   "tradition": "zen-western",
+   "era": "contemporary",
+   "work": "Attributed in The Essence of Alan Watts (1977), via Wikiquote; primary text not checked",
+   "source": "https://en.wikiquote.org/wiki/Alan_Watts"
+  },
+  {
+   "concept": "be-present",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "Our life is short; we must endeavour to gain the present time with best discretion and justice.",
+   "thinker": "Marcus Aurelius",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Meditations, Book IV, tr. Meric Casaubon",
+   "translation": "public-domain translation (Casaubon)",
+   "source": "https://www.gutenberg.org/ebooks/2680"
+  },
+  {
+   "concept": "take-care-of-yourself",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "probable",
+   "text": "Treat yourself like someone you are responsible for helping.",
+   "thinker": "Jordan B. Peterson",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "12 Rules for Life (2018), Rule 2 (rule title); checked via Wikipedia, not the book",
+   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+  },
+  {
+   "concept": "embrace-the-struggle",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "probable",
+   "text": "One must imagine Sisyphus happy.",
+   "thinker": "Albert Camus",
+   "tradition": "existentialism",
+   "era": "contemporary",
+   "work": "The Myth of Sisyphus (1942), English translation; checked via Wikipedia, not the book",
+   "source": "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus"
+  },
+  {
+   "concept": "leave-it-better",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "probable",
+   "text": "Leave this world a little better than you found it.",
+   "thinker": "Robert Baden-Powell",
+   "tradition": "scouting",
+   "era": "modern",
+   "work": "Last message to Scouts (published 1941); checked via Wikiquote, not the original",
+   "source": "https://en.wikiquote.org/wiki/Robert_Baden-Powell"
+  },
+  {
+   "concept": "keep-it-simple",
+   "rel": "expresses",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "Keep it simple, stupid.",
+   "thinker": "Kelly Johnson (reported)",
+   "tradition": "management",
+   "era": "contemporary",
+   "work": "Reportedly coined at Lockheed Skunk Works; attribution per Wikipedia",
+   "source": "https://en.wikipedia.org/wiki/KISS_principle"
+  },
+  {
+   "concept": "vital-few",
+   "rel": "expresses",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "For many outcomes, roughly 80% of consequences come from 20% of causes.",
+   "thinker": "Joseph M. Juran (after Vilfredo Pareto)",
+   "tradition": "management",
+   "era": "modern",
+   "work": "Pareto principle, as summarised by Wikipedia (paraphrase, not a direct quote)",
+   "source": "https://en.wikipedia.org/wiki/Pareto_principle"
+  },
+  {
+   "concept": "peter-principle",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "probable",
+   "text": "In a hierarchy, every employee tends to rise to his level of incompetence.",
+   "thinker": "Laurence J. Peter",
+   "tradition": "management",
+   "era": "contemporary",
+   "work": "The Peter Principle (1969); checked via Wikipedia, not the book",
+   "source": "https://en.wikipedia.org/wiki/Peter_principle"
+  },
+  {
+   "concept": "happiness-and-expectations",
+   "rel": "expresses",
+   "conf": 0.7,
+   "ver": "unverified",
+   "text": "Happiness equals reality minus expectations.",
+   "thinker": "Anonymous / popular saying",
+   "tradition": "popular",
+   "era": "contemporary",
+   "work": "Origin not established; widely circulated online",
+   "source": ""
+  },
+  {
+   "concept": "golden-rule",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "And as ye would that men should do to you, do ye also to them likewise.",
+   "thinker": "Jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Luke 6:31 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Luke+6%3A31&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "golden-rule",
+   "rel": "similar",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "Thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD.",
+   "thinker": "Hebrew Bible (Torah)",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Leviticus 19:18 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Leviticus+19%3A18&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "be-present",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof.",
+   "thinker": "Jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Matthew 6:34 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+6%3A34&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "be-present",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "Yet just as there is no time but the present, and no one except the all-and-everything, there is never anything to be gained—though the zest of the game is to pretend that there is.",
+   "thinker": "Alan Watts",
+   "tradition": "zen-western",
+   "era": "contemporary",
+   "work": "The Book (1966); checked via Wikiquote, not the book",
+   "source": "https://en.wikiquote.org/wiki/Alan_Watts"
+  },
+  {
+   "concept": "desire-is-the-root-of-suffering",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "From lust comes grief, from lust comes fear; he who is free from lust knows neither grief nor fear.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 215, tr. F. Max Müller",
+   "source": "https://www.gutenberg.org/ebooks/2017",
+   "translation": "public-domain translation (Müller)"
+  },
+  {
+   "concept": "desire-is-the-root-of-suffering",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "For the love of money is the root of all evil: which while some coveted after, they have erred from the faith, and pierced themselves through with many sorrows.",
+   "thinker": "Paul the Apostle",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "1 Timothy 6:10 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=1+Timothy+6%3A10&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "happiness-and-expectations",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "My third maxim was to endeavor always to conquer myself rather than fortune, and change my desires rather than the order of the world.",
+   "thinker": "René Descartes",
+   "tradition": "rationalism",
+   "era": "early-modern",
+   "work": "Discourse on Method (1637), Part III, tr. John Veitch",
+   "source": "https://www.gutenberg.org/ebooks/59",
+   "translation": "public-domain translation (Veitch)"
+  },
+  {
+   "concept": "keep-it-simple",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Our life is frittered away by detail. … Simplify, simplify.",
+   "thinker": "Henry David Thoreau",
+   "tradition": "transcendentalism",
+   "era": "modern",
+   "work": "Walden (1854), ch. 2",
+   "source": "https://www.gutenberg.org/ebooks/205"
+  },
+  {
+   "concept": "mastery",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Whatsoever thy hand findeth to do, do it with thy might; for there is no work, nor device, nor knowledge, nor wisdom, in the grave, whither thou goest.",
+   "thinker": "Qoheleth (the Preacher)",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Ecclesiastes 9:10 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Ecclesiastes+9%3A10&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "mastery",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 22:29 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Proverbs+22%3A29&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "mastery",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "misattributed",
+   "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+   "thinker": "Will Durant (often misattributed to Aristotle)",
+   "tradition": "philosophy-history",
+   "era": "modern",
+   "work": "The Story of Philosophy (1926), summarising Aristotle; listed as misattributed on Wikiquote",
+   "source": "https://en.wikiquote.org/wiki/Aristotle"
+  },
+  {
+   "concept": "pursue-meaning",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "probable",
+   "text": "Pursue what is meaningful (not what is expedient).",
+   "thinker": "Jordan B. Peterson",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "12 Rules for Life (2018), Rule 7 (rule title); checked via Wikipedia",
+   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+  },
+  {
+   "concept": "pursue-meaning",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "unverified",
+   "text": "Do what you love and the money will follow; if you say that getting the money is the most important thing, you will spend your life completely wasting your time.",
+   "thinker": "Alan Watts (popular attribution)",
+   "tradition": "zen-western",
+   "era": "contemporary",
+   "work": "Popular paraphrase of the 'What if money was no object?' talk; exact wording not traced",
+   "source": ""
+  },
+  {
+   "concept": "growth-mindset",
+   "rel": "expresses",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "Compare yourself to who you were yesterday, not to who someone else is today.",
+   "thinker": "Jordan B. Peterson",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "12 Rules for Life (2018), Rule 4 (rule title); checked via Wikipedia",
+   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+  },
+  {
+   "concept": "growth-mindset",
+   "rel": "expresses",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "People with a growth mindset believe their abilities can be developed through effort and learning.",
+   "thinker": "Carol S. Dweck",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "Mindset (2006): summary of the idea via Wikipedia (paraphrase, not a direct quote)",
+   "source": "https://en.wikipedia.org/wiki/Mindset_(book)"
+  },
+  {
+   "concept": "paradox-of-choice",
+   "rel": "expresses",
+   "conf": 0.8,
+   "ver": "probable",
+   "text": "Eliminating consumer choices can greatly reduce anxiety for shoppers.",
+   "thinker": "Barry Schwartz",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "The Paradox of Choice (2004): summary via Wikipedia (paraphrase, not a direct quote)",
+   "source": "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+  },
+  {
+   "concept": "a-time-for-everything",
+   "rel": "expresses",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "To every thing there is a season, and a time to every purpose under the heaven.",
+   "thinker": "Qoheleth (the Preacher)",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Ecclesiastes 3:1 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Ecclesiastes+3%3A1&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "a-time-for-everything",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "unverified",
+   "text": "Wake up and eat at the same time every day; structure and schedule support practice.",
+   "thinker": "Buddhist monastic routine (popular summary)",
+   "tradition": "buddhism",
+   "era": "contemporary",
+   "work": "From the owner's seed notes (video https://youtu.be/OevzUnEY5KQ); not checked against a text",
+   "source": ""
+  },
+  {
+   "concept": "tell-the-truth",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "probable",
+   "text": "Tell the truth – or, at least, don't lie.",
+   "thinker": "Jordan B. Peterson",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "12 Rules for Life (2018), Rule 8 (rule title); checked via Wikipedia",
+   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+  },
+  {
+   "concept": "leave-it-better",
+   "rel": "partial",
+   "conf": 0.5,
+   "ver": "probable",
+   "text": "Set your house in perfect order before you criticize the world.",
+   "thinker": "Jordan B. Peterson",
+   "tradition": "modern-psychology",
+   "era": "contemporary",
+   "work": "12 Rules for Life (2018), Rule 6 (rule title); checked via Wikipedia",
+   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+  },
+  {
+   "concept": "thoughts-shape-life",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "All that we are is the result of what we have thought: it is founded on our thoughts, it is made up of our thoughts.",
+   "thinker": "The Buddha",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada 1, tr. F. Max Müller",
+   "source": "https://www.gutenberg.org/ebooks/2017",
+   "translation": "public-domain translation (Müller)"
+  },
+  {
+   "concept": "thoughts-shape-life",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "And be not conformed to this world: but be ye transformed by the renewing of your mind.",
+   "thinker": "Paul the Apostle",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Romans 12:2 (KJV)",
+   "source": "https://www.biblegateway.com/passage/?search=Romans+12%3A2&version=KJV",
+   "translation": "King James Version (public domain)"
+  },
+  {
+   "concept": "thoughts-shape-life",
+   "rel": "partial",
+   "conf": 0.5,
+   "ver": "verified",
+   "text": "I think, therefore I am (COGITO ERGO SUM).",
+   "thinker": "René Descartes",
+   "tradition": "rationalism",
+   "era": "early-modern",
+   "work": "Discourse on Method (1637), Part IV, tr. John Veitch",
+   "source": "https://www.gutenberg.org/ebooks/59",
+   "translation": "public-domain translation (Veitch)"
+  }
+ ]
 }

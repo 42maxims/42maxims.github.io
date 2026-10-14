@@ -31,3 +31,8 @@
 - **unverified**: popular saying with no traceable origin. Allowed, shown with label, scores 0. Never upgrade without a source.
 - **disputed / misattributed**: credible sources disagree, or the attribution is known to be wrong (check Quote Investigator, Wikiquote "Misattributed"). Record the true origin if known.
 - Never paraphrase inside `text`; a paraphrase must say so in `work`. Never invent a citation. Modern authors: one or two sentences max. AI-assisted translations must say "AI-assisted translation" in `translation`.
+
+## Page model (since M0.1)
+- Each maxim page shows a **seed** expression at the top: the oldest-era quote, then the best verified one. Set `"seed": <index into that concept's quotes>` on the concept to override it. All other quotes follow under "Related expressions".
+- Near-duplicate sayings belong under the existing maxim as `similar`/`partial` quotes. Don't create a new concept for them.
+- Don't use the Guardian "digested read" as a source; it's satire. Use Wikipedia or the book for Peterson's rule titles.
