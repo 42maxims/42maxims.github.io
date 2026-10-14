@@ -2583,6 +2583,70 @@
    "work": "Ecclesiastes 6:9 (KJV)",
    "translation": "King James Version (public domain)",
    "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "listen-first",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "He that answereth a matter before he heareth it, it is folly and shame unto him.",
+   "thinker": "Book of Proverbs",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Proverbs 18:13 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "leave-it-better",
+   "rel": "similar",
+   "conf": 0.85,
+   "ver": "verified",
+   "text": "That man himself found a world full of carob trees. Just as my ancestors planted for me, I too am planting for my descendants.",
+   "thinker": "Anonymous (the carob planter, told of Honi HaMe'aggel)",
+   "tradition": "judaism",
+   "era": "classical",
+   "work": "Babylonian Talmud, Taanit 23a, William Davidson Edition (Koren-Steinsaltz)",
+   "translation": "William Davidson Edition English translation, CC BY-NC (via Sefaria)",
+   "source": "https://www.sefaria.org/Taanit.23a"
+  },
+  {
+   "concept": "embrace-the-struggle",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope:",
+   "thinker": "Paul the Apostle",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "Romans 5:3-4 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.gutenberg.org/ebooks/10"
+  },
+  {
+   "concept": "keep-it-simple",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "verified",
+   "text": "But simple views, and courses plain and true Would selfish ends and many lusts eschew.",
+   "thinker": "Laozi",
+   "tradition": "taoism",
+   "era": "axial",
+   "work": "Tao Te Ching, ch. 19, tr. James Legge (Legge's verse rendering)",
+   "translation": "public-domain translation (James Legge)",
+   "source": "https://www.gutenberg.org/ebooks/216"
+  },
+  {
+   "concept": "keep-it-simple",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "misattributed",
+   "text": "Simplicity is the ultimate sophistication.",
+   "thinker": "Unknown (often misattributed to Leonardo da Vinci)",
+   "tradition": "philosophy-history",
+   "era": "modern",
+   "work": "Popular attribution to Leonardo; Quote Investigator finds no evidence he said it (earliest Leonardo attribution c. 2000). Closest early match: Clare Boothe Luce, Stuffed Shirts (1931): \"the height of sophistication is simplicity.\"",
+   "source": "https://quoteinvestigator.com/2015/04/02/simple/"
   }
  ]
 }
