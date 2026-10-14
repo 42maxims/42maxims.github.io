@@ -1071,5 +1071,171 @@
    "https://quoteinvestigator.com/2013/05/23/campbell-treasure/",
    "https://en.wikipedia.org/wiki/Joseph_Campbell"
   ]
+ },
+ "7-habits": {
+  "title": "The 7 Habits of Highly Effective People",
+  "voice": "stephen-covey",
+  "kind": "book",
+  "dates": "1989",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Stephen R. Covey's self-help and business book, first published in 1989. It sets out seven habits for personal and working effectiveness and puts character ahead of technique.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People",
+   "https://www.franklincovey.com/habit-5/"
+  ]
+ },
+ "atomic-habits": {
+  "title": "Atomic Habits",
+  "voice": "james-clear",
+  "kind": "book",
+  "dates": "2018",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "James Clear's 2018 book on building good habits and breaking bad ones. Its central idea is that small, easy changes, repeated daily, add up to large ones and gradually reshape how we see ourselves.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Atomic_Habits",
+   "https://jamesclear.com/atomic-habits-summary"
+  ]
+ },
+ "the-obstacle-is-the-way": {
+  "title": "The Obstacle Is the Way",
+  "voice": "ryan-holiday",
+  "kind": "book",
+  "dates": "2014",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Ryan Holiday's 2014 book on turning obstacles into opportunities. Its title and theme come from a line in Marcus Aurelius's Meditations (V.20) about what stands in the way becoming the way.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way",
+   "https://dailystoic.com/obstacle-is-the-way/"
+  ]
+ },
+ "ego-is-the-enemy": {
+  "title": "Ego Is the Enemy",
+  "voice": "ryan-holiday",
+  "kind": "book",
+  "dates": "2016",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Ryan Holiday's fourth book, published in 2016, about how ego gets in the way of ambition, success and recovery from failure.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Ego_Is_the_Enemy"
+  ]
+ },
+ "subtle-art": {
+  "title": "The Subtle Art of Not Giving a F*ck",
+  "voice": "mark-manson",
+  "kind": "book",
+  "dates": "2016",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Mark Manson's 2016 self-help bestseller. It argues that struggle gives life its meaning and that chasing constant positivity only makes us feel worse.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Subtle_Art_of_Not_Giving_a_Fuck",
+   "https://en.wikiquote.org/wiki/Mark_Manson"
+  ]
+ },
+ "ted-radio-hour-shame": {
+  "title": "'Can We Gain Strength From Shame?' (TED Radio Hour)",
+  "voice": "brene-brown",
+  "kind": "speech",
+  "dates": "2013",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "A segment of NPR's TED Radio Hour, aired on 11 March 2013, in which Brené Brown talks with host Guy Raz about her research on shame and vulnerability. NPR publishes a transcript.",
+  "confidence": "solid",
+  "refs": [
+   "https://www.npr.org/transcripts/174033560"
+  ]
+ },
+ "mans-search-for-meaning": {
+  "title": "Man's Search for Meaning",
+  "voice": "viktor-frankl",
+  "kind": "book",
+  "dates": "1946",
+  "tradition": "modern-psychology",
+  "period": "modern",
+  "summary": "Viktor Frankl's 1946 account of his years as a prisoner in Nazi concentration camps, followed by an outline of logotherapy. It describes finding meaning through work, through love for another person, and through facing unavoidable suffering with dignity.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
+   "https://en.wikiquote.org/wiki/Man%27s_Search_for_Meaning"
+  ]
+ },
+ "the-power-of-now": {
+  "title": "The Power of Now",
+  "voice": "eckhart-tolle",
+  "kind": "book",
+  "dates": "1997",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Eckhart Tolle's 1997 guide to living in the present moment, with simple exercises in self-observation. Oprah Winfrey recommended it, and it has been translated into 33 languages.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Power_of_Now",
+   "https://en.wikiquote.org/wiki/The_Power_of_Now"
+  ]
+ },
+ "naval-podcast": {
+  "title": "Naval (podcast)",
+  "voice": "naval-ravikant",
+  "kind": "other",
+  "dates": "2018–present",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Naval Ravikant's podcast, published with transcripts at nav.al, with short episodes on happiness, wealth and philosophy. The 2020 series on happiness includes the episode 'Desire Is a Contract You Make to Be Unhappy'.",
+  "confidence": "thin",
+  "refs": [
+   "https://nav.al/desire",
+   "https://en.wikipedia.org/wiki/Naval_Ravikant"
+  ]
+ },
+ "fear-setting": {
+  "title": "'Fear-Setting' (blog post)",
+  "voice": "tim-ferriss",
+  "kind": "other",
+  "dates": "2017",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "A 2017 post on Tim Ferriss's blog, adapted from chapters of The 4-Hour Workweek (2007) and Tools of Titans (2016). It sets out his 'fear-setting' exercise of naming the worst case, accepting it and acting anyway.",
+  "confidence": "solid",
+  "refs": [
+   "https://tim.blog/2017/05/15/fear-setting/",
+   "https://en.wikipedia.org/wiki/The_4-Hour_Workweek"
+  ]
+ },
+ "huberman-lab": {
+  "title": "Huberman Lab (podcast)",
+  "voice": "andrew-huberman",
+  "kind": "other",
+  "dates": "2021–present",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Andrew Huberman's health and science podcast, which began in 2021. Episodes come with show notes, timestamps and transcripts on hubermanlab.com; the 22 November 2021 solo episode covers the science of gratitude.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Andrew_Huberman",
+   "https://www.hubermanlab.com/episode/the-science-of-gratitude-and-how-to-build-a-gratitude-practice"
+  ]
+ },
+ "extreme-ownership-tedx": {
+  "title": "'Extreme Ownership' (TEDxUniversityofNevada talk)",
+  "voice": "jocko-willink",
+  "kind": "speech",
+  "dates": "2017",
+  "tradition": "management",
+  "period": "contemporary",
+  "summary": "Jocko Willink's TEDx talk at the University of Nevada, published in February 2017. He describes a confused 2006 operation in Ramadi, Iraq, and how taking full responsibility for it, rather than blaming others, earned his commander's trust.",
+  "confidence": "solid",
+  "refs": [
+   "https://singjupost.com/jocko-willink-on-extreme-ownership-at-tedxuniversityofnevada-transcript/",
+   "https://en.wikipedia.org/wiki/Jocko_Willink"
+  ]
  }
 }

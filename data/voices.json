@@ -777,5 +777,146 @@
    "https://en.wikipedia.org/wiki/Joseph_Campbell",
    "https://www.jcf.org/learn/joseph-campbell-follow-your-bliss"
   ]
+ },
+ "stephen-covey": {
+  "name": "Stephen R. Covey",
+  "kind": "person",
+  "dates": "1932–2012",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Stephen R. Covey was an American educator, author and speaker, and a professor at Utah State University's Jon M. Huntsman School of Business at the time of his death. His best-known book is The 7 Habits of Highly Effective People (1989), and in 1996 Time magazine named him one of the 25 most influential people.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Stephen_Covey",
+   "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People"
+  ]
+ },
+ "james-clear": {
+  "name": "James Clear",
+  "kind": "person",
+  "dates": "born 1986",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "James Clear is an American writer, raised in Hamilton, Ohio, who writes about habits and decision-making. He is best known for Atomic Habits (2018), which argues that small, steady changes in behaviour add up to lasting change.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/James_Clear",
+   "https://en.wikipedia.org/wiki/Atomic_Habits"
+  ]
+ },
+ "ryan-holiday": {
+  "name": "Ryan Holiday",
+  "kind": "person",
+  "dates": "born 1987",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Ryan Holiday is an American author and marketer who has done much to bring Stoic philosophy, especially that of Marcus Aurelius, to a modern popular readership. His books include The Obstacle Is the Way (2014) and Ego Is the Enemy (2016).",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Ryan_Holiday",
+   "https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way"
+  ]
+ },
+ "mark-manson": {
+  "name": "Mark Manson",
+  "kind": "person",
+  "dates": "born 1984",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Mark Manson is an American self-help author and blogger. His bestseller The Subtle Art of Not Giving a F*ck (2016) argues that life's struggles give it meaning and pushes back against relentless positive thinking.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mark_Manson",
+   "https://en.wikipedia.org/wiki/The_Subtle_Art_of_Not_Giving_a_Fuck"
+  ]
+ },
+ "brene-brown": {
+  "name": "Brené Brown",
+  "kind": "person",
+  "dates": "born 1965",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Brené Brown is an American academic, author and podcaster who holds an endowed chair at the University of Houston's Graduate College of Social Work. She is known for her research on shame, vulnerability and courage, for her widely viewed 2010 TEDx talk 'The power of vulnerability', and for books such as Daring Greatly (2012).",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Bren%C3%A9_Brown",
+   "https://www.ted.com/talks/brene_brown_the_power_of_vulnerability"
+  ]
+ },
+ "viktor-frankl": {
+  "name": "Viktor E. Frankl",
+  "kind": "person",
+  "dates": "1905–1997",
+  "tradition": "modern-psychology",
+  "period": "modern",
+  "summary": "Viktor Frankl was an Austrian neurologist and psychiatrist who survived the Nazi concentration camps. He founded logotherapy, a school of psychotherapy that sees the search for meaning as the central human motivation, and described his camp experiences in Man's Search for Meaning (1946).",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Viktor_Frankl",
+   "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning"
+  ]
+ },
+ "eckhart-tolle": {
+  "name": "Eckhart Tolle",
+  "kind": "person",
+  "dates": "born 1948",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Eckhart Tolle, born Ulrich Leonard Tölle in Lünen, Germany, is a spiritual teacher and self-help author not tied to any particular religion. His books The Power of Now (1997) and A New Earth (2005) invite readers to rest their attention in the present moment.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Eckhart_Tolle",
+   "https://en.wikipedia.org/wiki/The_Power_of_Now"
+  ]
+ },
+ "naval-ravikant": {
+  "name": "Naval Ravikant",
+  "kind": "person",
+  "dates": "born 1974",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Naval Ravikant is an Indian-born American entrepreneur and investor, co-founder and chairman of AngelList. He hosts his own podcast on philosophy, happiness and wealth, and has been a guest on The Joe Rogan Experience and The Tim Ferriss Show.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Naval_Ravikant",
+   "https://nav.al/desire"
+  ]
+ },
+ "tim-ferriss": {
+  "name": "Tim Ferriss",
+  "kind": "person",
+  "dates": "born 1977",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Tim Ferriss is an American entrepreneur, investor, author and podcaster, host of The Tim Ferriss Show. He is known for his 4-Hour series of books, beginning with The 4-Hour Workweek (2007), and for his exercise of 'fear-setting', which he draws from Stoic writers such as Seneca.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Tim_Ferriss",
+   "https://tim.blog/2017/05/15/fear-setting/"
+  ]
+ },
+ "andrew-huberman": {
+  "name": "Andrew Huberman",
+  "kind": "person",
+  "dates": "born 1975",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Andrew Huberman is an American neuroscientist and associate professor of neurobiology and ophthalmology at the Stanford University School of Medicine. Since 2021 he has hosted the widely heard Huberman Lab podcast on health and science; some scientists have criticised claims made on it as poorly evidenced.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Andrew_Huberman"
+  ]
+ },
+ "jocko-willink": {
+  "name": "Jocko Willink",
+  "kind": "person",
+  "dates": "born 1971",
+  "tradition": "management",
+  "period": "contemporary",
+  "summary": "Jocko Willink is an American author, podcaster and retired U.S. Navy SEAL officer who served in the Iraq War. He co-wrote Extreme Ownership (2015) with Leif Babin, and after appearing on the podcasts of Tim Ferriss, Joe Rogan and Sam Harris he started the Jocko Podcast in 2015.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Jocko_Willink"
+  ]
  }
 }
