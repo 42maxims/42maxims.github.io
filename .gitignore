@@ -1,2 +1,1 @@
-hugo
-*.tar.gz
+__pycache__/

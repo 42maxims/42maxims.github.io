@@ -1,0 +1,11 @@
+# Decisions log
+- 2026-10-14 Name "42 Maxims"; domain 42maxims.com (later; not bought).
+- 2026-10-14 Host on GitHub Pages with simple tools; publish directly to `master`.
+- 2026-10-14 Anonymous author (account 42maxims, "Max Ims"); accept pull requests.
+- 2026-10-14 English first; AI-assisted translations for non-English sources, clearly labelled; other languages later.
+- 2026-10-14 Include modern/living thinkers with short attributed quotes.
+- 2026-10-14 Ranking: SPEC diversity-over-count scoring (3.0 per tradition, 1.5 per era, derives_from at 0.5).
+- 2026-10-14 Voice: warm and reflective.
+- 2026-10-14 Own content licensed CC BY-SA 4.0.
+- 2026-10-14 M0 built as plain Python + static HTML (not Astro/Cloudflare) to keep tools simple; 2018 Hugo draft kept at tag `draft-2018`.
+- Roadmap-aligned PRs may be merged by the portfolio agent; deploys, spend and domain need the owner.

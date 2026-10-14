@@ -1,0 +1,101 @@
+{
+ "golden-rule": {
+  "Q": 2.8499999999999996,
+  "K": 2.8499999999999996,
+  "T": 2.375,
+  "R": 2,
+  "E": 13.161267449913106,
+  "traditions": 3,
+  "moral_rank": 100.0
+ },
+ "life-is-suffering": {
+  "Q": 0.9,
+  "K": 0.9,
+  "T": 0.9,
+  "R": 1,
+  "E": 5.7905371842229085,
+  "traditions": 1,
+  "moral_rank": 44.0
+ },
+ "desire-is-the-root-of-suffering": {
+  "Q": 0.9,
+  "K": 0.9,
+  "T": 0.9,
+  "R": 1,
+  "E": 5.7905371842229085,
+  "traditions": 1,
+  "moral_rank": 44.0
+ },
+ "be-present": {
+  "Q": 1.1,
+  "K": 1.1,
+  "T": 1.1,
+  "R": 2,
+  "E": 8.09074619289953,
+  "traditions": 2,
+  "moral_rank": 61.5
+ },
+ "take-care-of-yourself": {
+  "Q": 0.95,
+  "K": 0.95,
+  "T": 0.95,
+  "R": 1,
+  "E": 5.992508807056551,
+  "traditions": 1,
+  "moral_rank": 45.5
+ },
+ "embrace-the-struggle": {
+  "Q": 0.54,
+  "K": 0.54,
+  "T": 0.54,
+  "R": 1,
+  "E": 4.286629339260491,
+  "traditions": 1,
+  "moral_rank": 32.6
+ },
+ "leave-it-better": {
+  "Q": 0.54,
+  "K": 0.54,
+  "T": 0.54,
+  "R": 1,
+  "E": 4.286629339260491,
+  "traditions": 1,
+  "moral_rank": 32.6
+ },
+ "keep-it-simple": {
+  "Q": 0.48,
+  "K": 0.48,
+  "T": 0.48,
+  "R": 1,
+  "E": 4.024862410803575,
+  "traditions": 1,
+  "moral_rank": 30.6
+ },
+ "vital-few": {
+  "Q": 0.48,
+  "K": 0.48,
+  "T": 0.48,
+  "R": 1,
+  "E": 4.024862410803575,
+  "traditions": 1,
+  "moral_rank": 30.6
+ },
+ "peter-principle": {
+  "Q": 0.54,
+  "K": 0.54,
+  "T": 0.54,
+  "R": 1,
+  "E": 4.286629339260491,
+  "traditions": 1,
+  "moral_rank": 32.6
+ },
+ "happiness-and-expectations": {
+  "Q": 0.0,
+  "K": 0,
+  "T": 0.0,
+  "R": 0,
+  "E": 0.0,
+  "traditions": 0,
+  "moral_rank": 0.0
+ }
+}
