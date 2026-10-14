@@ -205,7 +205,8 @@ for c in D["concepts"]:
     if rest:
         body += f'<h3>Related expressions</h3><ul class="quotes">{"".join(related(q) for q in rest)}</ul>'
     body += (f'<h3>Score</h3><p>Moral Rank <strong>{MR[c["slug"]]:.1f}</strong> · Evidence E = {b["E"]:.2f}</p>'
-             + FORMULA + score_terms(b, c["slug"], qs))
+             + f'<p class="formula"><code>E = ln(1+{b["Q"]:.2f}) + √{b["K"]:.2f} + 3·{b["T"]:.2f} + 1.5·{b["R"]} = {b["E"]:.2f}</code></p>'
+             + '<p class="howto"><small><a href="../../method/">How this is scored</a></small></p>')
     links = "".join(f'<li><a href="{esc(u)}">{esc(u)}</a></li>' for u in c.get("links", []))
     if links:
         body += f"<h3>Further reading</h3><ul>{links}</ul>"
