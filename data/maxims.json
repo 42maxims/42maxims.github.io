@@ -142,7 +142,8 @@
    "summary": "Effort and outcome are rarely in proportion. Find the vital few things that matter and give them your best attention.",
    "links": [
     "https://en.wikipedia.org/wiki/Pareto_principle"
-   ]
+   ],
+   "hold": "The older quotes here (Marcus Aurelius, Luke 10) echo only the 'focus on what matters' half of this idea, not the claim that a few causes drive most results, so it waits in Emerging until a closer independent source is found."
   },
   {
    "slug": "peter-principle",
@@ -2079,27 +2080,27 @@
   },
   {
    "concept": "vital-few",
-   "rel": "similar",
-   "conf": 0.75,
+   "rel": "partial",
+   "conf": 0.35,
    "ver": "verified",
    "text": "Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.",
    "thinker": "Marcus Aurelius",
    "tradition": "stoicism",
    "era": "classical",
-   "work": "Meditations IV.24, tr. George Long",
+   "work": "Meditations IV.24, tr. George Long (kept as a related saying about focus; not used as independent attestation of the 80/20 rule)",
    "translation": "public-domain translation (George Long)",
    "source": "https://www.gutenberg.org/ebooks/15877"
   },
   {
    "concept": "vital-few",
    "rel": "partial",
-   "conf": 0.6,
+   "conf": 0.35,
    "ver": "verified",
    "text": "Martha, Martha, thou art careful and troubled about many things: But one thing is needful:",
    "thinker": "Jesus",
    "tradition": "christianity",
    "era": "classical",
-   "work": "Luke 10:41-42 (KJV)",
+   "work": "Luke 10:41-42 (KJV) (kept as a related saying about focus; not used as independent attestation of the 80/20 rule)",
    "translation": "King James Version (public domain)",
    "source": "https://www.biblegateway.com/passage/?search=Luke+10%3A41-42&version=KJV"
   },

@@ -17,7 +17,7 @@
    {"concept": "<concept slug>", "rel": "expresses|similar|partial|contrasts", "conf": 0.0-1.0,
     "ver": "verified|probable|disputed|unverified|misattributed",
     "text": "exact wording from the source", "thinker": "Name or Anonymous",
-    "tradition": "<key in traditions>", "era": "axial|classical|medieval|early-modern|modern|contemporary",
+    "tradition": "<key in traditions>", "era": "axial|classical|medieval|early-modern|modern|contemporary"  # shown as periods: Ancient (before 200 BCE), Classical (200 BCE–600 CE), Medieval (600–1500), Early modern (1500–1800), Modern (1800–1950), Contemporary (1950–today),
     "work": "Title, chapter/verse, translator", "translation": "optional: translator/licence, or 'AI-assisted (labelled)'",
     "source": "URL where the exact wording can be read, or \"\" if none"}
    ```
@@ -33,6 +33,6 @@
 - Never paraphrase inside `text`; a paraphrase must say so in `work`. Never invent a citation. Modern authors: one or two sentences max. AI-assisted translations must say "AI-assisted translation" in `translation`.
 
 ## Page model (since M0.1)
-- Each maxim page shows a **seed** expression at the top: the oldest-era quote, then the best verified one. Set `"seed": <index into that concept's quotes>` on the concept to override it. All other quotes follow under "Related expressions".
+- Each maxim page shows a **seed** expression at the top: the oldest-period quote, then the best verified one. Set `"seed": <index into that concept's quotes>` on the concept to override it. All other quotes follow under "Related expressions".
 - Near-duplicate sayings belong under the existing maxim as `similar`/`partial` quotes. Don't create a new concept for them.
 - Don't use the Guardian "digested read" as a source; it's satire. Use Wikipedia or the book for Peterson's rule titles.

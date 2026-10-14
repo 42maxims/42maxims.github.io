@@ -16,8 +16,10 @@ VER_TITLE = {"verified": "Checked against a primary text or reputable translatio
              "disputed": "Credible sources disagree about this attribution",
              "unverified": "No traceable origin yet; scores zero",
              "misattributed": "Attribution known to be wrong; scores zero"}
-ERA_LABEL = {"axial": "Axial age", "classical": "Classical", "medieval": "Medieval",
-             "early-modern": "Early modern", "modern": "Modern", "contemporary": "Contemporary"}
+# Display name for the data field "era": shown as a "period" with explicit dates (SPEC §5.1 buckets).
+ERA_LABEL = {"axial": "Ancient (before 200 BCE)", "classical": "Classical (200 BCE – 600 CE)",
+             "medieval": "Medieval (600 – 1500)", "early-modern": "Early modern (1500 – 1800)",
+             "modern": "Modern (1800 – 1950)", "contemporary": "Contemporary (1950 – today)"}
 
 CSS = """:root{--bg:#fbf7ef;--card:#fffdf8;--fg:#2e2a25;--muted:#6f655a;--accent:#8a5a2b;--accent-soft:#c9a46a;
 --line:#e7ddcc;--chip:#f1e8d8;
@@ -118,7 +120,7 @@ def row(c, i):
     plural = lambda n, w: f"{n} {w}{'' if n == 1 else 's'}"
     return (f'<tr><td class="n">{i}</td><td class="m"><a href="maxims/{c["slug"]}/">{esc(c["maxim"])}</a>'
             f'<div class="chips"><span class="chip">{plural(len(qs), "quote")}</span><span class="chip">{plural(thinkers, "voice")}</span>'
-            f'<span class="chip">{plural(b["traditions"], "tradition")}</span><span class="chip">{plural(b["R"], "era")}</span></div></td>'
+            f'<span class="chip">{plural(b["traditions"], "tradition")}</span><span class="chip">{plural(b["R"], "period")}</span></div></td>'
             f'<td class="s">{MR[c["slug"]]:.1f}</td></tr>')
 
 
@@ -127,15 +129,16 @@ def table(cs):
             + "".join(row(c, i + 1) for i, c in enumerate(cs)) + "</table>")
 
 
-main = [c for c in order if BD[c["slug"]]["traditions"] >= 2][:TOP_N]
-emerging = [c for c in order if BD[c["slug"]]["traditions"] < 2]
+qualifying = [c for c in order if BD[c["slug"]]["traditions"] >= 2 and not c.get("hold")]
+main = qualifying[:TOP_N]
+emerging = [c for c in order if c not in main]
 body = ('<p class="lede">Some ideas keep turning up, in different centuries and different languages, from people who never met. '
         "This is a slow, careful collection of them: each maxim with its sources, ranked by how widely and independently humanity has arrived at it.</p>"
         "<h2>The 42</h2><p class=\"sub\">The 42 highest-ranked maxims</p>"
-        f'<p class="note">The list shows the top {TOP_N} once there are enough; for now it holds every maxim that at least two traditions share. '
-        "This is an early seed, and rankings will move as sources are added.</p>"
+        f'<p class="note">{len(qualifying)} maxims are now shared by at least two independent traditions; these are the {len(main)} that rank highest among them. '
+        "It is still an early collection, and the order will keep shifting gently as new sources are found.</p>"
         + table(main) +
-        "<h2>Emerging</h2><p>Maxims supported by only one tradition so far. They can join The 42 once a second, independent tradition is sourced.</p>"
+        "<h2>Emerging</h2><p>Maxims that just missed The 42, plus those supported by only one tradition so far (or whose second source is still too loose a match). They can join once ranked high enough or once a second, independent tradition is sourced.</p>"
         + table(emerging))
 write("index.html", page("42 Maxims — rules for life, with sources", body, 0))
 
@@ -182,7 +185,7 @@ def score_terms(b=None, slug=None, qs=()):
         f"<strong>T</strong> adds up the distinct traditions, each counted at its strongest quote, with weight {W_T:g}. "
         "A tradition that grew out of another tradition already supporting the maxim (for example Christianity from Judaism) counts half (0.5)."
         + (v(f"T = {b['T']:.2f} → {W_T:g}·T = {W_T * b['T']:.2f}") + tdetail if b else ""),
-        f"<strong>R</strong> is the number of distinct eras with at least one quote weighing 0.3 or more, with weight {W_R:g}."
+        f"<strong>R</strong> is the number of distinct time periods (listed below) with at least one quote weighing 0.3 or more, with weight {W_R:g}."
         + (v(f"R = {b['R']} → {W_R:g}·R = {W_R * b['R']:.2f}") if b else ""),
         "<strong>Moral Rank</strong> divides E by the highest E on the site and scales to 100, so the best-supported maxim scores 100. "
         "Concepts are not linked to one another yet, so nothing propagates between them."
@@ -201,6 +204,8 @@ for c in D["concepts"]:
         body += (f'<figure class="seed"><blockquote>“{esc(s["text"])}”</blockquote>'
                  f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}</figcaption></figure>')
     body += f'<p class="summary">{esc(c["summary"])}</p>'
+    if c.get("hold"):
+        body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
     rest = [q for i, q in enumerate(qs) if i != si]
     if rest:
         body += f'<h3>Related expressions</h3><ul class="quotes">{"".join(related(q) for q in rest)}</ul>'
@@ -220,13 +225,15 @@ legend = "".join(f"<dt>{pill(k)}</dt><dd>{d}</dd>" for k, d in [
     ("misattributed", "The saying is real but the attribution is known to be wrong. We show it because people will look for it, "
                       "record the true origin where known, and give it no weight.")])
 
+PERIODS = "".join(f"<li>{ERA_LABEL[e]}</li>" for e in ERA_ORDER)
 write("method/index.html", page("Method — 42 Maxims", f"""<h2>How Moral Rank works</h2>
 <p>Moral Rank asks one question: <strong>how widely, independently and reliably has humanity arrived at this idea?</strong></p>
-<p>Breadth matters more than volume: each independent tradition adds a lot, each era adds a good deal, while extra quotes and thinkers add less and less.</p>
+<p>Breadth matters more than volume: each independent tradition adds a lot, each time period adds a good deal, while extra quotes and thinkers add less and less.</p>
 {FORMULA}
 {score_terms()}
 <p>The score measures <em>convergence</em>, not truth or moral worth. We never rank traditions or thinkers, only ideas.
 Full details are in <a href="https://github.com/42maxims/42maxims.github.io/blob/master/SPEC.md">the spec</a>.</p>
+<h3>Time periods</h3><p>Each quote is placed in one period by when it was written or first recorded:</p><ul>{PERIODS}</ul>
 <h3>Verification labels</h3><dl class="legend">{legend}</dl>
 <p>Translations of non-English texts are public-domain or credited translations. Where we make our own, they are AI-assisted and labelled as such.</p>""", 1))
 
