@@ -126,19 +126,28 @@ order = sorted(D["concepts"], key=lambda c: (-MR[c["slug"]], -BD[c["slug"]]["T"]
 write("data/generated/scores.json", json.dumps({s: dict(BD[s], moral_rank=round(MR[s], 1)) for s in MR}, indent=1))
 
 
-def row(c, i):
+def reason(c):
+    if c.get("hold"):
+        return "awaiting a stronger second source"
+    if BD[c["slug"]]["traditions"] < 2:
+        return "awaiting a second tradition"
+    return f"ranked just below the top {TOP_N}"
+
+
+def row(c, i, why=False):
     b = BD[c["slug"]]; qs = quotes_by.get(c["slug"], [])
     thinkers = len({q["thinker"] for q in qs})
     plural = lambda n, w: f"{n} {w}{'' if n == 1 else 's'}"
     return (f'<tr><td class="n">{i}</td><td class="m"><a href="maxims/{c["slug"]}/">{esc(c["maxim"])}</a>'
             f'<div class="chips"><span class="chip">{plural(len(qs), "quote")}</span><span class="chip">{plural(thinkers, "voice")}</span>'
-            f'<span class="chip">{plural(b["traditions"], "tradition")}</span><span class="chip">{plural(b["R"], "period")}</span></div></td>'
+            f'<span class="chip">{plural(b["traditions"], "tradition")}</span><span class="chip">{plural(b["R"], "period")}</span>'
+            + (f'<span class="chip why">{reason(c)}</span>' if why else '') + '</div></td>'
             f'<td class="s">{MR[c["slug"]]:.1f}</td></tr>')
 
 
-def table(cs):
+def table(cs, why=False):
     return ('<table><tr><th>#</th><th>Maxim</th><th class="s">Moral Rank</th></tr>'
-            + "".join(row(c, i + 1) for i, c in enumerate(cs)) + "</table>")
+            + "".join(row(c, i + 1, why) for i, c in enumerate(cs)) + "</table>")
 
 
 qualifying = [c for c in order if BD[c["slug"]]["traditions"] >= 2 and not c.get("hold")]
@@ -150,8 +159,8 @@ body = ('<p class="lede">Some ideas keep turning up, in different centuries and 
         f'<p class="note">{len(qualifying)} maxims are now shared by at least two independent traditions; these are the {len(main)} that rank highest among them. '
         "It is still an early collection, and the order will keep shifting gently as new sources are found.</p>"
         + table(main) +
-        "<h2>Emerging</h2><p>Maxims that just missed The 42, plus those supported by only one tradition so far (or whose second source is still too loose a match). They can join once ranked high enough or once a second, independent tradition is sourced.</p>"
-        + table(emerging))
+        "<h2>Emerging</h2><p>Maxims just outside The 42. Some rank just below the top; others are waiting for stronger backing from a second tradition. Each is marked with its reason, and any of them can join as new sources are found.</p>"
+        + table(emerging, True))
 write("index.html", page("42 Maxims — rules for life, with sources", body, 0))
 
 

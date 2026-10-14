@@ -57,7 +57,7 @@ The long-term feel is a mix of Wikipedia (sourced, neutral, readable), Obsidian 
 1. **The 42** (`/`): a short introduction, then a table of the 42 highest-ranked qualifying maxims. Each row shows rank, maxim, Moral Rank and small chips (quotes, voices, traditions, periods).
    - **Qualifying** means supported by at least two distinct traditions with a quote that scores above zero, and not on hold.
    - **Hold flag:** a maxim can carry `"hold": "<reason>"` in `data/maxims.json`. It is kept out of The 42, and its page shows "On hold for The 42" with the reason (e.g. when the second tradition's quote is too loose a match and a closer source is still being sought).
-   - **Emerging:** every other maxim, ranked by score: those that just missed the top 42, those with only one tradition so far, and those on hold.
+   - **Emerging:** every other maxim, ranked by score: those that just missed the top 42, those with only one tradition so far, and those on hold. Each Emerging row carries a reason chip ("ranked just below the top 42", "awaiting a second tradition" or "awaiting a stronger second source").
 2. **Maxim page** (`/maxims/<slug>/`):
    - the maxim;
    - the **seed** expression at the top: the quote from the oldest time period, then the best-verified one; the concept's `"seed": <index>` overrides the choice;
