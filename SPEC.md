@@ -1,169 +1,136 @@
 # 42 Maxims: Product & Build Spec
 
-**Owner:** the project owner · **Build lead:** Devsy (dev-manager bot) briefing Claude Code
-**Repo (placeholder):** `42maxims/42maxims.github.io` · **Status:** Draft v0.1 (2026-10-14)
-**Working name:** 42 Maxims. "42" is the brand, not a limit. The catalogue has no fixed size.
+**Owner:** the project owner (anonymous) · **Maintainer identity:** Max Ims (GitHub `42maxims`) · **Build lead:** Devsy (dev-manager bot) briefing Claude Code
+**Repo:** `42maxims/42maxims.github.io` · **Live:** https://42maxims.github.io · **Status:** v0.2, rewritten to match the site as built (2026-10-14)
+**Working name:** 42 Maxims. "42" is the brand and the size of the main list (The 42), not a limit on the catalogue.
+
+Throughout this spec, **[Built]** marks what exists on the live site today and **[Planned]** marks the long-term vision. Where the built site differs from an earlier plan, the built version is described and the plan is kept as [Planned].
 
 ---
 
 ## 1. What we're building
 
-42 Maxims is a published knowledge graph of how to live. Each **Quote** (from a philosopher, thinker or religious/wisdom text) gets:
+42 Maxims is a published, sourced collection of the rules for living that humanity keeps rediscovering. Each **maxim** (a short core rule such as "Treat others as you would wish to be treated") gathers **quotes** from philosophers, thinkers, religious and wisdom texts, and popular sayings that express it. Many quotes from different traditions and periods point to the same maxim.
 
-- its exact text,
-- a translation where needed,
-- a precise source (work, chapter, verse),
-- a verification status,
-- a short plain-English explanation.
+Each quote has:
+- its exact wording (never paraphrased; a paraphrase must say so) [Built],
+- a translator or translation note where needed [Built],
+- a precise source (work, chapter, verse) and a URL where the wording can be read [Built],
+- an honest verification label [Built],
+- links to its **voice** (who said it) and **source** (which work it is from) [Built],
+- a short plain-English explanation of its own [Planned].
 
-Each quote links to one or more **Concepts**. A Concept is a short core maxim such as "Treat others as you would wish to be treated". Many quotes from different traditions point to the same Concept.
+The headline view is **The 42**: the 42 highest-ranked maxims by **Moral Rank**, a score that rewards broad, independent agreement across thinkers, traditions and time periods more than a raw count of quotes.
 
-The headline view is the **Scoreboard**, which ranks Concepts by **Moral Rank**. Moral Rank is a PageRank-style score. It rewards broad, independent agreement across thinkers, traditions and eras more than a raw count of quotes.
+The long-term feel is a mix of Wikipedia (sourced, neutral, readable), Obsidian (backlinks and a local graph on every page) and a published mind map you can explore. Today the site is the sourced, neutral, readable part; the graph is [Planned].
 
-The site should feel like a mix of Wikipedia (sourced, neutral, readable), Obsidian (backlinks and a local graph on every page) and a published Roam-style mind map (an interactive graph you can explore).
-
-**Why agents do the work:** the owner tried this by hand in Obsidian and it took too much manual effort. In this version, agents ingest, source, verify and cluster. the owner stays the editor. He approves concept definitions and merges through GitHub PRs.
+**Why agents do the work:** an earlier attempt to do this by hand in Obsidian took too much manual effort. In this version, agents find, source, verify and cluster quotes, and the project owner stays the editor, approving new maxims, merges and scoring changes through GitHub pull requests.
 
 ### Primary user journey (SEO entry)
-1. A visitor searches for a specific quote, e.g. *"what you do not want done to yourself, do not do to others"*.
-2. They land on its **Quote page**, which shows the exact text, translation, source citation, verification badge and explanation.
-3. The page leads them **up** to the parent **Concept** (the Golden Rule), which has its Moral Rank, definition and **sibling quotes** from other traditions.
-4. From there they can move **across** to Thinker and Tradition pages or the graph, or subscribe to "a maxim a week".
+1. A visitor searches for a quote, e.g. *"what you do not want done to yourself, do not do to others"*.
+2. [Built] They land on the **maxim page** that holds it (the Golden Rule), with the seed expression on top, all related expressions below, each with its source, label, voice and work.
+3. [Built] From there they move **across** to Voice and Source pages, or **back** to The 42.
+4. [Planned] Dedicated per-quote pages, Tradition pages, a graph view, and "a maxim a week" signup.
 
 ---
 
-## 2. Goals & success metrics
+## 2. Goals & success metrics [Planned targets]
 
-| Goal | Metric | MVP target (≈3 months after launch) |
+| Goal | Metric | Target (≈3 months after launch) |
 |---|---|---|
-| Trustworthy | % of published quotes with status `verified` and a primary-source citation | ≥ 90% (rest clearly badged) |
-| Trustworthy | Misattributions published as genuine | 0 (misattributions get a "misattributed" page) |
-| Findable | Indexed quote pages in Google Search Console | ≥ 150 of ~200 |
+| Trustworthy | % of published quotes `verified` with a primary-source citation | ≥ 90% (rest clearly labelled) |
+| Trustworthy | Misattributions published as genuine | 0 (misattributions are labelled `misattributed`) |
+| Findable | Indexed pages in Google Search Console | ≥ 150 |
 | Findable | Organic clicks per month | 1,000 (directional) |
-| Climb-up journey works | % of quote-page sessions that go on to a Concept page | ≥ 25% |
-| Engaging | Graph view interactions per session (among those who open it) | ≥ 3 node clicks |
+| Engaging | % of visits that open a second page | ≥ 25% |
 | Audience | Newsletter subscribers | 500 |
-| Low-touch for the owner | the owner's review time per week | ≤ 2 h; PRs reviewable in < 10 min each |
-| Pipeline quality | % of agent-proposed concept links the owner accepts unchanged | ≥ 70% (tracks clustering quality) |
+| Low-touch | Owner review time per week | ≤ 2 h; PRs reviewable in < 10 min each |
+| Pipeline quality | % of agent-proposed quote→maxim links accepted unchanged | ≥ 70% |
 
-**Non-goals for MVP:** user accounts, comments, user-submitted quotes, mobile app, multi-language UI, and real-time editing.
+**Non-goals for now:** user accounts, comments, in-site submissions (contributions come as GitHub issues/PRs), mobile app, multi-language UI.
 
 ---
 
-## 3. MVP scope
+## 3. Pages and features
 
-**Content**
-- About **200 well-sourced quotes**. Aim for breadth: at least 12 traditions and at least 5 eras. No single tradition should be more than 20% of the set.
-- **First-draft Concept clusters**, roughly 30–60 Concepts. Each needs at least 2 quotes to be published. Agents draft every Concept definition and the owner approves it.
-- About 60–100 **Thinker** pages and 12–20 **Tradition** pages.
+### 3.1 Built
+1. **The 42** (`/`): a short introduction, then a table of the 42 highest-ranked qualifying maxims. Each row shows rank, maxim, Moral Rank and small chips (quotes, voices, traditions, periods).
+   - **Qualifying** means supported by at least two distinct traditions with a quote that scores above zero, and not on hold.
+   - **Hold flag:** a maxim can carry `"hold": "<reason>"` in `data/maxims.json`. It is kept out of The 42, and its page shows "On hold for The 42" with the reason (e.g. when the second tradition's quote is too loose a match and a closer source is still being sought).
+   - **Emerging:** every other maxim, ranked by score: those that just missed the top 42, those with only one tradition so far, and those on hold.
+2. **Maxim page** (`/maxims/<slug>/`):
+   - the maxim;
+   - the **seed** expression at the top: the quote from the oldest time period, then the best-verified one; the concept's `"seed": <index>` overrides the choice;
+   - a short warm summary in our own words, and the hold note if any;
+   - **Related expressions**: a scrolling list of all other quotes, each with voice, work, tradition, period, relation, verification label and source link;
+   - **Score**: Moral Rank and the evidence equation with this maxim's numbers filled in, plus a link to the Method page (no long explanation on the maxim page);
+   - optional further-reading links.
+3. **Voices** (`/voices/` and `/voices/<slug>/`): who said it. Kind (person, collective, known only through the text, traditional or legendary figure), dates, tradition, period, a 2–3 sentence factual summary, references, a caution note when `confidence` is `thin` or `uncertain`, and every quote by that voice.
+4. **Sources** (`/sources/<slug>/` and `/sources/`): which work it is from. One source per book whatever the chapter or translation (each Bible book, each hadith or Pali collection, each Plato dialogue is one source). Same layout as voices, plus a link to the source's voice.
+5. **Method** (`/method/`): the Moral Rank equation, a plain-words bullet for each term, the time periods with dates, the verification-label legend, and the translation policy.
+6. **About** (`/about/`): what the project is, how to contribute, licence.
+7. 404 page; light and dark colour schemes; serif reading typography.
 
-**Pages and features**
-1. **Scoreboard** (`/`): Concepts ranked by Moral Rank. Each row shows the rank and score plus small "breadth" chips (number of quotes, thinkers, traditions, eras). The list can be filtered by tradition and era.
-2. **Concept page** (`/concepts/<slug>/`): the maxim, an approved definition (100–300 words), how the score breaks down, supporting quotes grouped by tradition, related Concepts (refines, complements, tensions), a local graph, and a "similar idea, not the same" note where it applies.
-3. **Quote page** (`/quotes/<slug>/`): original text (when available), translation and translator, full citation with a link to the primary source, a verification badge, an explanation (context and meaning, 80–250 words), parent Concept(s) with the relation type, sibling quotes, the thinker and the tradition.
-4. **Thinker page** (`/thinkers/<slug>/`): short bio, dates, tradition(s), their quotes, the Concepts they support, and their "reach" (how many Concepts they appear in).
-5. **Tradition page** (`/traditions/<slug>/`): overview, era span, influence links (derives_from), thinkers, and the Concepts it supports.
-6. **Graph view** (`/graph/`): an interactive, force-directed graph of Concepts, Quotes, Thinkers and Traditions. You can filter by node type, tradition and era. Clicking a node opens its page. Concept node size scales with Moral Rank.
-7. **Search**: full-text static search over quotes (original and translation), concepts and thinkers.
-8. **Misattributed** (`/misattributed/`): popular quotes that are wrongly attributed, with what we know about where each really came from. These pages are strong for SEO and build trust.
-9. **About / Method** page: how sourcing, verification and Moral Rank work, plus the framing rule for religious texts.
-10. Newsletter signup (embedded form), RSS feed, sitemap.
+### 3.2 Planned
+- Per-quote pages (`/quotes/<slug>/`) with original text, translation, explanation (80–250 words), siblings.
+- Tradition pages (`/traditions/<slug>/`) with influence links (`derives_from`).
+- Filters on The 42 (tradition, period) and sort options (most references, most traditions).
+- Static search (e.g. Pagefind).
+- Graph view (`/graph/`): interactive graph of maxims, quotes, voices and traditions; local graphs on maxim pages.
+- **Misattributed** page (`/misattributed/`) collecting the `misattributed` quotes with their true origins.
+- References beyond quotes: video clips with start/end times, songs, stories.
+- Newsletter signup, RSS feed, sitemap, structured data.
 
 ---
 
 ## 4. Data model
 
-All content is stored as **Markdown files with YAML frontmatter** in the repo, and Git is the database. Schemas are enforced with Astro content collections (zod), and CI fails if a file is invalid. Slugs are stable IDs: never reuse one, and when content is renamed, add the old slug to `redirect_from`.
+### 4.1 Built: JSON in `data/`
+Git is the database and the audit trail. Generated output (`data/generated/`, all HTML) is never hand-edited.
 
-### 4.1 Quote — `content/quotes/<slug>.md`
-```yaml
-id: confucius-analects-15-24            # = slug, kebab-case, stable
-text: "What you do not want done to yourself, do not do to others."
-original:                                # optional
-  text: "己所不欲，勿施於人。"
-  language: lzh                          # ISO 639-3 (Classical Chinese)
-translation:
-  translator: James Legge
-  year: 1861
-  licence: public-domain                 # public-domain | cc-by | cc-by-sa | fair-dealing-short | own
-  source_url: https://en.wikisource.org/wiki/...
-thinker: confucius                       # Thinker id ("anonymous-<text>" allowed for texts)
-traditions: [confucianism]
-era: axial                               # see era buckets §5.2
-date: { approx: "c. 479 BCE", sort_year: -479 }   # composition or attribution date
-source:
-  work: Analects
-  section: "Book XV (Wei Ling Gong)"
-  locator: "15.24"                       # chapter/verse/line/Stephanus/Bekker etc.
-  edition: "Legge, The Chinese Classics vol. 1 (1861)"
-  primary_url: https://...               # link to the full-text primary source
-  secondary_refs: []                     # scholarly refs, Quote Investigator, etc. (links only)
-verification:
-  status: verified                       # verified | probable | disputed | misattributed | unverified
-  method: primary-text-match             # primary-text-match | scholarly-ref | secondary-only
-  checked_by: [agent:verifier, human:joe]
-  checked_at: 2026-10-14
-  notes: "Text matched in Wikisource Legge edition; also 12.2 has a near-identical line."
-concepts:                                # Quote → Concept links
-  - concept: golden-rule
-    relation: expresses                  # see relation types §4.5
-    confidence: 0.95                     # 0..1, set by agent, can be overridden by the owner
-    rationale: "Negative (prohibitive) form of the reciprocity principle."
-    status: approved                     # proposed | approved | rejected
-tags: [reciprocity, ethics]
-explanation_status: approved             # draft | approved
-redirect_from: []
----
-Markdown body = explanation (context, meaning, how it is read within its own tradition).
+**`data/maxims.json`**
+- `traditions`: `{"<key>": {"name": "...", "derives_from": ["<key>", ...]}}`. `derives_from` records historical influence and is used to discount non-independent evidence (§5).
+- `concepts` (maxims): `{"slug", "maxim", "summary", "links": [...], "seed"?: <int>, "hold"?: "<reason>"}`.
+- `quotes`:
+```json
+{"concept": "golden-rule", "rel": "expresses|similar|partial|contrasts", "conf": 0.95,
+ "ver": "verified|probable|disputed|unverified|misattributed",
+ "text": "exact wording from the source", "thinker": "Confucius", "voice": "confucius",
+ "tradition": "confucianism", "era": "axial",
+ "work": "Analects 15.24, tr. James Legge", "source_id": "analects",
+ "translation": "optional: translator/licence, or 'AI-assisted translation'",
+ "source": "URL where the exact wording can be read, or \"\""}
 ```
 
-### 4.2 Thinker — `content/thinkers/<slug>.md`
-`id, name, alt_names[], born {approx, sort_year}, died {…}, traditions[], era, kind (person | text | collective | legendary), wikidata_qid, wikipedia_url, image (PD/CC only, with credit)`. The body holds a short bio. For an anonymous or composite text, use `kind: text`, for example `mahabharata` (traditionally attributed to Vyasa).
+**`data/voices.json`**: `{"<slug>": {"name", "kind": "person|collective|text|legendary", "dates", "tradition", "period", "summary", "confidence": "solid|thin|uncertain", "refs": [...]}}`
 
-### 4.3 Tradition — `content/traditions/<slug>.md`
-`id, name, family (e.g. "Abrahamic", "Indic", "Chinese", "Hellenistic", "Modern Western"), kind (religious | philosophical | wisdom-literature | literary), era_span, derives_from[] (tradition ids), wikidata_qid`. Moral Rank uses `derives_from` to discount evidence that isn't independent (§5). the owner signs off on this table.
+**`data/sources.json`**: `{"<slug>": {"title", "voice": "<voice slug> or null", "kind": "book|scripture|collection|speech|proverb|other", "dates", "tradition", "period", "summary", "confidence", "refs": [...]}}`
 
-### 4.4 Concept — `content/concepts/<slug>.md`
-```yaml
-id: golden-rule
-maxim: "Treat others as you would wish to be treated."   # concise core rule, ≤ 12 words ideally
-aliases: ["ethic of reciprocity"]
-definition_status: approved             # draft | approved (the owner only)
-related:                                # Concept ↔ Concept links
-  - concept: do-no-harm
-    relation: complements
-    confidence: 0.9
-    status: approved
-merged_from: []                         # slugs merged into this one (→ redirects)
----
-Definition / essay (agent-drafted, the owner-approved).
-```
+Tests fail on unknown slugs, missing fields, empty summaries, or voice/source entries nothing uses. Full contributor rules are in CLAUDE.md.
 
-### 4.5 Link relation types
-| Link | Relation | Meaning | Weight in score |
-|---|---|---|---|
-| Quote→Concept | `expresses` | States the concept directly | 1.0 |
-| Quote→Concept | `similar` | A similar idea in its own terms (default for cross-tradition matches) | 0.7 |
-| Quote→Concept | `partial` | Covers one aspect, or a related principle | 0.4 |
-| Quote→Concept | `contrasts` | Disagrees with or complicates the concept (shown on the page, not scored) | 0 |
-| Concept↔Concept | `refines` / `generalises` | One is a more specific form of the other | 1.0 |
-| Concept↔Concept | `complements` | Often found together and mutually supporting | 0.7 |
-| Concept↔Concept | `tension` | Pulls against it (e.g. justice vs mercy). Shown, but carries no rank | 0 |
-| Tradition→Tradition | `derives_from` | Historical influence, used for independence | n/a |
+### 4.2 Link relation types
+| Link | Relation | Meaning | Weight in score | Status |
+|---|---|---|---|---|
+| Quote→Maxim | `expresses` | States the maxim directly | 1.0 | Built |
+| Quote→Maxim | `similar` | A similar idea in its own terms (default for cross-tradition matches) | 0.7 | Built |
+| Quote→Maxim | `partial` | Covers one aspect, or a related principle | 0.4 | Built |
+| Quote→Maxim | `contrasts` | Disagrees with or complicates the maxim (shown, not scored) | 0 | Built |
+| Tradition→Tradition | `derives_from` | Historical influence, used for independence | n/a | Built |
+| Maxim↔Maxim | `refines` / `generalises` | One is a more specific form of the other | 1.0 | Planned |
+| Maxim↔Maxim | `complements` | Often found together and mutually supporting | 0.7 | Planned |
+| Maxim↔Maxim | `tension` | Pulls against it (e.g. justice vs mercy); shown, no rank | 0 | Planned |
 
-Every link has `confidence` (0–1), `rationale`, `status` and `proposed_by`. Only `approved` links count toward the published score. `proposed` links appear in PR previews only.
-
-### 4.6 Generated (not hand-edited) — `data/generated/`
-`scores.json` (Moral Rank and its breakdown per Concept), `graph.json` (nodes and edges for the graph view), `embeddings.parquet` (gitignored or kept in R2, used for clustering). All are rebuilt in CI.
+### 4.3 Planned richer model
+Later fields from the original plan: original-language text with ISO language code, structured translation licence (`public-domain | cc-by | cc-by-sa | fair-dealing-short | own`), sort year, link `rationale` and `status` (proposed/approved), concept aliases and `merged_from` with redirects, Wikidata IDs for voices and traditions, `data/review-log.jsonl` of editorial decisions, and `graph.json`.
 
 ---
 
-## 5. Moral Rank: scoring algorithm
+## 5. Moral Rank: scoring
 
-Moral Rank answers one question: **how widely, independently and reliably has humanity arrived at this idea?** It is computed in two stages.
+Moral Rank answers one question: **how widely, independently and reliably has humanity arrived at this idea?** The score measures convergence, not truth or moral worth. It ranks ideas, never traditions or thinkers. Constants live in `scoring.py` and change only with the project owner's approval.
 
-### 5.1 Stage 1: Evidence score E(c)
-For every approved link from quote q to concept c:
+### 5.1 Evidence score E(c) [Built]
+For every quote q linked to maxim c:
 
 ```
 w_q = ver(q) × rel(link) × conf(link)
@@ -171,236 +138,203 @@ ver:  verified 1.0 · probable 0.6 · disputed 0.2 · unverified 0 · misattribu
 rel:  expresses 1.0 · similar 0.7 · partial 0.4 · contrasts 0
 ```
 
-Then:
-
 | Term | Definition | Why |
 |---|---|---|
 | **Q** = Σ w_q | Weighted quote count | Raw support, with diminishing returns via log |
-| **K** = Σ over thinkers k of max w_q from k | Each thinker counts once, at their strongest quote | Ten quotes from Seneca are still one Seneca |
+| **K** = Σ over voices k of max w_q from k | Each thinker counts once, at their strongest quote | Ten quotes from Seneca are still one Seneca |
 | **T** = Σ over traditions t of indep(t) × max w_q in t | Weighted count of independent traditions | Diversity of tradition matters most |
-| **R** = number of eras with at least one quote where w_q ≥ 0.3 | Era spread | Agreement across time |
+| **R** = number of time periods with at least one quote where w_q ≥ 0.3 | Period spread | Agreement across time |
 
-`indep(t) = 0.5` if any ancestor of t (in `derives_from`) also supports c. Otherwise it is 1.0. The discount does not compound. For example, Christianity next to Judaism counts at half weight.
+`indep(t) = 0.5` if any ancestor of t (in `derives_from`) also supports c, otherwise 1.0. The discount does not compound; for example, Christianity next to Judaism counts at half weight.
 
 ```
-E(c) = 1.0·ln(1+Q) + 1.0·√K + 3.0·T + 1.5·R
+E(c) = ln(1+Q) + √K + 3.0·T + 1.5·R
+Moral Rank(c) = 100 × E(c) / max E          # top maxim = 100
 ```
 
-Quote count sits under a log and thinkers under a square root, so piling up quotes and names gives less and less. Traditions and eras grow linearly and carry large weights. In practice, **diversity and independence outweigh raw count**.
+The site shows only this equation (with the maxim's numbers) on each maxim page and links to the Method page for the plain-words explanation.
 
-Era buckets (`era`): `axial` (< 200 BCE), `classical` (200 BCE–600 CE), `medieval` (600–1500), `early-modern` (1500–1800), `modern` (1800–1950), `contemporary` (1950–).
+### 5.2 Time periods [Built]
+Each quote is placed in one period by when it was written or first recorded. The data key is `era`; the site shows the period name with its dates.
 
-### 5.2 Stage 2: Graph propagation (the "PageRank" part)
-We build an undirected, weighted graph of Concepts from approved Concept↔Concept links. Edge weight = rel × conf, and `tension` is excluded. We then run personalised PageRank, with the teleport vector set to normalised evidence:
+| `era` key | Shown as |
+|---|---|
+| `axial` | Ancient (before 200 BCE) |
+| `classical` | Classical (200 BCE – 600 CE) |
+| `medieval` | Medieval (600 – 1500) |
+| `early-modern` | Early modern (1500 – 1800) |
+| `modern` | Modern (1800 – 1950) |
+| `contemporary` | Contemporary (1950 – today) |
+
+### 5.3 Graph propagation [Planned]
+Once Maxim↔Maxim links exist, build an undirected weighted graph (edge weight = rel × conf, `tension` excluded) and run personalised PageRank with the teleport vector set to normalised evidence:
 
 ```
 e_c   = E(c) / Σ E
 r     = (1 − β)·e + β·Wᵀ r        # W row-normalised edge weights
-β     = 0.2                         # 80% evidence, 20% from linked concepts
+β     = 0.2                         # 80% evidence, 20% from linked maxims
 dangling nodes (no links) redistribute via e
-MoralRank(c) = 100 × r_c / max(r)  # displayed 0–100, top concept = 100
+MoralRank(c) = 100 × r_c / max(r)
 ```
 
-Because β is low, cross-links can lift a well-connected concept but cannot replace evidence. Ties are broken by T, then K. The score breakdown is published on every Concept page for transparency. All constants live in `config/scoring.yaml` and are versioned. Any change to them needs the owner's approval, and the Method page lists the changes.
+`scoring.moral_rank` already implements this; with no links it reduces to 100 × E / max E, which is what the site shows today. Ties are broken by T, then K.
 
-### 5.3 Worked example
-**Concept A: Golden Rule** ("Treat others as you would wish to be treated")
+### 5.4 Worked example (unit-test fixture, `tests/test_scoring.py`) [Built]
+**Maxim A: Golden Rule**
 
-| Quote | Thinker | Tradition | Era | ver | rel | conf | w_q |
+| Quote | Thinker | Tradition | Period | ver | rel | conf | w_q |
 |---|---|---|---|---|---|---|---|
-| Analects 15.24 | Confucius | Confucianism | axial | 1.0 | expresses 1.0 | 0.95 | 0.95 |
-| Talmud, Shabbat 31a | Hillel | Judaism | classical | 1.0 | expresses 1.0 | 0.95 | 0.95 |
-| Matthew 7:12 | Jesus | Christianity (derives_from Judaism) | classical | 1.0 | expresses 1.0 | 0.95 | 0.95 |
-| Luke 6:31 | Jesus | Christianity | classical | 1.0 | expresses 1.0 | 0.90 | 0.90 |
-| Mahabharata, Anushasana Parva 113.8 | Mahabharata (text) | Hinduism | axial | 1.0 | similar 0.7 | 0.90 | 0.63 |
-| Isocrates, *Nicocles* 61 | Isocrates | Classical Greek | axial | 1.0 | similar 0.7 | 0.90 | 0.63 |
-| Kant, *Groundwork* (Categorical Imperative) | Kant | Enlightenment (derives_from Greek, Christianity) | early-modern | 1.0 | partial 0.4 | 0.80 | 0.32 |
+| Analects 15.24 | Confucius | Confucianism | Ancient | 1.0 | expresses 1.0 | 0.95 | 0.95 |
+| Talmud, Shabbat 31a | Hillel | Judaism | Classical | 1.0 | expresses 1.0 | 0.95 | 0.95 |
+| Matthew 7:12 | Jesus | Christianity (derives_from Judaism) | Classical | 1.0 | expresses 1.0 | 0.95 | 0.95 |
+| Luke 6:31 | Jesus | Christianity | Classical | 1.0 | expresses 1.0 | 0.90 | 0.90 |
+| Mahabharata, Anushasana Parva 113.8 | Mahabharata (text) | Hinduism | Ancient | 1.0 | similar 0.7 | 0.90 | 0.63 |
+| Isocrates, *Nicocles* 61 | Isocrates | Classical Greek | Ancient | 1.0 | similar 0.7 | 0.90 | 0.63 |
+| Kant, *Groundwork* | Kant | Enlightenment (derives_from Greek, Christianity) | Early modern | 1.0 | partial 0.4 | 0.80 | 0.32 |
 
-- Q = 0.95+0.95+0.95+0.90+0.63+0.63+0.32 = **5.33**, so ln(6.33) = **1.845**
-- K = Confucius 0.95 + Hillel 0.95 + Jesus 0.95 (Luke is not counted again) + Mahabharata 0.63 + Isocrates 0.63 + Kant 0.32 = **4.43**, so √K = **2.105**
-- T = Confucianism 0.95 + Judaism 0.95 + Christianity 0.95×0.5 + Hinduism 0.63 + Classical Greek 0.63 + Enlightenment 0.32×0.5 = **3.795**, so 3T = **11.385**
-- R = {axial, classical, early-modern} = **3**, so 1.5R = **4.5**
-- **E(A) = 1.845 + 2.105 + 11.385 + 4.5 = 19.835**
+- Q = **5.33**, ln(6.33) = **1.845**
+- K = 0.95 + 0.95 + 0.95 (Luke not counted again) + 0.63 + 0.63 + 0.32 = **4.43**, √K = **2.105**
+- T = 0.95 + 0.95 + 0.95×0.5 + 0.63 + 0.63 + 0.32×0.5 = **3.795**, 3T = **11.385**
+- R = {Ancient, Classical, Early modern} = **3**, 1.5R = **4.5**
+- **E(A) = 19.835**
 
-*(Kant explicitly rejected the Golden Rule as a foundation (Groundwork, footnote at 4:430). That is why the link is `partial` and the page notes the distinction.)*
+*(Kant explicitly rejected the Golden Rule as a foundation (Groundwork, footnote at 4:430), hence `partial`.)*
 
-**Concept B: "Time is the only thing truly ours"**, supported by 7 verified Seneca quotes (all `expresses`, conf 0.9).
-- Q = 6.3, so ln(7.3) = 1.988 · K = 0.9, so √K = 0.949 · T = Stoicism 0.9, so 3T = 2.7 · R = 1, so 1.5
-- **E(B) = 7.137**. B has the same number of quotes as A and a slightly higher Q, but scores **about 2.8× lower** because it rests on one voice.
+**Maxim B: "Time is the only thing truly ours"**, 7 verified Seneca quotes (all `expresses`, conf 0.9): ln(7.3) = 1.988 · √0.9 = 0.949 · 3T = 2.7 · 1.5R = 1.5 → **E(B) = 7.137**, about 2.8× lower than A because it rests on one voice.
 
-**Concept C: "Do no harm"**: assume E(C) = 12.0, with an approved `complements` link C↔A (conf 0.9). B has no links.
+**Propagation example [Planned; not yet a test]:** the A and B evidence values above are unit-tested; this part is illustrative. With C "Do no harm" at E = 12.0 and a `complements` link C↔A (conf 0.9), β = 0.2 gives Moral Rank A 100.0, C 71.8, B 30.8.
 
-Propagation (β = 0.2):
-
-| Concept | E | e (normalised) | r after PageRank | **Moral Rank** |
-|---|---|---|---|---|
-| A Golden Rule | 19.835 | 0.509 | 0.494 | **100.0** |
-| C Do no harm | 12.0 | 0.308 | 0.354 | **71.8** |
-| B Time is ours | 7.137 | 0.183 | 0.152 | **30.8** |
-
-C gains from its link to the highly evidenced A, and B, which has no links, slips slightly. Claude Code should add this exact example as a unit test fixture (`tests/scoring/worked_example.test.ts`), with values matched to 3 decimal places.
-
-### 5.4 Guardrails
-- A Concept needs **at least 2 traditions** to appear on the main Scoreboard. Single-tradition Concepts go under an "Emerging" tab.
-- Splitting or merging Concepts changes ranks, so each merge PR shows the before/after scoreboard diff.
-- The score measures convergence, not truth or moral worth. The Method page says this plainly.
+### 5.5 Guardrails
+- [Built] A maxim needs at least 2 traditions with a scoring quote, and no hold flag, to enter The 42; others appear under Emerging.
+- [Built] Near-duplicate sayings go under the existing maxim as `similar`/`partial` quotes, not new maxims.
+- [Planned] Merge PRs show the before/after diff of The 42.
 
 ---
 
 ## 6. Respectful framing rule (religious & wisdom texts)
 
-1. **Use "similar idea", never "the same".** When we link across traditions, the wording is: *"Expresses a similar idea to…"*, *"Echoes…"*, *"Resonates with…"*. We never write "X is the same as Y" or "all religions teach…".
-2. **Use the tradition's own context first.** Every explanation begins with what the text means within its own tradition, then mentions parallels. Wherever the difference matters, we include a "How it differs" note (e.g. the Golden Rule in a covenantal vs a Confucian relational setting).
-3. **Use neutral, descriptive voice.** Write "In the Gospel of Matthew, Jesus says…" or "The Qur'an states…". Don't write "God commands us…" and don't mock or debunk. Use dating conventions (BCE/CE) consistently.
-4. **Cite scripture exactly.** Give book, chapter and verse plus the translation. Prefer translations widely accepted by the tradition and in the public domain.
-5. **Never rank traditions.** Moral Rank scores Concepts, never traditions or thinkers. No "most moral religion" leaderboards.
-6. **Default to `similar`.** Cross-tradition quote→concept links start as `similar`. An agent may only propose `expresses` with a rationale, and the owner confirms it.
-7. The LLM style prompt includes this rule, and the reviewer agent checks for banned phrases ("the same as", "all religions", "proves") before opening a PR.
+1. **Use "similar idea", never "the same".** Write *"Expresses a similar idea to…"*, *"Echoes…"*, *"Resonates with…"*. Never "X is the same as Y" or "all religions teach…".
+2. **Use the tradition's own context first**, then mention parallels; add a "How it differs" note where the difference matters.
+3. **Use neutral, descriptive voice.** "In the Gospel of Matthew, Jesus says…", "The Qur'an states…". Don't mock or debunk. Use BCE/CE consistently.
+4. **Cite scripture exactly**: book, chapter and verse plus the translation; prefer public-domain translations widely accepted by the tradition.
+5. **Never rank traditions or thinkers.** Moral Rank scores ideas only.
+6. **Default to `similar`** for cross-tradition links; `expresses` needs a reason and the project owner's confirmation.
+7. **Disputed authorship** is stated neutrally ("traditionally attributed to X") with the scholarly view (see CLAUDE.md, Voices and sources).
 
 ---
 
-## 7. Agent pipeline
+## 7. Content policy [Built]
 
-Devsy runs the pipeline. Each stage is a script in `pipeline/` (Python 3.12 with `uv`, or TypeScript; Claude Code's choice, but pick one) and can run locally or from GitHub Actions on demand. **Every content change reaches `main` only through a PR.**
+- **English first.** Non-English sources use public-domain or credited translations. Where we translate ourselves, the quote's `translation` says "AI-assisted translation" and the site labels it. Other languages for the site itself are [Planned].
+- **Modern and living authors**: short quotations only (one or two sentences), always attributed.
+- **Verification labels** (`ver`): `verified` = exact wording seen at a primary text, reputable/public-domain translation, or the author's own book/site/talk; `probable` = reliable secondary source only (counts 0.6); `disputed` = credible sources disagree (0.2); `unverified` = no traceable origin (shown, scores 0); `misattributed` = attribution known to be wrong (shown with the true origin where known, scores 0). Never invent or "fix" wording or citations.
+- **Licence:** our own writing and data are CC BY-SA 4.0. Quotes remain the property of their authors and translators.
 
+---
+
+## 8. Agent pipeline
+
+### 8.1 Built (manual, agent-assisted)
+Agents (Claude Code, briefed by Devsy) follow the content workflow in CLAUDE.md and OPS.md: pick a maxim, find exact wording at a primary or reputable source, fetch the URL to confirm, set `ver`/`rel`/`conf`, add voice and source entries, run `python3 build.py && python3 -m unittest discover tests`, and open a small PR. The project owner approves new maxims, merges and scoring changes.
+
+### 8.2 Planned (automated)
 ```
 [1 Discover] → [2 Ingest & licence check] → [3 Verify attribution] → [4 Explain]
-     → [5 Embed & cluster] → [6 LLM concept review] → [7 Lint & score] → [8 Open PR] → the owner
+     → [5 Embed & cluster] → [6 LLM review] → [7 Lint & score] → [8 Open PR] → project owner
 ```
-
-1. **Discover.** Start from seed lists (the owner's old Obsidian vault if he exports it, plus curated lists per tradition) and produce candidate quotes with their claimed attribution. Wikiquote and Quote Investigator are used **for leads only**: we don't copy their text or commentary.
-2. **Ingest & licence check.** Fetch the primary text from public-domain sources:
-   - **Wikisource**: source texts are generally PD. Check each translation's PD status (translator death date and publication date). The wiki's own pages are CC BY-SA.
-   - **Project Gutenberg**: works are PD in the US. Follow the PG licence: strip the PG header/trademark if we redistribute, and record the ebook number.
-   - **Sacred-texts.com**: many old PD translations, but the site's compilation, scans and notes may not be. Confirm that the underlying translation is PD and cite the original edition.
-   - Others to consider: Perseus (CC BY-SA, so attribute), CText.org (check its terms), SuttaCentral (many CC0 translations).
-   - Write `translation.licence` on every quote. **Modern copyrighted translations** are only allowed as `fair-dealing-short` (one or two sentences, credited) and must be flagged for the owner. Agents translate themselves only with `licence: own` and `translator: "42 Maxims (AI-assisted, reviewed)"`, and are never a substitute where a good PD translation exists.
-   - **KJV caveat:** the KJV is PD in most places, but in the UK it is under Crown letters patent. Quoting it is fine in practice, but note it.
-   - Respect `robots.txt`, rate-limit to 1 request/sec or less, and cache raw pages in `data/raw/` (gitignored, or kept in R2).
-3. **Verify attribution.** Match the quote against the primary text using fuzzy matching (normalised, translation-aware). Set `verification.status` as follows:
-   - `verified`: found at the stated locator in a primary or scholarly edition.
-   - `probable`: found in a reliable secondary source but not yet in the primary.
-   - `disputed`: scholars disagree.
-   - `misattributed`: there is evidence it is falsely attributed (e.g. "Insanity is doing the same thing over and over…", which is not Einstein, and many "Buddha" quotes). These become entries on the Misattributed page.
-   - `unverified`: no evidence found. Not published.
-   Anything below `verified` is flagged in the PR body.
-4. **Explain.** The LLM drafts the 80–250 word explanation under the framing rule, grounded in the source context it retrieved. It must cite, may not invent locators, and each explanation is marked `draft`.
-5. **Embed & cluster.** Embed the normalised meaning of each quote ("what rule for life does this express?" paraphrase plus text). Compare to existing Concept centroids by cosine similarity. If similarity is 0.82 or higher, propose a link to that concept. Between 0.70 and 0.82, send it to LLM review. Below that, the quote becomes a seed for a new cluster (HDBSCAN over the leftovers). Thresholds go in `config/pipeline.yaml` and are tuned on the first 200 quotes.
-6. **LLM concept review.** A second LLM pass acts as a sceptical editor. It confirms or rejects each proposed link, assigns a `relation` and `confidence`, writes the `rationale`, and drafts the maxim and definition for any new Concept. It also proposes **merges** (two Concepts that are really one) and **splits**, and suggests Concept↔Concept links.
-7. **Lint & score.** Schema validation, a banned-phrase check, licence check, link-integrity check, and duplicate detection (the same quote under two slugs). Then recompute `scores.json`.
-8. **Open PR.** One PR per batch of about 10–20 quotes, or per proposed merge/new Concept, so each stays reviewable. The PR body includes:
-   - a summary table of quotes, statuses, licences and proposed links with confidence,
-   - the scoreboard diff (before/after ranks),
-   - flagged items (non-verified, non-PD, low confidence, new or merged Concepts needing the owner),
-   - a Cloudflare Pages preview URL.
-   Labels: `needs-owner:concept`, `needs-owner:merge`, `content:quotes`, `risk:licence`.
-
-**the owner's review loop:** the owner approves or edits in the GitHub UI and merges. Agents never merge content PRs. Concept definitions and merges require the owner's approval. Routine quote additions where every quote is `verified`, PD and linked to an already-approved Concept may later be auto-approved by Devsy, but **only if the owner opts in** (open question).
-
-**Feedback:** the owner's edits and rejections are logged to `data/review-log.jsonl` and used as few-shot examples to improve stage 6.
+1. **Discover** from the project seed notes and curated lists per tradition. Wikiquote and Quote Investigator are leads only.
+2. **Ingest & licence check** from public-domain sources (Wikisource, Project Gutenberg, Sacred-texts with PD check, Perseus, CText, SuttaCentral). Record the licence; modern copyrighted translations only as short credited extracts, flagged for review. KJV caveat: under Crown letters patent in the UK.
+3. **Verify attribution** by fuzzy-matching against the primary text and set `ver`.
+4. **Explain**: draft per-quote explanations under the framing rule; no invented locators.
+5. **Embed & cluster**: propose quote→maxim links by similarity; leftovers seed new clusters.
+6. **LLM review**: a sceptical second pass confirms links, sets relation/confidence, drafts new maxims, proposes merges and splits.
+7. **Lint & score**: schema, banned phrases, licence, link integrity, duplicates; rebuild scores.
+8. **Open PR**: 10–20 quotes per PR, with a summary table, The 42 diff and flagged items. Agents never merge content PRs that need the project owner.
 
 ---
 
-## 8. Stack (simplest that works)
+## 9. Stack
 
-| Layer | Choice | Notes |
+| Layer | Built | Planned |
 |---|---|---|
-| Site | **Astro** (static output) + content collections (zod schemas) | One `.md` file per entity; pages generated at build |
-| Graph | **Cytoscape.js** for local graphs and the MVP `/graph/` view | Switch the global view to **Sigma.js + graphology** if nodes exceed ~3k |
-| Search | **Pagefind** | Static, zero-backend, indexes at build |
-| Styling | Plain CSS or Tailwind; serif reading typography | Wikipedia-calm, not flashy |
-| Data | Markdown/YAML in GitHub `42maxims/42maxims.github.io` | Git is the database and the audit trail |
-| Pipeline | Scripts in `pipeline/`, run by Devsy and GitHub Actions (`workflow_dispatch`) | LLM and embedding provider via env vars, never committed |
-| CI | GitHub Actions: lint → schema → score → build → tests | Fails on invalid data |
-| Hosting | **Cloudflare Pages** (preview per PR, production on `main`) | Optional R2 for raw caches and embeddings |
-| Analytics | Cloudflare Web Analytics (cookieless) | No cookie banner needed |
-| Newsletter | Buttondown or Beehiiv embed | Paid tier only with the owner's approval |
+| Site | Plain Python static generator (`build.py`, no dependencies) writing committed HTML and `style.css` | Possibly a framework later if needed |
+| Data | JSON in `data/` (maxims, voices, sources) | Richer fields (§4.3) |
+| Scoring | `scoring.py` with unit tests (`tests/`) | Concept links + propagation |
+| CI | GitHub Actions: runs tests and checks committed HTML matches `build.py` output | Lint stages from §8.2 |
+| Hosting | GitHub Pages user site `42maxims.github.io`, branch `master`, root folder, `.nojekyll`; push to `master` deploys | Custom domain 42maxims.com (chosen, not bought; needs approval) |
+| Search / graph | — | Pagefind; Cytoscape.js or Sigma.js |
+| Analytics / newsletter | — | Cookieless analytics; Buttondown or Beehiiv |
+
+**Commits:** all commits use the anonymous project identity `Max Ims <37961849+42maxims@users.noreply.github.com>`. No personal names in commits, files or pages.
 
 Repo layout:
 ```
-42-maxims/
-  SPEC.md  README.md
-  content/{quotes,concepts,thinkers,traditions}/*.md
-  config/{scoring.yaml,pipeline.yaml,style-guide.md}
-  data/generated/   data/review-log.jsonl
-  pipeline/{discover,ingest,verify,explain,cluster,review,lint,score,pr}.*
-  src/{pages,components,layouts,lib/scoring.ts}
-  tests/
-  .github/workflows/{ci.yml,pipeline.yml}
+build.py  scoring.py  style.css  index.html  404.html
+data/{maxims,voices,sources}.json  data/generated/scores.json
+maxims/<slug>/  voices/<slug>/  sources/<slug>/  method/  about/   (generated)
+tests/  .github/workflows/ci.yml
+SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  CLAUDE.md  CONTRIBUTING.md  README.md  LICENSE
 ```
 
 ---
 
-## 9. SEO approach (without thin, scaled content)
+## 10. SEO approach [mostly Planned]
 
-Google's scaled-content-abuse policy targets mass-produced pages with little value. Our rules:
-
-- **A page is published only if it adds value:** a verified (or clearly badged) quote with an exact citation, a primary-source link, an explanation, context, and links to its Concept and siblings. Pages with `unverified` status or a `draft` explanation are not built. Thin pages (e.g. a thinker with only one quote) get `noindex` until they fill out.
-- **A human stays in the loop.** Explanations and definitions are reviewed and approved through PRs, and the Method page discloses that the work is AI-assisted with editorial review.
-- **Publish at a steady pace.** Batches of about 10–20 per week, not thousands at once. Quality metrics come before volume.
-- **On-page:**
-  - Title = the quote (truncated) + thinker + "meaning & source".
-  - H1 = the quote.
-  - Show the exact citation near the top: that is what searchers want ("who said…", "what does … mean", "source of …").
-- **Structured data:** `Quotation` (with `creator` and `isPartOf` for the work), `Person` with `sameAs` pointing to Wikidata/Wikipedia, `DefinedTerm` for Concepts, `BreadcrumbList` (Tradition › Thinker › Quote and Concept › Quote).
-- **Canonicals:** one canonical page per quote. Variant wordings and translations go on the same page as "Also rendered as…", not as separate pages. Merges get 301 redirects via `_redirects`.
-- **Internal linking** is the product itself: every quote links up to its Concept, and every Concept links to its siblings, thinkers and traditions.
-- **Linkable assets:** the Misattributed page, the Scoreboard, and "the Golden Rule across 12 traditions" style Concept pages. They suit outreach to educators and philosophy communities.
-- **Performance:** static HTML, the graph JS loads only on graph and concept pages, and the Lighthouse SEO score is ≥ 95.
+- [Built] Static HTML, fast pages, descriptive titles ("<maxim> — 42 Maxims"), exact citations near the top, dense internal linking between maxims, voices and sources.
+- [Planned] Publish only pages that add value; thin pages `noindex` until they fill out; steady weekly batches rather than mass publishing; Method page discloses AI-assisted work with editorial review.
+- [Planned] Structured data (`Quotation`, `Person` with `sameAs`, `DefinedTerm`, `BreadcrumbList`), sitemap, one canonical page per quote with variant wordings on the same page, redirects on merges.
+- [Planned] Linkable assets: the Misattributed page, The 42, "the Golden Rule across many traditions" maxim pages.
 
 ---
 
-## 10. Monetisation (in priority order)
+## 11. Monetisation [Planned, in priority order]
 
-1. **Newsletter: "A maxim a week".** One Concept with 3–4 sibling quotes from different traditions. It is generated from the repo and the owner approves each issue. Free at first; a paid tier or sponsorship comes later.
-2. **Book and prints.** A "42 Maxims" book (the top 42 by Moral Rank, each with cross-tradition quotes), plus typographic posters and prints via print-on-demand (e.g. Gelato/Prodigi). PD source texts make this clean. Check the licence of any translation used in print.
-3. **App (later).** "Maxim of the day", widgets, reflection prompts, built from the same data. Only once the newsletter shows traction.
-4. **Ads last, if ever.** If they happen at all: no ads on religious-text pages, and nothing intrusive. Affiliate links to good editions of source books are a softer option.
+1. **Newsletter "A maxim a week"**: one maxim with 3–4 quotes from different traditions, generated from the repo, each issue approved by the project owner.
+2. **Book and prints**: a "42 Maxims" book (The 42, each with cross-tradition quotes), typographic prints via print-on-demand; check translation licences for print.
+3. **App (later)**: maxim of the day, reflection prompts, once the newsletter shows traction.
+4. **Ads last, if ever**: none on religious-text pages; affiliate links to good editions as a softer option.
 
 ---
 
-## 11. Approvals (the owner decides; agents never do these on their own)
+## 12. Approvals (the project owner decides; agents never do these on their own)
 
 | Item | Who approves |
 |---|---|
-| Concept maxims/definitions (`definition_status: approved`) | **the owner** |
-| Concept merges, splits, renames, deletions | **the owner** |
-| `expresses` links across traditions; any `misattributed` publication | **the owner** |
-| Tradition `derives_from` table and scoring constants | **the owner** |
-| Domain purchase and DNS | **the owner** |
-| Any paid service (LLM/embedding spend above the agreed budget, newsletter paid tier, R2, POD) | **the owner** |
-| Production deploy (first launch, and any deploy that changes the scoring config) | **the owner** |
-| Non-PD translation use (`fair-dealing-short`) | **the owner** |
-| Routine verified-quote PRs | the owner (until he opts in to Devsy auto-merge) |
-| Code PRs (site, pipeline) | Devsy reviews; the owner for anything touching data policy |
+| New maxims (concept definitions) | Project owner |
+| Merges, splits, renames, deletions of maxims | Project owner |
+| `expresses` links across traditions; publishing a `misattributed` entry | Project owner |
+| Tradition `derives_from` table and scoring constants | Project owner |
+| Domain purchase and DNS | Project owner |
+| Any spend (paid services, LLM/embedding budget, newsletter tier, print) | Project owner |
+| Quotes added to existing maxims | Maintainer may merge once CI passes |
+| Code PRs (site, pipeline) | Devsy reviews; project owner for anything touching data policy |
 
 ---
 
-## 12. Milestones
+## 13. Milestones
 
-| # | Milestone | Deliverables | Exit criteria |
-|---|---|---|---|
-| M0 | Skeleton (week 1) | Repo, Astro scaffold, zod schemas, 10 hand-checked seed quotes, `scoring.ts` + worked-example test, CI, CF Pages preview | Test passes; preview deploys |
-| M1 | Pages (weeks 2–3) | Quote/Concept/Thinker/Tradition templates, Scoreboard, Pagefind search, structured data | All page types render from seed data |
-| M2 | Pipeline v1 (weeks 3–5) | Ingest + licence check, verify, explain, lint, PR bot | Pipeline opens a 15-quote PR that the owner can review in < 10 min |
-| M3 | Clustering (weeks 5–6) | Embeddings, cluster + LLM review, merge proposals, scoreboard diff in PRs | ≥ 70% link acceptance on a test batch |
-| M4 | Content to MVP (weeks 6–9) | ~200 quotes, 30–60 approved Concepts, graph view, Misattributed + Method pages | Coverage targets in §3 met |
-| M5 | Launch (week 10) | Domain, newsletter signup, analytics, sitemap, Search Console; **the owner approves prod deploy** | Live; first newsletter issue sent |
-| M6 | Grow (post-launch) | Weekly batches, newsletter cadence, book/print exploration | §2 metrics tracked monthly |
+| # | Milestone | Status |
+|---|---|---|
+| M0 | Skeleton: static site on GitHub Pages, seed data, scoring module + worked-example test, CI | Done (2026-10-14) |
+| M0.1 | "The 42" naming, seed-quote maxim page with Related expressions, plain-words Method page, periods with dates, hold flag | Done (2026-10-14) |
+| M0.2 | Voices and Sources: data files, pages, links from maxim pages, nav, tests | Done (2026-10-14) |
+| M1 | Tradition pages, filters and sort options on The 42, search, structured data; more maxims reach 2 traditions | Planned |
+| M2 | Sourcing: verification checklist, Misattributed page, references beyond quotes | Planned |
+| M3 | Clustering: maxim-to-maxim links, graph propagation, merge proposals with The 42 diffs | Planned |
+| M4 | Pipeline automation (§8.2) and per-quote explanations | Planned |
+| M5 | Launch extras: domain, newsletter, analytics, sitemap, Search Console | Planned |
 
 ---
 
-## 13. Open questions for the owner
+## 14. Questions
 
-1. **Name and domain:** keep "42 Maxims"? Which domain (e.g. 42maxims.com / .org)? And what budget?
-2. **Seed set:** can you export the old Obsidian vault as seed data? Is there a list of must-include traditions or thinkers for the MVP?
-3. **Scope of thinkers:** include modern and living thinkers, where quotes are copyrighted and limited to short fair-dealing extracts? Or PD only for the MVP?
-4. **Translations:** PD-only (often archaic English) or also our own AI-assisted modernised translations, clearly labelled?
-5. **Scoring weights:** are you happy with "diversity more than count" as set (3.0·T, 1.5·R)? Should influence (`derives_from`) discount at 0.5?
-6. **Auto-merge:** may Devsy auto-merge fully verified, PD quote batches that link only to already-approved Concepts?
-7. **Tensions:** should Concepts in tension (e.g. justice vs mercy) get their own "debates" view in MVP or later?
-8. **LLM/embedding provider and monthly budget cap** for the pipeline.
-9. **Newsletter platform** (Buttondown vs Beehiiv) and sender name/address.
-10. **Brand voice:** academic-neutral (Wikipedia-like) or warmer and more reflective? That decides the explanation style guide.
-11. **Misattributed page at launch:** yes or no? It is good for SEO but needs careful sourcing.
-12. **Licence for our own content** (explanations, definitions, data): CC BY-SA, CC BY-NC, or all rights reserved (keeps book/app options open)?
+**Settled** (see DECISIONS.md): name "42 Maxims"; domain 42maxims.com chosen but not bought; anonymous author ("Max Ims"); GitHub Pages with simple tools; English first with labelled AI-assisted translations; modern and living thinkers with short attributed quotes; scoring weights 3.0·T, 1.5·R, `derives_from` at 0.5; warm, reflective voice; own content CC BY-SA 4.0.
+
+**Open:**
+1. Domain purchase timing and budget.
+2. Seed set: export of the earlier Obsidian notes; must-include traditions or thinkers.
+3. Auto-merge: may fully verified, public-domain quote batches on existing maxims merge automatically?
+4. Tensions: a "debates" view for maxims in tension (e.g. justice vs mercy), now or later?
+5. LLM/embedding provider and monthly budget cap for the automated pipeline.
+6. Newsletter platform and sender name/address (must stay anonymous).
+7. Misattributed page: when to launch it.

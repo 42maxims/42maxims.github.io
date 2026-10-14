@@ -1,4 +1,4 @@
-"""Moral Rank scoring (SPEC.md section 5). Constants changes need the owner's approval."""
+"""Moral Rank scoring (SPEC.md section 5). Constant changes need the project owner's approval."""
 import math
 
 VER = {"verified": 1.0, "probable": 0.6, "disputed": 0.2, "unverified": 0.0, "misattributed": 0.0}

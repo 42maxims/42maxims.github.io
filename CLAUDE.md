@@ -1,16 +1,16 @@
 # Notes for AI agents working on this repo
 - Data lives in `data/maxims.json` (concepts, quotes, traditions), `data/voices.json` and `data/sources.json`; never hand-edit generated HTML or `data/generated/`. Run `python3 build.py` and commit the output.
-- Run `python3 -m unittest discover tests` before pushing. Scoring constants in `scoring.py` change only with the owner's approval.
+- Run `python3 -m unittest discover tests` before pushing. Scoring constants in `scoring.py` change only with the project owner's approval.
 - Every quote needs a `source` URL and an honest `ver` label (verified = checked against primary text/reputable translation; probable = secondary source only; unverified = scores 0). Never invent or "fix" quote wording.
 - Voice: warm and reflective. Never rank traditions or thinkers. Respect religious texts.
 - English first; non-English sources use public-domain or credited translations, or AI-assisted ones labelled as such.
 - Modern authors: short attributed quotes only.
 - Commit identity for this repo: Max Ims <37961849+42maxims@users.noreply.github.com>. The project is anonymous; do not add personal names.
-- the owner approves: new concept definitions, merges of concepts, domain purchase, spend, scoring changes.
+- The project owner approves: new concept definitions, merges of concepts, domain purchase, spend, scoring changes.
 
 ## How to add a maxim or quote (content workflow)
 1. **Check for an existing concept** in `data/maxims.json` → `concepts`. If the idea is already there (even in other words), add a quote to it; don't create a near-duplicate.
-2. **New concept** (needs the owner's approval in the PR): add to `concepts`:
+2. **New concept** (needs the project owner's approval in the PR): add to `concepts`:
    `{"slug": "kebab-case", "maxim": "One-line rule, imperative or plain statement.", "summary": "2–3 warm, reflective sentences in our own words.", "links": ["optional further-reading URLs"]}`
 3. **Add the quote** to `quotes`:
    ```json

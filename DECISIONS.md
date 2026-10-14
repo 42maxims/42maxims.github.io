@@ -8,7 +8,7 @@
 - 2026-10-14 Voice: warm and reflective.
 - 2026-10-14 Own content licensed CC BY-SA 4.0.
 - 2026-10-14 M0 built as plain Python + static HTML (not Astro/Cloudflare) to keep tools simple; 2018 Hugo draft kept at tag `draft-2018`.
-- Roadmap-aligned PRs may be merged by the portfolio agent; deploys, spend and domain need the owner.
+- Roadmap-aligned PRs may be merged by the portfolio agent; deploys, spend and domain need the project owner.
 - 2026-10-14 Main list renamed "The 42" (top 42 maxims). Maxim page = seed expression (oldest era, best verified; override with `seed`) + all related expressions; near-duplicates go under an existing maxim, not new ones.
 - 2026-10-14 Score shown with formula plus plain-words bullets explaining each term.
 - 2026-10-14 Peterson rule titles cited via Wikipedia (probable); the Guardian "digested read" is a parody, so it isn't used as a source.
