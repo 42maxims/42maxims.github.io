@@ -1,5 +1,5 @@
 # Notes for AI agents working on this repo
-- Data lives in `data/maxims.json`; never hand-edit generated HTML or `data/generated/`. Run `python3 build.py` and commit the output.
+- Data lives in `data/maxims.json` (concepts, quotes, traditions), `data/voices.json` and `data/sources.json`; never hand-edit generated HTML or `data/generated/`. Run `python3 build.py` and commit the output.
 - Run `python3 -m unittest discover tests` before pushing. Scoring constants in `scoring.py` change only with the owner's approval.
 - Every quote needs a `source` URL and an honest `ver` label (verified = checked against primary text/reputable translation; probable = secondary source only; unverified = scores 0). Never invent or "fix" quote wording.
 - Voice: warm and reflective. Never rank traditions or thinkers. Respect religious texts.
@@ -16,14 +16,16 @@
    ```json
    {"concept": "<concept slug>", "rel": "expresses|similar|partial|contrasts", "conf": 0.0-1.0,
     "ver": "verified|probable|disputed|unverified|misattributed",
-    "text": "exact wording from the source", "thinker": "Name or Anonymous",
+    "text": "exact wording from the source", "thinker": "Name or Anonymous", "voice": "<slug in data/voices.json>",
     "tradition": "<key in traditions>", "era": "axial|classical|medieval|early-modern|modern|contemporary"  # shown as periods: Ancient (before 200 BCE), Classical (200 BCE–600 CE), Medieval (600–1500), Early modern (1500–1800), Modern (1800–1950), Contemporary (1950–today),
-    "work": "Title, chapter/verse, translator", "translation": "optional: translator/licence, or 'AI-assisted (labelled)'",
+    "work": "Title, chapter/verse, translator", "source_id": "<slug in data/sources.json>", "translation": "optional: translator/licence, or 'AI-assisted (labelled)'",
     "source": "URL where the exact wording can be read, or \"\" if none"}
    ```
    New tradition? Add it under `traditions` with `name` and, if it grew out of another, `derives_from`.
-4. **Verify the source** (rules below), set `ver` honestly.
-5. `python3 build.py && python3 -m unittest discover tests`, commit data + generated HTML together, open a PR (one concept or a small batch per PR). Push to `master` deploys.
+   `thinker` and `work` stay as display text (`work` holds the precise locus, e.g. "Meditations IV.24, tr. George Long"); `voice` and `source_id` link the quote to its voice and source pages.
+4. **Link a voice and a source** (see "Voices and sources" below): reuse an existing slug if there is one, otherwise add an entry.
+5. **Verify the source** (rules below), set `ver` honestly.
+6. `python3 build.py && python3 -m unittest discover tests`, commit data + generated HTML together, open a PR (one concept or a small batch per PR). Push to `master` deploys.
 
 ### Source verification rules
 - **verified**: you fetched the source URL and the exact wording appears there; source is a primary text, a reputable/public-domain translation (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Bible Gateway, ctext), or the author's own book/site/recorded talk.
@@ -31,6 +33,17 @@
 - **unverified**: popular saying with no traceable origin. Allowed, shown with label, scores 0. Never upgrade without a source.
 - **disputed / misattributed**: credible sources disagree, or the attribution is known to be wrong (check Quote Investigator, Wikiquote "Misattributed"). Record the true origin if known.
 - Never paraphrase inside `text`; a paraphrase must say so in `work`. Never invent a citation. Modern authors: one or two sentences max. AI-assisted translations must say "AI-assisted translation" in `translation`.
+
+## Voices and sources
+Each quote points to one **voice** (who said it) and one **source** (which work it is from). They get pages at `/voices/<slug>/` and `/sources/<slug>/`, and maxim pages link the thinker name and work to them.
+- `data/voices.json`: `{"<slug>": {"name", "kind": "person|collective|text|legendary", "dates", "tradition": "<key in traditions>", "period": "<era key>", "summary", "confidence": "solid|thin|uncertain", "refs": ["https://..."]}}`
+- `data/sources.json`: `{"<slug>": {"title", "voice": "<voice slug> or null", "kind": "book|scripture|collection|speech|proverb|other", "dates", "tradition", "period", "summary", "confidence", "refs"}}`
+- **Grouping:** one source per book, whatever the chapter or translation (all Meditations quotes share `meditations`; each Bible book is its own source: `gospel-of-matthew`, `proverbs`, ...). Each hadith collection, each Pali collection (`samyutta-nikaya`, `sutta-nipata`), each Plato dialogue is one source. The chapter/verse/translator stays in the quote's `work`.
+- **Kinds of voice:** `person` (a historical individual); `collective` (many hands: `popular-saying`, `hebrew-wisdom-writers` for Proverbs, `psalmists`, `torah-writers`); `text` (an anonymous author known only through the text: `qoheleth`, `author-of-job`, `author-of-hebrews`, `quran`); `legendary` (a traditional figure whose historicity or dates can't be established: `laozi`, `homer`, `krishna`, `king-tang`).
+- **Disputed authorship:** say "traditionally attributed to X" and give the scholarly view in neutral words (e.g. Proverbs → voice `hebrew-wisdom-writers`, summary notes the traditional attribution to Solomon). Pauline letters whose authorship is disputed still use voice `paul-the-apostle`; the source summary says it is disputed.
+- **Misattributed quotes** (`ver: misattributed`): `voice` is the person the saying is popularly credited to (e.g. Aristotle for Durant's "We are what we repeatedly do"); the `thinker` text and the verification pill tell the true story. A verified quote whose real author is known (e.g. Goldsmith, often credited to Confucius) uses the real author.
+- **Summaries:** 2–3 sentences, warm but strictly factual (who/what, dates, tradition, period). Check every fact against reputable references (Wikipedia, Britannica, Stanford Encyclopedia of Philosophy, IEP, Quote Investigator) and list them in `refs`. Never invent. Use `confidence: "thin"` when little is known or sourcing is weak, `"uncertain"` when identity, authorship, dates or origin are seriously disputed; the page then shows a caution note.
+- A voice may have no quotes of its own if it is the author of a source (e.g. `plato` for the Apology). Tests fail on unknown slugs, missing fields, empty summaries, or entries nothing uses.
 
 ## Page model (since M0.1)
 - Each maxim page shows a **seed** expression at the top: the oldest-period quote, then the best verified one. Set `"seed": <index into that concept's quotes>` on the concept to override it. All other quotes follow under "Related expressions".

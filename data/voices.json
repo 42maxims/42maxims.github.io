@@ -1,0 +1,665 @@
+{
+ "confucius": {
+  "name": "Confucius",
+  "kind": "person",
+  "dates": "551–479 BCE (traditional dates)",
+  "tradition": "confucianism",
+  "period": "axial",
+  "summary": "Kong Qiu, known in the West as Confucius, was a teacher and minor official from the state of Lu in China's Spring and Autumn period. His sayings, gathered by his followers in the Analects, became the heart of the Confucian tradition, with its care for humaneness, ritual propriety and learning.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Confucius",
+   "https://plato.stanford.edu/entries/confucius/"
+  ]
+ },
+ "hillel-the-elder": {
+  "name": "Hillel the Elder",
+  "kind": "person",
+  "dates": "fl. late 1st century BCE – early 1st century CE",
+  "tradition": "judaism",
+  "period": "classical",
+  "summary": "Hillel was a Jewish sage, born in Babylonia, who taught in Jerusalem around the turn of the Common Era. His sayings are preserved in the Mishnah and the Talmud, and the school that followed him, the House of Hillel, shaped much of later Jewish law.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Hillel_the_Elder",
+   "https://www.britannica.com/biography/Hillel"
+  ]
+ },
+ "jesus": {
+  "name": "Jesus",
+  "kind": "person",
+  "dates": "c. 6–4 BCE – c. 30/33 CE",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "Jesus of Nazareth was a Jewish preacher and teacher in Galilee and Judea under Roman rule. His teaching is preserved in the Gospels of the New Testament, written in the decades after his death; Christians revere him as the Christ and the Son of God.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Jesus",
+   "https://www.britannica.com/biography/Jesus"
+  ]
+ },
+ "the-buddha": {
+  "name": "The Buddha",
+  "kind": "person",
+  "dates": "c. 5th century BCE (exact dates debated)",
+  "tradition": "buddhism",
+  "period": "axial",
+  "summary": "Siddhartha Gautama, called the Buddha, 'the awakened one', was a wandering teacher in north-eastern India whose teaching became the foundation of Buddhism. His discourses were handed down orally by the monastic community and later written down, most fully in the Pali Canon.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Buddha",
+   "https://www.britannica.com/biography/Buddha-founder-of-Buddhism"
+  ]
+ },
+ "alan-watts": {
+  "name": "Alan Watts",
+  "kind": "person",
+  "dates": "1915–1973",
+  "tradition": "zen-western",
+  "period": "contemporary",
+  "summary": "Alan Watts was a British-born writer and speaker who spent most of his adult life in the United States. Through books such as The Way of Zen (1957) and many recorded talks, he introduced Zen, Taoism and other Asian philosophies to a wide Western audience.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Alan_Watts",
+   "https://www.britannica.com/biography/Alan-Watts"
+  ]
+ },
+ "marcus-aurelius": {
+  "name": "Marcus Aurelius",
+  "kind": "person",
+  "dates": "121–180 CE",
+  "tradition": "stoicism",
+  "period": "classical",
+  "summary": "Marcus Aurelius was Roman emperor from 161 to 180 CE and a lifelong student of Stoic philosophy. The private notes he wrote to himself, known as the Meditations, are among the most widely read works of Stoicism.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Marcus_Aurelius",
+   "https://iep.utm.edu/marcus/"
+  ]
+ },
+ "jordan-peterson": {
+  "name": "Jordan B. Peterson",
+  "kind": "person",
+  "dates": "born 1962",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Jordan B. Peterson is a Canadian clinical psychologist and professor emeritus of psychology at the University of Toronto. His self-help book 12 Rules for Life (2018) became an international bestseller.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Jordan_Peterson",
+   "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+  ]
+ },
+ "albert-camus": {
+  "name": "Albert Camus",
+  "kind": "person",
+  "dates": "1913–1960",
+  "tradition": "existentialism",
+  "period": "modern",
+  "summary": "Albert Camus was a French writer and philosopher, born in Algeria, whose novels and essays explore what he called the absurd: our longing for meaning in a world that offers none. His works include The Stranger (1942) and The Myth of Sisyphus (1942), and he received the Nobel Prize in Literature in 1957.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Albert_Camus",
+   "https://plato.stanford.edu/entries/camus/"
+  ]
+ },
+ "robert-baden-powell": {
+  "name": "Robert Baden-Powell",
+  "kind": "person",
+  "dates": "1857–1941",
+  "tradition": "scouting",
+  "period": "modern",
+  "summary": "Robert Baden-Powell was a British Army officer who founded the Scout movement; his handbook Scouting for Boys appeared in 1908. He served as Chief Scout of the World until his death in Kenya in 1941.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Robert_Baden-Powell,_1st_Baron_Baden-Powell",
+   "https://www.britannica.com/biography/Robert-Stephenson-Smyth-Baden-Powell-1st-Baron-Baden-Powell"
+  ]
+ },
+ "kelly-johnson": {
+  "name": "Kelly Johnson",
+  "kind": "person",
+  "dates": "1910–1990",
+  "tradition": "management",
+  "period": "contemporary",
+  "summary": "Clarence 'Kelly' Johnson was an American aeronautical engineer who led Lockheed's Skunk Works, where aircraft such as the U-2 and SR-71 were designed. The design rule 'keep it simple, stupid' is commonly credited to him, though the attribution rests on later accounts.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Kelly_Johnson_(engineer)",
+   "https://en.wikipedia.org/wiki/KISS_principle"
+  ]
+ },
+ "joseph-juran": {
+  "name": "Joseph M. Juran",
+  "kind": "person",
+  "dates": "1904–2008",
+  "tradition": "management",
+  "period": "modern",
+  "summary": "Joseph M. Juran was a Romanian-born American engineer and management consultant, known for his work on quality management. He popularised the idea of 'the vital few and the trivial many' and named it the Pareto principle, after the economist Vilfredo Pareto.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Joseph_M._Juran",
+   "https://en.wikipedia.org/wiki/Pareto_principle",
+   "https://www.juran.com/wp-content/uploads/2021/03/The-Non-Pareto-Principle-1974.pdf"
+  ]
+ },
+ "laurence-j-peter": {
+  "name": "Laurence J. Peter",
+  "kind": "person",
+  "dates": "1919–1990",
+  "tradition": "management",
+  "period": "contemporary",
+  "summary": "Laurence J. Peter was a Canadian-born educator and writer. With Raymond Hull he wrote The Peter Principle (1969), which argues that people in a hierarchy tend to rise to their 'level of incompetence'.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Laurence_J._Peter",
+   "https://en.wikipedia.org/wiki/Peter_principle"
+  ]
+ },
+ "popular-saying": {
+  "name": "Popular saying",
+  "kind": "collective",
+  "dates": "unknown",
+  "tradition": "popular",
+  "period": "contemporary",
+  "summary": "Sayings that pass from person to person, in print and online, without a known author. We include them because many people live by them, label them honestly, and keep looking for where they came from.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Saying"
+  ]
+ },
+ "torah-writers": {
+  "name": "Authors of the Torah",
+  "kind": "collective",
+  "dates": "compiled over centuries; final form c. 5th century BCE (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "The Torah, the first five books of the Hebrew Bible, is traditionally attributed to Moses. Most modern scholars see it as the work of several writers and editors whose material was brought together over centuries, reaching its final form around the Persian period.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Torah",
+   "https://en.wikipedia.org/wiki/Mosaic_authorship",
+   "https://en.wikipedia.org/wiki/Composition_of_the_Torah"
+  ]
+ },
+ "qoheleth": {
+  "name": "Qoheleth (the Preacher)",
+  "kind": "text",
+  "dates": "c. 450–180 BCE (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "Qoheleth, a Hebrew title usually rendered 'the Preacher' or 'the Teacher', is the voice that speaks in the book of Ecclesiastes. Jewish and Christian tradition identified him with King Solomon; most modern scholars regard the author as unknown and date the book to between the mid-5th and early 2nd centuries BCE.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Ecclesiastes",
+   "https://www.britannica.com/topic/Ecclesiastes-Old-Testament"
+  ]
+ },
+ "hebrew-wisdom-writers": {
+  "name": "Hebrew wisdom writers",
+  "kind": "collective",
+  "dates": "collected over several centuries; final form c. 5th–4th century BCE (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "The sayings of the Book of Proverbs are traditionally attributed to King Solomon, and the book itself also names other sages, such as Agur and Lemuel. Scholars see it as a collection of Israelite wisdom gathered over several centuries, probably reaching its final form in the Persian or early Hellenistic period.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Proverbs",
+   "https://www.britannica.com/topic/The-Proverbs"
+  ]
+ },
+ "paul-the-apostle": {
+  "name": "Paul the Apostle",
+  "kind": "person",
+  "dates": "c. 5 – c. 64/65 CE",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "Paul of Tarsus was a Jew who joined the early followers of Jesus and became their most influential missionary to non-Jews. Thirteen New Testament letters bear his name: scholars widely accept seven as his own, while others, such as Ephesians, Colossians and the letters to Timothy, are traditionally attributed to him but disputed.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Paul_the_Apostle",
+   "https://en.wikipedia.org/wiki/Authorship_of_the_Pauline_epistles"
+  ]
+ },
+ "rene-descartes": {
+  "name": "René Descartes",
+  "kind": "person",
+  "dates": "1596–1650",
+  "tradition": "rationalism",
+  "period": "early-modern",
+  "summary": "René Descartes was a French philosopher, mathematician and scientist, often called the father of modern philosophy. His Discourse on the Method (1637) sets out a way of reasoning from doubt to certainty, beginning from 'I think, therefore I am'.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes",
+   "https://plato.stanford.edu/entries/descartes/"
+  ]
+ },
+ "henry-david-thoreau": {
+  "name": "Henry David Thoreau",
+  "kind": "person",
+  "dates": "1817–1862",
+  "tradition": "transcendentalism",
+  "period": "modern",
+  "summary": "Henry David Thoreau was an American essayist, naturalist and a leading voice of New England Transcendentalism. Walden (1854) reflects on the two years he spent living simply in a cabin by Walden Pond, and his essay on civil disobedience has inspired movements of nonviolent resistance.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Henry_David_Thoreau",
+   "https://plato.stanford.edu/entries/thoreau/"
+  ]
+ },
+ "aristotle": {
+  "name": "Aristotle",
+  "kind": "person",
+  "dates": "384–322 BCE",
+  "tradition": "greek-philosophy",
+  "period": "axial",
+  "summary": "Aristotle was a Greek philosopher, a student of Plato and tutor to Alexander the Great, who founded his own school, the Lyceum, in Athens. His works range across logic, science, politics and ethics; the Nicomachean Ethics explores virtue as a settled habit and a mean between extremes.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Aristotle",
+   "https://plato.stanford.edu/entries/aristotle/"
+  ]
+ },
+ "carol-dweck": {
+  "name": "Carol S. Dweck",
+  "kind": "person",
+  "dates": "born 1946",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Carol S. Dweck is an American psychologist and professor at Stanford University. Her research on 'fixed' and 'growth' mindsets reached a wide audience through her book Mindset (2006).",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Carol_Dweck",
+   "https://en.wikipedia.org/wiki/Mindset_(book)"
+  ]
+ },
+ "barry-schwartz": {
+  "name": "Barry Schwartz",
+  "kind": "person",
+  "dates": "born 1946",
+  "tradition": "modern-psychology",
+  "period": "contemporary",
+  "summary": "Barry Schwartz is an American psychologist who taught for many years at Swarthmore College. In The Paradox of Choice (2004) he argues that having too many options can leave people less satisfied.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Barry_Schwartz_(psychologist)",
+   "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+  ]
+ },
+ "buddhist-monastic-routine": {
+  "name": "Buddhist monastic routine (popular summary)",
+  "kind": "collective",
+  "dates": "unknown",
+  "tradition": "buddhism",
+  "period": "contemporary",
+  "summary": "A present-day popular summary of the daily rhythm kept in Buddhist monasteries, noted from a video in the project's seed notes. It has not yet been checked against the monastic code (Vinaya) or any other Buddhist text, so it is shown as unverified.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Vinaya"
+  ]
+ },
+ "author-of-job": {
+  "name": "Author of the Book of Job",
+  "kind": "text",
+  "dates": "c. 6th–4th century BCE (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "The Book of Job, a poetic meditation on suffering and justice, does not name its author. A tradition recorded in the Talmud credits it to Moses; modern scholars regard the author as unknown and generally date the book to between the 6th and 4th centuries BCE.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Job",
+   "https://www.britannica.com/topic/The-Book-of-Job"
+  ]
+ },
+ "krishna": {
+  "name": "Krishna",
+  "kind": "legendary",
+  "dates": "not historically datable",
+  "tradition": "hinduism",
+  "period": "axial",
+  "summary": "Krishna is revered in Hinduism as a deity, an avatar of Vishnu and, in many traditions, the Supreme Being. In the Bhagavad Gita, part of the epic Mahabharata, he speaks as charioteer and teacher to the warrior Arjuna on the eve of battle.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Krishna",
+   "https://www.britannica.com/topic/Krishna-Hindu-deity"
+  ]
+ },
+ "epictetus": {
+  "name": "Epictetus",
+  "kind": "person",
+  "dates": "c. 50 – c. 135 CE",
+  "tradition": "stoicism",
+  "period": "classical",
+  "summary": "Epictetus was a Greek Stoic philosopher, born a slave in Hierapolis in Phrygia, who taught in Rome and later at Nicopolis in Greece. He wrote nothing himself; his student Arrian recorded his teaching in the Discourses and the short handbook known as the Enchiridion.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Epictetus",
+   "https://plato.stanford.edu/entries/epictetus/"
+  ]
+ },
+ "laozi": {
+  "name": "Laozi",
+  "kind": "legendary",
+  "dates": "traditionally 6th century BCE; historicity uncertain",
+  "tradition": "taoism",
+  "period": "axial",
+  "summary": "Laozi, 'the Old Master', is the sage traditionally credited with the Tao Te Ching and honoured as the founder of Taoism. The earliest account of his life, by the historian Sima Qian around 100 BCE, already mixes legend with history, and many scholars think the text grew from more than one hand.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Laozi",
+   "https://plato.stanford.edu/entries/laozi/"
+  ]
+ },
+ "muhammad": {
+  "name": "The Prophet Muhammad",
+  "kind": "person",
+  "dates": "c. 570–632 CE",
+  "tradition": "islam",
+  "period": "medieval",
+  "summary": "Muhammad, born in Mecca, is revered by Muslims as the final prophet of God, to whom the Qur'an was revealed. Reports of his words and deeds (hadith) were passed on by his companions and later gathered into collections such as Sahih al-Bukhari and Sahih Muslim.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Muhammad",
+   "https://www.britannica.com/biography/Muhammad"
+  ]
+ },
+ "quran": {
+  "name": "The Qur'an",
+  "kind": "text",
+  "dates": "revealed c. 610–632 CE; standard text compiled c. 650 CE",
+  "tradition": "islam",
+  "period": "medieval",
+  "summary": "The Qur'an is the central scripture of Islam, believed by Muslims to be the word of God revealed to the Prophet Muhammad over some twenty-three years. According to Islamic tradition, its standard written text was compiled under the caliph Uthman around 650 CE.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Quran",
+   "https://www.britannica.com/topic/Quran"
+  ]
+ },
+ "socrates": {
+  "name": "Socrates",
+  "kind": "person",
+  "dates": "c. 470–399 BCE",
+  "tradition": "greek-philosophy",
+  "period": "axial",
+  "summary": "Socrates was an Athenian philosopher who wrote nothing himself and is known mainly through the dialogues of his student Plato and the writings of Xenophon. He was tried and executed in Athens in 399 BCE; how closely Plato's Socrates matches the historical man is still debated.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Socrates",
+   "https://plato.stanford.edu/entries/socrates/"
+  ]
+ },
+ "psalmists": {
+  "name": "The Psalmists",
+  "kind": "collective",
+  "dates": "composed over several centuries, c. 10th–4th century BCE or later (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "The Book of Psalms gathers 150 songs and prayers of ancient Israel. Many carry headings naming David, and Psalm 90 is headed 'a prayer of Moses'; scholars see the collection as the work of many poets over several centuries, gathered for worship.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Psalms",
+   "https://www.britannica.com/topic/Psalms"
+  ]
+ },
+ "homer": {
+  "name": "Homer",
+  "kind": "legendary",
+  "dates": "c. 8th century BCE (traditional; historicity debated)",
+  "tradition": "greek-epic",
+  "period": "axial",
+  "summary": "Homer is the poet traditionally credited with the Iliad and the Odyssey, the oldest surviving works of Greek literature. The ancient Greeks treated him as a real person, but modern scholars debate whether he existed and how the epics, rooted in oral tradition, came to be written down.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Homer",
+   "https://www.britannica.com/biography/Homer-Greek-poet"
+  ]
+ },
+ "alexander-pope": {
+  "name": "Alexander Pope",
+  "kind": "person",
+  "dates": "1688–1744",
+  "tradition": "english-poetry",
+  "period": "early-modern",
+  "summary": "Alexander Pope was an English poet of the Augustan age, known for his satire and his translations of Homer. An Essay on Criticism, begun in his late teens and published in 1711 when he was in his early twenties, gave English many lasting phrases, among them 'to err is human, to forgive divine'.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Alexander_Pope",
+   "https://www.britannica.com/biography/Alexander-Pope-English-author"
+  ]
+ },
+ "heraclitus": {
+  "name": "Heraclitus",
+  "kind": "person",
+  "dates": "fl. c. 500 BCE",
+  "tradition": "greek-philosophy",
+  "period": "axial",
+  "summary": "Heraclitus of Ephesus was a Greek philosopher who taught that the world is always changing, held together by an underlying order he called the logos. His book is lost and survives only in fragments quoted by later writers such as Plutarch and Clement of Alexandria.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Heraclitus",
+   "https://plato.stanford.edu/entries/heraclitus/"
+  ]
+ },
+ "author-of-joshua": {
+  "name": "Author of the Book of Joshua",
+  "kind": "text",
+  "dates": "c. 7th–6th century BCE (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "The Book of Joshua tells of Israel's entry into Canaan under Joshua, Moses' successor. Jewish tradition attributed it to Joshua himself; most modern scholars see it as part of a longer history composed and edited around the 7th and 6th centuries BCE.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Joshua",
+   "https://en.wikipedia.org/wiki/Deuteronomistic_history"
+  ]
+ },
+ "james": {
+  "name": "James",
+  "kind": "person",
+  "dates": "1st century CE",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "The Letter of James opens in the name of 'James, a servant of God and of the Lord Jesus Christ'. Tradition identifies him with James the brother of Jesus, a leader of the church in Jerusalem who died around 62 CE; many modern scholars think the letter was written later in his name.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Epistle_of_James",
+   "https://en.wikipedia.org/wiki/James,_brother_of_Jesus"
+  ]
+ },
+ "zechariah": {
+  "name": "Zechariah",
+  "kind": "person",
+  "dates": "active c. 520–518 BCE",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "Zechariah was a Hebrew prophet in Jerusalem after the return from exile in Babylon, who encouraged the rebuilding of the Temple. Scholars generally credit him with chapters 1–8 of the book that bears his name and attribute chapters 9–14 to later writers.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Zechariah",
+   "https://en.wikipedia.org/wiki/Zechariah_(Hebrew_prophet)"
+  ]
+ },
+ "author-of-hebrews": {
+  "name": "Author of Hebrews",
+  "kind": "text",
+  "dates": "1st century CE",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "The Epistle to the Hebrews is an early Christian sermon in letter form that does not name its author. It was long attributed to Paul, but its author is unknown; it was probably written in the second half of the 1st century CE.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Epistle_to_the_Hebrews",
+   "https://www.britannica.com/topic/Letter-of-Paul-to-the-Hebrews"
+  ]
+ },
+ "zeno-of-citium": {
+  "name": "Zeno of Citium",
+  "kind": "person",
+  "dates": "c. 334 – c. 262 BCE",
+  "tradition": "stoicism",
+  "period": "axial",
+  "summary": "Zeno of Citium, from Cyprus, founded the Stoic school in Athens around 300 BCE, teaching at the Stoa Poikile, the Painted Porch that gave Stoicism its name. His writings are lost except for fragments; his sayings are known through later authors such as Diogenes Laertius.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Zeno_of_Citium",
+   "https://www.britannica.com/biography/Zeno-of-Citium"
+  ]
+ },
+ "micah": {
+  "name": "Micah",
+  "kind": "person",
+  "dates": "late 8th century BCE",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "Micah of Moresheth was a Hebrew prophet in Judah in the late 8th century BCE, a contemporary of Isaiah. The book that bears his name speaks out against injustice and is best known for its summary of what God asks: to do justly, love mercy and walk humbly.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Micah_(prophet)",
+   "https://en.wikipedia.org/wiki/Book_of_Micah"
+  ]
+ },
+ "hippocrates": {
+  "name": "Hippocrates",
+  "kind": "person",
+  "dates": "c. 460 – c. 370 BCE",
+  "tradition": "hippocratic",
+  "period": "axial",
+  "summary": "Hippocrates of Kos was a Greek physician, often called the father of medicine. The Hippocratic Corpus, some sixty early medical writings, bears his name, though scholars think most were written by different authors of his school.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Hippocrates",
+   "https://en.wikipedia.org/wiki/Hippocratic_Corpus"
+  ]
+ },
+ "mahavira": {
+  "name": "Mahavira",
+  "kind": "person",
+  "dates": "traditionally 599–527 BCE; many scholars place him in the 5th century BCE",
+  "tradition": "jainism",
+  "period": "axial",
+  "summary": "Mahavira, born Vardhamana, is revered in Jainism as the twenty-fourth and last tirthankara of the present age. A contemporary of the Buddha, he taught non-violence (ahimsa) and self-discipline, and his teachings were passed on by his disciples in the Jain scriptures.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mahavira",
+   "https://www.britannica.com/biography/Mahavira"
+  ]
+ },
+ "blaise-pascal": {
+  "name": "Blaise Pascal",
+  "kind": "person",
+  "dates": "1623–1662",
+  "tradition": "christianity",
+  "period": "early-modern",
+  "summary": "Blaise Pascal was a French mathematician, physicist and Christian thinker. His Pensées ('Thoughts'), notes towards a defence of Christianity left unfinished at his death, were published in 1670.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Blaise_Pascal",
+   "https://plato.stanford.edu/entries/pascal/"
+  ]
+ },
+ "benjamin-franklin": {
+  "name": "Benjamin Franklin",
+  "kind": "person",
+  "dates": "1706–1790",
+  "tradition": "enlightenment",
+  "period": "early-modern",
+  "summary": "Benjamin Franklin was an American printer, writer, scientist and statesman, one of the Founding Fathers of the United States. His Autobiography, begun in 1771 and left unfinished, describes his plan for practising thirteen virtues.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Benjamin_Franklin",
+   "https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin"
+  ]
+ },
+ "talmudic-sages": {
+  "name": "Rabbis of the Talmud",
+  "kind": "collective",
+  "dates": "c. 3rd–6th century CE",
+  "tradition": "judaism",
+  "period": "classical",
+  "summary": "The Babylonian Talmud records the debates, teachings and stories of generations of rabbis, building on the Mishnah. Many of its lessons come as stories, like that of Honi the Circle-Drawer and the man planting a carob tree.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Talmud",
+   "https://en.wikipedia.org/wiki/Honi_HaMe%27agel"
+  ]
+ },
+ "leonardo-da-vinci": {
+  "name": "Leonardo da Vinci",
+  "kind": "person",
+  "dates": "1452–1519",
+  "tradition": "renaissance",
+  "period": "medieval",
+  "summary": "Leonardo da Vinci was an Italian painter, engineer and scientist of the Renaissance, whose notebooks record his studies of nature, anatomy and machines. The saying 'Simplicity is the ultimate sophistication' is often credited to him, but no source for it in his writings has been found.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+   "https://quoteinvestigator.com/2015/04/02/simple/"
+  ]
+ },
+ "king-tang": {
+  "name": "Tang of Shang",
+  "kind": "legendary",
+  "dates": "traditionally c. 1600 BCE",
+  "tradition": "confucianism",
+  "period": "axial",
+  "summary": "Tang was the founding king of the Shang dynasty in ancient China, traditionally dated to around 1600 BCE, and is honoured in the Confucian classics as a model ruler. The Great Learning quotes a motto said to have been inscribed on his bathing tub; the inscription is known only through this much later text.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Tang_of_Shang",
+   "https://en.wikipedia.org/wiki/Great_Learning"
+  ]
+ },
+ "oliver-goldsmith": {
+  "name": "Oliver Goldsmith",
+  "kind": "person",
+  "dates": "1728?–1774",
+  "tradition": "english-poetry",
+  "period": "early-modern",
+  "summary": "Oliver Goldsmith was an Irish novelist, playwright and poet, author of The Vicar of Wakefield and She Stoops to Conquer. The Citizen of the World (1762) gathers his letters written in the voice of a fictional Chinese philosopher visiting London.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Oliver_Goldsmith",
+   "https://www.britannica.com/biography/Oliver-Goldsmith"
+  ]
+ },
+ "plato": {
+  "name": "Plato",
+  "kind": "person",
+  "dates": "c. 428/427 – 348/347 BCE",
+  "tradition": "greek-philosophy",
+  "period": "axial",
+  "summary": "Plato was an Athenian philosopher, a student of Socrates and the teacher of Aristotle, who founded the Academy in Athens. Most of his works are dialogues in which Socrates is the main speaker, among them the Apology, the Gorgias and the Cratylus.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Plato",
+   "https://plato.stanford.edu/entries/plato/"
+  ]
+ },
+ "diogenes-laertius": {
+  "name": "Diogenes Laertius",
+  "kind": "person",
+  "dates": "fl. 3rd century CE (probably)",
+  "tradition": "greek-philosophy",
+  "period": "classical",
+  "summary": "Diogenes Laertius was a biographer of the Greek philosophers about whose own life almost nothing is known. His Lives of Eminent Philosophers, probably written in the first half of the 3rd century CE, preserves many sayings and anecdotes found nowhere else.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Diogenes_La%C3%ABrtius",
+   "https://www.britannica.com/biography/Diogenes-Laertius"
+  ]
+ },
+ "will-durant": {
+  "name": "Will Durant",
+  "kind": "person",
+  "dates": "1885–1981",
+  "tradition": "philosophy-history",
+  "period": "modern",
+  "summary": "Will Durant was an American historian and writer who brought philosophy and history to a wide readership. The Story of Philosophy (1926) became a bestseller, and he went on to write the eleven-volume Story of Civilization, the last five volumes jointly with his wife Ariel. The line 'We are what we repeatedly do' comes from his summary of Aristotle and is often quoted as Aristotle's own.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Will_Durant",
+   "https://en.wikiquote.org/wiki/Aristotle"
+  ]
+ }
+}

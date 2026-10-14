@@ -4,6 +4,8 @@ from scoring import evidence, moral_rank, ancestors, VER, REL, W_Q, W_K, W_T, W_
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(ROOT, "data/maxims.json")))
+VOICES = json.load(open(os.path.join(ROOT, "data/voices.json")))
+SOURCES = json.load(open(os.path.join(ROOT, "data/sources.json")))
 TR = D["traditions"]
 esc = html.escape
 TOP_N = 42
@@ -20,6 +22,11 @@ VER_TITLE = {"verified": "Checked against a primary text or reputable translatio
 ERA_LABEL = {"axial": "Ancient (before 200 BCE)", "classical": "Classical (200 BCE – 600 CE)",
              "medieval": "Medieval (600 – 1500)", "early-modern": "Early modern (1500 – 1800)",
              "modern": "Modern (1800 – 1950)", "contemporary": "Contemporary (1950 – today)"}
+VOICE_KIND = {"person": "Person", "collective": "Collective", "text": "Known through the text", "legendary": "Traditional or legendary figure"}
+SOURCE_KIND = {"book": "Book", "scripture": "Scripture", "collection": "Collection", "speech": "Speech or talk",
+               "proverb": "Proverb or saying", "other": "Other"}
+CONFIDENCE_NOTE = {"thin": "Little is known for certain here; this background is thin and may be revised.",
+                   "uncertain": "Authorship, dates or origin are uncertain or disputed; read this background with care."}
 
 CSS = """:root{--bg:#fbf7ef;--card:#fffdf8;--fg:#2e2a25;--muted:#6f655a;--accent:#8a5a2b;--accent-soft:#c9a46a;
 --line:#e7ddcc;--chip:#f1e8d8;
@@ -66,6 +73,10 @@ code,.formula{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-s
 .formula{display:block;padding:.75rem 1rem;background:var(--card);border-radius:.25rem;overflow-x:auto;margin:1rem 0}
 .terms{padding-left:1.2rem}.terms li{margin:.6rem 0}.val{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.85rem;color:var(--accent);white-space:nowrap}
 dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)}
+.profile{margin:0 0 1.5rem;padding:1.25rem 1.5rem;background:var(--card);border-left:4px solid var(--accent-soft);border-radius:.25rem}
+.profile h2{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
+.index{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}.index li{padding:.6rem .25rem;border-bottom:1px solid var(--line)}
+.index li>a{text-decoration:none;font-size:1.05rem}.index .chips{margin-top:.2rem}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
@@ -75,7 +86,7 @@ def page(title, body, depth):
 <meta name="color-scheme" content="light dark">
 <title>{esc(title)}</title><meta name="description" content="42 Maxims: the rules for life humanity keeps rediscovering, with sources.">
 <link rel="stylesheet" href="{up}style.css"></head><body>
-<header><h1><a href="{up}">42 Maxims</a></h1><nav><a href="{up}">The 42</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><h1><a href="{up}">42 Maxims</a></h1><nav><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
@@ -143,17 +154,27 @@ body = ('<p class="lede">Some ideas keep turning up, in different centuries and 
 write("index.html", page("42 Maxims — rules for life, with sources", body, 0))
 
 
-def cite(q):
-    src = f'<a href="{esc(q["source"])}">source</a>' if q["source"] else "no source yet"
-    return f'— {esc(q["thinker"])}, <em>{esc(q["work"])}</em> · {src} {pill(q["ver"])}'
+def voice_link(q, up):
+    return f'<a href="{up}voices/{q["voice"]}/">{esc(q["thinker"])}</a>'
 
 
-def related(q):
-    parts = [esc(TR[q["tradition"]]["name"]), ERA_LABEL.get(q["era"], q["era"]), f'relation: {q["rel"]}', pill(q["ver"])]
-    parts.append(f'<a href="{esc(q["source"])}">source</a>' if q["source"] else "no source yet")
+def work_link(q, up):
+    return f'<a href="{up}sources/{q["source_id"]}/"><em>{esc(q["work"])}</em></a>'
+
+
+def source_link(q):
+    return f'<a href="{esc(q["source"])}">source</a>' if q["source"] else "no source yet"
+
+
+def cite(q, up="../../"):
+    return f'— {voice_link(q, up)}, {work_link(q, up)} · {source_link(q)} {pill(q["ver"])}'
+
+
+def related(q, up="../../"):
+    parts = [esc(TR[q["tradition"]]["name"]), ERA_LABEL.get(q["era"], q["era"]), f'relation: {q["rel"]}', pill(q["ver"]), source_link(q)]
     if q.get("translation"):
         parts.append(f'Translation: {esc(q["translation"])}')
-    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {esc(q["thinker"])}, <em>{esc(q["work"])}</em></div>'
+    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {voice_link(q, up)}, {work_link(q, up)}</div>'
             f'<div class="meta">{"".join(f"<span>{p}</span>" for p in parts)}</div></li>')
 
 
@@ -217,6 +238,80 @@ for c in D["concepts"]:
         body += f"<h3>Further reading</h3><ul>{links}</ul>"
     write(f"maxims/{c['slug']}/index.html", page(f"{c['maxim']} — 42 Maxims", body, 2))
 
+CONCEPT = {c["slug"]: c for c in D["concepts"]}
+
+
+def profile(e, heading, extra=()):
+    """Summary block at the top of a voice or source page."""
+    facts = [esc(e["dates"]), esc(TR[e["tradition"]]["name"]), ERA_LABEL[e["period"]], *extra]
+    refs = "".join(f'<li><a href="{esc(u)}">{esc(u)}</a></li>' for u in e["refs"])
+    note = f'<p class="note">{CONFIDENCE_NOTE[e["confidence"]]}</p>' if e["confidence"] in CONFIDENCE_NOTE else ""
+    return (f'<section class="profile"><h2>{esc(heading)}</h2><div class="meta">{"".join(f"<span>{f}</span>" for f in facts)}</div>'
+            f'<p>{esc(e["summary"])}</p>{note}' + (f'<p class="label">References</p><ul>{refs}</ul>' if refs else "") + "</section>")
+
+
+def entry_quote(q, show_voice, show_work):
+    """One quote on a voice or source page (depth 2): who/where it is from, verification, locus and its maxim."""
+    who = voice_link(q, "../../") if show_voice else esc(q["thinker"])
+    where = work_link(q, "../../") if show_work else f'<em>{esc(q["work"])}</em>'
+    c = CONCEPT[q["concept"]]
+    parts = [pill(q["ver"]), source_link(q), f'Maxim: <a href="../../maxims/{c["slug"]}/">{esc(c["maxim"])}</a>']
+    if q.get("translation"):
+        parts.append(f'Translation: {esc(q["translation"])}')
+    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {who}, {where}</div>'
+            f'<div class="meta">{"".join(f"<span>{p}</span>" for p in parts)}</div></li>')
+
+
+def sort_key(name):
+    n = name.lower()
+    return n[4:] if n.startswith("the ") else n
+
+
+def plural(n, w):
+    return f"{n} {w}{'' if n == 1 else 's'}"
+
+
+def index_page(entries, label, kinds, counts, base, title, intro):
+    items = []
+    for slug, e in sorted(entries.items(), key=lambda x: sort_key(x[1][label])):
+        chips = [kinds[e["kind"]], plural(len(counts.get(slug, [])), "quote"), esc(e["dates"])]
+        items.append(f'<li><a href="{slug}/">{esc(e[label])}</a><div class="chips">'
+                     + "".join(f'<span class="chip">{x}</span>' for x in chips) + "</div></li>")
+    write(f"{base}/index.html", page(f"{title} — 42 Maxims", f'<h2>{title}</h2><p>{intro}</p><ul class="index">{"".join(items)}</ul>', 1))
+
+
+quotes_by_voice, quotes_by_source = {}, {}
+for q in D["quotes"]:
+    quotes_by_voice.setdefault(q["voice"], []).append(q)
+    quotes_by_source.setdefault(q["source_id"], []).append(q)
+
+for slug, v in VOICES.items():
+    qs = quotes_by_voice.get(slug, [])
+    works = sorted((k for k, s in SOURCES.items() if s["voice"] == slug), key=lambda k: sort_key(SOURCES[k]["title"]))
+    body = '<p class="label">Voice</p>' + profile(v, v["name"], [VOICE_KIND[v["kind"]]])
+    if works:
+        body += "<h3>Works</h3><ul>" + "".join(f'<li><a href="../../sources/{k}/"><em>{esc(SOURCES[k]["title"])}</em></a></li>' for k in works) + "</ul>"
+    if qs:
+        body += f'<h3>Quotes ({len(qs)})</h3><ul class="quotes">{"".join(entry_quote(q, False, True) for q in qs)}</ul>'
+    else:
+        body += '<p class="note">No quotes are credited directly to this voice yet; see the works above.</p>'
+    write(f"voices/{slug}/index.html", page(f"{v['name']} — 42 Maxims", body, 2))
+
+for slug, s in SOURCES.items():
+    qs = quotes_by_source.get(slug, [])
+    extra = [SOURCE_KIND[s["kind"]]]
+    if s["voice"]:
+        extra.insert(0, f'<a href="../../voices/{s["voice"]}/">{esc(VOICES[s["voice"]]["name"])}</a>')
+    body = '<p class="label">Source</p>' + profile(s, s["title"], extra)
+    body += f'<h3>Quotes ({len(qs)})</h3><ul class="quotes">{"".join(entry_quote(q, True, False) for q in qs)}</ul>'
+    write(f"sources/{slug}/index.html", page(f"{s['title']} — 42 Maxims", body, 2))
+
+index_page(VOICES, "name", VOICE_KIND, quotes_by_voice, "voices", "Voices",
+           "The people, communities and texts behind the quotes, from named thinkers to anonymous sayings. "
+           "Where authorship is disputed or a saying is misattributed, the voice page says so.")
+index_page(SOURCES, "title", SOURCE_KIND, quotes_by_source, "sources", "Sources",
+           "The books, scriptures, collections and talks the quotes come from. Each quote's exact chapter, verse and translation are shown beside it.")
+
 legend = "".join(f"<dt>{pill(k)}</dt><dd>{d}</dd>" for k, d in [
     ("verified", "Wording checked against a primary text, a reputable or public-domain translation, or the author's own book, site or recorded talk."),
     ("probable", "Wording found only in a reliable secondary source, such as Wikipedia or Wikiquote with a cited work. Counts at 0.6."),
@@ -244,4 +339,4 @@ write("about/index.html", page("About — 42 Maxims", """<h2>About</h2>
 <p>Our own writing is licensed CC BY-SA 4.0. Short quotations from modern authors are included with attribution for commentary.</p>""", 1))
 write("style.css", CSS)
 write("404.html", page("Not found — 42 Maxims", "<p>That page isn't here. <a href='/'>Back to The 42</a>.</p>", 0))
-print("built", len(D["concepts"]), "maxims")
+print("built", len(D["concepts"]), "maxims,", len(VOICES), "voices,", len(SOURCES), "sources")
