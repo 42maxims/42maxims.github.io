@@ -1029,5 +1029,47 @@
    "https://en.wikipedia.org/wiki/Works_of_Love",
    "https://plato.stanford.edu/entries/kierkegaard/"
   ]
+ },
+ "the-hero-with-a-thousand-faces": {
+  "title": "The Hero with a Thousand Faces",
+  "voice": "joseph-campbell",
+  "kind": "book",
+  "dates": "1949",
+  "tradition": "comparative-mythology",
+  "period": "modern",
+  "summary": "Campbell's 1949 study of comparative mythology, first published in the Bollingen Series. It argues that hero stories from many cultures, including those of Osiris, the Buddha and Moses, share one underlying pattern of departure, initiation and return, which he called the monomyth.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces",
+   "https://en.wikipedia.org/wiki/Hero%27s_journey"
+  ]
+ },
+ "the-power-of-myth": {
+  "title": "The Power of Myth",
+  "voice": "joseph-campbell",
+  "kind": "book",
+  "dates": "1988",
+  "tradition": "comparative-mythology",
+  "period": "contemporary",
+  "summary": "The companion book to Joseph Campbell and the Power of Myth, six conversations with the journalist Bill Moyers filmed in the last two summers of Campbell's life and broadcast on PBS in 1988. In them Campbell talks about the hero's journey, the place of myth in modern life and his advice to 'follow your bliss'.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Joseph_Campbell_and_the_Power_of_Myth",
+   "https://www.jcf.org/learn/joseph-campbell-follow-your-bliss"
+  ]
+ },
+ "a-joseph-campbell-companion": {
+  "title": "A Joseph Campbell Companion: Reflections on the Art of Living",
+  "voice": "joseph-campbell",
+  "kind": "collection",
+  "dates": "1991",
+  "tradition": "comparative-mythology",
+  "period": "contemporary",
+  "summary": "A posthumous collection of short sayings, published in 1991 from material gathered by Diane K. Osbon, who said she wrote them down in her journals over years in Campbell's company. Because the lines were recorded by a listener rather than written by Campbell, their exact wording rests on her notes.",
+  "confidence": "thin",
+  "refs": [
+   "https://quoteinvestigator.com/2013/05/23/campbell-treasure/",
+   "https://en.wikipedia.org/wiki/Joseph_Campbell"
+  ]
  }
 }

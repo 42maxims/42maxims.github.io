@@ -764,5 +764,18 @@
    "https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard",
    "https://plato.stanford.edu/entries/kierkegaard/"
   ]
+ },
+ "joseph-campbell": {
+  "name": "Joseph Campbell",
+  "kind": "person",
+  "dates": "1904–1987",
+  "tradition": "comparative-mythology",
+  "period": "contemporary",
+  "summary": "Joseph Campbell was an American writer on comparative mythology and religion who taught literature at Sarah Lawrence College for 38 years. His book The Hero with a Thousand Faces (1949) set out the 'monomyth', a shared pattern of the hero's journey across the world's myths. His conversations with Bill Moyers, broadcast after his death as The Power of Myth (1988), made the phrase 'follow your bliss' widely known.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Joseph_Campbell",
+   "https://www.jcf.org/learn/joseph-campbell-follow-your-bliss"
+  ]
  }
 }

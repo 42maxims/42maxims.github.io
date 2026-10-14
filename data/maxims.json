@@ -90,6 +90,9 @@
   },
   "renaissance-humanism": {
    "name": "Renaissance humanism"
+  },
+  "comparative-mythology": {
+   "name": "Comparative mythology"
   }
  },
  "concepts": [
@@ -3338,6 +3341,48 @@
    "source_id": "works-of-love",
    "translation": "tr. Howard V. and Edna H. Hong (copyright; short quotation)",
    "source": "https://en.wikiquote.org/wiki/S%C3%B8ren_Kierkegaard"
+  },
+  {
+   "concept": "pursue-meaning",
+   "rel": "similar",
+   "conf": 0.8,
+   "ver": "verified",
+   "text": "Follow your bliss and don't be afraid, and doors will open where you didn't know they were going to be.",
+   "thinker": "Joseph Campbell",
+   "voice": "joseph-campbell",
+   "tradition": "comparative-mythology",
+   "era": "contemporary",
+   "work": "The Power of Myth (1988, with Bill Moyers), p. 120; checked on the Joseph Campbell Foundation site",
+   "source_id": "the-power-of-myth",
+   "source": "https://www.jcf.org/post/doors-will-open"
+  },
+  {
+   "concept": "courage",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "probable",
+   "text": "The very cave you are afraid to enter turns out to be the source of what you are looking for.",
+   "thinker": "Joseph Campbell",
+   "voice": "joseph-campbell",
+   "tradition": "comparative-mythology",
+   "era": "contemporary",
+   "work": "A Joseph Campbell Companion (1991), ed. Diane K. Osbon, 'In the Field', from her notes of his talk; checked via Quote Investigator, not the book. The popular form \"The cave you fear to enter holds the treasure you seek\" is not found in his works; QI's earliest print instance is 2004",
+   "source_id": "a-joseph-campbell-companion",
+   "source": "https://quoteinvestigator.com/2013/05/23/campbell-treasure/"
+  },
+  {
+   "concept": "embrace-the-struggle",
+   "rel": "partial",
+   "conf": 0.5,
+   "ver": "probable",
+   "text": "A hero ventures forth from the world of common day into a region of supernatural wonder: fabulous forces are there encountered and a decisive victory is won: the hero comes back from this mysterious adventure with the power to bestow boons on his fellow man.",
+   "thinker": "Joseph Campbell",
+   "voice": "joseph-campbell",
+   "tradition": "comparative-mythology",
+   "era": "modern",
+   "work": "The Hero with a Thousand Faces (1949), introduction; p. 30 in the 1968 Princeton edition; checked via Wikipedia, not the book (the Joseph Campbell Foundation site has \"fellow men\")",
+   "source_id": "the-hero-with-a-thousand-faces",
+   "source": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
   }
  ]
 }
