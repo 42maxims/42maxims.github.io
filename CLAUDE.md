@@ -7,3 +7,27 @@
 - Modern authors: short attributed quotes only.
 - Commit identity for this repo: Max Ims <37961849+42maxims@users.noreply.github.com>. The project is anonymous; do not add personal names.
 - the owner approves: new concept definitions, merges of concepts, domain purchase, spend, scoring changes.
+
+## How to add a maxim or quote (content workflow)
+1. **Check for an existing concept** in `data/maxims.json` → `concepts`. If the idea is already there (even in other words), add a quote to it; don't create a near-duplicate.
+2. **New concept** (needs the owner's approval in the PR): add to `concepts`:
+   `{"slug": "kebab-case", "maxim": "One-line rule, imperative or plain statement.", "summary": "2–3 warm, reflective sentences in our own words.", "links": ["optional further-reading URLs"]}`
+3. **Add the quote** to `quotes`:
+   ```json
+   {"concept": "<concept slug>", "rel": "expresses|similar|partial|contrasts", "conf": 0.0-1.0,
+    "ver": "verified|probable|disputed|unverified|misattributed",
+    "text": "exact wording from the source", "thinker": "Name or Anonymous",
+    "tradition": "<key in traditions>", "era": "axial|classical|medieval|early-modern|modern|contemporary",
+    "work": "Title, chapter/verse, translator", "translation": "optional: translator/licence, or 'AI-assisted (labelled)'",
+    "source": "URL where the exact wording can be read, or \"\" if none"}
+   ```
+   New tradition? Add it under `traditions` with `name` and, if it grew out of another, `derives_from`.
+4. **Verify the source** (rules below), set `ver` honestly.
+5. `python3 build.py && python3 -m unittest discover tests`, commit data + generated HTML together, open a PR (one concept or a small batch per PR). Push to `master` deploys.
+
+### Source verification rules
+- **verified**: you fetched the source URL and the exact wording appears there; source is a primary text, a reputable/public-domain translation (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Bible Gateway, ctext), or the author's own book/site/recorded talk.
+- **probable**: wording found only in a reliable secondary source (Wikipedia, Wikiquote with a cited work, a major newspaper). Say "checked via X, not the original" in `work`.
+- **unverified**: popular saying with no traceable origin. Allowed, shown with label, scores 0. Never upgrade without a source.
+- **disputed / misattributed**: credible sources disagree, or the attribution is known to be wrong (check Quote Investigator, Wikiquote "Misattributed"). Record the true origin if known.
+- Never paraphrase inside `text`; a paraphrase must say so in `work`. Never invent a citation. Modern authors: one or two sentences max. AI-assisted translations must say "AI-assisted translation" in `translation`.
