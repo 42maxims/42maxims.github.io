@@ -304,6 +304,20 @@
    "maxim": "Welcome the stranger.",
    "summary": "Almost every tradition treats the guest and the traveller as someone to honour. Opening our door, and our table, reminds us that we too have been strangers somewhere.",
    "links": []
+  },
+  {
+   "slug": "honour-your-parents",
+   "maxim": "Honour your father and your mother.",
+   "summary": "The people who raised us gave us our first world, however imperfectly. Many traditions ask us to meet them with care and respect, not just duty, and to let that gratitude show in how we treat them as they grow older.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Filial_piety"
+   ]
+  },
+  {
+   "slug": "actions-over-words",
+   "maxim": "Let your actions match your words.",
+   "summary": "Fine words cost little; what we do shows what we really believe. Living out what we say, quietly and first, is how trust is built, in others and in ourselves.",
+   "links": []
   }
  ],
  "quotes": [
@@ -1886,6 +1900,110 @@
    "work": "Odyssey, Book XIV, tr. Samuel Butler",
    "translation": "public-domain translation (Samuel Butler)",
    "source": "https://www.gutenberg.org/ebooks/1727"
+  },
+  {
+   "concept": "peter-principle",
+   "rel": "similar",
+   "conf": 0.7,
+   "ver": "verified",
+   "text": "If you have assumed any character beyond your strength, you have both demeaned yourself ill in that and quitted one which you might have supported.",
+   "thinker": "Epictetus",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Enchiridion XXXVII, tr. Thomas Wentworth Higginson",
+   "translation": "public-domain translation (Higginson)",
+   "source": "https://www.gutenberg.org/ebooks/45109"
+  },
+  {
+   "concept": "a-time-for-everything",
+   "rel": "similar",
+   "conf": 0.75,
+   "ver": "verified",
+   "text": "Nothing for me is too early nor too late, which is in due time for thee. Everything is fruit to me which thy seasons bring, O Nature:",
+   "thinker": "Marcus Aurelius",
+   "tradition": "stoicism",
+   "era": "classical",
+   "work": "Meditations IV.23, tr. George Long",
+   "translation": "public-domain translation (George Long)",
+   "source": "https://www.gutenberg.org/ebooks/15877"
+  },
+  {
+   "concept": "paradox-of-choice",
+   "rel": "partial",
+   "conf": 0.6,
+   "ver": "verified",
+   "text": "He whose (desires) are few gets them; he whose (desires) are many goes astray.",
+   "thinker": "Laozi",
+   "tradition": "taoism",
+   "era": "axial",
+   "work": "Tao Te Ching, ch. 22, tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/216"
+  },
+  {
+   "concept": "honour-your-parents",
+   "rel": "expresses",
+   "conf": 0.95,
+   "ver": "verified",
+   "text": "Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.",
+   "thinker": "Torah (Ten Commandments)",
+   "tradition": "judaism",
+   "era": "axial",
+   "work": "Exodus 20:12 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.biblegateway.com/passage/?search=Exodus+20%3A12&version=KJV"
+  },
+  {
+   "concept": "honour-your-parents",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "The filial piety of now-a-days means the support of one's parents. But dogs and horses likewise are able to do something in the way of support;-- without reverence, what is there to distinguish the one support given from the other?",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 2.7 (Wei Zheng), tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "actions-over-words",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "He acts before he speaks, and afterwards speaks according to his actions.",
+   "thinker": "Confucius",
+   "tradition": "confucianism",
+   "era": "axial",
+   "work": "Analects 2.13 (Wei Zheng), tr. James Legge",
+   "translation": "public-domain translation (Legge)",
+   "source": "https://www.gutenberg.org/ebooks/4094"
+  },
+  {
+   "concept": "actions-over-words",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "Like a beautiful flower, full of colour, but without scent, are the fine but fruitless words of him who does not act accordingly.",
+   "thinker": "The Buddha (Dhammapada)",
+   "tradition": "buddhism",
+   "era": "axial",
+   "work": "Dhammapada, verse 51, tr. F. Max Müller",
+   "translation": "public-domain translation (Max Müller)",
+   "source": "https://www.gutenberg.org/ebooks/2017"
+  },
+  {
+   "concept": "actions-over-words",
+   "rel": "expresses",
+   "conf": 0.9,
+   "ver": "verified",
+   "text": "But be ye doers of the word, and not hearers only, deceiving your own selves.",
+   "thinker": "James",
+   "tradition": "christianity",
+   "era": "classical",
+   "work": "James 1:22 (KJV)",
+   "translation": "King James Version (public domain)",
+   "source": "https://www.biblegateway.com/passage/?search=James+1%3A22&version=KJV"
   }
  ]
 }

@@ -81,13 +81,13 @@
   "moral_rank": 21.1
  },
  "peter-principle": {
-  "Q": 0.54,
-  "K": 0.54,
-  "T": 0.54,
-  "R": 1,
-  "E": 4.286629339260491,
-  "traditions": 1,
-  "moral_rank": 22.5
+  "Q": 1.03,
+  "K": 1.03,
+  "T": 1.03,
+  "R": 2,
+  "E": 7.812924949562918,
+  "traditions": 2,
+  "moral_rank": 40.9
  },
  "happiness-and-expectations": {
   "Q": 1.8849999999999998,
@@ -126,22 +126,22 @@
   "moral_rank": 40.5
  },
  "paradox-of-choice": {
-  "Q": 0.48,
-  "K": 0.48,
-  "T": 0.48,
+  "Q": 0.72,
+  "K": 0.72,
+  "T": 0.72,
   "R": 1,
-  "E": 4.024862410803575,
-  "traditions": 1,
-  "moral_rank": 21.1
+  "E": 5.050852428249219,
+  "traditions": 2,
+  "moral_rank": 26.5
  },
  "a-time-for-everything": {
-  "Q": 0.8,
-  "K": 0.8,
-  "T": 0.8,
-  "R": 1,
-  "E": 5.382213855902036,
-  "traditions": 1,
-  "moral_rank": 28.2
+  "Q": 1.325,
+  "K": 1.325,
+  "T": 1.325,
+  "R": 2,
+  "E": 8.969806482361452,
+  "traditions": 2,
+  "moral_rank": 47.0
  },
  "tell-the-truth": {
   "Q": 3.17,
@@ -313,5 +313,23 @@
   "E": 16.023422899596078,
   "traditions": 4,
   "moral_rank": 83.9
+ },
+ "honour-your-parents": {
+  "Q": 1.85,
+  "K": 1.85,
+  "T": 1.85,
+  "R": 1,
+  "E": 9.457466045154105,
+  "traditions": 2,
+  "moral_rank": 49.5
+ },
+ "actions-over-words": {
+  "Q": 2.7,
+  "K": 2.7,
+  "T": 2.7,
+  "R": 2,
+  "E": 14.05150049216568,
+  "traditions": 3,
+  "moral_rank": 73.6
  }
 }
