@@ -83,6 +83,12 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .share a,.share button{font:inherit;color:var(--accent);background:none;border:1px solid var(--line);border-radius:1rem;padding:.1rem .7rem;text-decoration:none;cursor:pointer}
 .share a:hover,.share button:hover{border-color:var(--accent)}.share a:focus-visible,.share button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .share [hidden]{display:none}.copied{color:var(--ok-fg)}
+.clip{margin:.6rem 0 .3rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;color:var(--muted)}
+.clip-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}
+.clip button,.clip a{font:inherit;color:var(--accent)}.clip button{background:var(--card);border:1px solid var(--accent-soft);border-radius:1rem;padding:.2rem .9rem;cursor:pointer}
+.clip button:hover,.clip a:hover{border-color:var(--accent)}.clip button:focus-visible,.clip a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.clip [hidden]{display:none}.clip-credit{margin-top:.3rem}
+.clip-frame{position:relative;aspect-ratio:16/9;margin:.6rem 0 0;border-radius:.25rem;overflow:hidden;background:#000}.clip-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
@@ -263,6 +269,34 @@ def echoes(q):
     return f'<div class="echoes">Echoes {esc(e)}</div>' if e else ""
 
 
+CLIP_JS = ("(function(){var bs=document.querySelectorAll('.clip-play');for(var i=0;i<bs.length;i++){(function(b){if(b.hasAttribute('data-bound'))return;b.setAttribute('data-bound','1');b.hidden=false;b.addEventListener('click',function(){"
+           "var w=b.closest('.clip'),h=w.querySelector('.clip-slot'),f=document.createElement('iframe');f.src=b.getAttribute('data-src');f.title=b.getAttribute('data-title');"
+           "f.allow='encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';f.loading='lazy';"
+           "h.className='clip-slot clip-frame';h.appendChild(f);b.hidden=true;f.focus();});})(bs[i]);}})();")
+
+
+def mmss(n):
+    return f"{n // 60}:{n % 60:02d}"
+
+
+def clip_block(q):
+    """Optional click-to-load YouTube clips on a quote. Nothing from YouTube loads until the reader clicks; the
+    plain link to the video is the no-JS fallback and the off-ramp to the wider talk."""
+    out = ""
+    for cl in q.get("clips", []):
+        i, a, b = cl["id"], cl["start"], cl["end"]
+        embed = f"https://www.youtube-nocookie.com/embed/{i}?start={a}&amp;end={b}&amp;rel=0&amp;modestbranding=1&amp;controls=1&amp;playsinline=1"
+        title = f'{cl["title"]} ({cl["channel"]})'
+        out += (f'<div class="clip"><div class="clip-row"><span>{esc(cl["label"])} ({mmss(a)}–{mmss(b)})</span>'
+                f'<button type="button" class="clip-play" data-src="{embed}" data-title="{esc(title)}" '
+                f'aria-label="Play this clip, {mmss(b - a)} long, from {esc(cl["title"])}" hidden>▶ Play clip</button>'
+                f'<a href="https://www.youtube.com/watch?v={i}&amp;t={a}" target="_blank" rel="noopener noreferrer" '
+                f'aria-label="Watch on YouTube, starts at {mmss(a)} (opens in a new tab)">Watch on YouTube (starts at {mmss(a)}) ↗</a></div>'
+                f'<div class="clip-slot"></div>'
+                f'<div class="clip-credit">From “{esc(cl["title"])}”, {esc(cl["channel"])} on YouTube. Go deeper: watch the full talk.</div></div>')
+    return out + (f"<script>{CLIP_JS}</script>" if out else "")
+
+
 def cite(q, up="../../"):
     return f'— {voice_link(q, up)}, {work_link(q, up)} · {source_link(q)} {pill(q["ver"])}'
 
@@ -271,7 +305,7 @@ def related(q, up="../../"):
     parts = [esc(TR[q["tradition"]]["name"]), ERA_LABEL.get(q["era"], q["era"]), f'relation: {q["rel"]}', pill(q["ver"]), source_link(q)]
     if q.get("translation"):
         parts.append(f'Translation: {esc(q["translation"])}')
-    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {voice_link(q, up)}, {work_link(q, up)}</div>{echoes(q)}'
+    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {voice_link(q, up)}, {work_link(q, up)}</div>{echoes(q)}{clip_block(q)}'
             f'<div class="meta">{"".join(f"<span>{p}</span>" for p in parts)}</div></li>')
 
 
@@ -341,7 +375,7 @@ for c in D["concepts"]:
         si = seed_index(c, qs); s = qs[si]
         tr = f'<br>Translation: {esc(s["translation"])}' if s.get("translation") else ""
         body += (f'<figure class="seed"><blockquote>“{esc(s["text"])}”</blockquote>'
-                 f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}{echoes(s)}</figcaption></figure>')
+                 f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}{echoes(s)}</figcaption>{clip_block(s)}</figure>')
     body += f'<p class="summary">{esc(c["summary"])}</p>' + share_block(c["maxim"], f"maxims/{c['slug']}/")
     if c.get("hold"):
         body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
@@ -381,7 +415,7 @@ def entry_quote(q, show_voice, show_work):
     parts = [pill(q["ver"]), source_link(q), f'Maxim: <a href="../../maxims/{c["slug"]}/">{esc(c["maxim"])}</a>']
     if q.get("translation"):
         parts.append(f'Translation: {esc(q["translation"])}')
-    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {who}, {where}</div>{echoes(q)}'
+    return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {who}, {where}</div>{echoes(q)}{clip_block(q)}'
             f'<div class="meta">{"".join(f"<span>{p}</span>" for p in parts)}</div></li>')
 
 

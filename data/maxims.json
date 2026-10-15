@@ -3578,7 +3578,17 @@
    "work": "“Extreme Ownership”, TEDxUniversityofNevada (2017); checked in TED's official English subtitles for the talk (hosted on Amara by the TED team)",
    "source_id": "extreme-ownership-tedx",
    "source": "https://amara.org/api/videos/uIqTGaZOkeOg/languages/en/subtitles/?format=txt",
-   "echoes": "Proverbs 28:13: “He that covereth his sins shall not prosper”"
+   "echoes": "Proverbs 28:13: “He that covereth his sins shall not prosper”",
+   "clips": [
+    {
+     "id": "ljqra3BcqWM",
+     "start": 731,
+     "end": 737,
+     "label": "Hear it spoken",
+     "title": "Extreme Ownership | Jocko Willink | TEDxUniversityofNevada",
+     "channel": "TEDx Talks"
+    }
+   ]
   }
  ]
 }
