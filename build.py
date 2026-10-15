@@ -144,6 +144,9 @@ def ld(obj):
 def page(title, body, depth, path=None, desc=None, kind="website", noindex=False, jsonld=(), crumbs=None):
     """path: canonical path ("" = home, "voices/x/"); None means no canonical or sitemap entry (e.g. 404)."""
     up = "../" * depth
+    tag = f"<script>{globals().get('CLIP_JS', '')}</script>"  # one bind script per page, however many clips it holds
+    if "CLIP_JS" in globals() and body.count(tag) > 1:
+        body = body.replace(tag, "") + tag
     desc = blurb(desc or DEFAULT_DESC)
     head = f'<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">' + verification_tag()
     if noindex or path is None:
@@ -410,7 +413,8 @@ for c in D["concepts"]:
     body += (f'<h2>Score</h2><p>Moral Rank <strong>{MR[c["slug"]]:.1f}</strong> · Evidence E = {b["E"]:.2f}</p>'
              + f'<p class="formula"><code>E = ln(1+{b["Q"]:.2f}) + √{b["K"]:.2f} + 3·{b["T"]:.2f} + 1.5·{b["R"]} = {b["E"]:.2f}</code></p>'
              + '<p class="howto"><small><a href="../../method/">How this is scored</a></small></p>')
-    links = "".join(f'<li><a href="{esc(u)}">{esc(u)}</a></li>' for u in c.get("links", []))
+    links = "".join(f'<li><a href="{esc(l["url"])}">{esc(l["label"])}</a></li>' if isinstance(l, dict)
+                    else f'<li><a href="{esc(l)}">{esc(l)}</a></li>' for l in c.get("links", []))
     if links:
         body += f"<h2>Further reading</h2><ul>{links}</ul>"
     ldq = []
