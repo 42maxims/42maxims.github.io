@@ -85,17 +85,24 @@ SITE_URL = "https://42maxims.github.io"  # canonical origin; change to https://4
 SITE_NAME = "42 Maxims"
 DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with sources."
 SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
-PLAUSIBLE_DOMAIN = ""  # owner: set to the site hostname registered at plausible.io (e.g. 42maxims.github.io); empty = no analytics script
-HOSTNAME = re.compile(r"^(?=.{1,253}$)[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)+$")
+PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
+SCRIPT_ID = re.compile(r"^pa-[A-Za-z0-9_-]+$")
 
 
 def analytics_snippet():
-    """Cookieless Plausible script for <head>, or "" when PLAUSIBLE_DOMAIN is empty."""
-    if not PLAUSIBLE_DOMAIN:
+    """Owner's Plausible snippet for <head>, or "" when PLAUSIBLE_SCRIPT_ID is empty."""
+    if not PLAUSIBLE_SCRIPT_ID:
         return ""
-    if not HOSTNAME.match(PLAUSIBLE_DOMAIN):
-        raise ValueError(f"PLAUSIBLE_DOMAIN must be a hostname like 42maxims.github.io, got {PLAUSIBLE_DOMAIN!r}")
-    return f'<script defer data-domain="{PLAUSIBLE_DOMAIN}" src="https://plausible.io/js/script.js"></script>'
+    if not SCRIPT_ID.match(PLAUSIBLE_SCRIPT_ID):
+        raise ValueError(f"PLAUSIBLE_SCRIPT_ID must match ^pa-[A-Za-z0-9_-]+$, got {PLAUSIBLE_SCRIPT_ID!r}")
+    return (
+        "<!-- Privacy-friendly analytics by Plausible -->\n"
+        f'<script async src="https://plausible.io/js/{PLAUSIBLE_SCRIPT_ID}.js"></script>\n'
+        "<script>\n"
+        "  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};\n"
+        "  plausible.init()\n"
+        "</script>\n"
+    )
 
 
 def blurb(text, n=155):
