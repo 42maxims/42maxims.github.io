@@ -432,7 +432,17 @@
    "work": "Analects 15 (Wei Ling Gong), tr. James Legge",
    "source_id": "analects",
    "translation": "public-domain translation (Legge)",
-   "source": "https://www.gutenberg.org/cache/epub/4094/pg4094.txt"
+   "source": "https://www.gutenberg.org/cache/epub/4094/pg4094.txt",
+   "clips": [
+    {
+     "id": "1Evwgu369Jw",
+     "label": "Brené Brown on Empathy",
+     "title": "Brené Brown on Empathy",
+     "channel": "Royal Society of Arts",
+     "kind": "discussed",
+     "note": "Brené Brown discusses empathy, the heart of this rule"
+    }
+   ]
   },
   {
    "concept": "golden-rule",
@@ -447,7 +457,17 @@
    "work": "Babylonian Talmud, Shabbat 31a (William Davidson translation)",
    "source_id": "babylonian-talmud",
    "translation": "Sefaria / William Davidson translation (CC BY-NC)",
-   "source": "https://www.sefaria.org/Shabbat.31a"
+   "source": "https://www.sefaria.org/Shabbat.31a",
+   "clips": [
+    {
+     "id": "SJMm4RAwVLo",
+     "label": "Charter for Compassion | Karen Armstrong",
+     "title": "Karen Armstrong: 2008 TED Prize wish: Charter for Compassion",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Karen Armstrong discusses this idea"
+    }
+   ]
   },
   {
    "concept": "golden-rule",
@@ -651,7 +671,17 @@
    "era": "contemporary",
    "work": "The Peter Principle (1969), with Raymond Hull; checked in the Internet Archive scan of a 1969 UK edition",
    "source_id": "peter-principle",
-   "source": "https://archive.org/details/peterprinciple00laur"
+   "source": "https://archive.org/details/peterprinciple00laur",
+   "clips": [
+    {
+     "id": "39wzku9KIEM",
+     "label": "The Peter Principle (BBC, 1974)",
+     "title": "1974: Are YOU at your level of INCOMPETENCE? | The Peter Principle | BBC Archive",
+     "channel": "BBC Archive",
+     "kind": "discussed",
+     "note": "Laurence J. Peter explains the principle (1974)"
+    }
+   ]
   },
   {
    "concept": "happiness-and-expectations",
@@ -912,7 +942,17 @@
    "era": "contemporary",
    "work": "Mindset (2006): summary of the idea via Wikipedia (paraphrase, not a direct quote)",
    "source_id": "mindset",
-   "source": "https://en.wikipedia.org/wiki/Mindset_(book)"
+   "source": "https://en.wikipedia.org/wiki/Mindset_(book)",
+   "clips": [
+    {
+     "id": "_X0mgOOSpLU",
+     "label": "The power of believing that you can improve | Carol Dweck",
+     "title": "The power of believing that you can improve | Carol Dweck | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Carol Dweck discusses this idea"
+    }
+   ]
   },
   {
    "concept": "paradox-of-choice",
@@ -1288,7 +1328,17 @@
    "work": "Dhammapada 5, tr. F. Max Müller",
    "source_id": "dhammapada",
    "translation": "public-domain translation (Müller)",
-   "source": "https://www.gutenberg.org/ebooks/2017"
+   "source": "https://www.gutenberg.org/ebooks/2017",
+   "clips": [
+    {
+     "id": "ORp3q1Oaezw",
+     "label": "Why I attend KKK rallies | Daryl Davis",
+     "title": "Why I, as a black man, attend KKK rallies. | Daryl Davis | TEDxNaperville",
+     "channel": "TEDx Talks",
+     "kind": "discussed",
+     "note": "Daryl Davis discusses this idea"
+    }
+   ]
   },
   {
    "concept": "overcome-hatred-with-love",
@@ -1363,7 +1413,17 @@
    "work": "Plato, Apology 38a, tr. Benjamin Jowett",
    "source_id": "apology",
    "translation": "public-domain translation (Jowett)",
-   "source": "https://www.gutenberg.org/ebooks/1656"
+   "source": "https://www.gutenberg.org/ebooks/1656",
+   "clips": [
+    {
+     "id": "tGdsOXZpyWE",
+     "label": "Increase your self-awareness | Tasha Eurich",
+     "title": "Increase your self-awareness with one simple fix | Tasha Eurich | TEDxMileHigh",
+     "channel": "TEDx Talks",
+     "kind": "discussed",
+     "note": "Tasha Eurich discusses this idea"
+    }
+   ]
   },
   {
    "concept": "know-yourself",
@@ -1423,7 +1483,17 @@
    "work": "Matthew 23:12 (KJV)",
    "source_id": "gospel-of-matthew",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "136nLhwBoSQ",
+     "label": "The X Factor of Great Leadership | Jim Collins",
+     "title": "Jim Collins: The X Factor of Truly Great Leadership - Nordic Business Forum 2014",
+     "channel": "Nordic Business Forum",
+     "kind": "discussed",
+     "note": "Jim Collins discusses this idea"
+    }
+   ]
   },
   {
    "concept": "humility",
@@ -1498,7 +1568,17 @@
    "work": "Sahih al-Bukhari 6114",
    "source_id": "sahih-al-bukhari",
    "translation": "Muhsin Khan translation, as given on sunnah.com",
-   "source": "https://sunnah.com/bukhari:6114"
+   "source": "https://sunnah.com/bukhari:6114",
+   "clips": [
+    {
+     "id": "RBK5KLA5Jjg",
+     "label": "Understanding & Controlling Anger | Andrew Huberman",
+     "title": "Understanding & Controlling Anger & Aggression",
+     "channel": "Andrew Huberman",
+     "kind": "discussed",
+     "note": "Andrew Huberman discusses this idea"
+    }
+   ]
   },
   {
    "concept": "master-your-anger",
@@ -1528,7 +1608,17 @@
    "work": "Meditations, Book IV.17, tr. George Long",
    "source_id": "meditations",
    "translation": "public-domain translation (George Long)",
-   "source": "https://www.gutenberg.org/ebooks/15877"
+   "source": "https://www.gutenberg.org/ebooks/15877",
+   "clips": [
+    {
+     "id": "UF8uR6Z6KLc",
+     "label": "Steve Jobs' 2005 Stanford address",
+     "title": "Steve Jobs' 2005 Stanford Commencement Address",
+     "channel": "Stanford",
+     "kind": "discussed",
+     "note": "Steve Jobs discusses this idea"
+    }
+   ]
   },
   {
    "concept": "remember-death",
@@ -1588,7 +1678,17 @@
    "work": "Proverbs 21:23 (KJV)",
    "source_id": "proverbs",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "eIho2S0ZahI",
+     "label": "How to Speak So That People Want to Listen | Julian Treasure",
+     "title": "How to Speak So That People Want to Listen | Julian Treasure | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Julian Treasure discusses this idea"
+    }
+   ]
   },
   {
    "concept": "guard-your-tongue",
@@ -1828,7 +1928,17 @@
    "work": "Acts 20:35 (KJV)",
    "source_id": "acts-of-the-apostles",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "YyXRYgjQXX0",
+     "label": "Are you a giver or a taker? | Adam Grant",
+     "title": "Are you a giver or a taker? | Adam Grant | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Adam Grant discusses this idea"
+    }
+   ]
   },
   {
    "concept": "generosity",
@@ -1843,7 +1953,17 @@
    "work": "Proverbs 11:25 (KJV)",
    "source_id": "proverbs",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "lUKhMUZnLuw",
+     "label": "Helping others makes us happier | Elizabeth Dunn",
+     "title": "Helping others makes us happier -- but it matters how we do it | Elizabeth Dunn",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Elizabeth Dunn discusses this idea"
+    }
+   ]
   },
   {
    "concept": "generosity",
@@ -2113,7 +2233,17 @@
    "work": "Tao Te Ching, ch. 64, tr. James Legge",
    "source_id": "tao-te-ching",
    "translation": "public-domain translation (Legge)",
-   "source": "https://www.gutenberg.org/ebooks/216"
+   "source": "https://www.gutenberg.org/ebooks/216",
+   "clips": [
+    {
+     "id": "AdKUJxjn-R8",
+     "label": "Start with a tiny habit | BJ Fogg",
+     "title": "Forget big change, start with a tiny habit: BJ Fogg at TEDxFremont",
+     "channel": "TEDx Talks",
+     "kind": "discussed",
+     "note": "BJ Fogg discusses this idea"
+    }
+   ]
   },
   {
    "concept": "small-beginnings",
@@ -2158,7 +2288,17 @@
    "work": "Matthew 7:3 (KJV)",
    "source_id": "gospel-of-matthew",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "awTgtA3BuRY",
+     "label": "Rule 6: Set Your House in Perfect Order | Jordan Peterson",
+     "title": "Rule 6: Set Your House in Perfect Order | Jordan Peterson",
+     "channel": "ManOfAllCreation",
+     "kind": "discussed",
+     "note": "Jordan B. Peterson discusses this rule (fan upload)"
+    }
+   ]
   },
   {
    "concept": "examine-yourself-first",
@@ -2503,7 +2643,17 @@
    "work": "Analects 1.1 (Xue Er), tr. James Legge",
    "source_id": "analects",
    "translation": "public-domain translation (Legge)",
-   "source": "https://www.gutenberg.org/ebooks/4094"
+   "source": "https://www.gutenberg.org/ebooks/4094",
+   "clips": [
+    {
+     "id": "5MgBikgcWnY",
+     "label": "The first 20 hours | Josh Kaufman",
+     "title": "The first 20 hours -- how to learn anything | Josh Kaufman | TEDxCSU",
+     "channel": "TEDx Talks",
+     "kind": "discussed",
+     "note": "Josh Kaufman discusses this idea"
+    }
+   ]
   },
   {
    "concept": "keep-learning",
@@ -2588,7 +2738,17 @@
    "work": "Micah 6:8 (KJV)",
    "source_id": "micah",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "c2tOp7OxyQ8",
+     "label": "We need to talk about an injustice | Bryan Stevenson",
+     "title": "Bryan Stevenson: We need to talk about an injustice | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Bryan Stevenson discusses this idea"
+    }
+   ]
   },
   {
    "concept": "justice",
@@ -2948,7 +3108,17 @@
    "work": "Tao Te Ching, ch. 16, tr. James Legge",
    "source_id": "tao-te-ching",
    "translation": "public-domain translation (Legge)",
-   "source": "https://www.gutenberg.org/ebooks/216"
+   "source": "https://www.gutenberg.org/ebooks/216",
+   "clips": [
+    {
+     "id": "qzR62JJCMBQ",
+     "label": "All it takes is 10 mindful minutes | Andy Puddicombe",
+     "title": "All it takes is 10 mindful minutes | Andy Puddicombe | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Andy Puddicombe discusses this idea"
+    }
+   ]
   },
   {
    "concept": "be-still",
@@ -3480,6 +3650,14 @@
      "title": "Follow Your Bliss",
      "channel": "Joseph Campbell Foundation",
      "kind": "verbatim"
+    },
+    {
+     "id": "ji5_MqicxSo",
+     "label": "Randy Pausch's Last Lecture",
+     "title": "Randy Pausch's Last Lecture: Achieving Your Childhood Dreams",
+     "channel": "Carnegie Mellon University",
+     "kind": "discussed",
+     "note": "Randy Pausch discusses this idea"
     }
    ]
   },
@@ -3569,7 +3747,17 @@
    "work": "Ego Is the Enemy (Portfolio/Penguin, 2016) (book title; the phrase also recurs in the text); checked in the Internet Archive scan of that edition",
    "source_id": "ego-is-the-enemy",
    "source": "https://archive.org/details/egoisenemy0000holi",
-   "echoes": "Proverbs 16:18: “Pride goeth before destruction”"
+   "echoes": "Proverbs 16:18: “Pride goeth before destruction”",
+   "clips": [
+    {
+     "id": "Ug414e-PCn4",
+     "label": "Ego is the Enemy | Ryan Holiday (Talks at Google)",
+     "title": "Ego is the Enemy | Ryan Holiday | Talks at Google",
+     "channel": "Talks at Google",
+     "kind": "discussed",
+     "note": "Ryan Holiday discusses this idea"
+    }
+   ]
   },
   {
    "concept": "happiness-and-expectations",

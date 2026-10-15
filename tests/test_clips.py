@@ -114,6 +114,21 @@ class Pages(unittest.TestCase):
                         self.assertNotIn("fan upload", h.split(m.group(0))[1][:200])
         self.assertEqual(seen, set(want))
 
+    def test_batch2_whole_video_refs(self):
+        want = {"39wzku9KIEM", "UF8uR6Z6KLc", "ORp3q1Oaezw", "tGdsOXZpyWE", "AdKUJxjn-R8", "5MgBikgcWnY", "qzR62JJCMBQ",
+                "c2tOp7OxyQ8", "1Evwgu369Jw", "SJMm4RAwVLo", "eIho2S0ZahI", "YyXRYgjQXX0", "lUKhMUZnLuw", "RBK5KLA5Jjg",
+                "Ug414e-PCn4", "136nLhwBoSQ", "_X0mgOOSpLU", "awTgtA3BuRY", "ji5_MqicxSo"}
+        seen = set()
+        for q in D["quotes"]:
+            self.assertLessEqual(len(q.get("clips", [])), 2, q["text"][:40])
+            for cl in q.get("clips", []):
+                if cl["id"] in want:
+                    seen.add(cl["id"]); self.assertNotIn("start", cl); self.assertEqual(cl["kind"], "discussed")
+                    self.assertTrue(cl.get("note"))
+                    h = open(os.path.join(ROOT, "maxims", q["concept"], "index.html"), encoding="utf-8").read()
+                    self.assertIn("watch?v=" + cl["id"], h); self.assertIn(cl["note"], h)
+        self.assertEqual(seen, want)
+
     def test_nothing_from_youtube_loads_on_page_load(self):
         for root, _, files in os.walk(ROOT):
             if ".git" in root or "tests" in root:
@@ -127,7 +142,7 @@ class Pages(unittest.TestCase):
                         self.assertTrue(s.startswith("https://plausible.io/"), (f, s))
 
     def test_pages_without_clips_have_no_clip_markup(self):
-        h = open(os.path.join(ROOT, "maxims", "golden-rule", "index.html"), encoding="utf-8").read()
+        h = open(os.path.join(ROOT, "maxims", "moderation", "index.html"), encoding="utf-8").read()
         self.assertNotIn('class="clip"', h); self.assertNotIn("clip-play", h)
 
 
