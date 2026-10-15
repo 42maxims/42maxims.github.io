@@ -553,7 +553,7 @@
    "voice": "robert-baden-powell",
    "tradition": "scouting",
    "era": "modern",
-   "work": "Last message to Scouts (published 1941); checked via Wikiquote, not the original. The sentence as usually printed begins \"Try and leave this world…\" (e.g. Blassingame, Baden-Powell: Chief Scout of the World, 1966, seen via Internet Archive full-text search); original manuscript not checked",
+   "work": "Last message to Scouts (published 1941); checked via Wikiquote, not the original. The sentence as printed begins \"Try and leave this world…\" (e.g. The Children's Newspaper, 8 March 1941, and Blassingame, Baden-Powell: Chief Scout of the World, 1966, both seen via Internet Archive full-text search); original manuscript not checked",
    "source_id": "baden-powell-last-message",
    "source": "https://en.wikiquote.org/wiki/Robert_Baden-Powell"
   },
@@ -3560,7 +3560,7 @@
    "voice": "andrew-huberman",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "Huberman Lab, “The Science of Gratitude & How to Build a Gratitude Practice” (22 Nov 2021), in the “Introduction” chapter (from 00:00:00); official transcript, marked as under human review",
+   "work": "Huberman Lab, “The Science of Gratitude & How to Build a Gratitude Practice” (22 Nov 2021), in the “Introduction” chapter (from 00:00:00); wording matches the official transcript (re-checked Oct 2026), which is still marked as under human review; recording not checked",
    "source_id": "huberman-lab",
    "source": "https://www.hubermanlab.com/episode/the-science-of-gratitude-and-how-to-build-a-gratitude-practice",
    "echoes": "The Buddha, Maha-mangala Sutta: gratitude is among “the highest protection”"
@@ -3569,15 +3569,15 @@
    "concept": "own-your-mistakes",
    "rel": "similar",
    "conf": 0.7,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Don’t make excuses, don’t blame any other person or any other thing.",
    "thinker": "Jocko Willink",
    "voice": "jocko-willink",
    "tradition": "management",
    "era": "contemporary",
-   "work": "“Extreme Ownership”, TEDxUniversityofNevada (2017); checked via the Singju Post transcript, not the video",
+   "work": "“Extreme Ownership”, TEDxUniversityofNevada (2017); checked in TED's official English subtitles for the talk (hosted on Amara by the TED team)",
    "source_id": "extreme-ownership-tedx",
-   "source": "https://singjupost.com/jocko-willink-on-extreme-ownership-at-tedxuniversityofnevada-transcript/",
+   "source": "https://amara.org/api/videos/uIqTGaZOkeOg/languages/en/subtitles/?format=txt",
    "echoes": "Proverbs 28:13: “He that covereth his sins shall not prosper”"
   }
  ]
