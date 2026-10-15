@@ -1,5 +1,5 @@
 """Builds the static site from data/maxims.json. Run: python3 build.py (no dependencies)."""
-import json, os, html, math
+import json, os, html, math, re
 from scoring import evidence, moral_rank, ancestors, VER, REL, W_Q, W_K, W_T, W_R
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -39,10 +39,10 @@ html{font-size:18px;-webkit-text-size-adjust:100%}
 body{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Charter,"Bitstream Charter",Georgia,serif;
 max-width:42rem;margin:0 auto;padding:2rem 1.25rem 3rem;color:var(--fg);background:var(--bg);line-height:1.65;overflow-wrap:break-word}
 a{color:var(--accent);text-underline-offset:.15em}a:hover{text-decoration-thickness:2px}
-h1,h2,h3{line-height:1.25;font-weight:normal}h2{font-size:1.6rem;margin:2.5rem 0 .5rem}h3{font-size:1.2rem;margin:2rem 0 .5rem}
+h1,h2,h3{line-height:1.25;font-weight:normal}main h1,h2.big{font-size:1.6rem;margin:2.5rem 0 .5rem}main h1:first-child{margin-top:0}main h2{font-size:1.2rem;margin:2rem 0 .5rem}h2.big{margin:2.5rem 0 .5rem}
 header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 1.5rem;
 padding-bottom:1rem;margin-bottom:2rem;border-bottom:1px solid var(--line)}
-header h1{font-size:1.5rem;margin:0;letter-spacing:.02em}header h1 a{text-decoration:none;color:inherit}
+.brand{font-size:1.5rem;line-height:1.25;margin:0;letter-spacing:.02em}.brand a{text-decoration:none;color:inherit}
 nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent)}
 .lede{font-size:1.1rem}.note{color:var(--muted);font-size:.9rem}.sub{color:var(--muted);margin-top:-.25rem}
 table{width:100%;border-collapse:collapse;margin:1rem 0}
@@ -57,7 +57,7 @@ table,tbody,tr,td{display:block}tr:first-child{display:none}tr{position:relative
 td{border:0;padding:0}td.n{position:absolute;left:0;top:.75rem}td.m{padding-left:2rem}td.s{text-align:left;padding-left:2rem;color:var(--muted);font-size:.9rem}
 td.s::before{content:"Moral Rank "}}
 .label{font-variant:small-caps;letter-spacing:.08em;color:var(--muted);font-size:.95rem;margin:0}
-.maxim{font-size:2rem;line-height:1.3;margin:.25rem 0 2rem}
+.maxim,main h1.maxim{font-size:2rem;line-height:1.3;margin:.25rem 0 2rem}
 .seed{margin:0 0 1.5rem;padding:1.5rem 1.5rem 1.25rem;background:var(--card);border-left:4px solid var(--accent-soft);border-radius:.25rem}
 .seed blockquote{margin:0;font-size:1.35rem;line-height:1.5}
 .cite{margin-top:.75rem;font-size:.9rem;color:var(--muted)}.cite em{color:var(--fg)}
@@ -75,19 +75,58 @@ code,.formula{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-s
 .terms{padding-left:1.2rem}.terms li{margin:.6rem 0}.val{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.85rem;color:var(--accent);white-space:nowrap}
 dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)}
 .profile{margin:0 0 1.5rem;padding:1.25rem 1.5rem;background:var(--card);border-left:4px solid var(--accent-soft);border-radius:.25rem}
-.profile h2{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
+.profile h1{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
 .index{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}.index li{padding:.6rem .25rem;border-bottom:1px solid var(--line)}
 .index li>a{text-decoration:none;font-size:1.05rem}.index .chips{margin-top:.2rem}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
-def page(title, body, depth):
+SITE_URL = "https://42maxims.github.io"  # canonical origin; change to https://42maxims.com only after the domain is bought (issue #5)
+SITE_NAME = "42 Maxims"
+DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with sources."
+SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
+
+
+def blurb(text, n=155):
+    """Plain-text meta description: whitespace collapsed, cut at a word boundary with an ellipsis if over n chars."""
+    t = " ".join(re.sub(r"<[^>]+>", " ", html.unescape(text)).split())
+    if len(t) <= n:
+        return t
+    return t[:n - 1].rsplit(" ", 1)[0].rstrip(" ,;:.—-") + "…"
+
+
+def ld(obj):
+    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("<", "\\u003c") + "</script>"
+
+
+def page(title, body, depth, path=None, desc=None, kind="website", noindex=False, jsonld=(), crumbs=None):
+    """path: canonical path ("" = home, "voices/x/"); None means no canonical or sitemap entry (e.g. 404)."""
     up = "../" * depth
+    desc = blurb(desc or DEFAULT_DESC)
+    head = f'<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">'
+    if noindex or path is None:
+        head += '<meta name="robots" content="noindex,follow">'
+    if path is not None:
+        url = f"{SITE_URL}/{path}"
+        head += (f'<link rel="canonical" href="{url}">'
+                 f'<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:locale" content="en_IE">'
+                 f'<meta property="og:type" content="{kind}"><meta property="og:title" content="{esc(title)}">'
+                 f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">'
+                 f'<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}">'
+                 f'<meta name="twitter:description" content="{esc(desc)}">')
+        if not noindex:
+            SITEMAP.append(path)
+            graph = list(jsonld)
+            if crumbs is not None:
+                items = [("Home", "")] + list(crumbs) + [(title.split(" — ")[0], path)]
+                graph.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                    {"@type": "ListItem", "position": n + 1, "name": nm, "item": f"{SITE_URL}/{p}"} for n, (nm, p) in enumerate(items)]})
+            head += "".join(ld(g) for g in graph)
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>{esc(title)}</title><meta name="description" content="42 Maxims: the rules for life humanity keeps rediscovering, with sources.">
+{head}
 <link rel="stylesheet" href="{up}style.css"></head><body>
-<header><h1><a href="{up}">42 Maxims</a></h1><nav><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
@@ -155,13 +194,16 @@ main = qualifying[:TOP_N]
 emerging = [c for c in order if c not in main]
 body = ('<p class="lede">Some ideas keep turning up, in different centuries and different languages, from people who never met. '
         "This is a slow, careful collection of them: each maxim with its sources, ranked by how widely and independently humanity has arrived at it.</p>"
-        "<h2>The 42</h2><p class=\"sub\">The 42 highest-ranked maxims</p>"
+        "<h1>The 42</h1><p class=\"sub\">The 42 highest-ranked maxims</p>"
         f'<p class="note">{len(qualifying)} maxims are now shared by at least two independent traditions; these are the {len(main)} that rank highest among them. '
         "It is still an early collection, and the order will keep shifting gently as new sources are found.</p>"
         + table(main) +
-        "<h2>Emerging</h2><p>Maxims just outside The 42. Some rank just below the top; others are waiting for stronger backing from a second tradition. Each is marked with its reason, and any of them can join as new sources are found.</p>"
+        "<h2 class=\"big\">Emerging</h2><p>Maxims just outside The 42. Some rank just below the top; others are waiting for stronger backing from a second tradition. Each is marked with its reason, and any of them can join as new sources are found.</p>"
         + table(emerging, True))
-write("index.html", page("42 Maxims — rules for life, with sources", body, 0))
+write("index.html", page("42 Maxims — rules for life, with sources", body, 0, "",
+                         "Some ideas keep turning up in different centuries and languages. 42 Maxims ranks them by how widely and independently humanity arrived at them, with sources.",
+                         jsonld=[{"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/",
+                                  "description": DEFAULT_DESC, "inLanguage": "en"}]))
 
 
 def voice_link(q, up):
@@ -233,7 +275,7 @@ def score_terms(b=None, slug=None, qs=()):
 
 for c in D["concepts"]:
     b = BD[c["slug"]]; qs = quotes_by.get(c["slug"], [])
-    body = f'<p class="label">Maxim</p><h2 class="maxim">{esc(c["maxim"])}</h2>'
+    body = f'<p class="label">Maxim</p><h1 class="maxim">{esc(c["maxim"])}</h1>'
     si = None
     if qs:
         si = seed_index(c, qs); s = qs[si]
@@ -245,14 +287,19 @@ for c in D["concepts"]:
         body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
     rest = [q for i, q in enumerate(qs) if i != si]
     if rest:
-        body += f'<h3>Related expressions</h3><ul class="quotes">{"".join(related(q) for q in rest)}</ul>'
-    body += (f'<h3>Score</h3><p>Moral Rank <strong>{MR[c["slug"]]:.1f}</strong> · Evidence E = {b["E"]:.2f}</p>'
+        body += f'<h2>Related expressions</h2><ul class="quotes">{"".join(related(q) for q in rest)}</ul>'
+    body += (f'<h2>Score</h2><p>Moral Rank <strong>{MR[c["slug"]]:.1f}</strong> · Evidence E = {b["E"]:.2f}</p>'
              + f'<p class="formula"><code>E = ln(1+{b["Q"]:.2f}) + √{b["K"]:.2f} + 3·{b["T"]:.2f} + 1.5·{b["R"]} = {b["E"]:.2f}</code></p>'
              + '<p class="howto"><small><a href="../../method/">How this is scored</a></small></p>')
     links = "".join(f'<li><a href="{esc(u)}">{esc(u)}</a></li>' for u in c.get("links", []))
     if links:
-        body += f"<h3>Further reading</h3><ul>{links}</ul>"
-    write(f"maxims/{c['slug']}/index.html", page(f"{c['maxim']} — 42 Maxims", body, 2))
+        body += f"<h2>Further reading</h2><ul>{links}</ul>"
+    ldq = []
+    if qs:
+        ldq = [{"@context": "https://schema.org", "@type": "Quotation", "text": s["text"], "creator": {"@type": "Person", "name": s["thinker"]},
+                "isPartOf": {"@type": "CreativeWork", "name": s["work"]}, "inLanguage": "en"}] if VOICES[s["voice"]]["kind"] == "person" else []
+    write(f"maxims/{c['slug']}/index.html", page(f"{c['maxim']} — 42 Maxims", body, 2, f"maxims/{c['slug']}/",
+          c["summary"], "article", jsonld=ldq, crumbs=[]))
 
 CONCEPT = {c["slug"]: c for c in D["concepts"]}
 
@@ -262,7 +309,7 @@ def profile(e, heading, extra=()):
     facts = [esc(e["dates"]), esc(TR[e["tradition"]]["name"]), ERA_LABEL[e["period"]], *extra]
     refs = "".join(f'<li><a href="{esc(u)}">{esc(u)}</a></li>' for u in e["refs"])
     note = f'<p class="note">{CONFIDENCE_NOTE[e["confidence"]]}</p>' if e["confidence"] in CONFIDENCE_NOTE else ""
-    return (f'<section class="profile"><h2>{esc(heading)}</h2><div class="meta">{"".join(f"<span>{f}</span>" for f in facts)}</div>'
+    return (f'<section class="profile"><h1>{esc(heading)}</h1><div class="meta">{"".join(f"<span>{f}</span>" for f in facts)}</div>'
             f'<p>{esc(e["summary"])}</p>{note}' + (f'<p class="label">References</p><ul>{refs}</ul>' if refs else "") + "</section>")
 
 
@@ -293,7 +340,8 @@ def index_page(entries, label, kinds, counts, base, title, intro):
         chips = [kinds[e["kind"]], plural(len(counts.get(slug, [])), "quote"), esc(e["dates"])]
         items.append(f'<li><a href="{slug}/">{esc(e[label])}</a><div class="chips">'
                      + "".join(f'<span class="chip">{x}</span>' for x in chips) + "</div></li>")
-    write(f"{base}/index.html", page(f"{title} — 42 Maxims", f'<h2>{title}</h2><p>{intro}</p><ul class="index">{"".join(items)}</ul>', 1))
+    write(f"{base}/index.html", page(f"{title} — 42 Maxims", f'<h1>{title}</h1><p>{intro}</p><ul class="index">{"".join(items)}</ul>', 1,
+                                          f"{base}/", intro, crumbs=[]))
 
 
 quotes_by_voice, quotes_by_source = {}, {}
@@ -306,12 +354,14 @@ for slug, v in VOICES.items():
     works = sorted((k for k, s in SOURCES.items() if s["voice"] == slug), key=lambda k: sort_key(SOURCES[k]["title"]))
     body = '<p class="label">Voice</p>' + profile(v, v["name"], [VOICE_KIND[v["kind"]]])
     if works:
-        body += "<h3>Works</h3><ul>" + "".join(f'<li><a href="../../sources/{k}/"><em>{esc(SOURCES[k]["title"])}</em></a></li>' for k in works) + "</ul>"
+        body += "<h2>Works</h2><ul>" + "".join(f'<li><a href="../../sources/{k}/"><em>{esc(SOURCES[k]["title"])}</em></a></li>' for k in works) + "</ul>"
     if qs:
-        body += f'<h3>Quotes ({len(qs)})</h3><ul class="quotes">{"".join(entry_quote(q, False, True) for q in qs)}</ul>'
+        body += f'<h2>Quotes ({len(qs)})</h2><ul class="quotes">{"".join(entry_quote(q, False, True) for q in qs)}</ul>'
     else:
         body += '<p class="note">No quotes are credited directly to this voice yet; see the works above.</p>'
-    write(f"voices/{slug}/index.html", page(f"{v['name']} — 42 Maxims", body, 2))
+    ldv = [{"@context": "https://schema.org", "@type": "Person", "name": v["name"], "description": v["summary"]}] if v["kind"] == "person" else []
+    write(f"voices/{slug}/index.html", page(f"{v['name']} — 42 Maxims", body, 2, f"voices/{slug}/", v["summary"],
+          "profile", noindex=not (qs or works), jsonld=ldv, crumbs=[("Voices", "voices/")]))
 
 for slug, s in SOURCES.items():
     qs = quotes_by_source.get(slug, [])
@@ -319,8 +369,9 @@ for slug, s in SOURCES.items():
     if s["voice"]:
         extra.insert(0, f'<a href="../../voices/{s["voice"]}/">{esc(VOICES[s["voice"]]["name"])}</a>')
     body = '<p class="label">Source</p>' + profile(s, s["title"], extra)
-    body += f'<h3>Quotes ({len(qs)})</h3><ul class="quotes">{"".join(entry_quote(q, True, False) for q in qs)}</ul>'
-    write(f"sources/{slug}/index.html", page(f"{s['title']} — 42 Maxims", body, 2))
+    body += f'<h2>Quotes ({len(qs)})</h2><ul class="quotes">{"".join(entry_quote(q, True, False) for q in qs)}</ul>'
+    write(f"sources/{slug}/index.html", page(f"{s['title']} (source) — 42 Maxims", body, 2, f"sources/{slug}/", s["summary"],
+          noindex=not qs, crumbs=[("Sources", "sources/")]))
 
 index_page(VOICES, "name", VOICE_KIND, quotes_by_voice, "voices", "Voices",
            "The people, communities and texts behind the quotes, from named thinkers to anonymous sayings. "
@@ -337,22 +388,28 @@ legend = "".join(f"<dt>{pill(k)}</dt><dd>{d}</dd>" for k, d in [
                       "record the true origin where known, and give it no weight.")])
 
 PERIODS = "".join(f"<li>{ERA_LABEL[e]}</li>" for e in ERA_ORDER)
-write("method/index.html", page("Method — 42 Maxims", f"""<h2>How Moral Rank works</h2>
+write("method/index.html", page("Method — 42 Maxims", f"""<h1>How Moral Rank works</h1>
 <p>Moral Rank asks one question: <strong>how widely, independently and reliably has humanity arrived at this idea?</strong></p>
 <p>Breadth matters more than volume: each independent tradition adds a lot, each time period adds a good deal, while extra quotes and thinkers add less and less.</p>
 {FORMULA}
 {score_terms()}
 <p>The score measures <em>convergence</em>, not truth or moral worth. We never rank traditions or thinkers, only ideas.
 Full details are in <a href="https://github.com/42maxims/42maxims.github.io/blob/master/SPEC.md">the spec</a>.</p>
-<h3>Time periods</h3><p>Each quote is placed in one period by when it was written or first recorded:</p><ul>{PERIODS}</ul>
-<h3>Verification labels</h3><dl class="legend">{legend}</dl>
-<p>Translations of non-English texts are public-domain or credited translations. Where we make our own, they are AI-assisted and labelled as such.</p>""", 1))
+<h2>Time periods</h2><p>Each quote is placed in one period by when it was written or first recorded:</p><ul>{PERIODS}</ul>
+<h2>Verification labels</h2><dl class="legend">{legend}</dl>
+<p>Translations of non-English texts are public-domain or credited translations. Where we make our own, they are AI-assisted and labelled as such.</p>""", 1,
+ "method/", "How Moral Rank works: each maxim is scored on how many quotes, thinkers, independent traditions and time periods express it, with verification labels explained.",
+ crumbs=[]))
 
-write("about/index.html", page("About — 42 Maxims", """<h2>About</h2>
+write("about/index.html", page("About — 42 Maxims", """<h1>About</h1>
 <p>42 Maxims gathers the short rules for living that keep reappearing across religions, philosophies, science and popular wisdom, and links every one to its sources.</p>
 <p>It is an open project. Anyone can suggest a maxim, a quote or a correction by opening an issue or pull request on
 <a href="https://github.com/42maxims/42maxims.github.io">GitHub</a>. The site is in English first; other languages will follow.</p>
-<p>Our own writing is licensed CC BY-SA 4.0. Short quotations from modern authors are included with attribution for commentary.</p>""", 1))
+<p>Our own writing is licensed CC BY-SA 4.0. Short quotations from modern authors are included with attribution for commentary.</p>""", 1,
+ "about/", "42 Maxims gathers the short rules for living that keep reappearing across religions, philosophies, science and popular wisdom, and links every one to its sources.", crumbs=[]))
 write("style.css", CSS)
-write("404.html", page("Not found — 42 Maxims", "<p>That page isn't here. <a href='/'>Back to The 42</a>.</p>", 0))
+write("404.html", page("Not found — 42 Maxims", "<h1>Page not found</h1><p>That page isn't here. <a href='/'>Back to The 42</a>.</p>", 0))
+write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+      + "".join(f"<url><loc>{SITE_URL}/{p}</loc></url>\n" for p in sorted(SITEMAP)) + "</urlset>\n")
+write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 print("built", len(D["concepts"]), "maxims,", len(VOICES), "voices,", len(SOURCES), "sources")

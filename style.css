@@ -9,10 +9,10 @@ html{font-size:18px;-webkit-text-size-adjust:100%}
 body{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Charter,"Bitstream Charter",Georgia,serif;
 max-width:42rem;margin:0 auto;padding:2rem 1.25rem 3rem;color:var(--fg);background:var(--bg);line-height:1.65;overflow-wrap:break-word}
 a{color:var(--accent);text-underline-offset:.15em}a:hover{text-decoration-thickness:2px}
-h1,h2,h3{line-height:1.25;font-weight:normal}h2{font-size:1.6rem;margin:2.5rem 0 .5rem}h3{font-size:1.2rem;margin:2rem 0 .5rem}
+h1,h2,h3{line-height:1.25;font-weight:normal}main h1,h2.big{font-size:1.6rem;margin:2.5rem 0 .5rem}main h1:first-child{margin-top:0}main h2{font-size:1.2rem;margin:2rem 0 .5rem}h2.big{margin:2.5rem 0 .5rem}
 header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 1.5rem;
 padding-bottom:1rem;margin-bottom:2rem;border-bottom:1px solid var(--line)}
-header h1{font-size:1.5rem;margin:0;letter-spacing:.02em}header h1 a{text-decoration:none;color:inherit}
+.brand{font-size:1.5rem;line-height:1.25;margin:0;letter-spacing:.02em}.brand a{text-decoration:none;color:inherit}
 nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent)}
 .lede{font-size:1.1rem}.note{color:var(--muted);font-size:.9rem}.sub{color:var(--muted);margin-top:-.25rem}
 table{width:100%;border-collapse:collapse;margin:1rem 0}
@@ -27,7 +27,7 @@ table,tbody,tr,td{display:block}tr:first-child{display:none}tr{position:relative
 td{border:0;padding:0}td.n{position:absolute;left:0;top:.75rem}td.m{padding-left:2rem}td.s{text-align:left;padding-left:2rem;color:var(--muted);font-size:.9rem}
 td.s::before{content:"Moral Rank "}}
 .label{font-variant:small-caps;letter-spacing:.08em;color:var(--muted);font-size:.95rem;margin:0}
-.maxim{font-size:2rem;line-height:1.3;margin:.25rem 0 2rem}
+.maxim,main h1.maxim{font-size:2rem;line-height:1.3;margin:.25rem 0 2rem}
 .seed{margin:0 0 1.5rem;padding:1.5rem 1.5rem 1.25rem;background:var(--card);border-left:4px solid var(--accent-soft);border-radius:.25rem}
 .seed blockquote{margin:0;font-size:1.35rem;line-height:1.5}
 .cite{margin-top:.75rem;font-size:.9rem;color:var(--muted)}.cite em{color:var(--fg)}
@@ -45,7 +45,7 @@ code,.formula{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-s
 .terms{padding-left:1.2rem}.terms li{margin:.6rem 0}.val{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.85rem;color:var(--accent);white-space:nowrap}
 dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)}
 .profile{margin:0 0 1.5rem;padding:1.25rem 1.5rem;background:var(--card);border-left:4px solid var(--accent-soft);border-radius:.25rem}
-.profile h2{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
+.profile h1{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
 .index{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}.index li{padding:.6rem .25rem;border-bottom:1px solid var(--line)}
 .index li>a{text-decoration:none;font-size:1.05rem}.index .chips{margin-top:.2rem}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
