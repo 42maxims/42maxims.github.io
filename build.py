@@ -94,6 +94,17 @@ DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with
 SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
 PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
 SCRIPT_ID = re.compile(r"^pa-[A-Za-z0-9_-]+$")
+GOOGLE_SITE_VERIFICATION = "rpfVMtZnMXoRdDKscG_bzbKO-IlKBdvh7tE8za73o4U"  # Search Console HTML-tag token; empty = no tag
+VERIFICATION_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
+
+
+def verification_tag():
+    """Google Search Console verification meta tag, or "" when GOOGLE_SITE_VERIFICATION is empty."""
+    if not GOOGLE_SITE_VERIFICATION:
+        return ""
+    if not VERIFICATION_TOKEN.match(GOOGLE_SITE_VERIFICATION):
+        raise ValueError(f"GOOGLE_SITE_VERIFICATION must match ^[A-Za-z0-9_-]+$, got {GOOGLE_SITE_VERIFICATION!r}")
+    return f'<meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}" />'
 
 
 def analytics_snippet():
@@ -128,7 +139,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
     """path: canonical path ("" = home, "voices/x/"); None means no canonical or sitemap entry (e.g. 404)."""
     up = "../" * depth
     desc = blurb(desc or DEFAULT_DESC)
-    head = f'<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">'
+    head = f'<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">' + verification_tag()
     if noindex or path is None:
         head += '<meta name="robots" content="noindex,follow">'
     if path is not None:
