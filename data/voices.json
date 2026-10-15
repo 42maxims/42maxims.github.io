@@ -918,5 +918,18 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Jocko_Willink"
   ]
+ },
+ "donald-knuth": {
+  "name": "Donald Knuth",
+  "kind": "person",
+  "dates": "born 1938",
+  "tradition": "computer-science",
+  "period": "contemporary",
+  "summary": "Donald Knuth is an American computer scientist and mathematician, professor emeritus at Stanford University and recipient of the 1974 ACM Turing Award. He is the author of The Art of Computer Programming and has been called the father of the analysis of algorithms.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Donald_Knuth",
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Knuth/"
+  ]
  }
 }

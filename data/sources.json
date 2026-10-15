@@ -1237,5 +1237,19 @@
    "https://singjupost.com/jocko-willink-on-extreme-ownership-at-tedxuniversityofnevada-transcript/",
    "https://en.wikipedia.org/wiki/Jocko_Willink"
   ]
+ },
+ "structured-programming-with-go-to-statements": {
+  "title": "Structured Programming with go to Statements",
+  "voice": "donald-knuth",
+  "kind": "other",
+  "dates": "1974",
+  "tradition": "computer-science",
+  "period": "contemporary",
+  "summary": "A paper by Donald Knuth published in ACM Computing Surveys in December 1974, on program structure and efficiency. It is the source of his often-quoted remark that premature optimization is the root of all evil, together with his advice not to neglect the critical few per cent of a program.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Program_optimization",
+   "https://en.wikiquote.org/wiki/Donald_Knuth"
+  ]
  }
 }
