@@ -165,7 +165,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
 <meta name="color-scheme" content="light dark">
 {head}
 <link rel="stylesheet" href="{up}style.css">{analytics_snippet()}</head><body>
-<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}maxim-of-the-day/">Maxim of the day</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}maxim-of-the-day/" aria-label="Maxim of the day" title="Maxim of the day">Daily</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
@@ -462,11 +462,12 @@ Full details are in <a href="https://github.com/42maxims/42maxims.github.io/blob
  crumbs=[]))
 
 write("about/index.html", page("About — 42 Maxims", """<h1>About</h1>
+<p>A maxim is a short, memorable rule for how to live. Each one here gathers the quotes, from many thinkers, traditions and periods, that express the same idea.</p>
 <p>42 Maxims gathers the short rules for living that keep reappearing across religions, philosophies, science and popular wisdom, and links every one to its sources.</p>
 <p>It is an open project. Anyone can suggest a maxim, a quote or a correction by opening an issue or pull request on
 <a href="https://github.com/42maxims/42maxims.github.io">GitHub</a>. The site is in English first; other languages will follow.</p>
 <p>Our own writing is licensed CC BY-SA 4.0. Short quotations from modern authors are included with attribution for commentary.</p>""", 1,
- "about/", "42 Maxims gathers the short rules for living that keep reappearing across religions, philosophies, science and popular wisdom, and links every one to its sources.", crumbs=[]))
+ "about/", "A maxim is a short, memorable rule for how to live. 42 Maxims gathers the ones that keep reappearing across traditions and links each to its sources.", crumbs=[]))
 # ---- Maxim of the Day: date-seeded (UTC), same formula in Python and in the inline script ----
 MOTD_FORMULA = "Math.floor(Date.now()/86400000)%LIST.length"  # JS twin of motd_index(); keep in sync (tests check it)
 
