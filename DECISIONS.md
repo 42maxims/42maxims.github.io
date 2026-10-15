@@ -22,3 +22,4 @@
 - 2026-10-15 **Decision: Analytics.** Plausible.io, owner's script on all pages (`PLAUSIBLE_SCRIPT_ID` in `build.py`); replaces the GA4 prep (cookieless, per SPEC).
 - 2026-10-15 **Decision: Domain.** 42maxims.com (#5) deferred; the owner will look at registering it later. Canonical stays github.io via `SITE_URL`.
 - 2026-10-15 **Decision: Release.** SEO and Plausible are released together from `release-candidate`; the owner approved merging to master and deploying. Review the long titles after launch.
+- 2026-10-15 **Maxim of the Day** at `/maxim-of-the-day/`: date-seeded, no server. Maxim = whole UTC days since 1970-01-01 modulo the list of maxims (not on hold, with a verified quote; sorted by slug). Fallback pre-rendered (first in list) for no-JS/crawlers; inline script picks the day's maxim with the same formula as `motd_index()` in `build.py`. Added to nav and sitemap.

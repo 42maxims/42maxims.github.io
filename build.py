@@ -1,5 +1,5 @@
 """Builds the static site from data/maxims.json. Run: python3 build.py (no dependencies)."""
-import json, os, html, math, re
+import json, os, html, math, re, datetime
 from scoring import evidence, moral_rank, ancestors, VER, REL, W_Q, W_K, W_T, W_R
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -144,7 +144,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
 <meta name="color-scheme" content="light dark">
 {head}
 <link rel="stylesheet" href="{up}style.css">{analytics_snippet()}</head><body>
-<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}maxim-of-the-day/">Maxim of the day</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
@@ -425,6 +425,61 @@ write("about/index.html", page("About — 42 Maxims", """<h1>About</h1>
 <a href="https://github.com/42maxims/42maxims.github.io">GitHub</a>. The site is in English first; other languages will follow.</p>
 <p>Our own writing is licensed CC BY-SA 4.0. Short quotations from modern authors are included with attribution for commentary.</p>""", 1,
  "about/", "42 Maxims gathers the short rules for living that keep reappearing across religions, philosophies, science and popular wisdom, and links every one to its sources.", crumbs=[]))
+# ---- Maxim of the Day: date-seeded (UTC), same formula in Python and in the inline script ----
+MOTD_FORMULA = "Math.floor(Date.now()/86400000)%LIST.length"  # JS twin of motd_index(); keep in sync (tests check it)
+
+
+def motd_index(day, n):
+    """Index of the maxim for a UTC date: whole days since 1970-01-01, modulo n."""
+    return (day - datetime.date(1970, 1, 1)).days % n
+
+
+def motd_entries():
+    """Indexable maxims (not on hold, with a verified quote), sorted by slug so the cycle is stable. Quote = seed if verified, else first verified."""
+    out = []
+    for c in sorted(D["concepts"], key=lambda c: c["slug"]):
+        qs = quotes_by.get(c["slug"], [])
+        if c.get("hold") or not qs:
+            continue
+        s = qs[seed_index(c, qs)]
+        if s["ver"] != "verified":
+            ver = [q for q in qs if q["ver"] == "verified"]
+            if not ver:
+                continue
+            s = ver[0]
+        out.append({"slug": c["slug"], "maxim": c["maxim"], "text": s["text"], "who": s["thinker"], "voice": s["voice"],
+                    "work": s["work"], "source_id": s["source_id"], "period": ERA_LABEL.get(s["era"], s["era"]),
+                    "tradition": TR[s["tradition"]]["name"]})
+    return out
+
+
+MOTD = motd_entries()
+
+
+def motd_card(e, up="../"):
+    return (f'<p class="label">Maxim of the day</p><h1 class="maxim"><a id="motd-link" href="{up}maxims/{e["slug"]}/">{esc(e["maxim"])}</a></h1>'
+            f'<figure class="seed"><blockquote id="motd-text">“{esc(e["text"])}”</blockquote>'
+            f'<figcaption class="cite" id="motd-cite">— <a href="{up}voices/{e["voice"]}/">{esc(e["who"])}</a>, '
+            f'<a href="{up}sources/{e["source_id"]}/"><em>{esc(e["work"])}</em></a> {pill("verified")}'
+            f'<br>{esc(e["tradition"])} · {e["period"]}</figcaption></figure>'
+            f'<p><a id="motd-more" href="{up}maxims/{e["slug"]}/">Read the full maxim, with every source →</a></p>')
+
+
+motd_js = ("(function(){var LIST=" + json.dumps(MOTD, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c") + ";"
+           "var e=LIST[" + MOTD_FORMULA + "];if(!e)return;"
+           "var $=function(i){return document.getElementById(i)};var u='../';"
+           "$('motd-link').textContent=e.maxim;$('motd-link').href=u+'maxims/'+e.slug+'/';$('motd-more').href=u+'maxims/'+e.slug+'/';"
+           "$('motd-text').textContent='\\u201c'+e.text+'\\u201d';"
+           "var c=$('motd-cite'),a=c.getElementsByTagName('a');a[0].textContent=e.who;a[0].href=u+'voices/'+e.voice+'/';"
+           "a[1].firstChild.textContent=e.work;a[1].href=u+'sources/'+e.source_id+'/';"
+           "var t=c.lastChild;t.textContent=e.tradition+' \\u00b7 '+e.period;})();")
+body = (motd_card(MOTD[0]) +
+        '<p class="note">One maxim a day, the same for everyone: it changes at midnight UTC and cycles through the '
+        f'{len(MOTD)} maxims that have a verified quote. <noscript>With JavaScript off, this page shows a fixed maxim; '
+        '<a href="../">browse The 42</a> for the full list.</noscript></p>'
+        f"<script>{motd_js}</script>")
+write("maxim-of-the-day/index.html", page("Maxim of the Day — 42 Maxims", body, 1, "maxim-of-the-day/",
+      "One maxim a day, the same for everyone, each with a verified quote and its sources. It changes at midnight UTC.", crumbs=[]))
 write("style.css", CSS)
 write("404.html", page("Not found — 42 Maxims", "<h1>Page not found</h1><p>That page isn't here. <a href='/'>Back to The 42</a>.</p>", 0))
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
