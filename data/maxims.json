@@ -519,15 +519,15 @@
    "concept": "take-care-of-yourself",
    "rel": "expresses",
    "conf": 0.95,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Treat yourself like someone you are responsible for helping.",
    "thinker": "Jordan B. Peterson",
    "voice": "jordan-peterson",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "12 Rules for Life (2018), Rule 2 (rule title); checked via Wikipedia, not the book",
+   "work": "12 Rules for Life (2018), Rule 2 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
   },
   {
    "concept": "embrace-the-struggle",
@@ -793,15 +793,15 @@
    "concept": "pursue-meaning",
    "rel": "expresses",
    "conf": 0.95,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Pursue what is meaningful (not what is expedient).",
    "thinker": "Jordan B. Peterson",
    "voice": "jordan-peterson",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "12 Rules for Life (2018), Rule 7 (rule title); checked via Wikipedia",
+   "work": "12 Rules for Life (2018), Rule 7 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
   },
   {
    "concept": "pursue-meaning",
@@ -821,15 +821,15 @@
    "concept": "growth-mindset",
    "rel": "expresses",
    "conf": 0.8,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Compare yourself to who you were yesterday, not to who someone else is today.",
    "thinker": "Jordan B. Peterson",
    "voice": "jordan-peterson",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "12 Rules for Life (2018), Rule 4 (rule title); checked via Wikipedia",
+   "work": "12 Rules for Life (2018), Rule 4 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
   },
   {
    "concept": "growth-mindset",
@@ -892,29 +892,29 @@
    "concept": "tell-the-truth",
    "rel": "expresses",
    "conf": 0.95,
-   "ver": "probable",
-   "text": "Tell the truth – or, at least, don't lie.",
+   "ver": "verified",
+   "text": "Tell the truth—or, at least, don't lie.",
    "thinker": "Jordan B. Peterson",
    "voice": "jordan-peterson",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "12 Rules for Life (2018), Rule 8 (rule title); checked via Wikipedia",
+   "work": "12 Rules for Life (2018), Rule 8 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation; dash corrected to the unspaced em dash of the printed chapter heading)",
    "source_id": "12-rules-for-life",
-   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
   },
   {
    "concept": "leave-it-better",
    "rel": "partial",
    "conf": 0.5,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Set your house in perfect order before you criticize the world.",
    "thinker": "Jordan B. Peterson",
    "voice": "jordan-peterson",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "12 Rules for Life (2018), Rule 6 (rule title); checked via Wikipedia",
+   "work": "12 Rules for Life (2018), Rule 6 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
   },
   {
    "concept": "thoughts-shape-life",
@@ -2450,15 +2450,15 @@
    "concept": "listen-first",
    "rel": "similar",
    "conf": 0.8,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Assume that the person you are listening to might know something you don't.",
    "thinker": "Jordan B. Peterson",
    "voice": "jordan-peterson",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "12 Rules for Life (2018), Rule 9 (rule title); checked via Wikipedia, not the book",
+   "work": "12 Rules for Life (2018), Rule 9 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
   },
   {
    "concept": "justice",
