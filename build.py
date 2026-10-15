@@ -285,6 +285,8 @@ CLIP_KINDS = ("verbatim", "paraphrase", "discussed")
 def clip_note(q, cl):
     """Short label for clips that are not the exact quoted words (kind defaults to verbatim = no label)."""
     k = cl.get("kind", "verbatim")
+    if "start" not in cl:
+        return f"{esc(q.get('thinker', 'The speaker'))} discusses this idea"
     if k == "paraphrase":
         return "Spoken as a close paraphrase"
     if k == "discussed":
@@ -298,7 +300,14 @@ def clip_block(q):
     plain link to the video is the no-JS fallback and the off-ramp to the wider talk."""
     out = ""
     for cl in q.get("clips", []):
-        i, a, b = cl["id"], cl["start"], cl["end"]
+        i = cl["id"]
+        if "start" not in cl:  # whole-video reference: link only, no embed, no timestamps
+            out += (f'<div class="clip"><div class="clip-row">'
+                    f'<a href="https://www.youtube.com/watch?v={i}" target="_blank" rel="noopener noreferrer" '
+                    f'aria-label="Watch on YouTube: {esc(cl["title"])} (opens in a new tab)">Watch on YouTube: {esc(cl["label"])} ↗</a>'
+                    f'<span class="clip-note">{clip_note(q, cl)}</span></div></div>')
+            continue
+        a, b = cl["start"], cl["end"]
         embed = f"https://www.youtube-nocookie.com/embed/{i}?start={a}&amp;end={b}&amp;rel=0&amp;modestbranding=1&amp;controls=1&amp;playsinline=1"
         title = f'{cl["title"]} ({cl["channel"]})'
         out += (f'<div class="clip"><div class="clip-row">'
@@ -308,7 +317,7 @@ def clip_block(q):
                 f'aria-label="Watch on YouTube, {mmss(a)} to {mmss(b)} (opens in a new tab)">Watch on YouTube ({mmss(a)}–{mmss(b)}) ↗</a>'
                 + (f'<span class="clip-note">{clip_note(q, cl)}</span>' if clip_note(q, cl) else "") + '</div>'
                 f'<div class="clip-slot"></div></div>')
-    return out + (f"<script>{CLIP_JS}</script>" if out else "")
+    return out + (f"<script>{CLIP_JS}</script>" if "clip-play" in out else "")
 
 
 def cite(q, up="../../"):

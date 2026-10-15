@@ -9,18 +9,24 @@ REQ = ("id", "start", "end", "label", "title", "channel")
 
 def problems(cl):
     """Return a list of what is wrong with one clip record (empty = fine)."""
-    bad = [k for k in REQ if k not in cl]
+    whole = "start" not in cl and "end" not in cl
+    req = ("id", "label", "title", "channel") if whole else REQ
+    bad = [k for k in req if k not in cl]
     if bad:
         return [f"missing {bad}"]
     out = []
     if not (isinstance(cl["id"], str) and ID.match(cl["id"])):
         out.append("id must be an 11-character YouTube id")
-    for k in ("start", "end"):
+    if whole and cl.get("kind") != "discussed":
+        out.append("whole-video references must be kind discussed")
+    for k in () if whole else ("start", "end"):
         if not (isinstance(cl[k], int) and not isinstance(cl[k], bool) and cl[k] >= 0):
             out.append(f"{k} must be a non-negative integer (seconds)")
-    if not out and cl["start"] >= cl["end"]:
+    if whole:
+        pass
+    elif not out and cl["start"] >= cl["end"]:
         out.append("start must be before end")
-    if not out and cl["end"] - cl["start"] > 120:
+    if not whole and not out and cl["end"] - cl["start"] > 120:
         out.append("clips are short: 120 seconds at most")
     if "kind" in cl and cl["kind"] not in ("verbatim", "paraphrase", "discussed"):
         out.append("kind must be verbatim, paraphrase or discussed")
@@ -36,7 +42,8 @@ class Data(unittest.TestCase):
         for i, q in enumerate(D["quotes"]):
             if "clips" in q:
                 self.assertIsInstance(q["clips"], list); self.assertTrue(q["clips"], i)
-                self.assertEqual(q["ver"], "verified", f"quote {i}: clips only on verified quotes")
+                whole = all("start" not in c for c in q["clips"])
+                self.assertIn(q["ver"], ("verified", "probable") if whole else ("verified",), f"quote {i}: timed clips only on verified quotes")
                 for cl in q["clips"]:
                     n += 1; self.assertEqual(problems(cl), [], f"quote {i}")
         self.assertGreaterEqual(n, 9)
@@ -60,10 +67,10 @@ class Data(unittest.TestCase):
 
 class Pages(unittest.TestCase):
     def test_clip_rendered_on_maxim_and_voice_pages(self):
-        for q in (x for x in D["quotes"] if x.get("clips")):
+        for q in (x for x in D["quotes"] if any("start" in c for c in x.get("clips", []))):
             for path in (f"maxims/{q['concept']}", f"voices/{q['voice']}", f"sources/{q['source_id']}"):
                 h = open(os.path.join(ROOT, path, "index.html"), encoding="utf-8").read()
-                for cl in q["clips"]:
+                for cl in (c for c in q["clips"] if "start" in c):
                     i, a, b = cl["id"], cl["start"], cl["end"]
                     self.assertIn(f'href="https://www.youtube.com/watch?v={i}&amp;t={a}"', h, path)
                     link = re.search(r'<a href="https://www\.youtube\.com/watch\?v=%s[^>]*>' % i, h).group(0)
@@ -83,6 +90,29 @@ class Pages(unittest.TestCase):
         self.assertIn("Spoken as a close paraphrase", w)
         g = open(os.path.join(ROOT, "maxims", "own-your-mistakes", "index.html"), encoding="utf-8").read()
         self.assertNotIn("clip-note", g.split("<style")[-1].split("</style>")[-1])
+
+    def test_whole_video_references(self):
+        good = {"id": "VO6XEQIsCoM", "label": "L", "title": "T", "channel": "C", "kind": "discussed"}
+        self.assertEqual(problems(good), [])
+        self.assertTrue(problems({**good, "kind": "verbatim"}))
+        self.assertTrue(problems({**good, "start": 5}))
+        for k in ("id", "label", "title", "channel"):
+            self.assertTrue(problems({a: b for a, b in good.items() if a != k}), k)
+        want = {"VO6XEQIsCoM": ("The paradox of choice", "Barry Schwartz"), "ffEGzX-qwz0": ("Desire Is a Contract", "Naval Ravikant"),
+                "iCvmsMzlF7o": ("The Power of Vulnerability", "Brené Brown")}
+        seen = set()
+        for q in D["quotes"]:
+            for cl in q.get("clips", []):
+                if cl["id"] in want:
+                    seen.add(cl["id"]); self.assertNotIn("start", cl); self.assertEqual(cl["kind"], "discussed")
+                    for path in (f"maxims/{q['concept']}", f"voices/{q['voice']}", f"sources/{q['source_id']}"):
+                        h = open(os.path.join(ROOT, path, "index.html"), encoding="utf-8").read()
+                        m = re.search(r'<a href="https://www\.youtube\.com/watch\?v=%s"[^>]*>(.*?)</a>' % cl["id"], h)
+                        self.assertIsNotNone(m, path); self.assertIn('rel="noopener noreferrer"', m.group(0))
+                        self.assertTrue(m.group(1).startswith("Watch on YouTube: ") and m.group(1).endswith(" ↗"))
+                        self.assertIn(f"{q['thinker']} discusses this idea", h)
+                        self.assertNotIn("fan upload", h.split(m.group(0))[1][:200])
+        self.assertEqual(seen, set(want))
 
     def test_nothing_from_youtube_loads_on_page_load(self):
         for root, _, files in os.walk(ROOT):

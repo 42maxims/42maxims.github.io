@@ -909,7 +909,16 @@
    "era": "contemporary",
    "work": "The Paradox of Choice (2004): summary via Wikipedia (paraphrase, not a direct quote)",
    "source_id": "paradox-of-choice",
-   "source": "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+   "source": "https://en.wikipedia.org/wiki/The_Paradox_of_Choice",
+   "clips": [
+    {
+     "id": "VO6XEQIsCoM",
+     "label": "The paradox of choice (TED)",
+     "title": "The paradox of choice | Barry Schwartz | TED",
+     "channel": "TED",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "a-time-for-everything",
@@ -3573,7 +3582,16 @@
    "work": "Interview on NPR's TED Radio Hour, “Can We Gain Strength From Shame?”, 11 March 2013 (NPR transcript)",
    "source_id": "ted-radio-hour-shame",
    "source": "https://www.npr.org/transcripts/174033560",
-   "echoes": "Joseph Campbell: “The very cave you are afraid to enter turns out to be the source…”"
+   "echoes": "Joseph Campbell: “The very cave you are afraid to enter turns out to be the source…”",
+   "clips": [
+    {
+     "id": "iCvmsMzlF7o",
+     "label": "The Power of Vulnerability (TED)",
+     "title": "The Power of Vulnerability | Brené Brown | TED",
+     "channel": "TED",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "thoughts-shape-life",
@@ -3618,7 +3636,16 @@
    "work": "Naval podcast, “Desire Is a Contract You Make to Be Unhappy” (10 Feb 2020), episode transcript on nav.al",
    "source_id": "naval-podcast",
    "source": "https://nav.al/desire",
-   "echoes": "The Buddha, SN 56.11: craving as the origin of suffering (stress)"
+   "echoes": "The Buddha, SN 56.11: craving as the origin of suffering (stress)",
+   "clips": [
+    {
+     "id": "ffEGzX-qwz0",
+     "label": "Desire Is a Contract You Make to Be Unhappy (Naval)",
+     "title": "Desire Is a Contract You Make to Be Unhappy",
+     "channel": "Naval",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "courage",
