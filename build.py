@@ -165,7 +165,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
 <meta name="color-scheme" content="light dark">
 {head}
 <link rel="stylesheet" href="{up}style.css">{analytics_snippet()}</head><body>
-<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}">The 42</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}maxim-of-the-day/" aria-label="Maxim of the day" title="Maxim of the day">Daily</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}" aria-label="Home">Home</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}maxim-of-the-day/" aria-label="Maxim of the day" title="Maxim of the day">Daily</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""

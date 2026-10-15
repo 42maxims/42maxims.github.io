@@ -21,6 +21,14 @@ class NavAboutTests(unittest.TestCase):
             n += 1
         self.assertGreater(n, 100)
 
+    def test_home_nav_and_brand_link(self):
+        for p in pages():
+            with open(p, encoding="utf-8") as fh:
+                h = fh.read()
+            self.assertRegex(h, r'<p class="brand"><a href="[^"]*">42 Maxims</a></p>', p)
+            self.assertRegex(h, r'<nav aria-label="Main"><a href="[^"]*" aria-label="Home">Home</a><a href="[^"]*voices/">', p)
+            self.assertNotIn('">The 42</a><a href', h, p)
+
     def test_about_defines_maxim(self):
         with open(os.path.join(ROOT, "about", "index.html"), encoding="utf-8") as fh:
             t = fh.read()
