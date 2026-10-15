@@ -87,7 +87,7 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .clip-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}
 .clip button,.clip a{font:inherit;color:var(--accent)}.clip button{background:var(--card);border:1px solid var(--accent-soft);border-radius:1rem;padding:.2rem .9rem;cursor:pointer}
 .clip button:hover,.clip a:hover{border-color:var(--accent)}.clip button:focus-visible,.clip a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.clip [hidden]{display:none}.clip-credit{margin-top:.3rem}
+.clip [hidden]{display:none}
 .clip-frame{position:relative;aspect-ratio:16/9;margin:.6rem 0 0;border-radius:.25rem;overflow:hidden;background:#000}.clip-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
@@ -292,8 +292,7 @@ def clip_block(q):
                 f'aria-label="Play this clip, {mmss(b - a)} long, from {esc(cl["title"])}" hidden>▶ Play clip</button>'
                 f'<a href="https://www.youtube.com/watch?v={i}&amp;t={a}" target="_blank" rel="noopener noreferrer" '
                 f'aria-label="Watch on YouTube, starts at {mmss(a)} (opens in a new tab)">Watch on YouTube (starts at {mmss(a)}) ↗</a></div>'
-                f'<div class="clip-slot"></div>'
-                f'<div class="clip-credit">From “{esc(cl["title"])}”, {esc(cl["channel"])} on YouTube. Go deeper: watch the full talk.</div></div>')
+                f'<div class="clip-slot"></div></div>')
     return out + (f"<script>{CLIP_JS}</script>" if out else "")
 
 
@@ -463,6 +462,8 @@ for slug, s in SOURCES.items():
     if s["voice"]:
         extra.insert(0, f'<a href="../../voices/{s["voice"]}/">{esc(VOICES[s["voice"]]["name"])}</a>')
     body = '<p class="label">Source</p>' + profile(s, s["title"], extra)
+    if s.get("verification"):
+        body += f'<p class="note">Verification: {esc(s["verification"])}</p>'
     body += f'<h2>Quotes ({len(qs)})</h2><ul class="quotes">{"".join(entry_quote(q, True, False) for q in qs)}</ul>'
     write(f"sources/{slug}/index.html", page(f"{s['title']} (source) — 42 Maxims", body, 2, f"sources/{slug}/", s["summary"],
           noindex=not qs, crumbs=[("Sources", "sources/")]))

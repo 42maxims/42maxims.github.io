@@ -61,6 +61,8 @@ class Pages(unittest.TestCase):
                     self.assertIn('target="_blank"', link); self.assertIn('rel="noopener noreferrer"', link)
                     self.assertIn(f'data-src="https://www.youtube-nocookie.com/embed/{i}?start={a}&amp;end={b}&amp;rel=0&amp;modestbranding=1&amp;controls=1', h, path)
                     self.assertIn("Watch on YouTube (starts at", h)
+                    self.assertNotIn("Go deeper", h); self.assertNotIn("clip-credit", h)
+                    self.assertNotIn("Amara", h) if not path.startswith("sources/") else self.assertIn("Amara", h)
 
     def test_nothing_from_youtube_loads_on_page_load(self):
         for root, _, files in os.walk(ROOT):
