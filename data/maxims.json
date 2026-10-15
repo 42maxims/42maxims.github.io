@@ -498,7 +498,18 @@
    "era": "contemporary",
    "work": "The Essential Alan Watts (Celestial Arts, Berkeley), reissue of The Essence of Alan Watts (1977); checked in the Internet Archive scan of that edition. The 1977 Millbrae edition reads \"realize that it is play\"",
    "source_id": "essence-of-alan-watts",
-   "source": "https://archive.org/details/essentialalanwat0000watt"
+   "source": "https://archive.org/details/essentialalanwat0000watt",
+   "clips": [
+    {
+     "id": "-T54rbjQcZM",
+     "start": 36,
+     "end": 61,
+     "label": "Hear it spoken",
+     "title": "Alan Watts - The Real Secret to Life - Work as Play",
+     "channel": "Official Alan Watts Org",
+     "kind": "paraphrase"
+    }
+   ]
   },
   {
    "concept": "be-present",
@@ -527,7 +538,18 @@
    "era": "contemporary",
    "work": "12 Rules for Life (2018), Rule 2 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ",
+   "clips": [
+    {
+     "id": "_nSPyE_QxUw",
+     "start": 0,
+     "end": 17,
+     "label": "Hear it spoken",
+     "title": "Rule 2: Treat yourself like someone you are responsible for helping",
+     "channel": "JBProbe",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "embrace-the-struggle",
@@ -801,7 +823,18 @@
    "era": "contemporary",
    "work": "12 Rules for Life (2018), Rule 7 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ",
+   "clips": [
+    {
+     "id": "p8EMUIQh_fg",
+     "start": 23,
+     "end": 40,
+     "label": "Hear it spoken",
+     "title": "Rule 7: Pursue what is meaningful (not what is expedient)",
+     "channel": "JBProbe",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "pursue-meaning",
@@ -829,7 +862,18 @@
    "era": "contemporary",
    "work": "12 Rules for Life (2018), Rule 4 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ",
+   "clips": [
+    {
+     "id": "i-rifSRcO1A",
+     "start": 0,
+     "end": 16,
+     "label": "Hear it spoken",
+     "title": "Rule 4: Compare yourself to who you were yesterday, not to who someone else is today",
+     "channel": "JBProbe",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "growth-mindset",
@@ -900,7 +944,18 @@
    "era": "contemporary",
    "work": "12 Rules for Life (2018), Rule 8 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation; dash corrected to the unspaced em dash of the printed chapter heading)",
    "source_id": "12-rules-for-life",
-   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ",
+   "clips": [
+    {
+     "id": "n53HmC1zxVc",
+     "start": 0,
+     "end": 10,
+     "label": "Hear it spoken",
+     "title": "Rule 8: Tell The Truth or At Least Don't Lie | Jordan Peterson",
+     "channel": "ManOfAllCreation",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "leave-it-better",
@@ -2458,7 +2513,18 @@
    "era": "contemporary",
    "work": "12 Rules for Life (2018), Rule 9 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ",
+   "clips": [
+    {
+     "id": "y8CO-WekHio",
+     "start": 10,
+     "end": 19,
+     "label": "Hear it spoken",
+     "title": "Rule 9: Assume that the person you are listening to might know something you don't",
+     "channel": "JBProbe",
+     "kind": "discussed"
+    }
+   ]
   },
   {
    "concept": "justice",
@@ -3370,7 +3436,18 @@
    "era": "contemporary",
    "work": "The Power of Myth (1988, with Bill Moyers), p. 120; checked on the Joseph Campbell Foundation site",
    "source_id": "the-power-of-myth",
-   "source": "https://www.jcf.org/post/doors-will-open"
+   "source": "https://www.jcf.org/post/doors-will-open",
+   "clips": [
+    {
+     "id": "s28rwnz18j4",
+     "start": 243,
+     "end": 250,
+     "label": "Hear it spoken",
+     "title": "Follow Your Bliss",
+     "channel": "Joseph Campbell Foundation",
+     "kind": "verbatim"
+    }
+   ]
   },
   {
    "concept": "courage",
@@ -3554,16 +3631,27 @@
    "concept": "gratitude",
    "rel": "partial",
    "conf": 0.5,
-   "ver": "probable",
+   "ver": "verified",
    "text": "a gratitude practice is a very, very potent way in which you can steer your mental and physical health in positive directions",
    "thinker": "Andrew Huberman",
    "voice": "andrew-huberman",
    "tradition": "modern-psychology",
    "era": "contemporary",
-   "work": "Huberman Lab, “The Science of Gratitude & How to Build a Gratitude Practice” (22 Nov 2021), in the “Introduction” chapter (from 00:00:00); wording matches the official transcript (re-checked Oct 2026), which is still marked as under human review; recording not checked",
+   "work": "Huberman Lab, “The Science of Gratitude & How to Build a Gratitude Practice” (22 Nov 2021), spoken at 12:08 of the full episode (in the “Introduction” section of the episode); wording matches both the official transcript (re-checked Oct 2026) and the recording’s captions",
    "source_id": "huberman-lab",
    "source": "https://www.hubermanlab.com/episode/the-science-of-gratitude-and-how-to-build-a-gratitude-practice",
-   "echoes": "The Buddha, Maha-mangala Sutta: gratitude is among “the highest protection”"
+   "echoes": "The Buddha, Maha-mangala Sutta: gratitude is among “the highest protection”",
+   "clips": [
+    {
+     "id": "KVjfFN89qvQ",
+     "start": 728,
+     "end": 739,
+     "label": "Hear it spoken",
+     "title": "The Science of Gratitude & How to Build a Gratitude Practice",
+     "channel": "Andrew Huberman",
+     "kind": "verbatim"
+    }
+   ]
   },
   {
    "concept": "own-your-mistakes",
@@ -3586,7 +3674,8 @@
      "end": 737,
      "label": "Hear it spoken",
      "title": "Extreme Ownership | Jocko Willink | TEDxUniversityofNevada",
-     "channel": "TEDx Talks"
+     "channel": "TEDx Talks",
+     "kind": "verbatim"
     }
    ]
   }

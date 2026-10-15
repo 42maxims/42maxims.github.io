@@ -87,7 +87,7 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .clip-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}
 .clip button,.clip a{font:inherit;color:var(--accent)}.clip button{background:var(--card);border:1px solid var(--accent-soft);border-radius:1rem;padding:.2rem .9rem;cursor:pointer}
 .clip button:hover,.clip a:hover{border-color:var(--accent)}.clip button:focus-visible,.clip a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.clip [hidden]{display:none}
+.clip [hidden]{display:none}.clip-note{font-size:.8rem;font-style:italic}
 .clip-frame{position:relative;aspect-ratio:16/9;margin:.6rem 0 0;border-radius:.25rem;overflow:hidden;background:#000}.clip-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
@@ -279,6 +279,20 @@ def mmss(n):
     return f"{n // 60}:{n % 60:02d}"
 
 
+CLIP_KINDS = ("verbatim", "paraphrase", "discussed")
+
+
+def clip_note(q, cl):
+    """Short label for clips that are not the exact quoted words (kind defaults to verbatim = no label)."""
+    k = cl.get("kind", "verbatim")
+    if k == "paraphrase":
+        return "Spoken as a close paraphrase"
+    if k == "discussed":
+        who = esc(q.get("thinker", "The speaker"))
+        return f"{who} discusses this rule (fan upload)"
+    return ""
+
+
 def clip_block(q):
     """Optional click-to-load YouTube clips on a quote. Nothing from YouTube loads until the reader clicks; the
     plain link to the video is the no-JS fallback and the off-ramp to the wider talk."""
@@ -291,7 +305,8 @@ def clip_block(q):
                 f'<button type="button" class="clip-play" data-src="{embed}" data-title="{esc(title)}" '
                 f'aria-label="Play this clip, {mmss(b - a)} long, from {esc(cl["title"])}" hidden>▶ Play clip</button>'
                 f'<a href="https://www.youtube.com/watch?v={i}&amp;t={a}" target="_blank" rel="noopener noreferrer" '
-                f'aria-label="Watch on YouTube, {mmss(a)} to {mmss(b)} (opens in a new tab)">Watch on YouTube ({mmss(a)}–{mmss(b)}) ↗</a></div>'
+                f'aria-label="Watch on YouTube, {mmss(a)} to {mmss(b)} (opens in a new tab)">Watch on YouTube ({mmss(a)}–{mmss(b)}) ↗</a>'
+                + (f'<span class="clip-note">{clip_note(q, cl)}</span>' if clip_note(q, cl) else "") + '</div>'
                 f'<div class="clip-slot"></div></div>')
     return out + (f"<script>{CLIP_JS}</script>" if out else "")
 

@@ -22,6 +22,8 @@ def problems(cl):
         out.append("start must be before end")
     if not out and cl["end"] - cl["start"] > 120:
         out.append("clips are short: 120 seconds at most")
+    if "kind" in cl and cl["kind"] not in ("verbatim", "paraphrase", "discussed"):
+        out.append("kind must be verbatim, paraphrase or discussed")
     for k in ("label", "title", "channel"):
         if not (isinstance(cl[k], str) and cl[k].strip()):
             out.append(f"{k} must be non-empty text")
@@ -37,13 +39,20 @@ class Data(unittest.TestCase):
                 self.assertEqual(q["ver"], "verified", f"quote {i}: clips only on verified quotes")
                 for cl in q["clips"]:
                     n += 1; self.assertEqual(problems(cl), [], f"quote {i}")
-        self.assertGreaterEqual(n, 1)
+        self.assertGreaterEqual(n, 9)
+
+    def test_discussed_clips_are_flagged(self):
+        """Third-party uploads that only discuss the line must say so; verbatim clips must be the exact words."""
+        for q in D["quotes"]:
+            for cl in q.get("clips", []):
+                if cl["channel"] in ("JBProbe", "ManOfAllCreation"):
+                    self.assertEqual(cl.get("kind"), "discussed", cl["id"])
 
     def test_validator_rejects_malformed(self):
         good = {"id": "ljqra3BcqWM", "start": 731, "end": 737, "label": "L", "title": "T", "channel": "C"}
         self.assertEqual(problems(good), [])
         for patch in ({"id": "short"}, {"id": "bad id!!!!!!"}, {"start": 737}, {"start": 800}, {"start": "731"}, {"end": 737.5},
-                      {"start": True}, {"start": -1}, {"end": 9999}, {"title": " "}, {"channel": ""}):
+                      {"start": True}, {"start": -1}, {"end": 9999}, {"title": " "}, {"channel": ""}, {"kind": "official"}):
             self.assertTrue(problems({**good, **patch}), patch)
         for k in REQ:
             self.assertTrue(problems({a: b for a, b in good.items() if a != k}), k)
@@ -63,7 +72,17 @@ class Pages(unittest.TestCase):
                     self.assertIn(f"Watch on YouTube ({a//60}:{a%60:02d}–{b//60}:{b%60:02d}) ↗", h)
                     self.assertNotIn("Hear it spoken", h)
                     self.assertNotIn("Go deeper", h); self.assertNotIn("clip-credit", h)
-                    self.assertNotIn("Amara", h) if not path.startswith("sources/") else self.assertIn("Amara", h)
+                    if i == "ljqra3BcqWM":
+                        self.assertNotIn("Amara", h) if not path.startswith("sources/") else self.assertIn("Amara", h)
+
+    def test_kind_labels(self):
+        h = open(os.path.join(ROOT, "sources", "12-rules-for-life", "index.html"), encoding="utf-8").read()
+        self.assertEqual(h.count("discusses this rule (fan upload)"), 5)
+        self.assertEqual(h.count('class="clip-play"'), 5)
+        w = open(os.path.join(ROOT, "maxims", "be-present", "index.html"), encoding="utf-8").read()
+        self.assertIn("Spoken as a close paraphrase", w)
+        g = open(os.path.join(ROOT, "maxims", "own-your-mistakes", "index.html"), encoding="utf-8").read()
+        self.assertNotIn("clip-note", g.split("<style")[-1].split("</style>")[-1])
 
     def test_nothing_from_youtube_loads_on_page_load(self):
         for root, _, files in os.walk(ROOT):
