@@ -1,6 +1,6 @@
 # Decisions log
 - 2026-10-14 Name "42 Maxims"; domain 42maxims.com later (not bought; needs owner approval).
-- 2026-10-14 Host on GitHub Pages with simple tools (plain Python + static HTML, not Astro/Cloudflare); publish directly to `master`. 2018 Hugo draft kept at tag `draft-2018`.
+- 2026-10-14 Host on GitHub Pages with simple tools (plain Python + static HTML, not Astro/Cloudflare); publish directly to `master`.
 - 2026-10-14 **Anonymity:** published under the anonymous GitHub account `42maxims` with commit identity "Max Ims"; contributions welcome via pull requests. On the shared box, `gh` is switched to `42maxims` only for this repo's pushes and switched back afterwards. No personal names in the repo.
 - 2026-10-14 Own content licensed **CC BY-SA 4.0**; quoted texts keep their own licences/credits.
 - 2026-10-14 **English first**; AI-assisted translations allowed for non-English sources, always labelled; other site languages later.
@@ -13,7 +13,7 @@
 - 2026-10-14 **Voice and source pages** with factual summaries and caution notes where authorship is thin or disputed.
 - 2026-10-14 Modern self-help/podcast voices attached to the older maxims they echo, with an "Echoes …" note; hero's journey (Campbell) placed under Courage rather than a new maxim.
 - 2026-10-14 Peterson rule titles cited via Wikipedia (probable); the Guardian "digested read" is satire and not used.
-- 2026-10-14 **History rewrite:** all commits rewritten with git filter-repo to remove the owner's real name and account, then force-pushed (master and `draft-2018`). A local bundle backup exists off-repo. Old SHAs may stay cached on GitHub until garbage-collected.
+- 2026-10-14 **History rewrite:** all commits rewritten with git filter-repo to remove the owner's real name and account, then force-pushed. A local bundle backup exists off-repo. Old SHAs may stay cached on GitHub until garbage-collected.
 - 2026-10-14 Handed over to **oo-42maxims**; roadmap-aligned PRs may be merged by the oo- bot; deploy-affecting spend, domain and outreach need the owner.
 - 2026-10-15 Naming change: app operating officer bots are now lowercase `oo-<app>` (was `COO-<app>`; shorter, more traceable). This repo's bot is `oo-42maxims`. Docs updated; no change to roles or approvals.
 - 2026-10-15 **SEO pass (branch `seo-pass`, not merged):** per-page titles/descriptions (from each page's own summary, ≤155 chars), canonical + Open Graph + Twitter tags, one `<h1>` per page (site name is now a `<p class="brand">`), `sitemap.xml`, `robots.txt`, JSON-LD (`WebSite` on home, `BreadcrumbList` on inner pages, `Quotation` for a maxim's seed quote only when its voice is a person, `Person` on person voice pages). Canonical origin is `SITE_URL` in `build.py` (currently github.io; switch to 42maxims.com only after #5). Source page titles now end "(source)" to avoid clashing with voice pages of the same name. No social image yet (none exists; none invented). Pages with no quotes or works are `noindex` (none today).
