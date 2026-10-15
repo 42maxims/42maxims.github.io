@@ -111,32 +111,64 @@
    "slug": "life-is-suffering",
    "maxim": "Life contains suffering; begin by accepting it.",
    "summary": "Not a counsel of despair, but a starting point. Naming the hardness of life honestly frees us to respond to it with courage rather than surprise.",
-   "links": []
+   "links": [
+    {
+     "url": "https://www.sacred-texts.com/bud/sbe10/index.htm",
+     "label": "The Dhammapada, tr. F. Max Müller (free text, Sacred Texts)"
+    }
+   ]
   },
   {
    "slug": "desire-is-the-root-of-suffering",
    "maxim": "Craving is the root of suffering.",
    "summary": "Much of our pain comes not from what happens, but from our grasping for things to be otherwise. Loosen the grip and the weight lightens.",
-   "links": []
+   "links": [
+    {
+     "url": "https://www.sacred-texts.com/bud/sbe10/index.htm",
+     "label": "The Dhammapada, tr. F. Max Müller (free text, Sacred Texts)"
+    }
+   ]
   },
   {
    "slug": "be-present",
    "maxim": "Be present: the here and now is where life happens.",
    "summary": "The past has gone and the future has not arrived. The present moment is the only place we can actually live, act and enjoy.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL5727686W",
+     "label": "Eckhart Tolle, The Power of Now (Open Library)"
+    }
+   ]
   },
   {
    "slug": "take-care-of-yourself",
    "maxim": "Treat yourself like someone you are responsible for helping.",
    "summary": "We often care better for others than for ourselves. Extend the same kindness and discipline inward.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL17837119W",
+     "label": "Jordan B. Peterson, 12 Rules for Life (Open Library)"
+    }
+   ]
   },
   {
    "slug": "embrace-the-struggle",
    "maxim": "Find meaning in the struggle itself.",
    "summary": "Sisyphus pushes his boulder up the hill forever. The ancient myth was a punishment; the modern reading asks whether the effort itself can be enough.",
    "links": [
-    "https://en.wikipedia.org/wiki/Sisyphus"
+    "https://en.wikipedia.org/wiki/Sisyphus",
+    {
+     "url": "https://openlibrary.org/works/OL19977665W",
+     "label": "Ryan Holiday, The Obstacle Is the Way (Open Library)"
+    },
+    {
+     "url": "https://openlibrary.org/works/OL1230690W",
+     "label": "Albert Camus, The Myth of Sisyphus (Open Library)"
+    },
+    {
+     "url": "https://openlibrary.org/works/OL2497175W",
+     "label": "Joseph Campbell, The Hero with a Thousand Faces (Open Library)"
+    }
    ],
    "seed": 0
   },
@@ -159,7 +191,11 @@
    "maxim": "A few causes drive most results (the 80/20 rule).",
    "summary": "Effort and outcome are rarely in proportion. Find the vital few things that matter and give them your best attention.",
    "links": [
-    "https://en.wikipedia.org/wiki/Pareto_principle"
+    "https://en.wikipedia.org/wiki/Pareto_principle",
+    {
+     "url": "https://openlibrary.org/works/OL17043626W",
+     "label": "Greg McKeown, Essentialism (Open Library)"
+    }
    ]
   },
   {
@@ -167,34 +203,65 @@
    "maxim": "People rise to their level of incompetence.",
    "summary": "A gently humbling observation about organisations: we tend to be promoted until we land in a role we no longer do well. Know your strengths.",
    "links": [
-    "https://en.wikipedia.org/wiki/Peter_principle"
+    "https://en.wikipedia.org/wiki/Peter_principle",
+    {
+     "url": "https://openlibrary.org/works/OL5095341W",
+     "label": "Laurence J. Peter and Raymond Hull, The Peter Principle (Open Library)"
+    }
    ]
   },
   {
    "slug": "happiness-and-expectations",
    "maxim": "Happiness is reality minus expectations.",
    "summary": "A popular modern formula. When expectations outrun reality, disappointment fills the gap; holding them lightly leaves room for contentment.",
-   "links": [],
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL17590212W",
+     "label": "Mark Manson, The Subtle Art of Not Giving a F*ck (Open Library)"
+    }
+   ],
    "seed": 2
   },
   {
    "slug": "mastery",
    "maxim": "Do your work wholeheartedly and with skill.",
    "summary": "Whatever is in front of you, give it your full strength. Skill grows quietly out of repeated, careful effort, and in time it opens doors.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL17930368W",
+     "label": "James Clear, Atomic Habits (Open Library)"
+    },
+    {
+     "url": "https://openlibrary.org/works/OL16028366W",
+     "label": "Josh Waitzkin, The Art of Learning (Open Library)"
+    }
+   ]
   },
   {
    "slug": "pursue-meaning",
    "maxim": "Pursue what is meaningful, not what is merely profitable.",
    "summary": "Chase the thing that matters to you rather than the quick reward. A life built around meaning tends to carry its own momentum.",
-   "links": []
+   "links": [
+    {
+     "url": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
+     "label": "Viktor Frankl, Man's Search for Meaning (Wikipedia)"
+    },
+    {
+     "url": "https://openlibrary.org/works/OL17837119W",
+     "label": "Jordan B. Peterson, 12 Rules for Life (Open Library)"
+    }
+   ]
   },
   {
    "slug": "growth-mindset",
    "maxim": "Ability grows with effort; measure yourself against who you were yesterday.",
    "summary": "Talents are a starting point, not a verdict. The useful comparison is with your own past self, and every honest effort moves the line.",
    "links": [
-    "https://en.wikipedia.org/wiki/Mindset_(book)"
+    "https://en.wikipedia.org/wiki/Mindset_(book)",
+    {
+     "url": "https://openlibrary.org/works/OL2003465W",
+     "label": "Carol S. Dweck, Mindset (Open Library)"
+    }
    ]
   },
   {
@@ -202,14 +269,23 @@
    "maxim": "More choice does not always mean more happiness.",
    "summary": "An endless menu can leave us anxious and second-guessing. Sometimes choosing 'good enough' and letting go is the wiser path.",
    "links": [
-    "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+    "https://en.wikipedia.org/wiki/The_Paradox_of_Choice",
+    {
+     "url": "https://openlibrary.org/works/OL272375W",
+     "label": "Barry Schwartz, The Paradox of Choice (Open Library)"
+    }
    ]
   },
   {
    "slug": "a-time-for-everything",
    "maxim": "There is a time for everything; give your days a rhythm.",
    "summary": "Life moves in seasons and cycles. A steady rhythm of rising, working, eating and resting makes room for everything else.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL22355777W",
+     "label": "Oliver Burkeman, Four Thousand Weeks (Open Library)"
+    }
+   ]
   },
   {
    "slug": "tell-the-truth",
@@ -221,7 +297,16 @@
    "slug": "thoughts-shape-life",
    "maxim": "Your thoughts shape your life.",
    "summary": "What we dwell on becomes the lens we see through, and then the ground we stand on. Tending the mind is tending the life.",
-   "links": []
+   "links": [
+    {
+     "url": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
+     "label": "Viktor Frankl, Man's Search for Meaning (Wikipedia)"
+    },
+    {
+     "url": "https://www.sacred-texts.com/bud/sbe10/index.htm",
+     "label": "The Dhammapada, tr. F. Max Müller (free text, Sacred Texts)"
+    }
+   ]
   },
   {
    "slug": "moderation",
@@ -250,7 +335,12 @@
    "slug": "humility",
    "maxim": "Be humble; pride goes before a fall.",
    "summary": "Those who lift themselves up tend to be brought low, while those who hold themselves lightly are trusted and remembered. Humility is not thinking less of ourselves, but seeing ourselves truly.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL20033244W",
+     "label": "Ryan Holiday, Ego Is the Enemy (Open Library)"
+    }
+   ]
   },
   {
    "slug": "master-your-anger",
@@ -263,7 +353,11 @@
    "maxim": "Remember that you will die, and live well today.",
    "summary": "Our days are numbered, and remembering it is not morbid but clarifying. Keeping death in view shrinks petty quarrels and turns us back towards what is good while we still can.",
    "links": [
-    "https://en.wikipedia.org/wiki/Memento_mori"
+    "https://en.wikipedia.org/wiki/Memento_mori",
+    {
+     "url": "https://www.gutenberg.org/ebooks/2680",
+     "label": "Marcus Aurelius, Meditations (free text, Project Gutenberg)"
+    }
    ]
   },
   {
@@ -288,19 +382,34 @@
    "slug": "generosity",
    "maxim": "Give freely; generosity enriches the giver.",
    "summary": "What we give away has a strange way of coming back as a fuller life. An open hand makes room for connection, and it loosens the grip that possessions can have on us.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL17312332W",
+     "label": "Adam Grant, Give and Take (Open Library)"
+    }
+   ]
   },
   {
    "slug": "everything-passes",
    "maxim": "Everything passes; hold things lightly.",
    "summary": "Nothing we see stays the same, not our troubles, our triumphs or the world around us. Remembering this can steady us in hard times and keep us gentle in good ones.",
-   "links": []
+   "links": [
+    {
+     "url": "https://www.gutenberg.org/ebooks/2680",
+     "label": "Marcus Aurelius, Meditations (free text, Project Gutenberg)"
+    }
+   ]
   },
   {
    "slug": "courage",
    "maxim": "Do what is right, even when you are afraid.",
    "summary": "Courage is not the absence of fear but the choice to act well in its presence. Most of the good we do asks a little bravery of us.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL16664399W",
+     "label": "Brené Brown, Daring Greatly (Open Library)"
+    }
+   ]
   },
   {
    "slug": "patience",
@@ -312,7 +421,12 @@
    "slug": "small-beginnings",
    "maxim": "Great things begin with small steps.",
    "summary": "Every large work starts as something tiny and easy to overlook. Taking the next small step, and being faithful in little things, is how anything worthwhile gets built.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL20641940W",
+     "label": "BJ Fogg, Tiny Habits (Open Library)"
+    }
+   ]
   },
   {
    "slug": "examine-yourself-first",
@@ -356,7 +470,12 @@
    "slug": "listen-first",
    "maxim": "Listen more than you speak.",
    "summary": "Real listening is a kind of generosity, and a kind of humility too. When we assume the other person may know something we don't, conversations stop being contests and start teaching us.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL2629977W",
+     "label": "Stephen R. Covey, The 7 Habits of Highly Effective People (Open Library)"
+    }
+   ]
   },
   {
    "slug": "justice",
@@ -401,7 +520,12 @@
    "slug": "own-your-mistakes",
    "maxim": "Admit your mistakes and put them right.",
    "summary": "Everyone falls short; what matters is what we do next. Owning a fault, rather than hiding it, is the first step to mending it, and a mended fault can leave us brighter than before.",
-   "links": []
+   "links": [
+    {
+     "url": "https://openlibrary.org/works/OL20017105W",
+     "label": "Jocko Willink and Leif Babin, Extreme Ownership (Open Library)"
+    }
+   ]
   },
   {
    "slug": "get-back-up",
@@ -414,7 +538,11 @@
    "maxim": "Advantage tends to compound: those who have, get more.",
    "summary": "Early advantages (a head start, a good name, a little capital) tend to attract more of the same, while those with little often find even that slipping away. The Gospel of Matthew states the pattern twice, and in 1968 the sociologists Robert K. Merton and Harriet Zuckerman named it the Matthew effect. Seeing it clearly invites us to share a head start generously and to lift up those who begin behind.",
    "links": [
-    "https://en.wikipedia.org/wiki/Matthew_effect"
+    "https://en.wikipedia.org/wiki/Matthew_effect",
+    {
+     "url": "https://openlibrary.org/works/OL5749847W",
+     "label": "Malcolm Gladwell, Outliers (Open Library)"
+    }
    ]
   }
  ],
@@ -482,7 +610,17 @@
    "work": "Matthew 7:12 (King James Version)",
    "source_id": "gospel-of-matthew",
    "translation": "KJV (public domain)",
-   "source": "https://www.biblegateway.com/passage/?search=Matthew+7%3A12&version=KJV"
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+7%3A12&version=KJV",
+   "clips": [
+    {
+     "id": "ajwehw_AT0s",
+     "label": "BibleProject: The Sermon on the Mount",
+     "title": "What Jesus Taught in the Sermon on the Mount (Visual Commentary)",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on the Sermon on the Mount"
+    }
+   ]
   },
   {
    "concept": "life-is-suffering",
@@ -497,7 +635,17 @@
    "work": "Dhammacakkappavattana Sutta (SN 56.11), tr. Thanissaro Bhikkhu",
    "source_id": "samyutta-nikaya",
    "translation": "Thanissaro Bhikkhu (free distribution)",
-   "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+   "source": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html",
+   "clips": [
+    {
+     "id": "tilBs32zN7I",
+     "label": "The School of Life: The Buddha",
+     "title": "EASTERN PHILOSOPHY - The Buddha",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces the Buddha"
+    }
+   ]
   },
   {
    "concept": "desire-is-the-root-of-suffering",
@@ -600,6 +748,14 @@
      "channel": "Andrew Huberman",
      "kind": "discussed",
      "note": "Huberman and David Goggins discuss this idea"
+    },
+    {
+     "id": "jQOfbObFOCw",
+     "label": "The School of Life: Albert Camus",
+     "title": "PHILOSOPHY - Albert Camus",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces Camus"
     }
    ]
   },
@@ -740,7 +896,17 @@
    "work": "Matthew 6:34 (KJV)",
    "source_id": "gospel-of-matthew",
    "source": "https://www.biblegateway.com/passage/?search=Matthew+6%3A34&version=KJV",
-   "translation": "King James Version (public domain)"
+   "translation": "King James Version (public domain)",
+   "clips": [
+    {
+     "id": "vduGmIISacQ",
+     "label": "Tim Keller: Peace, Overcoming Anxiety",
+     "title": "Peace: Overcoming Anxiety – Timothy Keller [Sermon]",
+     "channel": "Gospel in Life",
+     "kind": "discussed",
+     "note": "Timothy Keller preaches on overcoming anxiety"
+    }
+   ]
   },
   {
    "concept": "be-present",
@@ -813,7 +979,17 @@
    "era": "modern",
    "work": "Walden (1854), ch. 2",
    "source_id": "walden",
-   "source": "https://www.gutenberg.org/ebooks/205"
+   "source": "https://www.gutenberg.org/ebooks/205",
+   "clips": [
+    {
+     "id": "GgBpyNsS-jU",
+     "label": "The Minimalists: A rich life with less stuff",
+     "title": "A rich life with less stuff | The Minimalists | TEDxWhitefish",
+     "channel": "TEDx Talks",
+     "kind": "discussed",
+     "note": "The Minimalists discuss this idea"
+    }
+   ]
   },
   {
    "concept": "mastery",
@@ -843,7 +1019,17 @@
    "work": "Proverbs 22:29 (KJV)",
    "source_id": "proverbs",
    "source": "https://www.biblegateway.com/passage/?search=Proverbs+22%3A29&version=KJV",
-   "translation": "King James Version (public domain)"
+   "translation": "King James Version (public domain)",
+   "clips": [
+    {
+     "id": "gTZS3SqpT-o",
+     "label": "Josh Waitzkin: The Art of Learning (Talks at Google)",
+     "title": "The Art of Learning: A Journey in the Pursuit of Excellence | Josh Waitzkin | Talks at Google",
+     "channel": "Talks at Google",
+     "kind": "discussed",
+     "note": "Josh Waitzkin discusses the pursuit of excellence"
+    }
+   ]
   },
   {
    "concept": "mastery",
@@ -990,7 +1176,17 @@
    "work": "Ecclesiastes 3:1 (KJV)",
    "source_id": "ecclesiastes",
    "source": "https://www.biblegateway.com/passage/?search=Ecclesiastes+3%3A1&version=KJV",
-   "translation": "King James Version (public domain)"
+   "translation": "King James Version (public domain)",
+   "clips": [
+    {
+     "id": "lrsQ1tc-2wk",
+     "label": "BibleProject: The Book of Ecclesiastes",
+     "title": "Book of Ecclesiastes Summary: A Complete Animated Overview",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject gives an animated overview of Ecclesiastes"
+    }
+   ]
   },
   {
    "concept": "a-time-for-everything",
@@ -1043,7 +1239,17 @@
    "era": "contemporary",
    "work": "12 Rules for Life (2018), Rule 6 (rule title); Random House Canada edition, checked against the book's contents as shown on Google Books (that listing drops punctuation)",
    "source_id": "12-rules-for-life",
-   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ"
+   "source": "https://books.google.com/books/about/12_Rules_for_Life.html?id=sxVHDwAAQBAJ",
+   "clips": [
+    {
+     "id": "jpxLWF65jIM",
+     "label": "Jordan Peterson: Rule 6 (fan upload)",
+     "title": "Rule 6: Set your house in perfect order before you criticize the world",
+     "channel": "JBProbe",
+     "kind": "discussed",
+     "note": "Jordan B. Peterson discusses this rule (fan upload)"
+    }
+   ]
   },
   {
    "concept": "thoughts-shape-life",
@@ -1058,7 +1264,17 @@
    "work": "Dhammapada 1, tr. F. Max Müller",
    "source_id": "dhammapada",
    "source": "https://www.gutenberg.org/ebooks/2017",
-   "translation": "public-domain translation (Müller)"
+   "translation": "public-domain translation (Müller)",
+   "clips": [
+    {
+     "id": "fLJsdqxnZb0",
+     "label": "Shawn Achor: The happy secret to better work",
+     "title": "The happy secret to better work | Shawn Achor",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Shawn Achor discusses how mindset shapes outcomes"
+    }
+   ]
   },
   {
    "concept": "thoughts-shape-life",
@@ -1103,7 +1319,17 @@
    "work": "Job 14:1 (KJV)",
    "source_id": "job",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "xQwnH8th_fs",
+     "label": "BibleProject: The Book of Job",
+     "title": "Book of Job Summary: A Complete Animated Overview",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject gives an animated overview of Job"
+    }
+   ]
   },
   {
    "concept": "mastery",
@@ -1193,7 +1419,17 @@
    "work": "Meditations, Book V.20, tr. George Long",
    "source_id": "meditations",
    "translation": "public-domain translation (George Long)",
-   "source": "https://www.gutenberg.org/ebooks/15877"
+   "source": "https://www.gutenberg.org/ebooks/15877",
+   "clips": [
+    {
+     "id": "dIM7E8e9JKY",
+     "label": "David Goggins: Embrace Suffering (Tom Bilyeu)",
+     "title": "This Keeps Men Pathetic, Lazy & Poor - Embrace Suffering To Escape Mediocrity | David Goggins",
+     "channel": "Tom Bilyeu",
+     "kind": "discussed",
+     "note": "David Goggins and Tom Bilyeu discuss this idea"
+    }
+   ]
   },
   {
    "concept": "happiness-and-expectations",
@@ -1208,7 +1444,17 @@
    "work": "Enchiridion VIII, tr. Thomas Wentworth Higginson",
    "source_id": "enchiridion",
    "translation": "public-domain translation (Higginson)",
-   "source": "https://www.gutenberg.org/ebooks/45109"
+   "source": "https://www.gutenberg.org/ebooks/45109",
+   "clips": [
+    {
+     "id": "4q1dgn_C0AU",
+     "label": "Dan Gilbert: The surprising science of happiness",
+     "title": "The surprising science of happiness | Dan Gilbert",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Dan Gilbert discusses this idea"
+    }
+   ]
   },
   {
    "concept": "happiness-and-expectations",
@@ -1268,7 +1514,17 @@
    "work": "Nicomachean Ethics, Book II, ch. 6, tr. D. P. Chase",
    "source_id": "nicomachean-ethics",
    "translation": "public-domain translation (Chase)",
-   "source": "https://www.gutenberg.org/ebooks/8438"
+   "source": "https://www.gutenberg.org/ebooks/8438",
+   "clips": [
+    {
+     "id": "csIW4W_DYX4",
+     "label": "The School of Life: Aristotle",
+     "title": "PHILOSOPHY - Aristotle",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces Aristotle"
+    }
+   ]
   },
   {
    "concept": "moderation",
@@ -1353,7 +1609,17 @@
    "work": "Matthew 5:44 (KJV)",
    "source_id": "gospel-of-matthew",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "LFyCe8qtrYU",
+     "label": "BibleProject Podcast: Love Your Enemies",
+     "title": "Why Jesus Wants Us to Love Our Enemies",
+     "channel": "BibleProject Podcast",
+     "kind": "discussed",
+     "note": "BibleProject Podcast on loving enemies"
+    }
+   ]
   },
   {
    "concept": "overcome-hatred-with-love",
@@ -1492,6 +1758,14 @@
      "channel": "Nordic Business Forum",
      "kind": "discussed",
      "note": "Jim Collins discusses this idea"
+    },
+    {
+     "id": "n-UenIDevpI",
+     "label": "BibleProject: The Last Will Be First",
+     "title": "What Jesus Meant by \"The Last Will Be First\"",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on Jesus' teaching on being first and last"
     }
    ]
   },
@@ -1853,7 +2127,25 @@
    "work": "Matthew 18:22 (KJV), in answer to Peter asking how often he should forgive",
    "source_id": "gospel-of-matthew",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "XjPsBfJhkfs",
+     "label": "BibleProject: What Forgiveness Means to Jesus",
+     "title": "What Forgiveness Means to Jesus",
+     "channel": "BibleProject Podcast",
+     "kind": "discussed",
+     "note": "BibleProject on forgiveness in Jesus' teaching"
+    },
+    {
+     "id": "pMJiB9fuiEA",
+     "label": "Tim Keller: Forgiving and Forgiven",
+     "title": "Forgiving and Forgiven – Timothy Keller [Sermon]",
+     "channel": "Gospel in Life",
+     "kind": "discussed",
+     "note": "Timothy Keller preaches on forgiveness"
+    }
+   ]
   },
   {
    "concept": "forgiveness",
@@ -1913,7 +2205,17 @@
    "work": "An Essay on Criticism (1711), Part II",
    "source_id": "essay-on-criticism",
    "translation": "public domain",
-   "source": "https://www.gutenberg.org/ebooks/7409"
+   "source": "https://www.gutenberg.org/ebooks/7409",
+   "clips": [
+    {
+     "id": "d-K5btaxEFY",
+     "label": "The School of Life: How To Forgive",
+     "title": "How To Forgive",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life discusses forgiveness"
+    }
+   ]
   },
   {
    "concept": "generosity",
@@ -2023,7 +2325,17 @@
    "work": "Dhammapada 277, tr. F. Max Müller",
    "source_id": "dhammapada",
    "translation": "public-domain translation (Müller)",
-   "source": "https://www.gutenberg.org/ebooks/2017"
+   "source": "https://www.gutenberg.org/ebooks/2017",
+   "clips": [
+    {
+     "id": "tilBs32zN7I",
+     "label": "The School of Life: The Buddha",
+     "title": "EASTERN PHILOSOPHY - The Buddha",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces the Buddha"
+    }
+   ]
   },
   {
    "concept": "everything-passes",
@@ -2068,7 +2380,17 @@
    "work": "Ecclesiastes 1:4 (KJV)",
    "source_id": "ecclesiastes",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "VeUiuSK81-0",
+     "label": "BibleProject: Wisdom of Ecclesiastes",
+     "title": "The Disturbing But Surprising Wisdom of Ecclesiastes",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on the wisdom of Ecclesiastes"
+    }
+   ]
   },
   {
    "concept": "everything-passes",
@@ -2203,7 +2525,17 @@
    "work": "Ecclesiastes 7:8 (KJV)",
    "source_id": "ecclesiastes",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "M0yhHKWUa0g",
+     "label": "Joachim de Posada: Don't eat the marshmallow!",
+     "title": "Don't eat the marshmallow! | Joachim de Posada",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Joachim de Posada discusses delayed gratification"
+    }
+   ]
   },
   {
    "concept": "patience",
@@ -2373,7 +2705,17 @@
    "work": "Proverbs 13:20 (KJV)",
    "source_id": "proverbs",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "8KkKuTCFvzI",
+     "label": "Robert Waldinger: What makes a good life?",
+     "title": "What Makes a Good Life? Lessons from the Longest Study on Happiness | Robert Waldinger | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Robert Waldinger discusses this idea"
+    }
+   ]
   },
   {
    "concept": "choose-your-friends",
@@ -2478,7 +2820,17 @@
    "work": "Odyssey, Book XIV, tr. Samuel Butler",
    "source_id": "odyssey",
    "translation": "public-domain translation (Samuel Butler)",
-   "source": "https://www.gutenberg.org/ebooks/1727"
+   "source": "https://www.gutenberg.org/ebooks/1727",
+   "clips": [
+    {
+     "id": "8Z9FQxcCAZ0",
+     "label": "TED-Ed: Reading Homer's Odyssey",
+     "title": "Everything you need to know to read Homer's \"Odyssey\" - Jill Dash",
+     "channel": "TED-Ed",
+     "kind": "discussed",
+     "note": "TED-Ed introduces the Odyssey, where this welcome is given"
+    }
+   ]
   },
   {
    "concept": "peter-principle",
@@ -2538,7 +2890,25 @@
    "work": "Exodus 20:12 (KJV)",
    "source_id": "exodus",
    "translation": "King James Version (public domain)",
-   "source": "https://www.biblegateway.com/passage/?search=Exodus+20%3A12&version=KJV"
+   "source": "https://www.biblegateway.com/passage/?search=Exodus+20%3A12&version=KJV",
+   "clips": [
+    {
+     "id": "Q7PgVAN2MPo",
+     "label": "BibleProject: God and your parents",
+     "title": "How Your Relationship with God Involves Your Parents",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on honouring parents"
+    },
+    {
+     "id": "V7U3sPEE3Vo",
+     "label": "BibleProject Podcast: The 5th Commandment",
+     "title": "5th Commandment: Honor Your Father and Mother",
+     "channel": "BibleProject Podcast",
+     "kind": "discussed",
+     "note": "BibleProject Podcast on the fifth commandment"
+    }
+   ]
   },
   {
    "concept": "honour-your-parents",
@@ -2553,7 +2923,17 @@
    "work": "Analects 2.7 (Wei Zheng), tr. James Legge",
    "source_id": "analects",
    "translation": "public-domain translation (Legge)",
-   "source": "https://www.gutenberg.org/ebooks/4094"
+   "source": "https://www.gutenberg.org/ebooks/4094",
+   "clips": [
+    {
+     "id": "wFt_VGG0kJU",
+     "label": "TED-Ed: Who was Confucius?",
+     "title": "Who was Confucius? - Bryan W. Van Norden",
+     "channel": "TED-Ed",
+     "kind": "discussed",
+     "note": "TED-Ed introduces Confucius"
+    }
+   ]
   },
   {
    "concept": "actions-over-words",
@@ -2598,7 +2978,17 @@
    "work": "James 1:22 (KJV)",
    "source_id": "epistle-of-james",
    "translation": "King James Version (public domain)",
-   "source": "https://www.biblegateway.com/passage/?search=James+1%3A22&version=KJV"
+   "source": "https://www.biblegateway.com/passage/?search=James+1%3A22&version=KJV",
+   "clips": [
+    {
+     "id": "qn-hLHWwRYY",
+     "label": "BibleProject: The Book of James",
+     "title": "Book of James Summary: A Complete Animated Overview",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject gives an animated overview of James"
+    }
+   ]
   },
   {
    "concept": "vital-few",
@@ -2613,7 +3003,17 @@
    "work": "Meditations IV.24, tr. George Long (kept as a related saying about focus; not used as independent attestation of the 80/20 rule)",
    "source_id": "meditations",
    "translation": "public-domain translation (George Long)",
-   "source": "https://www.gutenberg.org/ebooks/15877"
+   "source": "https://www.gutenberg.org/ebooks/15877",
+   "clips": [
+    {
+     "id": "sQKrt1-IDaE",
+     "label": "Greg McKeown: Essentialism (Talks at Google)",
+     "title": "Essentialism | Greg McKeown | Talks at Google",
+     "channel": "Talks at Google",
+     "kind": "discussed",
+     "note": "Greg McKeown discusses doing less, but better"
+    }
+   ]
   },
   {
    "concept": "vital-few",
@@ -2723,7 +3123,17 @@
    "work": "Deuteronomy 16:20 (KJV)",
    "source_id": "deuteronomy",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "A14THPoc4-4",
+     "label": "BibleProject: This Justice Is Not Revenge",
+     "title": "This Justice Is Not Revenge",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on biblical justice"
+    }
+   ]
   },
   {
    "concept": "justice",
@@ -2808,7 +3218,17 @@
    "work": "Luke 6:36 (KJV)",
    "source_id": "gospel-of-luke",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "ZQD8fYHiHJc",
+     "label": "Bishop Barron: Agents of Divine Mercy",
+     "title": "Agents of Divine Mercy - Bishop Barron's Sunday Sermon",
+     "channel": "Bishop Robert Barron",
+     "kind": "discussed",
+     "note": "Bishop Barron preaches on mercy"
+    }
+   ]
   },
   {
    "concept": "be-merciful",
@@ -2853,7 +3273,17 @@
    "work": "Proverbs 4:7 (KJV)",
    "source_id": "proverbs",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "AzmYV8GNAIM",
+     "label": "BibleProject: The Book of Proverbs",
+     "title": "Book of Proverbs Summary: A Complete Animated Overview",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject gives an animated overview of Proverbs"
+    }
+   ]
   },
   {
    "concept": "keep-learning",
@@ -2898,7 +3328,17 @@
    "work": "Psalm 34:14 (KJV)",
    "source_id": "psalms",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "oLYORLZOaZE",
+     "label": "BibleProject: Shalom (peace)",
+     "title": "Shalom - Peace",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on shalom, the Hebrew idea of peace"
+    }
+   ]
   },
   {
    "concept": "be-a-peacemaker",
@@ -2928,7 +3368,17 @@
    "work": "Matthew 5:9 (KJV)",
    "source_id": "gospel-of-matthew",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "Wv7lEyck2mg",
+     "label": "Jordan Peterson: The Sermon on the Mount",
+     "title": "The Sermon on the Mount | Lecture One (Official) | Peterson Academy",
+     "channel": "Jordan B Peterson",
+     "kind": "discussed",
+     "note": "Jordan B. Peterson lectures on the Sermon on the Mount"
+    }
+   ]
   },
   {
    "concept": "be-a-peacemaker",
@@ -2988,7 +3438,17 @@
    "work": "Epidemics, Book I, section 2, tr. Francis Adams (The Genuine Works of Hippocrates, 1849)",
    "source_id": "epidemics",
    "translation": "public-domain translation (Francis Adams)",
-   "source": "https://www.gutenberg.org/ebooks/72583"
+   "source": "https://www.gutenberg.org/ebooks/72583",
+   "clips": [
+    {
+     "id": "iMiJDSbxLWE",
+     "label": "CBS Sunday Morning: The Hippocratic Oath",
+     "title": "The Hippocratic Oath",
+     "channel": "CBS Sunday Morning",
+     "kind": "discussed",
+     "note": "CBS Sunday Morning on the Hippocratic Oath"
+    }
+   ]
   },
   {
    "concept": "do-no-harm",
@@ -3003,7 +3463,17 @@
    "work": "Acaranga Sutra, Book I, Lecture 4, Lesson 1, tr. Hermann Jacobi (Sacred Books of the East 22)",
    "source_id": "acaranga-sutra",
    "translation": "public-domain translation (Hermann Jacobi)",
-   "source": "https://sacred-texts.com/jai/sbe22/sbe2219.htm"
+   "source": "https://sacred-texts.com/jai/sbe22/sbe2219.htm",
+   "clips": [
+    {
+     "id": "gmQkhTHb5aQ",
+     "label": "Manu Raval: The Art and Science of Nonviolence (TEDx)",
+     "title": "The Art and Science of Nonviolence, (Ahimsa) | Manu Raval | TEDxColoradoSprings",
+     "channel": "TEDx Talks",
+     "kind": "discussed",
+     "note": "Manu Raval discusses ahimsa"
+    }
+   ]
   },
   {
    "concept": "do-no-harm",
@@ -3063,7 +3533,17 @@
    "work": "Matthew 5:37 (KJV)",
    "source_id": "gospel-of-matthew",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "ajwehw_AT0s",
+     "label": "BibleProject: The Sermon on the Mount",
+     "title": "What Jesus Taught in the Sermon on the Mount (Visual Commentary)",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on the Sermon on the Mount"
+    }
+   ]
   },
   {
    "concept": "keep-your-word",
@@ -3223,7 +3703,17 @@
    "work": "Autobiography, the thirteen virtues (virtue no. 3)",
    "source_id": "franklin-autobiography",
    "translation": "public domain",
-   "source": "https://www.gutenberg.org/ebooks/20203"
+   "source": "https://www.gutenberg.org/ebooks/20203",
+   "clips": [
+    {
+     "id": "n3kNlFMXslo",
+     "label": "Laura Vanderkam: Control your free time",
+     "title": "How to gain control of your free time | Laura Vanderkam | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Laura Vanderkam discusses this idea"
+    }
+   ]
   },
   {
    "concept": "paradox-of-choice",
@@ -3268,7 +3758,17 @@
    "work": "Babylonian Talmud, Taanit 23a, William Davidson Edition (Koren-Steinsaltz)",
    "source_id": "babylonian-talmud",
    "translation": "William Davidson Edition English translation, CC BY-NC (via Sefaria)",
-   "source": "https://www.sefaria.org/Taanit.23a"
+   "source": "https://www.sefaria.org/Taanit.23a",
+   "clips": [
+    {
+     "id": "hRfV7XrGfBo",
+     "label": "BimBam: Honi and the carob tree",
+     "title": "Tu B'shvat Tale: Honi Comes Full Circle for the Jewish Birthday of the Trees",
+     "channel": "BimBam",
+     "kind": "discussed",
+     "note": "BimBam retells the carob tree story"
+    }
+   ]
   },
   {
    "concept": "embrace-the-struggle",
@@ -3283,7 +3783,17 @@
    "work": "Romans 5:3-4 (KJV)",
    "source_id": "romans",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "3DoW8ntjSbA",
+     "label": "Tim Keller: Walking with God through Pain and Suffering",
+     "title": "Walking with God through Pain and Suffering – Timothy Keller [Talk]",
+     "channel": "Gospel in Life",
+     "kind": "discussed",
+     "note": "Timothy Keller on pain and suffering"
+    }
+   ]
   },
   {
    "concept": "keep-it-simple",
@@ -3298,7 +3808,17 @@
    "work": "Tao Te Ching, ch. 19, tr. James Legge (Legge's verse rendering)",
    "source_id": "tao-te-ching",
    "translation": "public-domain translation (James Legge)",
-   "source": "https://www.gutenberg.org/ebooks/216"
+   "source": "https://www.gutenberg.org/ebooks/216",
+   "clips": [
+    {
+     "id": "dFb7Hxva5rg",
+     "label": "The School of Life: Lao Tzu",
+     "title": "EASTERN PHILOSOPHY - Lao Tzu",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces Lao Tzu"
+    }
+   ]
   },
   {
    "concept": "keep-it-simple",
@@ -3402,7 +3922,17 @@
    "work": "Proverbs 24:16 (KJV)",
    "source_id": "proverbs",
    "translation": "King James Version (public domain)",
-   "source": "https://www.gutenberg.org/ebooks/10"
+   "source": "https://www.gutenberg.org/ebooks/10",
+   "clips": [
+    {
+     "id": "E1N5YM5PGqE",
+     "label": "David Goggins: Keep Going When You're Failing",
+     "title": "How to Keep Going When You're Failing | David Goggins | Powerful Motivation",
+     "channel": "Tom Ferry",
+     "kind": "discussed",
+     "note": "David Goggins discusses this idea"
+    }
+   ]
   },
   {
    "concept": "get-back-up",
@@ -3416,7 +3946,17 @@
    "era": "early-modern",
    "work": "The Citizen of the World (1762), vol. 1, Letter VII. Spoken by Goldsmith's fictional Chinese narrator, who credits Confucius; the line is not found in Confucius's works (see Quote Investigator, https://quoteinvestigator.com/2014/05/27/rising/). Spelling modernised from the long s.",
    "source_id": "citizen-of-the-world",
-   "source": "https://archive.org/details/bim_eighteenth-century_the-citizen-of-the-world_goldsmith-oliver_1762_1_0"
+   "source": "https://archive.org/details/bim_eighteenth-century_the-citizen-of-the-world_goldsmith-oliver_1762_1_0",
+   "clips": [
+    {
+     "id": "H14bBuluwB8",
+     "label": "Angela Lee Duckworth: Grit",
+     "title": "Grit: The Power of Passion and Perseverance | Angela Lee Duckworth | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Angela Lee Duckworth discusses perseverance"
+    }
+   ]
   },
   {
    "concept": "examine-yourself-first",
@@ -3491,7 +4031,17 @@
    "work": "Essays, Book I, ch. 38, “Of solitude”, tr. Charles Cotton, ed. W. C. Hazlitt",
    "source_id": "essays-of-montaigne",
    "translation": "public-domain translation (Charles Cotton)",
-   "source": "https://www.gutenberg.org/ebooks/3600"
+   "source": "https://www.gutenberg.org/ebooks/3600",
+   "clips": [
+    {
+     "id": "WLAtXWaz76o",
+     "label": "The School of Life: Montaigne",
+     "title": "PHILOSOPHY - Montaigne",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces Montaigne"
+    }
+   ]
   },
   {
    "concept": "overcome-hatred-with-love",
@@ -3611,7 +4161,17 @@
    "work": "Twilight of the Idols (1889), “Maxims and Missiles” 8, tr. Anthony M. Ludovici",
    "source_id": "twilight-of-the-idols",
    "translation": "public-domain translation (Anthony M. Ludovici)",
-   "source": "https://www.gutenberg.org/ebooks/52263"
+   "source": "https://www.gutenberg.org/ebooks/52263",
+   "clips": [
+    {
+     "id": "wHWbZmg2hzU",
+     "label": "The School of Life: Nietzsche",
+     "title": "PHILOSOPHY - Nietzsche",
+     "channel": "The School of Life",
+     "kind": "discussed",
+     "note": "The School of Life introduces Nietzsche"
+    }
+   ]
   },
   {
    "concept": "forgiveness",
@@ -3717,7 +4277,17 @@
    "work": "Atomic Habits (2018); checked on the author's site (Atomic Habits summary)",
    "source_id": "atomic-habits",
    "source": "https://jamesclear.com/atomic-habits-summary",
-   "echoes": "Will Durant's summary of Aristotle: “We are what we repeatedly do”"
+   "echoes": "Will Durant's summary of Aristotle: “We are what we repeatedly do”",
+   "clips": [
+    {
+     "id": "rtufWBLOXgw",
+     "label": "James Clear on The Diary Of A CEO",
+     "title": "The Man Who Wrote Atomic Habits: Your Goals Are Quietly Restricting Your Happiness | James Clear",
+     "channel": "The Diary Of A CEO",
+     "kind": "discussed",
+     "note": "James Clear discusses this idea"
+    }
+   ]
   },
   {
    "concept": "embrace-the-struggle",
@@ -3772,7 +4342,17 @@
    "work": "The Subtle Art of Not Giving a F*ck (2016), ch. 1 “Don’t Try”, p. 9; checked via Wikiquote, not the book. The same wording appears in book summaries and uploaded copies found via Internet Archive full-text search, but no authorised scan, preview or publisher excerpt was available",
    "source_id": "subtle-art",
    "source": "https://en.wikiquote.org/wiki/Mark_Manson",
-   "echoes": "Epictetus, Enchiridion VIII: wish events to happen as they do happen"
+   "echoes": "Epictetus, Enchiridion VIII: wish events to happen as they do happen",
+   "clips": [
+    {
+     "id": "lz8sUiXAnbs",
+     "label": "Mark Manson: The Subtle Art (summarized by the author)",
+     "title": "The Subtle Art of Not Giving a F*ck - Summarized by the Author",
+     "channel": "Mark Manson",
+     "kind": "discussed",
+     "note": "Mark Manson discusses his book"
+    }
+   ]
   },
   {
    "concept": "courage",
@@ -3865,7 +4445,17 @@
    "work": "“Fear-Setting”, tim.blog (2017), adapted from The 4-Hour Workweek and Tools of Titans",
    "source_id": "fear-setting",
    "source": "https://tim.blog/2017/05/15/fear-setting/",
-   "echoes": "Confucius, Analects 2.24: “To see what is right and not to do it is want of courage”"
+   "echoes": "Confucius, Analects 2.24: “To see what is right and not to do it is want of courage”",
+   "clips": [
+    {
+     "id": "5J6jAC6XxAI",
+     "label": "Tim Ferriss: Define your fears, not your goals",
+     "title": "Why you should define your fears instead of your goals | Tim Ferriss | TED",
+     "channel": "TED",
+     "kind": "discussed",
+     "note": "Tim Ferriss discusses this idea"
+    }
+   ]
   },
   {
    "concept": "gratitude",
@@ -3932,7 +4522,25 @@
    "translation": "King James Version (public domain)",
    "text": "For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath.",
    "work": "Matthew 25:29 (KJV), closing the Parable of the Talents",
-   "source": "https://www.biblegateway.com/passage/?search=Matthew+25%3A29&version=KJV"
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+25%3A29&version=KJV",
+   "clips": [
+    {
+     "id": "bXC_qB8xfYQ",
+     "label": "Bishop Barron: The Parable of the Talents",
+     "title": "Bishop Barron on The Parable of the Talents",
+     "channel": "Bishop Robert Barron",
+     "kind": "discussed",
+     "note": "Bishop Barron on the Parable of the Talents"
+    },
+    {
+     "id": "EcMKLwVlpJk",
+     "label": "Malcolm Gladwell: Outliers (Microsoft Research)",
+     "title": "Outliers: Why Some People Succeed and Some Don't",
+     "channel": "Microsoft Research",
+     "kind": "discussed",
+     "note": "Malcolm Gladwell discusses his book Outliers"
+    }
+   ]
   },
   {
    "concept": "matthew-effect",
@@ -3947,7 +4555,17 @@
    "translation": "King James Version (public domain)",
    "text": "For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath.",
    "work": "Matthew 13:12 (KJV), explaining why Jesus teaches in parables",
-   "source": "https://www.biblegateway.com/passage/?search=Matthew+13%3A12&version=KJV"
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+13%3A12&version=KJV",
+   "clips": [
+    {
+     "id": "XX-aAg4_U2Q",
+     "label": "BibleProject: Why Jesus Told Parables",
+     "title": "Why Jesus Told Parables (and How You Can Understand Them)",
+     "channel": "BibleProject",
+     "kind": "discussed",
+     "note": "BibleProject on why Jesus taught in parables"
+    }
+   ]
   }
  ]
 }

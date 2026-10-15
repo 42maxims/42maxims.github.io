@@ -84,7 +84,7 @@ class Pages(unittest.TestCase):
 
     def test_kind_labels(self):
         h = open(os.path.join(ROOT, "sources", "12-rules-for-life", "index.html"), encoding="utf-8").read()
-        self.assertEqual(h.count("discusses this rule (fan upload)"), 5)
+        self.assertEqual(h.count("discusses this rule (fan upload)"), 6)  # 5 timed clips + the Rule 6 whole-video link (leave-it-better)
         self.assertEqual(h.count('class="clip-play"'), 5)
         w = open(os.path.join(ROOT, "maxims", "be-present", "index.html"), encoding="utf-8").read()
         self.assertIn("Spoken as a close paraphrase", w)
@@ -142,7 +142,12 @@ class Pages(unittest.TestCase):
                         self.assertTrue(s.startswith("https://plausible.io/"), (f, s))
 
     def test_pages_without_clips_have_no_clip_markup(self):
-        h = open(os.path.join(ROOT, "maxims", "moderation", "index.html"), encoding="utf-8").read()
+        """A voice page whose quotes carry no clips must have no clip markup."""
+        with_clips = {q["voice"] for q in D["quotes"] if q.get("clips")}
+        voices = json.load(open(os.path.join(ROOT, "data", "voices.json")))
+        free = [v for v in voices if v not in with_clips]
+        self.assertTrue(free)
+        h = open(os.path.join(ROOT, "voices", free[0], "index.html"), encoding="utf-8").read()
         self.assertNotIn('class="clip"', h); self.assertNotIn("clip-play", h)
 
 

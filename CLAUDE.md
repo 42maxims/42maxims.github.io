@@ -12,7 +12,7 @@ _Maintained by oo-42maxims. See OPS.md for gh account rules and approvals, ROADM
 ## How to add a maxim or quote (content workflow)
 1. **Check for an existing concept** in `data/maxims.json` → `concepts`. If the idea is already there (even in other words), add a quote to it; don't create a near-duplicate.
 2. **New concept** (needs the project owner's approval in the PR): add to `concepts`:
-   `{"slug": "kebab-case", "maxim": "One-line rule, imperative or plain statement.", "summary": "2–3 warm, reflective sentences in our own words.", "links": ["optional further-reading URLs"]}`
+   `{"slug": "kebab-case", "maxim": "One-line rule, imperative or plain statement.", "summary": "2–3 warm, reflective sentences in our own words.", "links": ["optional further-reading: a URL string, or {\"url\": \"https://...\", \"label\": \"Author, Title (Open Library)\"} for a book (prefer Project Gutenberg / Sacred Texts for public-domain texts, Open Library works pages for modern books; do not repeat a quote's own source URL)"]}`
 3. **Add the quote** to `quotes`:
    ```json
    {"concept": "<concept slug>", "rel": "expresses|similar|partial|contrasts", "conf": 0.0-1.0,
