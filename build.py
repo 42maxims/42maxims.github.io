@@ -287,11 +287,11 @@ def clip_block(q):
         i, a, b = cl["id"], cl["start"], cl["end"]
         embed = f"https://www.youtube-nocookie.com/embed/{i}?start={a}&amp;end={b}&amp;rel=0&amp;modestbranding=1&amp;controls=1&amp;playsinline=1"
         title = f'{cl["title"]} ({cl["channel"]})'
-        out += (f'<div class="clip"><div class="clip-row"><span>{esc(cl["label"])} ({mmss(a)}–{mmss(b)})</span>'
+        out += (f'<div class="clip"><div class="clip-row">'
                 f'<button type="button" class="clip-play" data-src="{embed}" data-title="{esc(title)}" '
                 f'aria-label="Play this clip, {mmss(b - a)} long, from {esc(cl["title"])}" hidden>▶ Play clip</button>'
                 f'<a href="https://www.youtube.com/watch?v={i}&amp;t={a}" target="_blank" rel="noopener noreferrer" '
-                f'aria-label="Watch on YouTube, starts at {mmss(a)} (opens in a new tab)">Watch on YouTube (starts at {mmss(a)}) ↗</a></div>'
+                f'aria-label="Watch on YouTube, {mmss(a)} to {mmss(b)} (opens in a new tab)">Watch on YouTube ({mmss(a)}–{mmss(b)}) ↗</a></div>'
                 f'<div class="clip-slot"></div></div>')
     return out + (f"<script>{CLIP_JS}</script>" if out else "")
 

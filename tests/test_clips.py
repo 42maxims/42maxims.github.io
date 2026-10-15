@@ -60,7 +60,8 @@ class Pages(unittest.TestCase):
                     link = re.search(r'<a href="https://www\.youtube\.com/watch\?v=%s[^>]*>' % i, h).group(0)
                     self.assertIn('target="_blank"', link); self.assertIn('rel="noopener noreferrer"', link)
                     self.assertIn(f'data-src="https://www.youtube-nocookie.com/embed/{i}?start={a}&amp;end={b}&amp;rel=0&amp;modestbranding=1&amp;controls=1', h, path)
-                    self.assertIn("Watch on YouTube (starts at", h)
+                    self.assertIn(f"Watch on YouTube ({a//60}:{a%60:02d}–{b//60}:{b%60:02d}) ↗", h)
+                    self.assertNotIn("Hear it spoken", h)
                     self.assertNotIn("Go deeper", h); self.assertNotIn("clip-credit", h)
                     self.assertNotIn("Amara", h) if not path.startswith("sources/") else self.assertIn("Amara", h)
 
