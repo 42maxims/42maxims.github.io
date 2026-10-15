@@ -408,6 +408,14 @@
    "maxim": "When you fall, get back up.",
    "summary": "Falling is not the failure; staying down is. Traditions far apart in time and place honour the person who stumbles, gathers themselves, and rises again, as many times as it takes.",
    "links": []
+  },
+  {
+   "slug": "matthew-effect",
+   "maxim": "Advantage tends to compound: those who have, get more.",
+   "summary": "Early advantages (a head start, a good name, a little capital) tend to attract more of the same, while those with little often find even that slipping away. The Gospel of Matthew states the pattern twice, and in 1968 the sociologists Robert K. Merton and Harriet Zuckerman named it the Matthew effect. Seeing it clearly invites us to share a head start generously and to lift up those who begin behind.",
+   "links": [
+    "https://en.wikipedia.org/wiki/Matthew_effect"
+   ]
   }
  ],
  "quotes": [
@@ -3678,6 +3686,36 @@
      "kind": "verbatim"
     }
    ]
+  },
+  {
+   "concept": "matthew-effect",
+   "conf": 0.9,
+   "rel": "expresses",
+   "ver": "verified",
+   "thinker": "Jesus",
+   "voice": "jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "source_id": "gospel-of-matthew",
+   "translation": "King James Version (public domain)",
+   "text": "For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath.",
+   "work": "Matthew 25:29 (KJV), closing the Parable of the Talents",
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+25%3A29&version=KJV"
+  },
+  {
+   "concept": "matthew-effect",
+   "conf": 0.9,
+   "rel": "expresses",
+   "ver": "verified",
+   "thinker": "Jesus",
+   "voice": "jesus",
+   "tradition": "christianity",
+   "era": "classical",
+   "source_id": "gospel-of-matthew",
+   "translation": "King James Version (public domain)",
+   "text": "For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath.",
+   "work": "Matthew 13:12 (KJV), explaining why Jesus teaches in parables",
+   "source": "https://www.biblegateway.com/passage/?search=Matthew+13%3A12&version=KJV"
   }
  ]
 }

@@ -421,5 +421,14 @@
   "E": 13.636823574154812,
   "traditions": 3,
   "moral_rank": 60.9
+ },
+ "matthew-effect": {
+  "Q": 1.8,
+  "K": 0.9,
+  "T": 0.9,
+  "R": 1,
+  "E": 6.178302715231672,
+  "traditions": 1,
+  "moral_rank": 27.6
  }
 }
