@@ -1,5 +1,5 @@
 # Operations
-_Owner: COO-42maxims. Accounts listed by name only; no secrets in this repo._
+_Owner: oo-42maxims. Accounts listed by name only; no secrets in this repo._
 
 ## Services and costs
 - **Hosting:** GitHub Pages user site `42maxims.github.io`, branch `master`, repo root (legacy build, `.nojekyll`). Free.
@@ -26,7 +26,7 @@ Pushing to `master` deploys; check `gh api repos/42maxims/42maxims.github.io/pag
 - Brief it as the expert curator; it must follow CLAUDE.md (never fabricate, honest labels, short attributed modern quotes). Work in small batches; build, test, commit and verify after each.
 
 ## Approvals
-- **COO-42maxims may:** add/relabel quotes, add voices/sources, fix bugs, merge roadmap-aligned PRs (including outside contributors' after review), close duplicates, open issues.
+- **oo-42maxims may:** add/relabel quotes, add voices/sources, fix bugs, merge roadmap-aligned PRs (including outside contributors' after review), close duplicates, open issues.
 - **Needs the project owner:** spend of any kind, domains, outreach/newsletters/social posts, new bots, sharing user data, scoring-constant changes, new concepts that change The 42 materially, and any history rewrite or force-push.
 
 ## Content pipeline

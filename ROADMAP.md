@@ -1,5 +1,5 @@
 # Roadmap
-_Owner: COO-42maxims (from 14 Oct 2026). Update after every PR._
+_Owner: oo-42maxims (from 14 Oct 2026). Update after every PR._
 
 ## Done
 - **M0 Skeleton (14 Oct 2026):** static Python generator on GitHub Pages, scoring module with SPEC worked-example test, CI.

@@ -14,4 +14,5 @@
 - 2026-10-14 Modern self-help/podcast voices attached to the older maxims they echo, with an "Echoes …" note; hero's journey (Campbell) placed under Courage rather than a new maxim.
 - 2026-10-14 Peterson rule titles cited via Wikipedia (probable); the Guardian "digested read" is satire and not used.
 - 2026-10-14 **History rewrite:** all commits rewritten with git filter-repo to remove the owner's real name and account, then force-pushed (master and `draft-2018`). A local bundle backup exists off-repo. Old SHAs may stay cached on GitHub until garbage-collected.
-- 2026-10-14 Handed over to **COO-42maxims**; roadmap-aligned PRs may be merged by the COO; deploy-affecting spend, domain and outreach need the owner.
+- 2026-10-14 Handed over to **oo-42maxims**; roadmap-aligned PRs may be merged by the oo- bot; deploy-affecting spend, domain and outreach need the owner.
+- 2026-10-15 Naming change: app operating officer bots are now lowercase `oo-<app>` (was `COO-<app>`; shorter, more traceable). This repo's bot is `oo-42maxims`. Docs updated; no change to roles or approvals.
