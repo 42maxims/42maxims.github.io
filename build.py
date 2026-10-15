@@ -1,5 +1,6 @@
 """Builds the static site from data/maxims.json. Run: python3 build.py (no dependencies)."""
 import json, os, html, math, re, datetime
+from urllib.parse import quote
 from scoring import evidence, moral_rank, ancestors, VER, REL, W_Q, W_K, W_T, W_R
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -78,6 +79,10 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .profile h1{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
 .index{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}.index li{padding:.6rem .25rem;border-bottom:1px solid var(--line)}
 .index li>a{text-decoration:none;font-size:1.05rem}.index .chips{margin-top:.2rem}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .5rem;margin:1rem 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.8rem;color:var(--muted)}
+.share a,.share button{font:inherit;color:var(--accent);background:none;border:1px solid var(--line);border-radius:1rem;padding:.1rem .7rem;text-decoration:none;cursor:pointer}
+.share a:hover,.share button:hover{border-color:var(--accent)}.share a:focus-visible,.share button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.share [hidden]{display:none}.copied{color:var(--ok-fg)}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
@@ -296,6 +301,27 @@ def score_terms(b=None, slug=None, qs=()):
     return '<ul class="terms">' + "".join(f"<li>{x}</li>" for x in lis) + "</ul>"
 
 
+SHARE_JS = ("(function(){var b=document.getElementById('copylink');if(!b)return;var f=document.getElementById('plainlink'),s=document.getElementById('copied');"
+            "b.hidden=false;if(f)f.hidden=true;function ok(){s.textContent='Copied';setTimeout(function(){s.textContent=''},2500)}"
+            "function old(u){var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';"
+            "document.body.appendChild(t);t.select();try{document.execCommand('copy')&&ok()}catch(e){}document.body.removeChild(t)}"
+            "b.addEventListener('click',function(){var u=b.getAttribute('data-url');"
+            "if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(ok,function(){old(u)})}else{old(u)}})})();")
+
+
+def share_block(text, path):
+    """Anonymous share links (no third-party scripts): X, LinkedIn, copy link (plain link without JS)."""
+    url = f"{SITE_URL}/{path}"
+    u, t = quote(url, safe=""), quote(text, safe="")
+    rel = 'target="_blank" rel="noopener noreferrer"'
+    return ('<div class="share" role="group" aria-label="Share this maxim"><span class="share-label">Share</span>'
+            f'<a href="https://twitter.com/intent/tweet?text={t}&amp;url={u}" {rel} aria-label="Share on X (opens in a new tab)">X</a>'
+            f'<a href="https://www.linkedin.com/sharing/share-offsite/?url={u}" {rel} aria-label="Share on LinkedIn (opens in a new tab)">LinkedIn</a>'
+            f'<a id="plainlink" href="{url}" aria-label="Link to this maxim">Link</a>'
+            f'<button type="button" id="copylink" data-url="{url}" aria-label="Copy link to this maxim" hidden>Copy link</button>'
+            f'<span id="copied" class="copied" role="status" aria-live="polite"></span></div><script>{SHARE_JS}</script>')
+
+
 for c in D["concepts"]:
     b = BD[c["slug"]]; qs = quotes_by.get(c["slug"], [])
     body = f'<p class="label">Maxim</p><h1 class="maxim">{esc(c["maxim"])}</h1>'
@@ -305,7 +331,7 @@ for c in D["concepts"]:
         tr = f'<br>Translation: {esc(s["translation"])}' if s.get("translation") else ""
         body += (f'<figure class="seed"><blockquote>“{esc(s["text"])}”</blockquote>'
                  f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}{echoes(s)}</figcaption></figure>')
-    body += f'<p class="summary">{esc(c["summary"])}</p>'
+    body += f'<p class="summary">{esc(c["summary"])}</p>' + share_block(c["maxim"], f"maxims/{c['slug']}/")
     if c.get("hold"):
         body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
     rest = [q for i, q in enumerate(qs) if i != si]

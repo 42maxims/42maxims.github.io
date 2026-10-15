@@ -48,4 +48,8 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .profile h1{margin:.1rem 0 .4rem}.profile p{margin:.5rem 0}.profile ul{margin:.25rem 0;padding-left:1.2rem;font-size:.85rem}
 .index{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}.index li{padding:.6rem .25rem;border-bottom:1px solid var(--line)}
 .index li>a{text-decoration:none;font-size:1.05rem}.index .chips{margin-top:.2rem}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .5rem;margin:1rem 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.8rem;color:var(--muted)}
+.share a,.share button{font:inherit;color:var(--accent);background:none;border:1px solid var(--line);border-radius:1rem;padding:.1rem .7rem;text-decoration:none;cursor:pointer}
+.share a:hover,.share button:hover{border-color:var(--accent)}.share a:focus-visible,.share button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.share [hidden]{display:none}.copied{color:var(--ok-fg)}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
