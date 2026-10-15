@@ -286,6 +286,8 @@ def clip_note(q, cl):
     """Short label for clips that are not the exact quoted words (kind defaults to verbatim = no label)."""
     k = cl.get("kind", "verbatim")
     if "start" not in cl:
+        if cl.get("note"):
+            return esc(cl["note"])
         return f"{esc(q.get('thinker', 'The speaker'))} discusses this idea"
     if k == "paraphrase":
         return "Spoken as a close paraphrase"

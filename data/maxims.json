@@ -571,7 +571,17 @@
    "era": "modern",
    "work": "The Myth of Sisyphus (1942), title essay, closing sentence; tr. Justin O'Brien (Vintage Books, 1955); checked in the Internet Archive scan of that edition",
    "source_id": "myth-of-sisyphus",
-   "source": "https://archive.org/details/mythofsisyphus0000unse"
+   "source": "https://archive.org/details/mythofsisyphus0000unse",
+   "clips": [
+    {
+     "id": "nDLb8_wgX50",
+     "label": "How to Build Immense Inner Strength | David Goggins",
+     "title": "How to Build Immense Inner Strength | David Goggins",
+     "channel": "Andrew Huberman",
+     "kind": "discussed",
+     "note": "Huberman and David Goggins discuss this idea"
+    }
+   ]
   },
   {
    "concept": "leave-it-better",
