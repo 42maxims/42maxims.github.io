@@ -490,15 +490,15 @@
    "concept": "be-present",
    "rel": "expresses",
    "conf": 0.9,
-   "ver": "probable",
+   "ver": "verified",
    "text": "This is the real secret of life — to be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play.",
    "thinker": "Alan Watts",
    "voice": "alan-watts",
    "tradition": "zen-western",
    "era": "contemporary",
-   "work": "Attributed in The Essence of Alan Watts (1977), via Wikiquote; primary text not checked",
+   "work": "The Essential Alan Watts (Celestial Arts, Berkeley), reissue of The Essence of Alan Watts (1977); checked in the Internet Archive scan of that edition. The 1977 Millbrae edition reads \"realize that it is play\"",
    "source_id": "essence-of-alan-watts",
-   "source": "https://en.wikiquote.org/wiki/Alan_Watts"
+   "source": "https://archive.org/details/essentialalanwat0000watt"
   },
   {
    "concept": "be-present",
@@ -676,15 +676,15 @@
    "concept": "be-present",
    "rel": "similar",
    "conf": 0.8,
-   "ver": "probable",
+   "ver": "verified",
    "text": "Yet just as there is no time but the present, and no one except the all-and-everything, there is never anything to be gained—though the zest of the game is to pretend that there is.",
    "thinker": "Alan Watts",
    "voice": "alan-watts",
    "tradition": "zen-western",
    "era": "contemporary",
-   "work": "The Book (1966); checked via Wikiquote, not the book",
+   "work": "The Book: On the Taboo Against Knowing Who You Are (Pantheon Books, 1966); checked in the Internet Archive scan of that edition",
    "source_id": "the-book-watts",
-   "source": "https://en.wikiquote.org/wiki/Alan_Watts"
+   "source": "https://archive.org/details/bookontabooagain00watt"
   },
   {
    "concept": "desire-is-the-root-of-suffering",
@@ -813,7 +813,7 @@
    "voice": "alan-watts",
    "tradition": "zen-western",
    "era": "contemporary",
-   "work": "Popular paraphrase of the 'What if money was no object?' talk; exact wording not traced",
+   "work": "Popular paraphrase of the 'What if money was no object?' talk; exact wording not traced. The second clause is widely quoted from the talk in books (seen via Internet Archive full-text search) but no transcript or recording was checked; \"Do what you love, the money will follow\" is not his phrase (it is the title of a 1987 book by Marsha Sinetar)",
    "source_id": "what-if-money-talk",
    "source": ""
   },
