@@ -83,6 +83,8 @@ footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-si
 
 SITE_URL = "https://42maxims.github.io"  # canonical origin; change to https://42maxims.com only after the domain is bought (issue #5)
 SITE_NAME = "42 Maxims"
+OG_IMAGE = "og.png"  # 1200x630 social preview at site root; regenerate with tools/make_og.py
+OG_ALT = "42 Maxims: a sourced, ranked collection of rules for life"
 DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with sources."
 SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
 PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
@@ -130,8 +132,11 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
                  f'<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:locale" content="en_IE">'
                  f'<meta property="og:type" content="{kind}"><meta property="og:title" content="{esc(title)}">'
                  f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">'
-                 f'<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}">'
-                 f'<meta name="twitter:description" content="{esc(desc)}">')
+                 f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">'
+                 f'<meta name="twitter:description" content="{esc(desc)}">'
+                 f'<meta property="og:image" content="{SITE_URL}/{OG_IMAGE}"><meta property="og:image:width" content="1200">'
+                 f'<meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(OG_ALT)}">'
+                 f'<meta name="twitter:image" content="{SITE_URL}/{OG_IMAGE}"><meta name="twitter:image:alt" content="{esc(OG_ALT)}">')
         if not noindex:
             SITEMAP.append(path)
             graph = list(jsonld)

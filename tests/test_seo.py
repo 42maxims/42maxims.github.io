@@ -76,8 +76,23 @@ class Seo(unittest.TestCase):
                 self.assertEqual(p.meta.get("og:url"), u)
                 self.assertEqual(p.meta.get("og:title"), p.title)
                 self.assertEqual(p.meta.get("og:description"), p.meta["description"])
-                self.assertEqual(p.meta.get("twitter:card"), "summary")
+                self.assertEqual(p.meta.get("twitter:card"), "summary_large_image")
+                img = SITE + "/og.png"
+                self.assertEqual(p.meta.get("og:image"), img)
+                self.assertEqual(p.meta.get("twitter:image"), img)
+                self.assertEqual(p.meta.get("og:image:width"), "1200")
+                self.assertEqual(p.meta.get("og:image:height"), "630")
+                self.assertTrue(p.meta.get("og:image:alt"))
                 self.assertEqual(p.meta.get("og:site_name"), "42 Maxims")
+
+    def test_og_image_file(self):
+        import struct
+        f = os.path.join(ROOT, "og.png")
+        self.assertTrue(os.path.isfile(f))
+        self.assertLess(os.path.getsize(f), 150_000)
+        d = open(f, "rb").read(24)
+        self.assertEqual(d[:8], b"\x89PNG\r\n\x1a\n")
+        self.assertEqual(struct.unpack(">II", d[16:24]), (1200, 630))
 
     def test_404_noindex_no_canonical(self):
         p = PAGES["404.html"]
