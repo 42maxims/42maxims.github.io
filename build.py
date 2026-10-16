@@ -23,7 +23,7 @@ VER_TITLE = {"verified": "Checked against a primary text or reputable translatio
 ERA_LABEL = {"axial": "Ancient (before 200 BCE)", "classical": "Classical (200 BCE – 600 CE)",
              "medieval": "Medieval (600 – 1500)", "early-modern": "Early modern (1500 – 1800)",
              "modern": "Modern (1800 – 1950)", "contemporary": "Contemporary (1950 – today)"}
-VOICE_KIND = {"person": "Person", "collective": "Collective", "text": "Anonymous author", "legendary": "Traditional or legendary figure"}
+VOICE_KIND = {"person": "Person", "collective": "Collective", "scripture": "Scripture", "legendary": "Traditional or legendary figure"}
 SOURCE_KIND = {"book": "Book", "scripture": "Scripture", "talk": "Talk, video or podcast", "article": "Article or paper",
                "other": "Saying or principle"}
 # Sources index: filter groups (plural heading, short button label, anchor id). "video" rows are YouTube references, not source entries.
@@ -469,7 +469,7 @@ def plural(n, w):
 def index_page(entries, label, kinds, counts, base, title, intro):
     items = []
     for slug, e in sorted(entries.items(), key=lambda x: sort_key(x[1][label])):
-        chips = [kinds[e["kind"]], plural(len(counts.get(slug, [])), "quote"), esc(e["dates"])]
+        chips = [e.get("label") or kinds[e["kind"]], plural(len(counts.get(slug, [])), "quote"), esc(e["dates"])]
         items.append(f'<li><a href="{slug}/">{esc(e[label])}</a><div class="chips">'
                      + "".join(f'<span class="chip">{x}</span>' for x in chips) + "</div></li>")
     write(f"{base}/index.html", page(f"{title} — 42 Maxims", f'<h1>{title}</h1><p>{intro}</p><ul class="index">{"".join(items)}</ul>', 1,
@@ -484,7 +484,7 @@ for q in D["quotes"]:
 for slug, v in VOICES.items():
     qs = quotes_by_voice.get(slug, [])
     works = sorted((k for k, s in SOURCES.items() if s["voice"] == slug), key=lambda k: sort_key(SOURCES[k]["title"]))
-    body = '<p class="label">Voice</p>' + profile(v, v["name"], [VOICE_KIND[v["kind"]]])
+    body = '<p class="label">Voice</p>' + profile(v, v["name"], [v.get("label") or VOICE_KIND[v["kind"]]])
     if works:
         body += "<h2>Works</h2><ul>" + "".join(f'<li><a href="../../sources/{k}/"><em>{esc(SOURCES[k]["title"])}</em></a></li>' for k in works) + "</ul>"
     if qs:

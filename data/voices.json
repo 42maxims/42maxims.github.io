@@ -180,11 +180,12 @@
    "https://en.wikipedia.org/wiki/Torah",
    "https://en.wikipedia.org/wiki/Mosaic_authorship",
    "https://en.wikipedia.org/wiki/Composition_of_the_Torah"
-  ]
+  ],
+  "label": "Scripture"
  },
  "qoheleth": {
   "name": "Qoheleth (the Preacher)",
-  "kind": "text",
+  "kind": "scripture",
   "dates": "c. 450–180 BCE (scholarly estimate)",
   "tradition": "judaism",
   "period": "axial",
@@ -206,7 +207,8 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Book_of_Proverbs",
    "https://www.britannica.com/topic/The-Proverbs"
-  ]
+  ],
+  "label": "Scripture"
  },
  "paul-the-apostle": {
   "name": "Paul the Apostle",
@@ -300,7 +302,7 @@
  },
  "author-of-job": {
   "name": "Author of the Book of Job",
-  "kind": "text",
+  "kind": "scripture",
   "dates": "c. 6th–4th century BCE (scholarly estimate)",
   "tradition": "judaism",
   "period": "axial",
@@ -365,7 +367,7 @@
  },
  "quran": {
   "name": "The Qur'an",
-  "kind": "text",
+  "kind": "scripture",
   "dates": "revealed c. 610–632 CE; standard text compiled c. 650 CE",
   "tradition": "islam",
   "period": "medieval",
@@ -400,7 +402,8 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Psalms",
    "https://www.britannica.com/topic/Psalms"
-  ]
+  ],
+  "label": "Scripture"
  },
  "homer": {
   "name": "Homer",
@@ -443,7 +446,7 @@
  },
  "author-of-joshua": {
   "name": "Author of the Book of Joshua",
-  "kind": "text",
+  "kind": "scripture",
   "dates": "c. 7th–6th century BCE (scholarly estimate)",
   "tradition": "judaism",
   "period": "axial",
@@ -478,11 +481,12 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Book_of_Zechariah",
    "https://en.wikipedia.org/wiki/Zechariah_(Hebrew_prophet)"
-  ]
+  ],
+  "label": "Scripture"
  },
  "author-of-hebrews": {
   "name": "Author of Hebrews",
-  "kind": "text",
+  "kind": "scripture",
   "dates": "1st century CE",
   "tradition": "christianity",
   "period": "classical",
@@ -517,7 +521,8 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Micah_(prophet)",
    "https://en.wikipedia.org/wiki/Book_of_Micah"
-  ]
+  ],
+  "label": "Scripture"
  },
  "hippocrates": {
   "name": "Hippocrates",

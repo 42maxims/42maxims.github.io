@@ -35,8 +35,16 @@ class Data(unittest.TestCase):
             with self.subTest(voice=slug):
                 self.assertRegex(slug, SLUG)
                 self.assertTrue(v.get("name", "").strip())
-                self.assertIn(v.get("kind"), {"person", "collective", "text", "legendary"})
+                self.assertIn(v.get("kind"), {"person", "collective", "scripture", "legendary"})
+                self.assertIn(v.get("label", "Scripture"), {"Scripture"})
                 self.check_common(v)
+
+    def test_scripture_voices_labelled(self):
+        for slug in ("qoheleth", "author-of-job", "author-of-joshua", "author-of-hebrews", "quran"):
+            self.assertEqual(VOICES[slug]["kind"], "scripture", slug)
+        for slug in ("psalmists", "torah-writers", "hebrew-wisdom-writers", "zechariah", "micah"):
+            self.assertEqual(VOICES[slug].get("label"), "Scripture", slug)
+        self.assertNotIn("text", {v["kind"] for v in VOICES.values()})
 
     def test_sources_complete(self):
         for slug, s in SOURCES.items():
