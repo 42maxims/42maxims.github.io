@@ -43,7 +43,7 @@ class Data(unittest.TestCase):
             with self.subTest(source=slug):
                 self.assertRegex(slug, SLUG)
                 self.assertTrue(s.get("title", "").strip())
-                self.assertIn(s.get("kind"), {"book", "scripture", "collection", "speech", "proverb", "other"})
+                self.assertIn(s.get("kind"), {"book", "scripture", "talk", "article", "other"})
                 self.assertIn("voice", s)
                 self.assertTrue(s["voice"] is None or s["voice"] in VOICES, s["voice"])
                 self.check_common(s)

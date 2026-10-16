@@ -104,7 +104,7 @@ Git is the database and the audit trail. Generated output (`data/generated/`, al
 
 **`data/voices.json`**: `{"<slug>": {"name", "kind": "person|collective|text|legendary", "dates", "tradition", "period", "summary", "confidence": "solid|thin|uncertain", "refs": [...]}}`
 
-**`data/sources.json`**: `{"<slug>": {"title", "voice": "<voice slug> or null", "kind": "book|scripture|collection|speech|proverb|other", "dates", "tradition", "period", "summary", "confidence", "refs": [...]}}`
+**`data/sources.json`**: `{"<slug>": {"title", "voice": "<voice slug> or null", "kind": "book|scripture|talk|article|other", "dates", "tradition", "period", "summary", "confidence", "refs": [...]}}`
 
 Tests fail on unknown slugs, missing fields, empty summaries, or voice/source entries nothing uses. Full contributor rules are in CLAUDE.md.
 

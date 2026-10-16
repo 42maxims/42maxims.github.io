@@ -24,8 +24,12 @@ ERA_LABEL = {"axial": "Ancient (before 200 BCE)", "classical": "Classical (200 B
              "medieval": "Medieval (600 – 1500)", "early-modern": "Early modern (1500 – 1800)",
              "modern": "Modern (1800 – 1950)", "contemporary": "Contemporary (1950 – today)"}
 VOICE_KIND = {"person": "Person", "collective": "Collective", "text": "Known through the text", "legendary": "Traditional or legendary figure"}
-SOURCE_KIND = {"book": "Book", "scripture": "Scripture", "collection": "Collection", "speech": "Speech or talk",
-               "proverb": "Proverb or saying", "other": "Other"}
+SOURCE_KIND = {"book": "Book", "scripture": "Scripture", "talk": "Talk, video or podcast", "article": "Article or paper",
+               "other": "Saying or principle"}
+# Sources index: filter groups (plural heading, short button label, anchor id). "video" rows are YouTube references, not source entries.
+TYPE_GROUPS = [("book", "Books", "Books", "books"), ("scripture", "Scripture", "Scripture", "scripture"),
+               ("talk", "Talks and podcasts", "Talks", "talks"), ("article", "Articles and papers", "Articles", "articles"),
+               ("other", "Sayings and principles", "Sayings", "sayings"), ("video", "YouTube videos", "Videos", "videos")]
 CONFIDENCE_NOTE = {"thin": "Little is known for certain here; this background is thin and may be revised.",
                    "uncertain": "Authorship, dates or origin are uncertain or disputed; read this background with care."}
 
@@ -89,6 +93,11 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .clip button:hover,.clip a:hover{border-color:var(--accent)}.clip button:focus-visible,.clip a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .clip [hidden]{display:none}.clip-note{font-size:.8rem;font-style:italic}
 .clip-frame{position:relative;aspect-ratio:16/9;margin:.6rem 0 0;border-radius:.25rem;overflow:hidden;background:#000}.clip-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.typebar{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem}
+.typebar a,.typebar button{font:inherit;color:var(--accent);background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:.25rem .8rem;text-decoration:none;cursor:pointer}
+.typebar button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.typebar a:focus-visible,.typebar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.typebar[hidden],.type-group[hidden]{display:none}
+.type-group{scroll-margin-top:1rem}.vmeta{margin:.3rem 0 0;font-size:.8rem;color:var(--muted)}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
@@ -501,8 +510,57 @@ for slug, s in SOURCES.items():
 index_page(VOICES, "name", VOICE_KIND, quotes_by_voice, "voices", "Voices",
            "The people, communities and texts behind the quotes, from named thinkers to anonymous sayings. "
            "Where authorship is disputed or a saying is misattributed, the voice page says so.")
-index_page(SOURCES, "title", SOURCE_KIND, quotes_by_source, "sources", "Sources",
-           "The books, scriptures, collections and talks the quotes come from. Each quote's exact chapter, verse and translation are shown beside it.")
+
+
+def video_rows():
+    """One row per distinct YouTube id used on any quote: title, channel, the sources and maxims it is attached to."""
+    vids = {}
+    for q in D["quotes"]:
+        for cl in q.get("clips", []):
+            v = vids.setdefault(cl["id"], {"cl": cl, "src": {}, "maxims": {}, "who": set()})
+            v["src"][q["source_id"]] = SOURCES[q["source_id"]]["title"]
+            v["maxims"][q["concept"]] = CONCEPT[q["concept"]]["maxim"]
+            v["who"].add(q["thinker"])
+            if "start" in cl and "start" not in v["cl"]:
+                v["cl"] = cl
+    return vids
+
+
+FILTER_JS = ("(function(){var n=document.getElementById('type-jump'),f=document.getElementById('type-filter');if(!n||!f)return;"
+             "var s=document.querySelectorAll('.type-group'),b=f.querySelectorAll('button');n.hidden=true;f.hidden=false;"
+             "function show(t){for(var i=0;i<s.length;i++)s[i].hidden=!(t==='all'||s[i].getAttribute('data-type')===t);"
+             "for(var j=0;j<b.length;j++)b[j].setAttribute('aria-pressed',b[j].getAttribute('data-type')===t?'true':'false');}"
+             "for(var k=0;k<b.length;k++)b[k].addEventListener('click',function(){show(this.getAttribute('data-type'));});show('all');})();")
+
+
+def sources_index():
+    groups = {t: [] for t, *_ in TYPE_GROUPS}
+    for slug, e in SOURCES.items():
+        chips = [SOURCE_KIND[e["kind"]], plural(len(quotes_by_source.get(slug, [])), "quote"), esc(e["dates"])]
+        groups[e["kind"]].append((sort_key(e["title"]), f'<li><a href="{slug}/">{esc(e["title"])}</a><div class="chips">'
+                                  + "".join(f'<span class="chip">{x}</span>' for x in chips) + "</div></li>"))
+    for i, v in video_rows().items():
+        cl = v["cl"]
+        href = f"https://www.youtube.com/watch?v={i}" + (f'&amp;t={cl["start"]}' if "start" in cl else "")
+        srcs = ", ".join(f'<a href="{k}/">{esc(t)}</a>' for k, t in sorted(v["src"].items(), key=lambda x: sort_key(x[1])))
+        mx = ", ".join(f'<a href="../maxims/{k}/">{esc(t)}</a>' for k, t in sorted(v["maxims"].items()))
+        chips = ["Video", esc(cl["channel"])] + (["Timed clip"] if "start" in cl else [])
+        groups["video"].append((sort_key(cl["title"]), f'<li><a href="{href}" target="_blank" rel="noopener noreferrer" '
+                                f'aria-label="{esc(cl["title"])} on YouTube (opens in a new tab)">{esc(cl["title"])} ↗</a><div class="chips">'
+                                + "".join(f'<span class="chip">{x}</span>' for x in chips) + f'</div><p class="vmeta">Source: {srcs} · Maxims: {mx}</p></li>'))
+    jump = "".join(f'<a href="#{a}">{lab} ({len(groups[t])})</a>' for t, h, lab, a in TYPE_GROUPS)
+    btns = f'<button type="button" data-type="all" aria-pressed="true">All ({sum(len(g) for g in groups.values())})</button>' + "".join(
+        f'<button type="button" data-type="{t}" aria-pressed="false">{lab} ({len(groups[t])})</button>' for t, h, lab, a in TYPE_GROUPS)
+    sections = "".join(
+        f'<section class="type-group" id="{a}" data-type="{t}"><h2>{h} ({len(groups[t])})</h2><ul class="index">'
+        + "".join(r for _, r in sorted(groups[t])) + "</ul></section>" for t, h, lab, a in TYPE_GROUPS)
+    intro = "The books, scriptures, talks and articles the quotes come from, and the YouTube videos linked beside them. Each quote's exact chapter, verse and translation are shown beside it."
+    body = (f'<h1>Sources</h1><p>{intro}</p><nav id="type-jump" class="typebar" aria-label="Jump to a type">{jump}</nav>'
+            f'<div id="type-filter" class="typebar" role="group" aria-label="Show one type of source" hidden>{btns}</div>{sections}<script>{FILTER_JS}</script>')
+    write("sources/index.html", page("Sources — 42 Maxims", body, 1, "sources/", intro, crumbs=[]))
+
+
+sources_index()
 
 legend = "".join(f"<dt>{pill(k)}</dt><dd>{d}</dd>" for k, d in [
     ("verified", "Wording checked against a primary text, a reputable or public-domain translation, or the author's own book, site or recorded talk."),

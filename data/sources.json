@@ -2,7 +2,7 @@
  "analects": {
   "title": "The Analects (Lunyu)",
   "voice": "confucius",
-  "kind": "collection",
+  "kind": "book",
   "dates": "compiled c. 5th–3rd century BCE; final form c. 2nd century BCE (Han dynasty)",
   "tradition": "confucianism",
   "period": "axial",
@@ -16,7 +16,7 @@
  "babylonian-talmud": {
   "title": "Babylonian Talmud",
   "voice": "talmudic-sages",
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled c. 3rd–6th century CE",
   "tradition": "judaism",
   "period": "classical",
@@ -31,7 +31,7 @@
  "pirkei-avot": {
   "title": "Pirkei Avot (Ethics of the Fathers)",
   "voice": null,
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled c. 200 CE",
   "tradition": "judaism",
   "period": "classical",
@@ -411,7 +411,7 @@
  "what-if-money-talk": {
   "title": "'What if money was no object?' (lecture excerpt)",
   "voice": "alan-watts",
-  "kind": "speech",
+  "kind": "talk",
   "dates": "unknown",
   "tradition": "zen-western",
   "period": "contemporary",
@@ -491,7 +491,7 @@
  "baden-powell-last-message": {
   "title": "Last message to Scouts",
   "voice": "robert-baden-powell",
-  "kind": "other",
+  "kind": "article",
   "dates": "written before 1941; published after his death in 1941",
   "tradition": "scouting",
   "period": "modern",
@@ -544,7 +544,7 @@
  "popular-sayings": {
   "title": "Popular sayings (origin unknown)",
   "voice": "popular-saying",
-  "kind": "proverb",
+  "kind": "other",
   "dates": "unknown",
   "tradition": "popular",
   "period": "contemporary",
@@ -625,7 +625,7 @@
  "monastic-routine-video": {
   "title": "Why You Should Wake Up And Eat At The Same Time Everyday (Improvement Pill, YouTube)",
   "voice": "buddhist-monastic-routine",
-  "kind": "other",
+  "kind": "talk",
   "dates": "unknown",
   "tradition": "popular",
   "period": "contemporary",
@@ -695,7 +695,7 @@
  "sahih-al-bukhari": {
   "title": "Sahih al-Bukhari",
   "voice": "muhammad",
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled 9th century CE",
   "tradition": "islam",
   "period": "medieval",
@@ -709,7 +709,7 @@
  "sahih-muslim": {
   "title": "Sahih Muslim",
   "voice": "muhammad",
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled 9th century CE",
   "tradition": "islam",
   "period": "medieval",
@@ -722,7 +722,7 @@
  "sunan-abi-dawud": {
   "title": "Sunan Abi Dawud",
   "voice": "muhammad",
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled 9th century CE",
   "tradition": "islam",
   "period": "medieval",
@@ -735,7 +735,7 @@
  "jami-at-tirmidhi": {
   "title": "Jami' at-Tirmidhi",
   "voice": "muhammad",
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled 9th century CE",
   "tradition": "islam",
   "period": "medieval",
@@ -748,7 +748,7 @@
  "sunan-ibn-majah": {
   "title": "Sunan Ibn Majah",
   "voice": "muhammad",
-  "kind": "collection",
+  "kind": "scripture",
   "dates": "compiled 9th century CE",
   "tradition": "islam",
   "period": "medieval",
@@ -923,7 +923,7 @@
  "live-not-by-lies": {
   "title": "Live Not by Lies",
   "voice": "aleksandr-solzhenitsyn",
-  "kind": "other",
+  "kind": "article",
   "dates": "1974",
   "tradition": "russian-literature",
   "period": "contemporary",
@@ -1062,7 +1062,7 @@
  "a-joseph-campbell-companion": {
   "title": "A Joseph Campbell Companion: Reflections on the Art of Living",
   "voice": "joseph-campbell",
-  "kind": "collection",
+  "kind": "book",
   "dates": "1991",
   "tradition": "comparative-mythology",
   "period": "contemporary",
@@ -1145,7 +1145,7 @@
  "ted-radio-hour-shame": {
   "title": "'Can We Gain Strength From Shame?' (TED Radio Hour)",
   "voice": "brene-brown",
-  "kind": "speech",
+  "kind": "talk",
   "dates": "2013",
   "tradition": "modern-psychology",
   "period": "contemporary",
@@ -1186,7 +1186,7 @@
  "naval-podcast": {
   "title": "Naval (podcast)",
   "voice": "naval-ravikant",
-  "kind": "other",
+  "kind": "talk",
   "dates": "2018–present",
   "tradition": "modern-psychology",
   "period": "contemporary",
@@ -1200,7 +1200,7 @@
  "fear-setting": {
   "title": "'Fear-Setting' (blog post)",
   "voice": "tim-ferriss",
-  "kind": "other",
+  "kind": "article",
   "dates": "2017",
   "tradition": "modern-psychology",
   "period": "contemporary",
@@ -1214,7 +1214,7 @@
  "huberman-lab": {
   "title": "Huberman Lab (podcast)",
   "voice": "andrew-huberman",
-  "kind": "other",
+  "kind": "talk",
   "dates": "2021–present",
   "tradition": "modern-psychology",
   "period": "contemporary",
@@ -1228,7 +1228,7 @@
  "extreme-ownership-tedx": {
   "title": "'Extreme Ownership' (TEDxUniversityofNevada talk)",
   "voice": "jocko-willink",
-  "kind": "speech",
+  "kind": "talk",
   "dates": "2017",
   "tradition": "management",
   "period": "contemporary",
@@ -1243,7 +1243,7 @@
  "structured-programming-with-go-to-statements": {
   "title": "Structured Programming with go to Statements",
   "voice": "donald-knuth",
-  "kind": "other",
+  "kind": "article",
   "dates": "1974",
   "tradition": "computer-science",
   "period": "contemporary",
