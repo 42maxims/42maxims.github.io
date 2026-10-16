@@ -255,8 +255,9 @@ emerging = [c for c in order if c not in main]
 body = ('<p class="lede">Some ideas keep turning up, in different centuries and different languages, from people who never met. '
         "This is a slow, careful collection of them: each maxim with its sources, ranked by how widely and independently humanity has arrived at it.</p>"
         "<h1>The 42</h1><p class=\"sub\">The 42 highest-ranked maxims</p>"
-        f'<p class="note">{len(qualifying)} maxims are now shared by at least two independent traditions; these are the {len(main)} that rank highest among them. '
-        "It is still an early collection, and the order will keep shifting gently as new sources are found.</p>"
+        f'<p class="note">Of the maxims collected so far, {len(qualifying)} are shared by at least two independent traditions. '
+        f'The {len(main)} highest-ranked of those are listed here; the other {len(qualifying) - len(main)} appear under Emerging, along with ideas still waiting for a second tradition. '
+        "This is an early collection, and the ranking will change as new sources are added.</p>"
         + table(main) +
         "<h2 class=\"big\">Emerging</h2><p>Maxims just outside The 42. Some rank just below the top; others are waiting for stronger backing from a second tradition. Each is marked with its reason, and any of them can join as new sources are found.</p>"
         + table(emerging, True))
