@@ -112,7 +112,7 @@ DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with
 SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
 PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
 SCRIPT_ID = re.compile(r"^pa-[A-Za-z0-9_-]+$")
-GOOGLE_SITE_VERIFICATION = "rpfVMtZnMXoRdDKscG_bzbKO-IlKBdvh7tE8za73o4U"  # Search Console HTML-tag token; empty = no tag
+GOOGLE_SITE_VERIFICATION = "KciBKHM1FLesIdzjoS5AjOy1-xuLPMgKGVx2BBv3w9s"  # Search Console HTML-tag token; empty = no tag
 VERIFICATION_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
 
 

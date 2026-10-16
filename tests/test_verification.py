@@ -2,7 +2,7 @@
 import glob, os, re, unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOKEN = "rpfVMtZnMXoRdDKscG_bzbKO-IlKBdvh7tE8za73o4U"
+TOKEN = "KciBKHM1FLesIdzjoS5AjOy1-xuLPMgKGVx2BBv3w9s"
 TAG = f'<meta name="google-site-verification" content="{TOKEN}" />'
 
 

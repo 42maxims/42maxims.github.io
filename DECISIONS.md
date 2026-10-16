@@ -82,3 +82,6 @@
 - `build.py` now writes `CNAME` (`42maxims.com`) on every build and a test checks it, so a rebuild cannot drop the Pages custom domain.
 - Plausible uses a script id, not `data-domain`, so `PLAUSIBLE_SCRIPT_ID` is unchanged. `og.png` has no baked-in URL.
 - Search Console: the HTML-tag token in `GOOGLE_SITE_VERIFICATION` is unchanged; the owner adds `https://42maxims.com/` as a new property and submits `sitemap.xml`. The old github.io property is superseded.
+
+## 2026-10-16: Search Console token replaced
+- The owner removed and re-added the `https://42maxims.com/` property, and Google issued a new HTML-tag token. `GOOGLE_SITE_VERIFICATION` in `build.py` now holds it. The old token is dropped (the build emits one tag, and its property was removed). Tests updated.
