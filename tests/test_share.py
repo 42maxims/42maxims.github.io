@@ -4,7 +4,7 @@ from html import unescape
 from urllib.parse import quote, urlparse, parse_qs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://42maxims.github.io"
+SITE = "https://42maxims.com"
 PAGES = sorted(glob.glob(os.path.join(ROOT, "maxims", "*", "index.html")))
 
 

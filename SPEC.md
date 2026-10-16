@@ -1,7 +1,7 @@
 # 42 Maxims: Product & Build Spec
 
 **Owner:** the project owner (anonymous) · **Maintainer identity:** Max Ims (GitHub `42maxims`) · **Operator:** oo-42maxims (app operating officer bot) briefing Claude Code
-**Repo:** `42maxims/42maxims.github.io` · **Live:** https://42maxims.github.io · **Status:** v0.2, rewritten to match the site as built (2026-10-14)
+**Repo:** `42maxims/42maxims.github.io` · **Live:** https://42maxims.com · **Status:** v0.2, rewritten to match the site as built (2026-10-14)
 **Working name:** 42 Maxims. "42" is the brand and the size of the main list (The 42), not a limit on the catalogue.
 
 Throughout this spec, **[Built]** marks what exists on the live site today and **[Planned]** marks the long-term vision. Where the built site differs from an earlier plan, the built version is described and the plan is kept as [Planned].
@@ -261,7 +261,7 @@ Agents (Claude Code, briefed by oo-42maxims) follow the content workflow in CLAU
 | Data | JSON in `data/` (maxims, voices, sources) | Richer fields (§4.3) |
 | Scoring | `scoring.py` with unit tests (`tests/`) | Concept links + propagation |
 | CI | GitHub Actions: runs tests and checks committed HTML matches `build.py` output | Lint stages from §8.2 |
-| Hosting | GitHub Pages user site `42maxims.github.io`, branch `master`, root folder, `.nojekyll`; push to `master` deploys | Custom domain 42maxims.com (chosen, not bought; needs approval) |
+| Hosting | GitHub Pages user site `42maxims.github.io`, branch `master`, root folder, `.nojekyll`; push to `master` deploys | Custom domain 42maxims.com (live 2026-10-16; `CNAME` file emitted by `build.py`; github.io redirects to it) |
 | Search / graph | — | Pagefind; Cytoscape.js or Sigma.js |
 | Analytics / newsletter | — | Cookieless analytics; Buttondown or Beehiiv |
 
@@ -328,7 +328,7 @@ SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  CLAUDE.md  CONTRIBUTING.md  README.md
 
 ## 14. Questions
 
-**Settled** (see DECISIONS.md): name "42 Maxims"; domain 42maxims.com chosen but not bought; anonymous author ("Max Ims"); GitHub Pages with simple tools; English first with labelled AI-assisted translations; modern and living thinkers with short attributed quotes; scoring weights 3.0·T, 1.5·R, `derives_from` at 0.5; warm, reflective voice; own content CC BY-SA 4.0.
+**Settled** (see DECISIONS.md): name "42 Maxims"; domain 42maxims.com (live since 2026-10-16); anonymous author ("Max Ims"); GitHub Pages with simple tools; English first with labelled AI-assisted translations; modern and living thinkers with short attributed quotes; scoring weights 3.0·T, 1.5·R, `derives_from` at 0.5; warm, reflective voice; own content CC BY-SA 4.0.
 
 **Open:**
 1. Domain purchase timing and budget.

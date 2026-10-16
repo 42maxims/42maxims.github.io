@@ -3,7 +3,7 @@ import glob, json, os, re, unittest
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://42maxims.github.io"
+SITE = "https://42maxims.com"
 
 
 def pages():
@@ -143,6 +143,10 @@ class Seo(unittest.TestCase):
         for f in ["sitemap.xml", "robots.txt"] + list(pages()):
             self.assertNotIn("Farrell", open(os.path.join(ROOT, f), encoding="utf-8").read())
             self.assertNotIn("joe2far", open(os.path.join(ROOT, f), encoding="utf-8").read())
+
+    def test_cname_matches_site(self):
+        self.assertEqual(open(os.path.join(ROOT, "CNAME")).read(), SITE.split("//", 1)[1])
+        self.assertEqual(SITE, "https://42maxims.com")
 
 
 if __name__ == "__main__":

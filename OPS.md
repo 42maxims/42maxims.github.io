@@ -4,7 +4,7 @@ _Owner: oo-42maxims. Accounts listed by name only; no secrets in this repo._
 ## Services and costs
 - **Hosting:** GitHub Pages user site `42maxims.github.io`, branch `master`, repo root (legacy build, `.nojekyll`). Free.
 - **CI:** GitHub Actions `.github/workflows/ci.yml`: runs tests and checks committed HTML matches `build.py` output. Free.
-- **Domain:** 42maxims.com chosen, not bought (issue #5). Cost: €0 today.
+- **Domain:** 42maxims.com, registered at Cloudflare (DNS only, not proxied; WHOIS privacy on), GitHub Pages custom domain with HTTPS enforced. `build.py` writes `CNAME`. `42maxims.github.io` redirects to it. Plausible site is 42maxims.com. Search Console needs a property for `https://42maxims.com/`.
 - **Data sources:** public texts (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Wikisource), Wikiquote/Wikipedia for probable labels, Quote Investigator for misattributions. No scheduled refresh; content is added in batches.
 
 ## Accounts and identity

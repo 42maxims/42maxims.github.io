@@ -56,12 +56,12 @@ class MotdTests(unittest.TestCase):
             self.assertTrue(os.path.exists(os.path.join(ROOT, "maxims", e["slug"], "index.html")))
 
     def test_page_basics(self):
-        self.assertIn('<link rel="canonical" href="https://42maxims.github.io/maxim-of-the-day/">', PAGE)
+        self.assertIn('<link rel="canonical" href="https://42maxims.com/maxim-of-the-day/">', PAGE)
         self.assertIn("<title>Maxim of the Day — 42 Maxims</title>", PAGE)
         self.assertEqual(PAGE.count("<h1"), 1)
         self.assertIn(build.MOTD[0]["maxim"].replace("'", "&#x27;"), PAGE)
         sm = open(os.path.join(ROOT, "sitemap.xml")).read()
-        self.assertIn("https://42maxims.github.io/maxim-of-the-day/", sm)
+        self.assertIn("https://42maxims.com/maxim-of-the-day/", sm)
 
 
 if __name__ == "__main__":

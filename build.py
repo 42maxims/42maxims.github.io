@@ -103,7 +103,8 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
-SITE_URL = "https://42maxims.github.io"  # canonical origin; change to https://42maxims.com only after the domain is bought (issue #5)
+SITE_URL = "https://42maxims.com"  # canonical origin; GitHub Pages custom domain (issue #5)
+CUSTOM_DOMAIN = SITE_URL.split("//", 1)[1]  # written to CNAME so a deploy never drops the Pages custom domain
 SITE_NAME = "42 Maxims"
 OG_IMAGE = "og.png"  # 1200x630 social preview at site root; regenerate with tools/make_og.py
 OG_ALT = "42 Maxims: a sourced, ranked collection of rules for life"
@@ -727,5 +728,6 @@ write("style.css", CSS)
 write("404.html", page("Not found — 42 Maxims", "<h1>Page not found</h1><p>That page isn't here. <a href='/'>Back to The 42</a>.</p>", 0))
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "".join(f"<url><loc>{SITE_URL}/{p}</loc></url>\n" for p in sorted(SITEMAP)) + "</urlset>\n")
+write("CNAME", CUSTOM_DOMAIN)
 write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 print("built", len(D["concepts"]), "maxims,", len(VOICES), "voices,", len(SOURCES), "sources")

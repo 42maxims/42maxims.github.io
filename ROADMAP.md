@@ -16,6 +16,6 @@ _Owner: oo-42maxims (from 14 Oct 2026). Update after every PR._
 - [#4](https://github.com/42maxims/42maxims.github.io/issues/4) Firm up probable and unverified quotes
 
 ## Later
-- [#5](https://github.com/42maxims/42maxims.github.io/issues/5) Domain 42maxims.com (needs the project owner's OK)
+- [#5](https://github.com/42maxims/42maxims.github.io/issues/5) Domain 42maxims.com (live 2026-10-16)
 - [#6](https://github.com/42maxims/42maxims.github.io/issues/6) AI-assisted translations, clearly labelled
 - From SPEC [Planned]: per-quote pages, tradition pages, graph view, search, "a maxim a week" newsletter (outreach needs owner OK).
