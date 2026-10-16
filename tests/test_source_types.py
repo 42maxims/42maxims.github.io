@@ -26,7 +26,7 @@ class SourceTypes(unittest.TestCase):
         sec = re.search(r'data-type="video">(.*?)</section>', self.idx, re.S).group(1)
         for i in ids:
             self.assertEqual(sec.count(f"watch?v={i}"), 1, i)
-        self.assertEqual(len(re.findall(r"<li>", sec)), len(ids))
+        self.assertEqual(len(re.findall(r"<li[ >]", sec)), len(ids))
 
     def test_filter_markup(self):
         self.assertIn('id="type-jump"', self.idx)  # no-JS anchors
