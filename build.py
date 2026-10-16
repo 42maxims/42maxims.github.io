@@ -94,9 +94,11 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .clip [hidden]{display:none}.clip-note{font-size:.8rem;font-style:italic}
 .clip-frame{position:relative;aspect-ratio:16/9;margin:.6rem 0 0;border-radius:.25rem;overflow:hidden;background:#000}.clip-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .typebar{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem}
-.typebar a,.typebar button{font:inherit;color:var(--accent);background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:.25rem .8rem;text-decoration:none;cursor:pointer}
+.typebar a,.typebar button{font:inherit;color:var(--accent);background:var(--chip);border:1px solid var(--line);border-radius:1rem;padding:.25rem .8rem;text-decoration:none;cursor:pointer;line-height:1.4}
 .typebar button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.typebar a:focus-visible,.typebar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.typebar[hidden],.type-group[hidden]{display:none}
+.chip-link{color:var(--accent);text-decoration:none;border:1px solid var(--line)}.chip-link:hover{border-color:var(--accent)}
+.chan-status{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.9rem;color:var(--muted)}
+.typebar a:focus-visible,.typebar button:focus-visible,.chip-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.typebar[hidden],.type-group[hidden],.index li[hidden],.chan-status[hidden]{display:none}
 .type-group{scroll-margin-top:1rem}.vmeta{margin:.3rem 0 0;font-size:.8rem;color:var(--muted)}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
@@ -526,28 +528,68 @@ def video_rows():
     return vids
 
 
-FILTER_JS = ("(function(){var n=document.getElementById('type-jump'),f=document.getElementById('type-filter');if(!n||!f)return;"
-             "var s=document.querySelectorAll('.type-group'),b=f.querySelectorAll('button');n.hidden=true;f.hidden=false;"
-             "function show(t){for(var i=0;i<s.length;i++)s[i].hidden=!(t==='all'||s[i].getAttribute('data-type')===t);"
-             "for(var j=0;j<b.length;j++)b[j].setAttribute('aria-pressed',b[j].getAttribute('data-type')===t?'true':'false');}"
-             "for(var k=0;k<b.length;k++)b[k].addEventListener('click',function(){show(this.getAttribute('data-type'));});show('all');})();")
+# Sources index chips: a video's channel links to the voice page when the channel is a voice's own (matched on normalised name, or the
+# small alias table below); otherwise it filters the Videos group by channel (#channel=<slug>; no-JS fallback #channel-<slug> jumps to its first row).
+CHANNEL_ALIAS = {"Naval": "naval-ravikant", "Official Alan Watts Org": "alan-watts"}
+
+
+def _norm(x):
+    return re.sub(r"[^a-z0-9]+", " ", x.lower()).strip()
+
+
+def channel_slug(c):
+    return re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
+
+
+FILTER_JS = r"""(function(){
+var f=document.getElementById('type-filter'),j=document.getElementById('type-jump');if(!f)return;
+var S=document.querySelectorAll('.type-group'),B=f.querySelectorAll('button'),R=document.querySelectorAll('li[data-channel]'),
+st=document.getElementById('chan-status'),A={};
+for(var i=0;i<S.length;i++)A[S[i].id]=S[i].getAttribute('data-type');
+if(j)j.hidden=true;f.hidden=false;
+var C=document.querySelectorAll('a[data-chan]');for(i=0;i<C.length;i++)C[i].setAttribute('href','#channel='+C[i].getAttribute('data-chan'));
+function parse(){var h=decodeURIComponent(location.hash.slice(1)),m=/^channel[=-](.+)$/.exec(h);
+if(m)return{t:'video',c:m[1]};if(h==='all'||!h)return{t:'all'};if(A[h])return{t:A[h]};return{t:'all'};}
+function show(){var p=parse(),name='';
+for(var i=0;i<S.length;i++)S[i].hidden=!(p.t==='all'||S[i].getAttribute('data-type')===p.t);
+for(i=0;i<R.length;i++){var on=!p.c||R[i].getAttribute('data-channel')===p.c;R[i].hidden=!on;if(on&&p.c)name=R[i].getAttribute('data-channel-name');}
+for(i=0;i<B.length;i++)B[i].setAttribute('aria-pressed',(B[i].getAttribute('data-type')===p.t&&!p.c)?'true':'false');
+if(st){st.hidden=!p.c;if(p.c)st.children[0].textContent='Showing videos from '+(name||p.c)+'. ';}}
+function go(v,scroll){if(location.hash!=='#'+v)location.hash=v;else show();if(scroll)f.scrollIntoView();}
+for(i=0;i<B.length;i++)B[i].addEventListener('click',function(){go(this.getAttribute('data-type')==='all'?'all':A2[this.getAttribute('data-type')],false);});
+var A2={};for(var k in A)A2[A[k]]=k;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-go]');if(!a)return;e.preventDefault();go(a.getAttribute('data-go'),true);});
+window.addEventListener('hashchange',function(){show();if(parse().c)f.scrollIntoView();});show();})();"""
 
 
 def sources_index():
+    voice_by_name = {_norm(v["name"]): k for k, v in VOICES.items()}
     groups = {t: [] for t, *_ in TYPE_GROUPS}
+    anchor = {t: a for t, h, lab, a in TYPE_GROUPS}
     for slug, e in SOURCES.items():
-        chips = [SOURCE_KIND[e["kind"]], plural(len(quotes_by_source.get(slug, [])), "quote"), esc(e["dates"])]
-        groups[e["kind"]].append((sort_key(e["title"]), f'<li><a href="{slug}/">{esc(e["title"])}</a><div class="chips">'
-                                  + "".join(f'<span class="chip">{x}</span>' for x in chips) + "</div></li>"))
-    for i, v in video_rows().items():
+        tchip = f'<a class="chip chip-link" href="#{anchor[e["kind"]]}" data-go="{anchor[e["kind"]]}">{SOURCE_KIND[e["kind"]]}</a>'
+        chips = [tchip] + [f'<span class="chip">{x}</span>' for x in (plural(len(quotes_by_source.get(slug, [])), "quote"), esc(e["dates"]))]
+        groups[e["kind"]].append((sort_key(e["title"]), f'<li><a href="{slug}/">{esc(e["title"])}</a><div class="chips">' + "".join(chips) + "</div></li>"))
+    seen = set()
+    for i, v in sorted(video_rows().items(), key=lambda kv: sort_key(kv[1]["cl"]["title"])):
         cl = v["cl"]
         href = f"https://www.youtube.com/watch?v={i}" + (f'&amp;t={cl["start"]}' if "start" in cl else "")
         srcs = ", ".join(f'<a href="{k}/">{esc(t)}</a>' for k, t in sorted(v["src"].items(), key=lambda x: sort_key(x[1])))
         mx = ", ".join(f'<a href="../maxims/{k}/">{esc(t)}</a>' for k, t in sorted(v["maxims"].items()))
-        chips = ["Video", esc(cl["channel"])] + (["Timed clip"] if "start" in cl else [])
-        groups["video"].append((sort_key(cl["title"]), f'<li><a href="{href}" target="_blank" rel="noopener noreferrer" '
+        ch = cl["channel"]
+        cs = channel_slug(ch)
+        vs = CHANNEL_ALIAS.get(ch) or voice_by_name.get(_norm(ch))
+        if vs:
+            cchip = f'<a class="chip chip-link" href="../voices/{vs}/">{esc(ch)}</a>'
+            rid = ""
+        else:
+            rid = "" if cs in seen else f' id="channel-{cs}"'
+            seen.add(cs)
+            cchip = f'<a class="chip chip-link" href="#channel-{cs}" data-chan="{cs}">{esc(ch)}</a>'
+        chips = ['<a class="chip chip-link" href="#videos" data-go="videos">Video</a>', cchip] + (['<span class="chip">Timed clip</span>'] if "start" in cl else [])
+        groups["video"].append((sort_key(cl["title"]), f'<li{rid} data-channel="{cs}" data-channel-name="{esc(ch)}"><a href="{href}" target="_blank" rel="noopener noreferrer" '
                                 f'aria-label="{esc(cl["title"])} on YouTube (opens in a new tab)">{esc(cl["title"])} ↗</a><div class="chips">'
-                                + "".join(f'<span class="chip">{x}</span>' for x in chips) + f'</div><p class="vmeta">Source: {srcs} · Maxims: {mx}</p></li>'))
+                                + "".join(chips) + f'</div><p class="vmeta">Source: {srcs} · Maxims: {mx}</p></li>'))
     jump = "".join(f'<a href="#{a}">{lab} ({len(groups[t])})</a>' for t, h, lab, a in TYPE_GROUPS)
     btns = f'<button type="button" data-type="all" aria-pressed="true">All ({sum(len(g) for g in groups.values())})</button>' + "".join(
         f'<button type="button" data-type="{t}" aria-pressed="false">{lab} ({len(groups[t])})</button>' for t, h, lab, a in TYPE_GROUPS)
@@ -556,7 +598,8 @@ def sources_index():
         + "".join(r for _, r in sorted(groups[t])) + "</ul></section>" for t, h, lab, a in TYPE_GROUPS)
     intro = "The books, scriptures, talks and articles the quotes come from, and the YouTube videos linked beside them. Each quote's exact chapter, verse and translation are shown beside it."
     body = (f'<h1>Sources</h1><p>{intro}</p><nav id="type-jump" class="typebar" aria-label="Jump to a type">{jump}</nav>'
-            f'<div id="type-filter" class="typebar" role="group" aria-label="Show one type of source" hidden>{btns}</div>{sections}<script>{FILTER_JS}</script>')
+            f'<div id="type-filter" class="typebar" role="group" aria-label="Show one type of source" hidden>{btns}</div>'
+            f'<p id="chan-status" class="chan-status" role="status" hidden><span></span><a href="#videos" data-go="videos">Show all videos</a></p>{sections}<script>{FILTER_JS}</script>')
     write("sources/index.html", page("Sources — 42 Maxims", body, 1, "sources/", intro, crumbs=[]))
 
 

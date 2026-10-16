@@ -38,6 +38,31 @@ class SourceTypes(unittest.TestCase):
         self.assertNotIn("youtube.com/embed", self.idx)
         self.assertNotIn("<iframe", self.idx)
 
+    def test_chips_are_links(self):
+        # type chip on every source row links to its section; no-JS falls back to the anchor
+        for kind, a in (("book", "books"), ("scripture", "scripture"), ("talk", "talks")):
+            sec = re.search(rf'data-type="{kind}">(.*?)</section>', self.idx, re.S).group(1)
+            self.assertIn(f'class="chip chip-link" href="#{a}" data-go="{a}"', sec)
+        vid = re.search(r'data-type="video">(.*?)</section>', self.idx, re.S).group(1)
+        self.assertIn('href="#videos" data-go="videos"', vid)
+        # voice-page channels link to the voice; the rest filter by channel with a no-JS anchor to the first row
+        self.assertIn('href="../voices/andrew-huberman/">Andrew Huberman</a>', vid)
+        self.assertIn('href="../voices/jordan-peterson/">Jordan B Peterson</a>', vid)
+        self.assertIn('href="#channel-chris-williamson" data-chan="chris-williamson"', vid)
+        self.assertEqual(vid.count('id="channel-chris-williamson"'), 1)
+        for m in re.finditer(r'data-chan="([^"]+)"', vid):
+            self.assertIn(f'id="channel-{m.group(1)}"', vid)
+
+    def test_voice_links_resolve(self):
+        for m in re.finditer(r'href="\.\./voices/([a-z0-9-]+)/"', self.idx):
+            self.assertTrue(os.path.exists(os.path.join(ROOT, "voices", m.group(1), "index.html")), m.group(1))
+
+    def test_single_control_set_when_js_on(self):
+        # JS hides the anchor row and keeps filter state in the hash
+        self.assertIn("j.hidden=true;f.hidden=false", self.idx)
+        self.assertIn("location.hash", self.idx)
+        self.assertIn("aria-pressed", self.idx)
+
 
 if __name__ == "__main__":
     unittest.main()
