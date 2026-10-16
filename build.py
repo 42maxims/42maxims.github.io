@@ -438,6 +438,15 @@ for c in D["concepts"]:
 CONCEPT = {c["slug"]: c for c in D["concepts"]}
 
 
+def voice_label(v):
+    """The chip label shown for a voice: the per-voice `label` override, else its kind's label."""
+    return v.get("label") or VOICE_KIND[v["kind"]]
+
+
+def label_slug(x):
+    return re.sub(r"[^a-z0-9]+", "-", x.lower()).strip("-")
+
+
 def profile(e, heading, extra=()):
     """Summary block at the top of a voice or source page."""
     facts = [esc(e["dates"]), esc(TR[e["tradition"]]["name"]), ERA_LABEL[e["period"]], *extra]
@@ -468,16 +477,6 @@ def plural(n, w):
     return f"{n} {w}{'' if n == 1 else 's'}"
 
 
-def index_page(entries, label, kinds, counts, base, title, intro):
-    items = []
-    for slug, e in sorted(entries.items(), key=lambda x: sort_key(x[1][label])):
-        chips = [e.get("label") or kinds[e["kind"]], plural(len(counts.get(slug, [])), "quote"), esc(e["dates"])]
-        items.append(f'<li><a href="{slug}/">{esc(e[label])}</a><div class="chips">'
-                     + "".join(f'<span class="chip">{x}</span>' for x in chips) + "</div></li>")
-    write(f"{base}/index.html", page(f"{title} — 42 Maxims", f'<h1>{title}</h1><p>{intro}</p><ul class="index">{"".join(items)}</ul>', 1,
-                                          f"{base}/", intro, crumbs=[]))
-
-
 quotes_by_voice, quotes_by_source = {}, {}
 for q in D["quotes"]:
     quotes_by_voice.setdefault(q["voice"], []).append(q)
@@ -486,7 +485,7 @@ for q in D["quotes"]:
 for slug, v in VOICES.items():
     qs = quotes_by_voice.get(slug, [])
     works = sorted((k for k, s in SOURCES.items() if s["voice"] == slug), key=lambda k: sort_key(SOURCES[k]["title"]))
-    body = '<p class="label">Voice</p>' + profile(v, v["name"], [v.get("label") or VOICE_KIND[v["kind"]]])
+    body = '<p class="label">Voice</p>' + profile(v, v["name"], [f'<a class="chip-link" href="../#{label_slug(voice_label(v))}">{voice_label(v)}</a>'])
     if works:
         body += "<h2>Works</h2><ul>" + "".join(f'<li><a href="../../sources/{k}/"><em>{esc(SOURCES[k]["title"])}</em></a></li>' for k in works) + "</ul>"
     if qs:
@@ -509,9 +508,44 @@ for slug, s in SOURCES.items():
     write(f"sources/{slug}/index.html", page(f"{s['title']} (source) — 42 Maxims", body, 2, f"sources/{slug}/", s["summary"],
           noindex=not qs, crumbs=[("Sources", "sources/")]))
 
-index_page(VOICES, "name", VOICE_KIND, quotes_by_voice, "voices", "Voices",
-           "The people, communities and texts behind the quotes, from named thinkers to anonymous sayings. "
-           "Where authorship is disputed or a saying is misattributed, the voice page says so.")
+VOICES_JS = r"""(function(){
+var f=document.getElementById('voice-filter'),j=document.getElementById('voice-jump');if(!f)return;
+var S=document.querySelectorAll('.type-group'),B=f.querySelectorAll('button'),A={};
+for(var i=0;i<S.length;i++)A[S[i].id]=1;
+if(j)j.hidden=true;f.hidden=false;
+function cur(){var h=decodeURIComponent(location.hash.slice(1));return A[h]?h:'all';}
+function show(){var c=cur();
+for(var i=0;i<S.length;i++)S[i].hidden=!(c==='all'||S[i].id===c);
+for(i=0;i<B.length;i++)B[i].setAttribute('aria-pressed',B[i].getAttribute('data-go')===c?'true':'false');}
+function go(v,scroll){if(location.hash!=='#'+v)location.hash=v;else show();if(scroll)f.scrollIntoView();}
+for(i=0;i<B.length;i++)B[i].addEventListener('click',function(){go(this.getAttribute('data-go'),false);});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-go]');if(!a)return;e.preventDefault();go(a.getAttribute('data-go'),true);});
+window.addEventListener('hashchange',show);show();})();"""
+
+
+def voices_index():
+    """Voices index: one section per displayed chip label (kind label or per-voice override), filter buttons with JS, anchor row without."""
+    groups = {}
+    for slug, e in sorted(VOICES.items(), key=lambda x: sort_key(x[1]["name"])):
+        lab = voice_label(e)
+        sl = label_slug(lab)
+        chips = [f'<a class="chip chip-link" href="#{sl}" data-go="{sl}">{lab}</a>'] + [
+            f'<span class="chip">{x}</span>' for x in (plural(len(quotes_by_voice.get(slug, [])), "quote"), esc(e["dates"]))]
+        groups.setdefault(lab, []).append(f'<li><a href="{slug}/">{esc(e["name"])}</a><div class="chips">' + "".join(chips) + "</div></li>")
+    order = [l for l in VOICE_KIND.values() if l in groups] + sorted(l for l in groups if l not in VOICE_KIND.values())
+    jump = "".join(f'<a href="#{label_slug(l)}">{l} ({len(groups[l])})</a>' for l in order)
+    btns = f'<button type="button" data-go="all" aria-pressed="true">All ({len(VOICES)})</button>' + "".join(
+        f'<button type="button" data-go="{label_slug(l)}" aria-pressed="false">{l} ({len(groups[l])})</button>' for l in order)
+    sections = "".join(f'<section class="type-group" id="{label_slug(l)}"><h2>{l} ({len(groups[l])})</h2><ul class="index">{"".join(groups[l])}</ul></section>'
+                       for l in order)
+    intro = ("The people, communities and texts behind the quotes, from named thinkers to anonymous sayings. "
+             "Where authorship is disputed or a saying is misattributed, the voice page says so.")
+    body = (f'<h1>Voices</h1><p>{intro}</p><nav id="voice-jump" class="typebar" aria-label="Jump to a kind of voice">{jump}</nav>'
+            f'<div id="voice-filter" class="typebar" role="group" aria-label="Show one kind of voice" hidden>{btns}</div>{sections}<script>{VOICES_JS}</script>')
+    write("voices/index.html", page("Voices — 42 Maxims", body, 1, "voices/", intro, crumbs=[]))
+
+
+voices_index()
 
 
 def video_rows():

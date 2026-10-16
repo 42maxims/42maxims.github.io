@@ -70,3 +70,8 @@
 - **Clickable chips.** The type chip on every source and video row is a link to its section anchor (no JS) and applies that type filter (JS). Filter state is in the URL hash (`#books`, `#videos`, `#all`, `#channel=<slug>`), so views are shareable and the back button works.
 - **Channel chips.** If the channel is a voice's own page (normalised name match, plus `CHANNEL_ALIAS` for "Naval" and "Official Alan Watts Org"), it links to `/voices/<slug>/`. Otherwise (Chris Williamson, TED, BibleProject...) it filters the Videos group by channel with a "Showing videos from X. Show all videos" line. Chosen over channel pages: no new pages, voices or concepts, and nothing to maintain. No-JS fallback is an anchor (`#channel-<slug>`) to that channel's first row. The group heading count stays at the full 100 while filtered.
 - No scoring changes; nothing loads from YouTube.
+
+## 2026-10-16: Voices index filter (branch `voices-filter`)
+- **Pattern.** /voices/ now mirrors the Sources filter: sections by displayed label (Person 55, Scripture 10, Collective 3, Traditional or legendary figure 4; 72 voices), filter buttons with counts and `aria-pressed` (JS), anchor row (no JS), hash state (`#scripture`, `#all`). Filtering is on the label the visitor sees, so the Scripture override and kind labels filter consistently.
+- **Chips.** Kind chip on each row filters; on a voice page it links to `/voices/#<label-slug>`.
+- **Reuse.** CSS is shared with Sources. The JS is a separate ~15-line script because the Sources script is tied to channel filtering. No scoring changes, nothing loads from YouTube.

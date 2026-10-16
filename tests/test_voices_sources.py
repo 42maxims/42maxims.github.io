@@ -1,5 +1,6 @@
 """Voices and sources data: every quote links to both, every entry is complete, and the build emits and links their pages."""
 import html, json, os, re, shutil, subprocess, sys, tempfile, unittest
+VOICE_KIND = {"person": "Person", "collective": "Collective", "scripture": "Scripture", "legendary": "Traditional or legendary figure"}  # mirrors build.py
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load = lambda name: json.load(open(os.path.join(ROOT, "data", name)))
@@ -86,6 +87,28 @@ class Build(unittest.TestCase):
         for slug, s in SOURCES.items():
             self.assertIn(f'href="{slug}/"', idx_s)
             self.assertIn(html.escape(s["summary"]), self.read(f"sources/{slug}/index.html"))
+
+    def test_voices_filter(self):
+        idx = self.read("voices/index.html")
+        self.assertIn('id="voice-jump"', idx)
+        self.assertRegex(idx, r'<div id="voice-filter"[^>]* hidden>')
+        self.assertIn('aria-pressed="true"', idx)
+        self.assertNotIn("<iframe", idx)
+        labels = {}
+        for slug, v in VOICES.items():
+            labels.setdefault(v.get("label") or VOICE_KIND[v["kind"]], []).append(slug)
+        for lab, slugs in labels.items():
+            a = re.sub(r"[^a-z0-9]+", "-", lab.lower()).strip("-")
+            self.assertIn(f'href="#{a}">{lab} ({len(slugs)})</a>', idx)
+            self.assertIn(f'data-go="{a}" aria-pressed="false">{lab} ({len(slugs)})</button>', idx)
+            sec = re.search(rf'<section class="type-group" id="{a}">(.*?)</section>', idx, re.S).group(1)
+            for slug in slugs:  # every voice exactly once, in the section of its displayed label, with a linked chip
+                self.assertEqual(sec.count(f'<li><a href="{slug}/">'), 1, slug)
+            self.assertEqual(sec.count('class="chip chip-link"'), len(slugs))
+        self.assertEqual(idx.count('<li><a href="'), len(VOICES))
+        # individual voice page: kind chip links back to the filtered index
+        self.assertIn('href="../#scripture">Scripture</a>', self.read("voices/psalmists/index.html"))
+        self.assertIn('href="../#person">Person</a>', self.read("voices/confucius/index.html"))
 
     def test_nav_links(self):
         home = self.read("index.html")
