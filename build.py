@@ -23,7 +23,7 @@ VER_TITLE = {"verified": "Checked against a primary text or reputable translatio
 ERA_LABEL = {"axial": "Ancient (before 200 BCE)", "classical": "Classical (200 BCE – 600 CE)",
              "medieval": "Medieval (600 – 1500)", "early-modern": "Early modern (1500 – 1800)",
              "modern": "Modern (1800 – 1950)", "contemporary": "Contemporary (1950 – today)"}
-VOICE_KIND = {"person": "Person", "collective": "Collective", "text": "Known through the text", "legendary": "Traditional or legendary figure"}
+VOICE_KIND = {"person": "Person", "collective": "Collective", "text": "Anonymous author", "legendary": "Traditional or legendary figure"}
 SOURCE_KIND = {"book": "Book", "scripture": "Scripture", "talk": "Talk, video or podcast", "article": "Article or paper",
                "other": "Saying or principle"}
 # Sources index: filter groups (plural heading, short button label, anchor id). "video" rows are YouTube references, not source entries.
