@@ -936,5 +936,18 @@
    "https://en.wikipedia.org/wiki/Donald_Knuth",
    "https://mathshistory.st-andrews.ac.uk/Biographies/Knuth/"
   ]
+ },
+ "william-shakespeare": {
+  "name": "William Shakespeare",
+  "kind": "person",
+  "dates": "1564–1616",
+  "tradition": "english-poetry",
+  "period": "early-modern",
+  "summary": "William Shakespeare was an English playwright and poet, born in Stratford-upon-Avon and active in London. His plays, among them The Merchant of Venice, written in the 1590s, are among the most performed and quoted in the English language.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/William_Shakespeare",
+   "https://www.britannica.com/biography/William-Shakespeare"
+  ]
  }
 }

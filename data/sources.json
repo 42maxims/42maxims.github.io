@@ -1253,5 +1253,19 @@
    "https://en.wikipedia.org/wiki/Program_optimization",
    "https://en.wikiquote.org/wiki/Donald_Knuth"
   ]
+ },
+ "merchant-of-venice": {
+  "title": "The Merchant of Venice",
+  "voice": "william-shakespeare",
+  "kind": "book",
+  "dates": "c. 1596–1599",
+  "tradition": "english-poetry",
+  "period": "early-modern",
+  "summary": "A comedy by William Shakespeare, written in the late 1590s and first printed in 1600. In the trial scene (Act 4, Scene 1) Portia, disguised as a lawyer, pleads for mercy in a speech that became one of the best-known passages in English.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Merchant_of_Venice",
+   "https://www.gutenberg.org/ebooks/1515"
+  ]
  }
 }
