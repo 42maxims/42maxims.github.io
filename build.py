@@ -257,7 +257,7 @@ body = ('<p class="lede">Some ideas keep turning up, in different centuries and 
         "<h1>The 42</h1><p class=\"sub\">The 42 highest-ranked maxims</p>"
         f'<p class="note">Of the maxims collected so far, {len(qualifying)} are shared by at least two independent traditions. '
         f'The {len(main)} highest-ranked of those are listed here; the other {len(qualifying) - len(main)} appear under Emerging, along with ideas still waiting for a second tradition. '
-        "This is an early collection, and the ranking will change as new sources are added.</p>"
+        "The ranking will evolve as new sources are added.</p>"
         + table(main) +
         "<h2 class=\"big\">Emerging</h2><p>Maxims just outside The 42. Some rank just below the top; others are waiting for stronger backing from a second tradition. Each is marked with its reason, and any of them can join as new sources are found.</p>"
         + table(emerging, True))
