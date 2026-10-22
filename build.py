@@ -101,6 +101,11 @@ dl.legend dt{margin-top:.9rem}dl.legend dd{margin:.2rem 0 0 0;color:var(--muted)
 .chan-status{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.9rem;color:var(--muted)}
 .typebar a:focus-visible,.typebar button:focus-visible,.chip-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.typebar[hidden],.type-group[hidden],.index li[hidden],.chan-status[hidden]{display:none}
 .type-group{scroll-margin-top:1rem}.vmeta{margin:.3rem 0 0;font-size:.8rem;color:var(--muted)}
+.entry{margin:0 0 2rem;padding:0 0 1.75rem;border-bottom:1px solid var(--line)}.entry:last-of-type{border-bottom:0}
+main h2.entry-title{margin:2rem 0 .75rem;font-size:1.25rem}.entry-title a{color:var(--accent);text-decoration:none}.entry-title a:hover{text-decoration:underline}
+.entry .seed{margin-bottom:.75rem}.entry-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1rem}.entry-foot .chips{margin:0}
+.more{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.8rem;color:var(--muted);text-decoration:none}.more:hover{color:var(--accent);text-decoration:underline}
+.more:focus-visible,.entry-title a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
@@ -804,13 +809,13 @@ def seed_of(slug):
 def maxim_card(slug, q, more):
     """One maxim on a theme or tradition page: linked rule, one quote with full citation, counts and a link to the rest."""
     c, b = CONCEPT[slug], BD[slug]
-    out = f'<h2><a href="../../maxims/{slug}/">{esc(c["maxim"])}</a></h2>'
+    out = f'<h2 class="entry-title"><a href="../../maxims/{slug}/">{esc(c["maxim"])}</a></h2>'
     if q:
         out += (f'<figure class="seed"><blockquote>“{esc(q["text"])}”</blockquote>'
                 f'<figcaption class="cite">{cite(q)}<br>{tradition_link(q["tradition"])} · {ERA_LABEL[q["era"]]}</figcaption></figure>')
     chips = [plural(len(quotes_by.get(slug, [])), "quote"), plural(b["traditions"], "tradition")]
-    return out + (f'<div class="chips">{"".join(f'<span class="chip">{x}</span>' for x in chips)}</div>'
-                  f'<p><a href="../../maxims/{slug}/">{more} →</a></p>')
+    return (f'<article class="entry">{out}<div class="entry-foot"><div class="chips">{"".join(f'<span class="chip">{x}</span>' for x in chips)}</div>'
+            f'<a class="more" href="../../maxims/{slug}/">{more} →</a></div></article>')
 
 
 def by_rank(slugs):
