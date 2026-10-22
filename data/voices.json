@@ -1133,5 +1133,31 @@
    "https://en.wikipedia.org/wiki/Prince_Shōtoku",
    "https://en.wikipedia.org/wiki/Seventeen-article_constitution"
   ]
+ },
+ "hesiod": {
+  "name": "Hesiod",
+  "kind": "person",
+  "dates": "active c. 750–650 BCE (scholarly estimate)",
+  "tradition": "greek-epic",
+  "period": "axial",
+  "summary": "Hesiod was an early Greek poet from Ascra in Boeotia, generally thought to have been active around the same time as Homer. His Theogony tells of the origins of the gods, and his Works and Days offers practical and moral advice, addressed to his brother Perses.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Hesiod",
+   "https://en.wikipedia.org/wiki/Works_and_Days"
+  ]
+ },
+ "book-of-documents-authors": {
+  "name": "Authors of the Book of Documents",
+  "kind": "collective",
+  "dates": "chapters written over many centuries, from the early Zhou to the 4th century CE (scholarly view)",
+  "tradition": "confucianism",
+  "period": "axial",
+  "summary": "The Book of Documents presents speeches and counsels attributed to the ancient rulers Yao, Shun and Yu and to ministers of the Xia, Shang and Zhou dynasties. Scholars date its chapters very differently: the oldest to the early Zhou, those about the earliest rulers to the Warring States period, and the 'Old Text' chapters to reconstructions of the 3rd or 4th century CE.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Documents",
+   "https://en.wikipedia.org/wiki/Emperor_Shun"
+  ]
  }
 }

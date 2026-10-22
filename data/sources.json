@@ -1504,5 +1504,31 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Epistle_to_the_Galatians"
   ]
+ },
+ "works-and-days": {
+  "title": "Works and Days",
+  "voice": "hesiod",
+  "kind": "book",
+  "dates": "c. 700 BCE",
+  "tradition": "greek-epic",
+  "period": "axial",
+  "summary": "A didactic poem of 828 lines by Hesiod, written in dactylic hexameter around 700 BCE. At its centre is a farmer's almanac addressed to his brother Perses, set among myths such as Pandora and the ages of humankind and advice on work, justice and good sense.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Works_and_Days"
+  ]
+ },
+ "book-of-documents": {
+  "title": "Book of Documents (Shujing)",
+  "voice": "book-of-documents-authors",
+  "kind": "book",
+  "dates": "compiled over many centuries; the received text includes 'Old Text' chapters judged 3rd–4th-century CE reconstructions",
+  "tradition": "confucianism",
+  "period": "axial",
+  "summary": "One of the Five Classics of ancient Chinese literature, a collection of speeches and documents attributed to early rulers and ministers, and a foundation of Chinese political thought for over two millennia. In the 17th century the scholar Yan Ruoqu persuaded most scholars that the 'Old Text' chapters of the received text were fabricated in the 3rd or 4th century CE.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Documents"
+  ]
  }
 }

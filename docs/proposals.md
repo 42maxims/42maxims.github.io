@@ -15,7 +15,7 @@ Status as of 22 Oct 2026.
 | Rise to your work | **Added** as `rise-to-your-work` (Stoicism, Buddhism, Judaism). |
 | You reap what you sow | **Added** as `you-reap-what-you-sow` (Christianity, Judaism, Hinduism, Yoruba, Taoism). |
 | Deal honestly in trade | **Added** as `deal-honestly-in-trade` (Judaism, Islam, Taoism). |
-| Seek counsel | **Sourcing; open for a proposal.** Verified leads: Proverbs 11:14, 12:15, 15:22 (KJV); Qur'an 42:38 (Rodwell); Shu King, Counsels of the Great Yü (Legge); Hesiod, Works and Days 293–297 (Evelyn-White); Rattray, Ashanti Proverbs no. 416; Dhammapada 76; Tirukkural 447; Shōtoku's Constitution XVII. A Stoic source would help. |
+| Seek counsel | **Added** as `seek-counsel` (owner approved, 22 Oct 2026): Judaism, Islam, Confucianism, Greek epic, Akan, Buddhism, Tamil ethics, Early Japanese thought. A Stoic source would still be welcome. |
 | Honour elders and teachers | **Folded** into `honour-your-parents` (Taittiriya Upanishad I.11.2, Leviticus 19:32, Yoruba couplet 9). |
 | A person is a person through other people (Ubuntu) | **Held**: needs a reputable published source. |
 | Don't covet | **Folded** into `desire-is-the-root-of-suffering` (Ptahhotep §19, `similar`). |
