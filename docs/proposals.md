@@ -7,15 +7,15 @@ A maxim (a `concept` in `data/maxims.json`) earns its place by recurring across 
 3. **Discussion.** Maintainers check the sources and overlap. The owner accepts, asks to fold it into an existing maxim, or declines.
 4. **Once accepted**, a PR adds the concept and its quotes (title the PR with the issue number). Nothing is added to `data/` before then.
 
-## Open candidates
-Collected during curation runs; none are in the data yet. Each needs an issue and owner approval.
+## Candidates from the curation runs
+Status as of 22 Oct 2026.
 | Candidate | Status |
 |---|---|
-| Be kind to animals | Judaism (Proverbs 12:10), Buddhism (Dhammapada 130), Islam (Sahih al-Bukhari 2363); may fold into `do-no-harm`. |
-| Rise to your work | Stoicism (Meditations V.1), Buddhism (Dhammapada 280), Judaism (Proverbs 6:6, Ecclesiastes 9:10). |
-| You reap what you sow | Hinduism (Brihadaranyaka IV.4.5), Yoruba proverb (Ellis 1894), Christianity (Galatians 6:7), Taoism (Taishang Ganying Pian, line to pick); overlaps `thoughts-shape-life`. |
-| Deal honestly in trade | Judaism (Proverbs 11:1), Islam (Qur'an XVII), Taoism (Taishang Ganying Pian). |
-| Seek counsel | Shōtoku's Seventeen-Article Constitution XVII; Proverbs 15:22 and Qur'an 42:38 still to verify. |
-| Honour elders and teachers | Taittiriya Upanishad I.11.2, Yoruba couplet (Ellis 1894); Leviticus 19:32 to verify; may fold into `honour-your-parents`. |
-| A person is a person through other people (Ubuntu) | Idea only: needs a reputable published source. |
-| Don't covet | Ptahhotep §19; probably a `similar` quote under `desire-is-the-root-of-suffering` instead. |
+| Be kind to animals | **Added** as `be-kind-to-animals` (Judaism, Buddhism, Islam, Jainism). |
+| Rise to your work | **Added** as `rise-to-your-work` (Stoicism, Buddhism, Judaism). |
+| You reap what you sow | **Added** as `you-reap-what-you-sow` (Christianity, Judaism, Hinduism, Yoruba, Taoism). |
+| Deal honestly in trade | **Added** as `deal-honestly-in-trade` (Judaism, Islam, Taoism). |
+| Seek counsel | **Sourcing; open for a proposal.** Verified leads: Proverbs 11:14, 12:15, 15:22 (KJV); Qur'an 42:38 (Rodwell); Shu King, Counsels of the Great Yü (Legge); Hesiod, Works and Days 293–297 (Evelyn-White); Rattray, Ashanti Proverbs no. 416; Dhammapada 76; Tirukkural 447; Shōtoku's Constitution XVII. A Stoic source would help. |
+| Honour elders and teachers | **Folded** into `honour-your-parents` (Taittiriya Upanishad I.11.2, Leviticus 19:32, Yoruba couplet 9). |
+| A person is a person through other people (Ubuntu) | **Held**: needs a reputable published source. |
+| Don't covet | **Folded** into `desire-is-the-root-of-suffering` (Ptahhotep §19, `similar`). |
