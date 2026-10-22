@@ -19,6 +19,6 @@ Status as of 22 Oct 2026.
 | Honour elders and teachers | **Folded** into `honour-your-parents` (Taittiriya Upanishad I.11.2, Leviticus 19:32, Yoruba couplet 9). |
 | A person is a person through other people (Ubuntu) | **Held**: needs a reputable published source. |
 | Don't covet | **Folded** into `desire-is-the-root-of-suffering` (Ptahhotep §19, `similar`). |
-| Don't gossip or slander | **Candidate** (needs owner approval): Leviticus 19:16, Proverbs 16:28, Qur'an 49:12 and sura 104, AN 10.176 (divisive speech), Analects 17.14, Enchiridion XXXIII, Tirukkural ch. 19, Ptahhotep §8. Proverbs 16:28 currently sits under `guard-your-tongue`. |
+| Don't gossip or slander | **Added** as `dont-backbite` (owner approved, 22 Oct 2026): Islam, Judaism, Buddhism, Confucianism, Stoicism (partial), Tamil ethics, Ancient Egypt. Proverbs 16:28 moved here from `guard-your-tongue`. |
 | Stewardship of the earth | **Folded** into `leave-it-better` (Genesis 2:15, Vendidad 3.4, Bukhari 2320, SN 1.47, Haudenosaunee Great Law §28). |
-| Defend the widow, the orphan and the poor | **Candidate** (needs owner approval): Proverbs 31:8–9, Zechariah 7:10, Exodus 22:22, James 1:27, Qur'an 93:9–10 and sura 107, Merikare and Amenemope ch. 6, Hammurabi prologue/epilogue, Mencius 1B.5. |
+| Defend the widow, the orphan and the poor | **Added** as `defend-the-vulnerable` (owner approved, 22 Oct 2026): Judaism, Christianity, Islam, Ancient Egypt, Mesopotamia (new tradition), Confucianism. |

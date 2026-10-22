@@ -1172,5 +1172,54 @@
    "https://en.wikipedia.org/wiki/Great_Law_of_Peace",
    "https://en.wikipedia.org/wiki/Iroquois"
   ]
+ },
+ "mencius": {
+  "name": "Mencius",
+  "kind": "person",
+  "dates": "c. 371–289 BCE",
+  "tradition": "confucianism",
+  "period": "axial",
+  "summary": "Mencius (Meng Ke) was a Chinese Confucian philosopher of the Warring States period, traditionally honoured as the 'Second Sage' after Confucius. He travelled between states advising rulers, and taught that human nature is inclined to goodness and that a ruler must govern with benevolence.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mencius"
+  ]
+ },
+ "hammurabi": {
+  "name": "Hammurabi",
+  "kind": "person",
+  "dates": "reigned c. 1792–1750 BCE",
+  "tradition": "mesopotamia",
+  "period": "axial",
+  "summary": "Hammurabi was the sixth Amorite king of Babylon, who brought almost all of Mesopotamia under Babylonian rule. He is best known for the law code issued in his name and inscribed on a basalt stele, now in the Louvre.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Hammurabi",
+   "https://en.wikipedia.org/wiki/Code_of_Hammurabi"
+  ]
+ },
+ "amenemope": {
+  "name": "Amenemope",
+  "kind": "legendary",
+  "dates": "text probably composed in the Ramesside period (c. 1300–1075 BCE)",
+  "tradition": "ancient-egypt",
+  "period": "axial",
+  "summary": "The Instruction of Amenemope presents itself as the advice of the scribe Amenemope, son of Kanakht, to his son. Nothing is known of him outside the text. The work is best known for its close parallels with part of the biblical Book of Proverbs.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Instruction_of_Amenemope"
+  ]
+ },
+ "kheti": {
+  "name": "Kheti (attributed)",
+  "kind": "legendary",
+  "dates": "set in the First Intermediate Period (c. 2150–2025 BCE); probably composed in the Middle Kingdom",
+  "tradition": "ancient-egypt",
+  "period": "axial",
+  "summary": "In the Teaching for King Merykara a king of Egypt, possibly named Kheti, advises his son Merykara on how to rule well. The real author is unknown; the text is probably a Middle Kingdom composition set in the earlier period of division.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Teaching_for_King_Merykara"
+  ]
  }
 }

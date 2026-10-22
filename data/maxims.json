@@ -146,6 +146,9 @@
     },
     "haudenosaunee": {
       "name": "Haudenosaunee (Iroquois) tradition"
+    },
+    "mesopotamia": {
+      "name": "Ancient Mesopotamia (Babylonian law)"
     }
   },
   "concepts": [
@@ -635,6 +638,24 @@
       "links": [
         "https://en.wikipedia.org/wiki/Advice_(opinion)",
         "https://en.wikipedia.org/wiki/Shura"
+      ]
+    },
+    {
+      "slug": "dont-backbite",
+      "maxim": "Don't speak ill of people behind their backs.",
+      "summary": "Talk about someone who is not there to answer can quietly wound them and divide friends. Many traditions single out backbiting and talebearing as a wrong of their own: what we would not say to a person's face, or what was told us in confidence, is better left unsaid.",
+      "links": [
+        "https://en.wikipedia.org/wiki/Gossip",
+        "https://en.wikipedia.org/wiki/Gheebah"
+      ]
+    },
+    {
+      "slug": "defend-the-vulnerable",
+      "maxim": "Defend the widow, the orphan and the poor.",
+      "summary": "Those without a protector are the easiest to overlook and to wrong. From the law codes of Babylon and the instructions of Egyptian kings to the Hebrew prophets, the Qur'an and Mencius, the measure of a just person or ruler is how they treat the widow, the fatherless and the needy, and whether they speak up for them.",
+      "links": [
+        "https://en.wikipedia.org/wiki/Social_justice",
+        "https://en.wikipedia.org/wiki/Orphan"
       ]
     }
   ],
@@ -5357,21 +5378,6 @@
     {
       "concept": "guard-your-tongue",
       "rel": "similar",
-      "conf": 0.7,
-      "ver": "verified",
-      "text": "A froward man soweth strife: and a whisperer separateth chief friends.",
-      "thinker": "Book of Proverbs",
-      "voice": "hebrew-wisdom-writers",
-      "tradition": "judaism",
-      "era": "axial",
-      "work": "Proverbs 16:28 (KJV); on gossip (\"a whisperer\")",
-      "source_id": "proverbs",
-      "translation": "King James Version (public domain)",
-      "source": "https://www.gutenberg.org/ebooks/10"
-    },
-    {
-      "concept": "guard-your-tongue",
-      "rel": "similar",
       "conf": 0.8,
       "ver": "verified",
       "text": "In the multitude of words there wanteth not sin: but he that refraineth his lips is wise.",
@@ -6183,6 +6189,326 @@
       "source_id": "gospel-of-luke",
       "translation": "King James Version (public domain)",
       "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "expresses",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "neither let the one of you traduce another in his absence. Would any one of you like to eat the flesh of his dead brother? Surely ye would loathe it.",
+      "thinker": "Qur'an",
+      "voice": "quran",
+      "tradition": "islam",
+      "era": "medieval",
+      "work": "Qur'an 49:12 (Sura Al-Hujurat, 'The Apartments'), tr. J. M. Rodwell",
+      "source_id": "quran",
+      "translation": "public-domain translation (J. M. Rodwell)",
+      "source": "https://www.gutenberg.org/ebooks/2800"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "Woe to every BACKBITER, Defamer!",
+      "thinker": "Qur'an",
+      "voice": "quran",
+      "tradition": "islam",
+      "era": "medieval",
+      "work": "Qur'an 104:1 (Sura Al-Humaza, 'The Backbiter'), tr. J. M. Rodwell; capitals as printed (Rodwell capitalises the word that names the sura)",
+      "source_id": "quran",
+      "translation": "public-domain translation (J. M. Rodwell)",
+      "source": "https://www.gutenberg.org/ebooks/2800"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "Thou shalt not go up and down as a talebearer among thy people",
+      "thinker": "Authors of the Torah",
+      "voice": "torah-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Leviticus 19:16 (KJV), first clause",
+      "source_id": "leviticus",
+      "clips": [
+        {
+          "id": "IJ-FekWUZzE",
+          "label": "BibleProject: Leviticus overview",
+          "title": "Book of Leviticus Summary: A Complete Animated Overview",
+          "channel": "BibleProject",
+          "kind": "discussed",
+          "note": "BibleProject introduces Leviticus, the book this verse is from"
+        }
+      ],
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.75,
+      "ver": "verified",
+      "text": "A froward man soweth strife: and a whisperer separateth chief friends.",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 16:28 (KJV)",
+      "source_id": "proverbs",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "Abandoning divisive speech he abstains from divisive speech. What he has heard here he does not tell there to break those people apart from these people here. What he has heard there he does not tell here to break these people apart from those people there.",
+      "thinker": "The Buddha",
+      "voice": "the-buddha",
+      "tradition": "buddhism",
+      "era": "axial",
+      "work": "Cunda Kammaraputta Sutta (AN 10.176), tr. Thanissaro Bhikkhu; divisive speech is listed apart from abusive speech",
+      "source_id": "anguttara-nikaya",
+      "translation": "Thanissaro Bhikkhu (free distribution)",
+      "source": "https://www.accesstoinsight.org/tipitaka/an/an10/an10.176.than.html"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.75,
+      "ver": "verified",
+      "text": "To tell, as we go along, what we have heard on the way, is to cast away our virtue.",
+      "thinker": "Confucius",
+      "voice": "confucius",
+      "tradition": "confucianism",
+      "era": "axial",
+      "work": "Analects 17.14 (Yang Huo), tr. James Legge",
+      "source_id": "analects",
+      "translation": "public-domain translation (Legge)",
+      "source": "https://www.gutenberg.org/ebooks/4094"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "partial",
+      "conf": 0.6,
+      "ver": "verified",
+      "text": "and especially not on men, so as either to blame, or praise, or make comparisons.",
+      "thinker": "Epictetus",
+      "voice": "epictetus",
+      "tradition": "stoicism",
+      "era": "classical",
+      "work": "Enchiridion XXXIII, tr. Thomas Wentworth Higginson; on topics of conversation, so it covers praise and comparison as well as blame",
+      "source_id": "enchiridion",
+      "translation": "public-domain translation (Higginson)",
+      "source": "https://www.gutenberg.org/ebooks/45109"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "In presence though unkindly words you speak, say not / In absence words whose ill result exceeds your thought.",
+      "thinker": "Tiruvalluvar",
+      "voice": "tiruvalluvar",
+      "tradition": "tamil-ethics",
+      "era": "classical",
+      "work": "Tirukkural, kural 184 (ch. 19, 'Not backbiting'), tr. G. U. Pope (1886); verse line break shown as ' / '",
+      "source_id": "tirukkural",
+      "translation": "public-domain translation (G. U. Pope, W. H. Drew, J. Lazarus, F. W. Ellis)",
+      "source": "https://en.wikisource.org/wiki/Tirukural/Chapter_19"
+    },
+    {
+      "concept": "dont-backbite",
+      "rel": "similar",
+      "conf": 0.75,
+      "ver": "verified",
+      "text": "Beware of making enmity by thy words, setting one noble against the other by perverting truth. Overstep it not, neither repeat that which any man, be he prince or peasant, saith in opening the heart; it is abhorrent to the soul.",
+      "thinker": "Ptahhotep",
+      "voice": "ptahhotep",
+      "tradition": "ancient-egypt",
+      "era": "axial",
+      "work": "The Instruction of Ptah-hotep, §8, tr. Battiscombe G. Gunn (1906)",
+      "source_id": "instruction-of-ptahhotep",
+      "translation": "public-domain translation (Battiscombe G. Gunn)",
+      "source": "https://www.gutenberg.org/ebooks/30508"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "expresses",
+      "conf": 0.95,
+      "ver": "verified",
+      "text": "Open thy mouth for the dumb in the cause of all such as are appointed to destruction. Open thy mouth, judge righteously, and plead the cause of the poor and needy.",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 31:8–9 (KJV)",
+      "source_id": "proverbs",
+      "clips": [
+        {
+          "id": "A14THPoc4-4",
+          "label": "BibleProject: This Justice Is Not Revenge",
+          "title": "This Justice Is Not Revenge",
+          "channel": "BibleProject",
+          "kind": "discussed",
+          "note": "BibleProject on biblical justice"
+        }
+      ],
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "And oppress not the widow, nor the fatherless, the stranger, nor the poor; and let none of you imagine evil against his brother in your heart.",
+      "thinker": "Zechariah",
+      "voice": "zechariah",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Zechariah 7:10 (KJV)",
+      "source_id": "zechariah",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "Ye shall not afflict any widow, or fatherless child.",
+      "thinker": "Authors of the Torah",
+      "voice": "torah-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Exodus 22:22 (KJV)",
+      "source_id": "exodus",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "Defend the poor and fatherless: do justice to the afflicted and needy.",
+      "thinker": "The Psalmists",
+      "voice": "psalmists",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Psalm 82:3 (KJV)",
+      "source_id": "psalms",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "Pure religion and undefiled before God and the Father is this, To visit the fatherless and widows in their affliction, and to keep himself unspotted from the world.",
+      "thinker": "James",
+      "voice": "james",
+      "tradition": "christianity",
+      "era": "classical",
+      "work": "James 1:27 (KJV)",
+      "source_id": "epistle-of-james",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "As to the orphan therefore wrong him not; And as to him that asketh of thee, chide him not away;",
+      "thinker": "Qur'an",
+      "voice": "quran",
+      "tradition": "islam",
+      "era": "medieval",
+      "work": "Qur'an 93:9–10 (Sura Ad-Duha, 'The Brightness'), tr. J. M. Rodwell",
+      "source_id": "quran",
+      "translation": "public-domain translation (J. M. Rodwell)",
+      "source": "https://www.gutenberg.org/ebooks/2800"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "WHAT thinkest thou of him who treateth our RELIGION as a lie? He it is who trusteth away the orphan, And stirreth not others up to feed the poor.",
+      "thinker": "Qur'an",
+      "voice": "quran",
+      "tradition": "islam",
+      "era": "medieval",
+      "work": "Qur'an 107:1–3 (Sura Al-Ma'un, 'Religion'), tr. J. M. Rodwell; capitals as printed",
+      "source_id": "quran",
+      "translation": "public-domain translation (J. M. Rodwell)",
+      "source": "https://www.gutenberg.org/ebooks/2800"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "Do the right, and thou shalt continue upon the earth. Make the weeper to cease his plaint. Fleece not the widow woman.",
+      "thinker": "Kheti (attributed)",
+      "voice": "kheti",
+      "tradition": "ancient-egypt",
+      "era": "axial",
+      "work": "Teaching for King Merykara, §XII, tr. E. A. Wallis Budge, in The Teaching of Amen-em-apt (1924)",
+      "source_id": "teaching-for-merykara",
+      "translation": "public-domain translation (E. A. Wallis Budge, 1924)",
+      "source": "https://archive.org/details/teachingofamenem0000eawa"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.75,
+      "ver": "verified",
+      "text": "Commit no robbery (i.e., filch not away land) by means of the cubit of the fields When thou art assessing the bounds of the estate of the widow.",
+      "thinker": "Amenemope",
+      "voice": "amenemope",
+      "tradition": "ancient-egypt",
+      "era": "axial",
+      "work": "Instruction of Amenemope, ch. 6, tr. E. A. Wallis Budge, The Teaching of Amen-em-apt (1924); Budge's gloss in brackets kept as printed",
+      "source_id": "instruction-of-amenemope",
+      "translation": "public-domain translation (E. A. Wallis Budge, 1924)",
+      "source": "https://archive.org/details/teachingofamenem0000eawa"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "That the strong might not injure the weak, in order to protect the widows and orphans",
+      "thinker": "Hammurabi",
+      "voice": "hammurabi",
+      "tradition": "mesopotamia",
+      "era": "axial",
+      "work": "Code of Hammurabi, epilogue, tr. L. W. King; opening of a longer sentence (the king set up his laws in Babylon for this purpose)",
+      "source_id": "code-of-hammurabi",
+      "translation": "public-domain translation (L. W. King)",
+      "source": "https://avalon.law.yale.edu/ancient/hamcode.asp"
+    },
+    {
+      "concept": "defend-the-vulnerable",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "There were the old and wifeless, or widowers, the old and husbandless, or widows; the old and childless, or solitaries; and the young and fatherless, or orphans:—these four classes are the most destitute under heaven, and have none to whom they can tell [their wants], and king Wan, in the institution of his government with its benevolent action, made them the first objects of his regard.",
+      "thinker": "Mencius",
+      "voice": "mencius",
+      "tradition": "confucianism",
+      "era": "axial",
+      "work": "Mencius I.ii.5 (1B.5), tr. James Legge, The Life and Works of Mencius (1875), p. 148; Legge's brackets kept",
+      "source_id": "mencius",
+      "translation": "public-domain translation (Legge)",
+      "source": "https://archive.org/details/lifeworksofmenci00mencuoft"
     }
   ]
 }

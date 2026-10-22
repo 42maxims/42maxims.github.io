@@ -148,3 +148,29 @@
   - Not used: the 'Chief Seattle' speech, a 1970s rewrite, and "We do not inherit the earth from our ancestors…", which is misattributed. A Jain verse on earth-bodies (Acaranga) is about not harming the earth rather than improving it, and no verifiable Daoist text was found.
 - Result: leave-it-better rises from 34.3 to 66.9, moving from Emerging #8 to The 42 at #20. You-reap-what-you-sow through happiness-and-expectations each move down one place. rise-to-your-work (44.1) leaves The 42 and becomes Emerging #1. guard-your-tongue goes from 94.3 to 94.5 (stays #4). be-still goes from 73.0 to 73.4 (stays #15).
 - Gossip/slander and justice for the vulnerable were researched as candidates only (notes kept off-repo; see `docs/proposals.md`).
+
+## 2026-10-22: dont-backbite and defend-the-vulnerable (branch `new-maxims-2`)
+- The owner approved two candidates from the bible-adds-2 research as new maxims. Every quote was read in its cited source. Scoring constants are unchanged.
+- **dont-backbite** ("Don't speak ill of people behind their backs."):
+  - `expresses`: Qur'an 49:12 (Rodwell), "neither let the one of you traduce another in his absence", which the wording follows most closely.
+  - `similar`: Qur'an 104:1; Leviticus 19:16; Proverbs 16:28, moved here from `guard-your-tongue`; AN 10.176 on divisive speech (Thanissaro); Analects 17.14 (Legge); Tirukkural 184 (Pope); Ptahhotep §8 (Gunn).
+  - `partial`: Enchiridion XXXIII, because it advises against talk that blames, praises or compares people, not only against ill-speaking.
+  - It is kept separate from `guard-your-tongue` because several traditions treat it as a distinct wrong. Buddhism lists divisive speech apart from harsh speech, the Tirukkural gives backbiting its own chapter, Leviticus gives talebearing its own commandment, and a sura of the Qur'an is named for the backbiter.
+- **defend-the-vulnerable** ("Defend the widow, the orphan and the poor."):
+  - `expresses`: Proverbs 31:8–9 (KJV), "plead the cause of the poor and needy".
+  - `similar`: Zechariah 7:10, Exodus 22:22, Psalm 82:3 and James 1:27 (KJV); Qur'an 93:9–10 and 107:1–3 (Rodwell); Teaching for King Merykara §XII and Amenemope ch. 6, both in Budge's 1924 translation; the Code of Hammurabi epilogue (L. W. King); Mencius 1B.5 (Legge 1875).
+  - It is kept separate from `justice`, which is about being fair even against our own interest, and from `welcome-the-stranger` and `generosity`. This maxim is a duty to protect and plead for those who have no one else.
+- **New tradition `mesopotamia`, with no `derives_from`, so it counts as independent:**
+  - Hammurabi's code (c. 1753 BCE) is older than the Hebrew Bible. Many scholars think Mesopotamian law influenced the biblical Covenant Code, but that is influence on Judaism, not Mesopotamia deriving from anything.
+  - Adding `judaism` derives_from `mesopotamia` would also change Judaism's weight wherever Mesopotamia appears. That is a broad decision, and it parallels Egypt→Proverbs (Amenemope), where the project's standing choice is to keep Judaism and Ancient Egypt independent. Mesopotamia is treated the same way.
+  - If the owner later wants influence links into Judaism, both Egypt and Mesopotamia should be revisited together.
+- **New voices:** `mencius`, `hammurabi`, `amenemope` (legendary, uncertain) and `kheti` (legendary, uncertain: "Kheti (attributed)").
+- **New sources:** `anguttara-nikaya`, `mencius`, `code-of-hammurabi`, `instruction-of-amenemope` and `teaching-for-merykara`.
+- **Videos** (whole-video `discussed` links; title and channel checked via oEmbed):
+  - BibleProject's Leviticus overview, on Leviticus 19:16.
+  - BibleProject's "This Justice Is Not Revenge" (its biblical-justice theme video, already linked from `justice`), on Proverbs 31:8–9.
+- **Result:**
+  - dont-backbite enters The 42 at #16 (72.7, seven traditions). defend-the-vulnerable enters at #17 (72.0, six traditions).
+  - guard-your-tongue goes from 94.5 to 94.3 after losing Proverbs 16:28 and stays #4.
+  - Leaving The 42: thoughts-shape-life (#41) and happiness-and-expectations (#42), now Emerging #1 and #2.
+  - Maxims 53→55.

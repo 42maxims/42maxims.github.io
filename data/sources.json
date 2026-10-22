@@ -1558,5 +1558,72 @@
    "https://en.wikipedia.org/wiki/Arthur_C._Parker",
    "https://en.wikipedia.org/wiki/Great_Law_of_Peace"
   ]
+ },
+ "anguttara-nikaya": {
+  "title": "Anguttara Nikaya (Numerical Discourses)",
+  "voice": "the-buddha",
+  "kind": "scripture",
+  "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
+  "tradition": "buddhism",
+  "period": "axial",
+  "summary": "The fourth of the five collections of discourses in the Pali Canon. Its several thousand discourses, ascribed to the Buddha and his chief disciples, are arranged in eleven books by the number of items each teaching lists.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/A%E1%B9%85guttara_Nik%C4%81ya",
+   "https://www.accesstoinsight.org/tipitaka/an/index.html"
+  ]
+ },
+ "mencius": {
+  "title": "Mencius",
+  "voice": "mencius",
+  "kind": "book",
+  "dates": "4th century BCE (compiled by disciples, scholarly view)",
+  "tradition": "confucianism",
+  "period": "axial",
+  "summary": "An anthology of conversations and anecdotes of the philosopher Mencius, many of them with rulers of the Warring States period. It is one of the Confucian classics and sets out his moral and political philosophy of benevolent government.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mencius_(book)"
+  ]
+ },
+ "code-of-hammurabi": {
+  "title": "Code of Hammurabi",
+  "voice": "hammurabi",
+  "kind": "other",
+  "dates": "c. 1753 BCE",
+  "tradition": "mesopotamia",
+  "period": "axial",
+  "summary": "A Babylonian legal text in Old Babylonian Akkadian, issued in the name of King Hammurabi and inscribed on a basalt stele rediscovered at Susa in 1901. A prologue and epilogue frame some 280 laws, presenting the king as appointed to bring justice to the land.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Code_of_Hammurabi",
+   "https://avalon.law.yale.edu/ancient/hamframe.asp"
+  ]
+ },
+ "instruction-of-amenemope": {
+  "title": "Instruction of Amenemope",
+  "voice": "amenemope",
+  "kind": "book",
+  "dates": "probably Ramesside period, c. 1300–1075 BCE",
+  "tradition": "ancient-egypt",
+  "period": "axial",
+  "summary": "An Egyptian wisdom text of thirty chapters of advice, ostensibly from the scribe Amenemope to his son. It reflects the New Kingdom \"Age of Personal Piety\" and is known for its similarity to part of the Book of Proverbs.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Instruction_of_Amenemope"
+  ]
+ },
+ "teaching-for-merykara": {
+  "title": "Teaching for King Merykara",
+  "voice": "kheti",
+  "kind": "book",
+  "dates": "probably Middle Kingdom, c. 2025–1700 BCE",
+  "tradition": "ancient-egypt",
+  "period": "axial",
+  "summary": "A Middle Egyptian instruction in which a king of the First Intermediate Period advises his son Merykara on how to be a good king and avoid evil, including how to treat the weak and judge justly.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Teaching_for_King_Merykara"
+  ]
  }
 }
