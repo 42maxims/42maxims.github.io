@@ -1,0 +1,32 @@
+name: indexnow
+# After GitHub Pages finishes deploying master, tell IndexNow (Bing, Yandex, Seznam, Naver…) which pages changed.
+# Manual equivalent: python3 scripts/indexnow.py --since <previous deployed commit>
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment", "pages build and deployment"]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Wait until the IndexNow key file is live
+        run: |
+          key=$(sed -n 's/^INDEXNOW_KEY = "\([0-9a-f]*\)".*/\1/p' build.py)
+          for i in $(seq 1 20); do
+            [ "$(curl -fsS "https://42maxims.com/$key.txt?cb=$RANDOM" || true)" = "$key" ] && exit 0
+            sleep 15
+          done
+          echo "key file not live"; exit 1
+      - name: Submit changed pages
+        run: |
+          if [ "${{ github.event_name }}" = workflow_dispatch ]; then python scripts/indexnow.py; else python scripts/indexnow.py --since HEAD~1; fi

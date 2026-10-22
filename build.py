@@ -121,6 +121,7 @@ SITE_NAME = "42 Maxims"
 OG_IMAGE = "og.png"  # 1200x630 social preview at site root; regenerate with tools/make_og.py
 OG_ALT = "42 Maxims: a sourced, ranked collection of rules for life"
 DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with sources."
+INDEXNOW_KEY = "ce7f27596a055176ddce9e6bfd652aca"  # public IndexNow key (indexnow.org); build writes /<key>.txt, scripts/indexnow.py submits URLs
 SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
 PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
 SCRIPT_ID = re.compile(r"^pa-[A-Za-z0-9_-]+$")
@@ -1018,6 +1019,9 @@ write("404.html", page("Not found — 42 Maxims", "<h1>Page not found</h1><p>Tha
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "".join(f"<url><loc>{SITE_URL}/{p}</loc></url>\n" for p in sorted(SITEMAP)) + "</urlset>\n")
 write("CNAME", CUSTOM_DOMAIN)
+if not re.fullmatch(r"[0-9a-f]{32}", INDEXNOW_KEY):
+    raise ValueError(f"INDEXNOW_KEY must be 32 lowercase hex characters, got {INDEXNOW_KEY!r}")
+write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)  # IndexNow key file: proves we own the host
 # ---- robots.txt (AI crawlers welcome, named so the intent is explicit) and llms.txt / llms-full.txt (llmstxt.org) ----
 AI_CRAWLERS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User",
                "Google-Extended", "Applebot-Extended", "CCBot"]
