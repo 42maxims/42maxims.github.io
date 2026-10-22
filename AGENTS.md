@@ -1,6 +1,6 @@
 # AGENTS.md: instructions for AI coding agents (and humans)
 _The single source of agent instructions for this repo. Claude Code (`CLAUDE.md`), Cursor (`.cursor/rules/`) and GitHub Copilot (`.github/copilot-instructions.md`) all point here; edit this file, not those._
-_Maintained by oo-42maxims. Human contributor guide: [CONTRIBUTING.md](CONTRIBUTING.md). Product spec: [SPEC.md](SPEC.md). Decision log: [DECISIONS.md](DECISIONS.md). Open work: [ROADMAP.md](ROADMAP.md) and GitHub issues._
+_Maintained by the maintainers (the maintainer bot). Human contributor guide: [CONTRIBUTING.md](CONTRIBUTING.md). Product spec: [SPEC.md](SPEC.md). Decision log: [DECISIONS.md](DECISIONS.md). Open work: [ROADMAP.md](ROADMAP.md) and GitHub issues._
 
 ## What this is
 42 Maxims (https://42maxims.com) collects the rules for life that many traditions rediscover, each backed by exact, sourced quotes, and ranks them by how widely and independently they recur (SPEC.md §5). It is a plain static site: no dependencies beyond Python 3 (3.12 in CI).

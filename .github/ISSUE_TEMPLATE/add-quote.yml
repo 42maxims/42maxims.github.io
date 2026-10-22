@@ -1,6 +1,7 @@
 name: Add or correct a quote
 description: Suggest a sourced quote for an existing maxim, or report a wrong quote or attribution.
 title: "[quote] "
+labels: ["quote"]
 body:
   - type: input
     id: maxim

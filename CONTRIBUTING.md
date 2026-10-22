@@ -43,8 +43,8 @@ Commit the regenerated files together with your data change. CI runs the same st
 - One maxim, a small batch of quotes (up to about 10) or one code change per PR.
 - Fill in the PR checklist: what you verified and how, build and tests run, and any change to The 42 (order or membership).
 - **Anonymity:** the project is anonymous. Don't put maintainers' personal names, accounts or emails in files, commits or PRs. Your own commit identity is up to you.
-- Maintainers review, then merge; merging to `master` deploys to https://42maxims.com.
+- Outside PRs are welcome. CI must pass before anything merges. Maintainers review and merge quote-only PRs (quotes plus their voices/sources) once CI passes; code PRs after review. New maxims, scoring changes and tradition influence (`derives_from`) links wait for the project owner's approval. Merging to `master` deploys to https://42maxims.com.
 - Be kind. We compare ideas; we never rank traditions or people, and we treat religious texts with respect.
 
 ## Licence
-Site content and data are CC BY-SA 4.0 (see [LICENSE](LICENSE)). By contributing you agree your contributions are licensed CC BY-SA 4.0. Quotes remain the property of their authors and translators.
+Site content and data are CC BY-SA 4.0 (see [LICENSE](LICENSE)). By contributing you agree your contributions are licensed CC BY-SA 4.0 (the same licence as the project; no DCO sign-off or CLA needed). Quotes remain the property of their authors and translators.

@@ -1,6 +1,7 @@
 name: Bug or site problem
 description: Something on 42maxims.com or in the build is broken or wrong.
 title: "[bug] "
+labels: ["bug"]
 body:
   - type: input
     id: url

@@ -1,7 +1,7 @@
 # Decisions log
 - 2026-10-14 Name "42 Maxims"; domain 42maxims.com later (not bought; needs owner approval).
 - 2026-10-14 Host on GitHub Pages with simple tools (plain Python + static HTML, not Astro/Cloudflare); publish directly to `master`.
-- 2026-10-14 **Anonymity:** published under the anonymous GitHub account `42maxims` with commit identity "Max Ims"; contributions welcome via pull requests. On the shared box, `gh` is switched to `42maxims` only for this repo's pushes and switched back afterwards. No personal names in the repo.
+- 2026-10-14 **Anonymity:** published under the anonymous GitHub account `42maxims` with commit identity "Max Ims"; contributions welcome via pull requests. No personal names in the repo.
 - 2026-10-14 Own content licensed **CC BY-SA 4.0**; quoted texts keep their own licences/credits.
 - 2026-10-14 **English first**; AI-assisted translations allowed for non-English sources, always labelled; other site languages later.
 - 2026-10-14 **Modern thinkers** included, with short attributed quotes only.
@@ -102,4 +102,7 @@
 - `scripts/validate.py` (stdlib only) checks the data with fix-it messages: required/unknown fields, unknown concept/voice/source/tradition ids, `ver`/`rel`/`era` values (tested against `scoring.VER`/`REL`), `conf` in 0–1, a source URL for verified/probable quotes (`""` allowed only for unverified/disputed/misattributed), duplicate quotes within a maxim, `derives_from` keys and cycles, voice/source kinds, confidence and refs, unused entries. `tests/test_validate.py` runs it on the real data and on broken copies.
 - CI now runs validate → build → tests, then fails if `git status --porcelain` is non-empty (catches untracked generated files too); triggers on PRs and pushes to master; read-only token.
 - New maxims are proposed through a "Propose a maxim" issue (`docs/proposals.md`, which also lists the open candidates from the curation runs). Owner approval rules unchanged (SPEC §12).
-- Open for the owner: branch protection on master, whether and how outside PRs are accepted and merged, contribution licence terms (currently CC BY-SA inbound = outbound), issue labels.
+- Owner decisions (22 Oct 2026): outside PRs are accepted. The maintainers (the maintainer bot) review and merge quote-only PRs once CI passes; new maxims, scoring changes and tradition influence (`derives_from`) links still need owner approval. Contributions are CC BY-SA 4.0 inbound = outbound, no DCO or CLA. Maintainers may keep pushing directly to master for now.
+- Branch protection on `master`: the CI check must pass on PRs; no required reviews; not enforced for admins, so maintainer direct pushes continue.
+- Issue labels `quote`, `proposal`, `bug` created and applied by the issue templates.
+- OPS.md trimmed to public, contributor-useful notes; machine- and account-specific operating notes now live outside the repo.

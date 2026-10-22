@@ -1,6 +1,7 @@
 name: Propose a new maxim
 description: A rule for life that recurs across independent traditions and isn't on the site yet. Needs owner approval before any PR.
 title: "[maxim] "
+labels: ["proposal"]
 body:
   - type: markdown
     attributes:
