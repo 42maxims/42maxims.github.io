@@ -1,0 +1,119 @@
+{
+ "anger-and-conflict": {
+  "title": "Anger, conflict and forgiveness",
+  "intro": "How to handle anger, quarrels and hurt is one of the oldest questions in moral writing. These maxims gather what scriptures, philosophers and sages from many traditions advise: be slow to anger, answer hatred with something better than hatred, forgive, and work for peace.",
+  "maxims": [
+   "master-your-anger",
+   "forgiveness",
+   "overcome-hatred-with-love",
+   "be-a-peacemaker",
+   "patience"
+  ]
+ },
+ "speech": {
+  "title": "Speech: honesty, gossip and listening",
+  "intro": "Many traditions spend a surprising amount of time on the tongue. These maxims collect their advice on speech: tell the truth, speak kindly or stay silent, don't run people down behind their backs, listen before you answer, and let your words and deeds match.",
+  "maxims": [
+   "tell-the-truth",
+   "guard-your-tongue",
+   "dont-backbite",
+   "listen-first",
+   "keep-your-word",
+   "actions-over-words"
+  ]
+ },
+ "kindness": {
+  "title": "Kindness and compassion",
+  "intro": "Treat others as you would wish to be treated is the best-known rule for life, but it has many neighbours. These maxims gather the sayings on kindness, mercy and generosity, towards strangers and animals as well as friends.",
+  "maxims": [
+   "golden-rule",
+   "be-merciful",
+   "generosity",
+   "welcome-the-stranger",
+   "be-kind-to-animals",
+   "do-no-harm"
+  ]
+ },
+ "justice": {
+  "title": "Justice and fairness",
+  "intro": "Law codes, prophets and philosophers return again and again to fairness: judge justly even when it costs you, protect those who have no one to speak for them, and deal honestly with others. These maxims collect what they said.",
+  "maxims": [
+   "justice",
+   "defend-the-vulnerable",
+   "deal-honestly-in-trade",
+   "golden-rule",
+   "you-reap-what-you-sow"
+  ]
+ },
+ "work": {
+  "title": "Work, effort and learning",
+  "intro": "Advice on work runs from ancient wisdom books to modern management writing. These maxims gather it: do your work with skill and heart, start small, keep learning, get up when you fall, and notice how results and advantages tend to pile up.",
+  "maxims": [
+   "mastery",
+   "rise-to-your-work",
+   "small-beginnings",
+   "keep-learning",
+   "get-back-up",
+   "growth-mindset",
+   "pursue-meaning",
+   "vital-few",
+   "peter-principle",
+   "matthew-effect"
+  ]
+ },
+ "contentment": {
+  "title": "Desire, contentment and simplicity",
+  "intro": "Many traditions trace unhappiness to wanting too much. These maxims collect their advice on craving, gratitude, moderation and keeping life simple, from the Buddha and the Stoics to modern psychology.",
+  "maxims": [
+   "desire-is-the-root-of-suffering",
+   "gratitude",
+   "moderation",
+   "happiness-and-expectations",
+   "keep-it-simple",
+   "paradox-of-choice"
+  ]
+ },
+ "family-and-community": {
+  "title": "Family, friends and community",
+  "intro": "How we treat parents, friends, neighbours and the places we share is a theme in nearly every tradition. These maxims gather that advice: honour your parents, choose your companions with care, take counsel, welcome the stranger and leave things better than you found them.",
+  "maxims": [
+   "honour-your-parents",
+   "choose-your-friends",
+   "seek-counsel",
+   "welcome-the-stranger",
+   "leave-it-better"
+  ]
+ },
+ "worry-and-calm": {
+  "title": "Worry, stillness and the present moment",
+  "intro": "Old traditions had a good deal to say about worry: don't borrow tomorrow's troubles, make time for stillness, remember that everything passes, and notice how much depends on the way you think. These are rules for living drawn from scripture and philosophy, not medical advice; if anxiety is overwhelming, please talk to a doctor or someone you trust.",
+  "maxims": [
+   "be-present",
+   "be-still",
+   "everything-passes",
+   "thoughts-shape-life"
+  ]
+ },
+ "humility-and-self-knowledge": {
+  "title": "Humility and self-knowledge",
+  "intro": "Know yourself was carved at Delphi, and many traditions say something close to it. These maxims gather their advice on humility: look to your own faults first, admit and repair your mistakes, and look after yourself as someone you are responsible for.",
+  "maxims": [
+   "humility",
+   "examine-yourself-first",
+   "own-your-mistakes",
+   "know-yourself",
+   "take-care-of-yourself"
+  ]
+ },
+ "hardship-and-mortality": {
+  "title": "Hardship, courage and mortality",
+  "intro": "Suffering, fear and death are where many traditions are at their most direct. These maxims collect what they say: accept that life contains suffering, find meaning in the struggle, do right even when afraid, remember that you will die, and give your days a rhythm.",
+  "maxims": [
+   "courage",
+   "embrace-the-struggle",
+   "life-is-suffering",
+   "remember-death",
+   "a-time-for-everything"
+  ]
+ }
+}

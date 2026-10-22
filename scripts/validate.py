@@ -214,6 +214,24 @@ def validate(root=ROOT):
     used_s = {q.get("source_id") for q in D["quotes"]}
     for k in sorted(set(S) - used_s):
         err(f"data/sources.json['{k}']: not used by any quote; remove it or link a quote to it")
+    tp = os.path.join(root, "data", "themes.json")  # optional: theme landing pages (SPEC §10)
+    if os.path.exists(tp):
+        slugs = {c.get("slug") for c in D["concepts"]}
+        for k, th in json.load(open(tp, encoding="utf-8")).items():
+            where = f"data/themes.json['{k}']"
+            if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", k):
+                err(f"{where}: theme slug must be kebab-case")
+            for f in ("title", "intro"):
+                if not str(th.get(f, "")).strip():
+                    err(f"{where}: missing '{f}'")
+            ms = th.get("maxims", [])
+            if len(ms) < 3:
+                err(f"{where}: a theme needs at least 3 maxims, has {len(ms)}")
+            if len(set(ms)) != len(ms):
+                err(f"{where}: a maxim is listed twice")
+            for m in ms:
+                if m not in slugs:
+                    err(f"{where}: unknown maxim slug '{m}'; use a slug from data/maxims.json concepts")
     return errors, warnings
 
 

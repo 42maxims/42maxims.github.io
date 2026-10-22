@@ -174,3 +174,29 @@
   - guard-your-tongue goes from 94.5 to 94.3 after losing Proverbs 16:28 and stays #4.
   - Leaving The 42: thoughts-shape-life (#41) and happiness-and-expectations (#42), now Emerging #1 and #2.
   - Maxims 53→55.
+
+## 2026-10-22: SEO and AI-search (GEO) pass (branch `seo-geo`)
+- **What the audit found:**
+  - Static HTML already carried every quote's full text, a canonical link, Open Graph and Twitter tags, a single og.png, a sitemap of the indexable pages and `robots.txt` allowing everyone.
+  - JSON-LD was thin: `WebSite` on the homepage, one seed `Quotation` on maxim pages (person voices only), `Person` on person voice pages, and breadcrumbs.
+  - Titles were "<maxim> — 42 Maxims" and descriptions were the summary.
+  - There was no `llms.txt`, no theme or tradition pages and no Dataset markup.
+- **Titles say what a searcher asks.** Titles use the "what N traditions say" pattern, with N taken from the scores. They carry no rank numbers, because ranks shift and a stale number in a search result would mislead.
+  - When a title is too long, the brand suffix is dropped first, because the maxim's own words are what people search for.
+  - H1s stay the plain maxim.
+- **Structured data only says what we stand behind.**
+  - Quotations go into JSON-LD only when the quote is verified or probable. Disputed, unverified and misattributed quotes stay on the page with their labels but are left out of the markup, which would otherwise assert the attribution.
+  - `creator` is a `Person` only for persons and traditional figures. Collectives and scriptures get `creditText` only.
+  - There are no ratings, and Moral Rank is not marked up as a rating; tests enforce this.
+  - The publisher is the anonymous Organization "42 Maxims", with no people.
+  - `sameAs` is emitted only when a Wikipedia ref's title has the same core words as the entity. The first, looser rule linked e.g. the voice "Amenemope" to the article on the Instruction of Amenemope, and "A Joseph Campbell Companion" to Joseph Campbell; the strict rule drops those.
+- **Tradition and period go in `keywords`.** schema.org has no "tradition" property, and `dateCreated`/`temporalCoverage` would need a date or would mean something else.
+- **Dataset licence:** CC BY-SA 4.0, matching LICENSE and the footer. The description says that quotes remain the property of their authors and translators.
+- **Themes are hand-curated in `data/themes.json` and kept small (10).** Every maxim sits in at least one theme, and intros make no claim the quotes don't support.
+  - "Worry, stillness and the present moment" is supported by Matthew 6:34, Philippians 4:6–7, stillness and impermanence quotes. It says plainly that it is not medical advice.
+  - The themes were picked by the maintainer bot and are open to the owner's edits; they do not change scoring.
+- **Tradition pages are built for every tradition with a quote** (40; 32 indexed). Those supporting fewer than 2 maxims are `noindex`, per the thin-pages rule. A tradition with no quotes (`renaissance`) gets no page.
+- **AI crawlers are named in `robots.txt` and given `Allow: /`.** The content is CC BY-SA and meant to be cited, and naming them makes the intent explicit; nothing deliberate blocked them before.
+  - `llms.txt` asks readers to cite the maxim page, keep the exact wording, and not credit unverified or misattributed sayings to their popular authors.
+  - `llms-full.txt` (~145 KB) carries every quote with its citation.
+- **Nav:** added Themes and Traditions after Sources (eight links; it wraps on phones, as before).

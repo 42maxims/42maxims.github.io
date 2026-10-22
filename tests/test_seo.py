@@ -125,7 +125,7 @@ class Seo(unittest.TestCase):
                     if o["@type"] == "BreadcrumbList":
                         self.assertEqual(o["itemListElement"][-1]["item"], url_of(k))
         types = [json.loads(r)["@type"] for r in INDEXABLE["index.html"].ld]
-        self.assertEqual(types, ["WebSite"])
+        self.assertEqual(types, ["WebSite", "Dataset", "ItemList"])
 
     def test_sitemap_matches_indexable_pages(self):
         sm = open(os.path.join(ROOT, "sitemap.xml")).read()
@@ -140,7 +140,7 @@ class Seo(unittest.TestCase):
         self.assertNotIn("Disallow: /\n", r)
 
     def test_project_stays_anonymous(self):
-        for f in ["sitemap.xml", "robots.txt"] + list(pages()):
+        for f in ["sitemap.xml", "robots.txt", "llms.txt", "llms-full.txt"] + list(pages()):
             self.assertNotIn("Farrell", open(os.path.join(ROOT, f), encoding="utf-8").read())
             self.assertNotIn("joe2far", open(os.path.join(ROOT, f), encoding="utf-8").read())
 

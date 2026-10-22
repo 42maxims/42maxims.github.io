@@ -30,7 +30,8 @@ The long-term feel is a mix of Wikipedia (sourced, neutral, readable), Obsidian 
 1. A visitor searches for a quote, e.g. *"what you do not want done to yourself, do not do to others"*.
 2. [Built] They land on the **maxim page** that holds it (the Golden Rule), with the seed expression on top, all related expressions below, each with its source, label, voice and work.
 3. [Built] From there they move **across** to Voice and Source pages, or **back** to The 42.
-4. [Planned] Dedicated per-quote pages, Tradition pages, a graph view, and "a maxim a week" signup.
+4. [Built] Theme and Tradition pages as further entry points (searches like "Buddhist rules for life" or "what religions say about anger").
+5. [Planned] Dedicated per-quote pages, a graph view, and "a maxim a week" signup.
 
 ---
 
@@ -69,17 +70,19 @@ The long-term feel is a mix of Wikipedia (sourced, neutral, readable), Obsidian 
 4. **Sources** (`/sources/<slug>/` and `/sources/`): which work it is from. One source per book whatever the chapter or translation (each Bible book, each hadith or Pali collection, each Plato dialogue is one source). Same layout as voices, plus a link to the source's voice.
 5. **Method** (`/method/`): the Moral Rank equation, a plain-words bullet for each term, the time periods with dates, the verification-label legend, and the translation policy.
 6. **About** (`/about/`): what the project is, how to contribute, licence.
-7. 404 page; light and dark colour schemes; serif reading typography.
+7. **Themes** (`/themes/` and `/themes/<slug>/`): a small, hand-curated set of topics (anger and conflict, speech, kindness, justice, work, contentment, family and community, worry and calm, humility, hardship and mortality) defined in `data/themes.json` (theme slug → `title`, `intro`, `maxims`). Each page has an intro in our own words, then every listed maxim strongest-supported first with one sample quote (its seed) and full citation. A maxim may sit in several themes; maxim pages link back to their themes. Themes stay honest: a theme is only added when the maxims on it really address it, and intros make no claims the quotes don't support.
+8. **Traditions** (`/traditions/` and `/traditions/<slug>/`): every tradition with at least one quote, the maxims it supports (strongest-supported first, with that tradition's strongest quote for each) and its `derives_from` note. Pages for traditions supporting fewer than 2 maxims are `noindex` until they fill out. Tradition names on maxim pages link here.
+9. 404 page; light and dark colour schemes; serif reading typography.
 
 ### 3.2 Planned
 - Per-quote pages (`/quotes/<slug>/`) with original text, translation, explanation (80–250 words), siblings.
-- Tradition pages (`/traditions/<slug>/`) with influence links (`derives_from`).
+- Richer tradition pages: a short factual summary per tradition and influence links drawn as a graph.
 - Filters on The 42 (tradition, period) and sort options (most references, most traditions).
 - Static search (e.g. Pagefind).
 - Graph view (`/graph/`): interactive graph of maxims, quotes, voices and traditions; local graphs on maxim pages.
 - **Misattributed** page (`/misattributed/`) collecting the `misattributed` quotes with their true origins.
 - References beyond quotes: video clips with start/end times, songs, stories.
-- Newsletter signup, RSS feed, sitemap, structured data.
+- Newsletter signup, RSS feed.
 
 ---
 
@@ -279,11 +282,20 @@ SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  AGENTS.md  CLAUDE.md  CONTRIBUTING.md
 
 ---
 
-## 10. SEO approach [mostly Planned]
+## 10. SEO and AI-search (GEO) approach [partly Built]
 
-- [Built] Static HTML, fast pages, descriptive titles ("<maxim> — 42 Maxims"), exact citations near the top, dense internal linking between maxims, voices and sources.
-- [Planned] Publish only pages that add value; thin pages `noindex` until they fill out; steady weekly batches rather than mass publishing; Method page discloses AI-assisted work with editorial review.
-- [Planned] Structured data (`Quotation`, `Person` with `sameAs`, `DefinedTerm`, `BreadcrumbList`), sitemap, one canonical page per quote with variant wordings on the same page, redirects on merges.
+- [Built] Static HTML, fast pages, exact citations near the top, dense internal linking between maxims, voices, sources, themes and traditions. Every quote's full, exact text is in the server-rendered HTML of its maxim page (no JavaScript needed; tested).
+- [Built] **Intent-based titles**, generated from data and without rank numbers (ranks shift): maxim pages "<maxim> — what N traditions say | 42 Maxims" (N = traditions with a quote that scores above zero; "— quotes and sources" below 2), theme pages "<theme>: what N traditions say | 42 Maxims", tradition pages "<tradition>: N rules for life, with sources | 42 Maxims". When a title would pass 70 characters the " | 42 Maxims" suffix is dropped first. H1s stay the plain maxim. Meta descriptions are generated too: the maxim, how many traditions (naming up to three, strongest first) and how many quotes.
+- [Built] **Structured data** (schema.org JSON-LD, tested for well-formedness and honesty; no ratings or reviews, ever):
+  - home: `WebSite`; `Dataset` (CC BY-SA 4.0, publisher the anonymous Organization "42 Maxims", `DataDownload`s for the JSON data files, a note that quotes remain the property of their authors and translators); `ItemList` of The 42;
+  - maxim pages: `ItemPage` whose `mainEntity` is the maxim (`CreativeWork`) with one `Quotation` per verified or probable quote (`text`, `creditText`, `creator` as `Person` for persons and traditional figures only, `isPartOf` the source as `Book`/`Article`/`CreativeWork`, `citation` = the URL where the wording can be read, `keywords` = tradition and period). Disputed, unverified and misattributed quotes are left out so structured data never asserts an attribution we don't stand behind;
+  - voice pages: `ProfilePage` + `Person` (persons and traditional figures), else `WebPage` about a `Thing`; source pages: `WebPage` with the work as `mainEntity`; `sameAs` only for an English Wikipedia ref whose title names the same thing (same core words), so a book never claims to be its author;
+  - theme, tradition and index pages: `CollectionPage` + `ItemList`; `BreadcrumbList` everywhere as before.
+  - schema.org has no exact property for "tradition", and `dateCreated` needs a real date, so tradition and period go in `keywords` as text.
+- [Built] **AI crawlers and llms.txt:** `robots.txt` allows everyone and names the main AI search/assistant crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Google-Extended, Applebot-Extended, CCBot) with `Allow: /`. `/llms.txt` (llmstxt.org format) describes the site, how to cite it honestly, and links the data files, key pages, The 42, themes and Emerging; `/llms-full.txt` is every maxim with all its quotes and citations as plain text. Both are generated by `build.py`.
+- [Built] Thin pages `noindex` (voices/sources with no quotes, traditions with fewer than 2 maxims); sitemap lists exactly the indexable pages.
+- [Planned] Steady weekly batches rather than mass publishing; Method page discloses AI-assisted work with editorial review.
+- [Planned] `sameAs` to Wikidata, `DefinedTerm` for maxims, per-quote pages, sitemap `lastmod`, redirects on merges.
 - [Planned] Linkable assets: the Misattributed page, The 42, "the Golden Rule across many traditions" maxim pages.
 
 ---

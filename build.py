@@ -1,12 +1,13 @@
 """Builds the static site from data/maxims.json. Run: python3 build.py (no dependencies)."""
-import json, os, html, math, re, datetime
-from urllib.parse import quote
+import json, os, html, math, re, datetime, unicodedata
+from urllib.parse import quote, unquote
 from scoring import evidence, moral_rank, ancestors, VER, REL, W_Q, W_K, W_T, W_R
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(ROOT, "data/maxims.json")))
 VOICES = json.load(open(os.path.join(ROOT, "data/voices.json")))
 SOURCES = json.load(open(os.path.join(ROOT, "data/sources.json")))
+THEMES = json.load(open(os.path.join(ROOT, "data/themes.json")))  # theme slug -> {title, intro, maxims}; SPEC §10
 TR = D["traditions"]
 esc = html.escape
 TOP_N = 42
@@ -153,7 +154,115 @@ def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("<", "\\u003c") + "</script>"
 
 
-def page(title, body, depth, path=None, desc=None, kind="website", noindex=False, jsonld=(), crumbs=None):
+# ---- Structured data (schema.org JSON-LD) and intent-based titles; SPEC §10. Honest only: no ratings, no invented dates. ----
+LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/"
+WEBSITE_ID = SITE_URL + "/#website"
+PUBLISHER_ID = SITE_URL + "/#publisher"
+PUBLISHER = {"@type": "Organization", "@id": PUBLISHER_ID, "name": SITE_NAME, "url": SITE_URL + "/"}  # anonymous project, no people
+SOURCE_LD_TYPE = {"book": "Book", "scripture": "Book", "talk": "CreativeWork", "article": "Article", "other": "CreativeWork"}
+LD_VER = ("verified", "probable")  # only quotes whose attribution we stand behind go into structured data
+DATA_FILES = [("data/maxims.json", "Traditions, maxims and every quote with its citation, verification label and relation"),
+              ("data/voices.json", "Voices: the people, communities and texts the quotes come from"),
+              ("data/sources.json", "Sources: the books, scriptures, talks and articles the quotes are taken from"),
+              ("data/generated/scores.json", "Moral Rank and its evidence terms for every maxim (generated)")]
+
+
+def ld_page(t, path, name, desc, **extra):
+    o = {"@context": "https://schema.org", "@type": t, "@id": f"{SITE_URL}/{path}", "url": f"{SITE_URL}/{path}", "name": name,
+         "description": blurb(desc, 300), "inLanguage": "en", "isPartOf": {"@id": WEBSITE_ID}, "publisher": {"@id": PUBLISHER_ID},
+         "license": LICENSE_URL}
+    o.update(extra)
+    return o
+
+
+def item_list(name, entries):
+    """entries: (name, path) pairs, in the order shown on the page."""
+    return {"@type": "ItemList", "name": name, "numberOfItems": len(entries), "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "url": f"{SITE_URL}/{p}"} for i, (n, p) in enumerate(entries)]}
+
+
+def core_words(x, extra=()):
+    """Lower-case, accent-free words of a name or Wikipedia title, ignoring any (parenthetical), subtitle and a few filler words."""
+    x = unicodedata.normalize("NFKD", unquote(x).replace("_", " ")).encode("ascii", "ignore").decode().lower()
+    x = re.split(r"[:;,]", re.sub(r"\([^)]*\)", " ", x))[0]
+    return set(re.findall(r"[a-z0-9]{2,}", x)) - {"the", "of", "an", "and", *extra}
+
+
+def wiki_same_as(name, refs, extra=()):
+    """sameAs: the first English Wikipedia ref whose title names the same thing (same core words), so a page
+    about a book never claims to be the same entity as its author, or a prophet the same as the book."""
+    want = core_words(name, extra)
+    return [r for r in refs if r.startswith("https://en.wikipedia.org/wiki/") and core_words(r.rsplit("/", 1)[1], extra) == want][:1]
+
+
+def with_same_as(o, name, refs, extra=()):
+    s = wiki_same_as(name, refs, extra)
+    return dict(o, sameAs=s) if s else o
+
+
+def person_ld(vslug):
+    """schema.org Person for a historical or traditional individual; None for collectives and scriptures."""
+    v = VOICES[vslug]
+    if v["kind"] not in ("person", "legendary"):
+        return None
+    return {"@type": "Person", "name": v["name"], "url": f"{SITE_URL}/voices/{vslug}/"}
+
+
+def source_ld(sid):
+    s = SOURCES[sid]
+    o = {"@type": SOURCE_LD_TYPE[s["kind"]], "name": s["title"], "url": f"{SITE_URL}/sources/{sid}/"}
+    if s["voice"] and person_ld(s["voice"]):
+        o["author"] = person_ld(s["voice"])
+    return o
+
+
+def quotation_ld(q):
+    o = {"@type": "Quotation", "text": q["text"], "creditText": f'{q["thinker"]}, {q["work"]}', "inLanguage": "en",
+         "isPartOf": source_ld(q["source_id"]), "keywords": [TR[q["tradition"]]["name"], ERA_LABEL[q["era"]]]}
+    if person_ld(q["voice"]):
+        o["creator"] = person_ld(q["voice"])
+    if q["source"]:
+        o["citation"] = q["source"]
+    return o
+
+
+def best_traditions(qs):
+    """Supporting traditions (weight > 0), strongest first, ties by oldest period then name."""
+    best = {}
+    for q in qs:
+        w = VER[q["ver"]] * REL[q["rel"]] * q["conf"]
+        if w > 0:
+            k = (-w, ERA_ORDER.index(q["era"]))
+            best[q["tradition"]] = min(best.get(q["tradition"], k), k)
+    return [TR[t]["name"] for t, _ in sorted(best.items(), key=lambda x: (x[1], TR[x[0]]["name"]))]
+
+
+def fit_title(base):
+    """'<base> | 42 Maxims', dropping the brand rather than the words people search for when it runs past 70 characters."""
+    full = f"{base} | {SITE_NAME}"
+    return full if len(full) <= 70 else base
+
+
+def plural(n, w):
+    return f"{n} {w}{'' if n == 1 else 's'}"
+
+
+def and_list(xs):
+    if not xs:
+        return ""
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+
+def fit_desc(make, names, short, n=155):
+    """Longest description make(k names) that fits n characters, trying 3, then 2, then 1 example names, then `short`."""
+    for k in (3, 2, 1):
+        d = make(names[:k])
+        if len(d) <= n:
+            return d
+    return blurb(short, n)
+
+
+def page(title, body, depth, path=None, desc=None, kind="website", noindex=False, jsonld=(), crumbs=None, crumb=None):
     """path: canonical path ("" = home, "voices/x/"); None means no canonical or sitemap entry (e.g. 404)."""
     up = "../" * depth
     tag = f"<script>{globals().get('CLIP_JS', '')}</script>"  # one bind script per page, however many clips it holds
@@ -178,7 +287,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
             SITEMAP.append(path)
             graph = list(jsonld)
             if crumbs is not None:
-                items = [("Home", "")] + list(crumbs) + [(title.split(" — ")[0], path)]
+                items = [("Home", "")] + list(crumbs) + [(crumb or title.split(" — ")[0].split(" | ")[0], path)]
                 graph.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                     {"@type": "ListItem", "position": n + 1, "name": nm, "item": f"{SITE_URL}/{p}"} for n, (nm, p) in enumerate(items)]})
             head += "".join(ld(g) for g in graph)
@@ -186,7 +295,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
 <meta name="color-scheme" content="light dark">
 {head}
 <link rel="stylesheet" href="{up}style.css">{analytics_snippet()}</head><body>
-<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}" aria-label="Home">Home</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}maxim-of-the-day/" aria-label="Maxim of the day" title="Maxim of the day">Daily</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}" aria-label="Home">Home</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}themes/">Themes</a><a href="{up}traditions/">Traditions</a><a href="{up}maxim-of-the-day/" aria-label="Maxim of the day" title="Maxim of the day">Daily</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
@@ -263,8 +372,20 @@ body = ('<p class="lede">Some ideas keep turning up, in different centuries and 
         + table(emerging, True))
 write("index.html", page("42 Maxims — rules for life, with sources", body, 0, "",
                          "Some ideas keep turning up in different centuries and languages. 42 Maxims ranks them by how widely and independently humanity arrived at them, with sources.",
-                         jsonld=[{"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/",
-                                  "description": DEFAULT_DESC, "inLanguage": "en"}]))
+                         jsonld=[{"@context": "https://schema.org", "@type": "WebSite", "@id": WEBSITE_ID, "name": SITE_NAME, "url": SITE_URL + "/",
+                                  "description": DEFAULT_DESC, "inLanguage": "en", "publisher": PUBLISHER, "license": LICENSE_URL},
+                                 {"@context": "https://schema.org", "@type": "Dataset", "@id": SITE_URL + "/#dataset",
+                                  "name": "42 Maxims: sourced quotes behind rules for life",
+                                  "description": ("Maxims (short rules for life) that recur across religions, philosophies and periods, each with exact quotes, "
+                                                  "their source, translation, tradition, period and a verification label, plus each maxim's Moral Rank. "
+                                                  "The licence covers the project's own writing and data; quotes remain the property of their authors and translators."),
+                                  "url": SITE_URL + "/", "license": LICENSE_URL, "isAccessibleForFree": True, "inLanguage": "en",
+                                  "creator": {"@id": PUBLISHER_ID}, "publisher": {"@id": PUBLISHER_ID},
+                                  "keywords": ["maxims", "rules for life", "quotations", "wisdom literature", "comparative religion", "philosophy"],
+                                  "measurementTechnique": SITE_URL + "/method/",
+                                  "distribution": [{"@type": "DataDownload", "name": f, "description": d, "encodingFormat": "application/json",
+                                                    "contentUrl": f"{SITE_URL}/{f}"} for f, d in DATA_FILES]},
+                                 dict(item_list("The 42", [(c["maxim"], f"maxims/{c['slug']}/") for c in main]), **{"@context": "https://schema.org"})]))
 
 
 def voice_link(q, up):
@@ -338,12 +459,16 @@ def clip_block(q):
     return out + (f"<script>{CLIP_JS}</script>" if "clip-play" in out else "")
 
 
+def tradition_link(t, up="../../"):
+    return f'<a href="{up}traditions/{t}/">{esc(TR[t]["name"])}</a>'
+
+
 def cite(q, up="../../"):
     return f'— {voice_link(q, up)}, {work_link(q, up)} · {source_link(q)} {pill(q["ver"])}'
 
 
 def related(q, up="../../"):
-    parts = [esc(TR[q["tradition"]]["name"]), ERA_LABEL.get(q["era"], q["era"]), f'relation: {q["rel"]}', pill(q["ver"]), source_link(q)]
+    parts = [tradition_link(q["tradition"], up), ERA_LABEL.get(q["era"], q["era"]), f'relation: {q["rel"]}', pill(q["ver"]), source_link(q)]
     if q.get("translation"):
         parts.append(f'Translation: {esc(q["translation"])}')
     return (f'<li><blockquote>“{esc(q["text"])}”</blockquote><div class="cite">— {voice_link(q, up)}, {work_link(q, up)}</div>{echoes(q)}{clip_block(q)}'
@@ -408,6 +533,27 @@ def share_block(text, path):
             f'<span id="copied" class="copied" role="status" aria-live="polite"></span></div><script>{SHARE_JS}</script>')
 
 
+THEMES_OF = {}
+for k, th in THEMES.items():
+    for m in th["maxims"]:
+        THEMES_OF.setdefault(m, []).append(k)
+
+
+def maxim_title(c):
+    """Intent-based title: what people search for (the rule, and what traditions say about it). No rank: ranks shift."""
+    m, n = c["maxim"].rstrip("."), BD[c["slug"]]["traditions"]
+    return fit_title(f"{m} — what {n} traditions say" if n >= 2 else f"{m} — quotes and sources")
+
+
+def maxim_desc(c):
+    qs = quotes_by.get(c["slug"], []); names = best_traditions(qs); n = len(names)
+    if n < 2:
+        return blurb(f'{c["maxim"]} {c["summary"]}')
+    tail = f'{plural(len(qs), "quote")}, each cited and labelled.'
+    return fit_desc(lambda xs: f'{c["maxim"]} What {n} traditions say, including {and_list(xs)}: {tail}', names,
+                    f'{c["maxim"]} What {n} traditions say: {tail}')
+
+
 for c in D["concepts"]:
     b = BD[c["slug"]]; qs = quotes_by.get(c["slug"], [])
     body = f'<p class="label">Maxim</p><h1 class="maxim">{esc(c["maxim"])}</h1>'
@@ -416,8 +562,11 @@ for c in D["concepts"]:
         si = seed_index(c, qs); s = qs[si]
         tr = f'<br>Translation: {esc(s["translation"])}' if s.get("translation") else ""
         body += (f'<figure class="seed"><blockquote>“{esc(s["text"])}”</blockquote>'
-                 f'<figcaption class="cite">{cite(s)}<br>{esc(TR[s["tradition"]]["name"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}{echoes(s)}</figcaption>{clip_block(s)}</figure>')
-    body += f'<p class="summary">{esc(c["summary"])}</p>' + share_block(c["maxim"], f"maxims/{c['slug']}/")
+                 f'<figcaption class="cite">{cite(s)}<br>{tradition_link(s["tradition"])} · {ERA_LABEL.get(s["era"], s["era"])}{tr}{echoes(s)}</figcaption>{clip_block(s)}</figure>')
+    body += f'<p class="summary">{esc(c["summary"])}</p>'
+    if THEMES_OF.get(c["slug"]):
+        body += '<p class="note">Themes: ' + ", ".join(f'<a href="../../themes/{k}/">{esc(THEMES[k]["title"])}</a>' for k in THEMES_OF[c["slug"]]) + "</p>"
+    body += share_block(c["maxim"], f"maxims/{c['slug']}/")
     if c.get("hold"):
         body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
     rest = [q for i, q in enumerate(qs) if i != si]
@@ -430,12 +579,13 @@ for c in D["concepts"]:
                     else f'<li><a href="{esc(l)}">{esc(l)}</a></li>' for l in c.get("links", []))
     if links:
         body += f"<h2>Further reading</h2><ul>{links}</ul>"
-    ldq = []
-    if qs:
-        ldq = [{"@context": "https://schema.org", "@type": "Quotation", "text": s["text"], "creator": {"@type": "Person", "name": s["thinker"]},
-                "isPartOf": {"@type": "CreativeWork", "name": s["work"]}, "inLanguage": "en"}] if VOICES[s["voice"]]["kind"] == "person" else []
-    write(f"maxims/{c['slug']}/index.html", page(f"{c['maxim']} — 42 Maxims", body, 2, f"maxims/{c['slug']}/",
-          c["summary"], "article", jsonld=ldq, crumbs=[]))
+    path = f"maxims/{c['slug']}/"
+    shown = ([qs[si]] if qs else []) + rest  # page order: seed first
+    ldm = ld_page("ItemPage", path, c["maxim"], c["summary"], mainEntity={
+        "@type": "CreativeWork", "@id": f"{SITE_URL}/{path}#maxim", "name": c["maxim"], "description": c["summary"],
+        "keywords": best_traditions(qs), "hasPart": [quotation_ld(q) for q in shown if q["ver"] in LD_VER]})
+    write(f"maxims/{c['slug']}/index.html", page(maxim_title(c), body, 2, path, maxim_desc(c), "article", jsonld=[ldm],
+          crumbs=[], crumb=c["maxim"]))
 
 CONCEPT = {c["slug"]: c for c in D["concepts"]}
 
@@ -475,10 +625,6 @@ def sort_key(name):
     return n[4:] if n.startswith("the ") else n
 
 
-def plural(n, w):
-    return f"{n} {w}{'' if n == 1 else 's'}"
-
-
 quotes_by_voice, quotes_by_source = {}, {}
 for q in D["quotes"]:
     quotes_by_voice.setdefault(q["voice"], []).append(q)
@@ -494,7 +640,12 @@ for slug, v in VOICES.items():
         body += f'<h2>Quotes ({len(qs)})</h2><ul class="quotes">{"".join(entry_quote(q, False, True) for q in qs)}</ul>'
     else:
         body += '<p class="note">No quotes are credited directly to this voice yet; see the works above.</p>'
-    ldv = [{"@context": "https://schema.org", "@type": "Person", "name": v["name"], "description": v["summary"]}] if v["kind"] == "person" else []
+    who = person_ld(slug)
+    if who:
+        who = with_same_as(dict(who, description=v["summary"]), v["name"], v["refs"])
+        ldv = [ld_page("ProfilePage", f"voices/{slug}/", v["name"], v["summary"], mainEntity=who)]
+    else:  # collectives and scriptures: a page about a text or group, not a Person
+        ldv = [ld_page("WebPage", f"voices/{slug}/", v["name"], v["summary"], about={"@type": "Thing", "name": v["name"], "description": v["summary"]})]
     write(f"voices/{slug}/index.html", page(f"{v['name']} — 42 Maxims", body, 2, f"voices/{slug}/", v["summary"],
           "profile", noindex=not (qs or works), jsonld=ldv, crumbs=[("Voices", "voices/")]))
 
@@ -507,8 +658,10 @@ for slug, s in SOURCES.items():
     if s.get("verification"):
         body += f'<p class="note">Verification: {esc(s["verification"])}</p>'
     body += f'<h2>Quotes ({len(qs)})</h2><ul class="quotes">{"".join(entry_quote(q, True, False) for q in qs)}</ul>'
+    work = with_same_as(dict(source_ld(slug), description=s["summary"]), s["title"], s["refs"], ("book",))
+    lds = [ld_page("WebPage", f"sources/{slug}/", s["title"], s["summary"], mainEntity=work)]
     write(f"sources/{slug}/index.html", page(f"{s['title']} (source) — 42 Maxims", body, 2, f"sources/{slug}/", s["summary"],
-          noindex=not qs, crumbs=[("Sources", "sources/")]))
+          noindex=not qs, jsonld=lds, crumbs=[("Sources", "sources/")]))
 
 VOICES_JS = r"""(function(){
 var f=document.getElementById('voice-filter'),j=document.getElementById('voice-jump');if(!f)return;
@@ -641,6 +794,104 @@ def sources_index():
 
 sources_index()
 
+
+# ---- Theme and tradition landing pages (data/themes.json; traditions from data/maxims.json) ----
+def seed_of(slug):
+    qs = quotes_by.get(slug, [])
+    return qs[seed_index(CONCEPT[slug], qs)] if qs else None
+
+
+def maxim_card(slug, q, more):
+    """One maxim on a theme or tradition page: linked rule, one quote with full citation, counts and a link to the rest."""
+    c, b = CONCEPT[slug], BD[slug]
+    out = f'<h2><a href="../../maxims/{slug}/">{esc(c["maxim"])}</a></h2>'
+    if q:
+        out += (f'<figure class="seed"><blockquote>“{esc(q["text"])}”</blockquote>'
+                f'<figcaption class="cite">{cite(q)}<br>{tradition_link(q["tradition"])} · {ERA_LABEL[q["era"]]}</figcaption></figure>')
+    chips = [plural(len(quotes_by.get(slug, [])), "quote"), plural(b["traditions"], "tradition")]
+    return out + (f'<div class="chips">{"".join(f'<span class="chip">{x}</span>' for x in chips)}</div>'
+                  f'<p><a href="../../maxims/{slug}/">{more} →</a></p>')
+
+
+def by_rank(slugs):
+    return sorted(slugs, key=lambda s: (-MR[s], s))
+
+
+for k, th in THEMES.items():
+    ms = by_rank(th["maxims"])
+    trads = sorted({TR[q["tradition"]]["name"] for m in ms for q in quotes_by.get(m, []) if weight(q) > 0})
+    names = best_traditions([q for m in ms for q in quotes_by.get(m, [])])
+    path = f"themes/{k}/"
+    others = "".join(f'<li><a href="../{o}/">{esc(t["title"])}</a></li>' for o, t in THEMES.items() if o != k)
+    body = (f'<p class="label">Theme</p><h1>{esc(th["title"])}</h1><p class="lede">{esc(th["intro"])}</p>'
+            f'<p class="note">{plural(len(ms), "maxim")} from {plural(len(trads), "tradition")}, strongest-supported first. '
+            'Each shows one quote; the maxim page has every source.</p>'
+            + "".join(maxim_card(m, seed_of(m), "Every quote for this maxim") for m in ms)
+            + f'<h2>Other themes</h2><ul>{others}</ul>')
+    desc = fit_desc(lambda xs: f'{th["title"]}: {plural(len(ms), "rule")} for life from {len(trads)} traditions, including {and_list(xs)}, each with exact, sourced quotes.',
+                    names, f'{th["title"]}: {plural(len(ms), "rule")} for life from {len(trads)} traditions, each with exact, sourced quotes.')
+    ldt = ld_page("CollectionPage", path, th["title"], th["intro"], mainEntity=item_list(th["title"], [(CONCEPT[m]["maxim"], f"maxims/{m}/") for m in ms]))
+    write(f"{path}index.html", page(fit_title(f'{th["title"]}: what {len(trads)} traditions say'), body, 2, path, desc,
+                                    jsonld=[ldt], crumbs=[("Themes", "themes/")], crumb=th["title"]))
+
+intro = ("The maxims grouped by what they are about, for readers who arrive with a question rather than a quote. "
+         "A maxim can sit in more than one theme.")
+items = "".join(f'<li><a href="{k}/">{esc(th["title"])}</a><div class="chips"><span class="chip">{plural(len(th["maxims"]), "maxim")}</span></div>'
+                f'<p class="vmeta">{", ".join(esc(CONCEPT[m]["maxim"]) for m in by_rank(th["maxims"]))}</p></li>' for k, th in THEMES.items())
+write("themes/index.html", page("Themes — 42 Maxims", f'<h1>Themes</h1><p>{intro}</p><ul class="index">{items}</ul>', 1, "themes/", intro,
+                                jsonld=[ld_page("CollectionPage", "themes/", "Themes", intro, mainEntity=item_list("Themes", [(th["title"], f"themes/{k}/") for k, th in THEMES.items()]))],
+                                crumbs=[]))
+
+quotes_by_tradition = {}
+for q in D["quotes"]:
+    quotes_by_tradition.setdefault(q["tradition"], []).append(q)
+TRAD_MAXIMS = {t: by_rank({q["concept"] for q in qs}) for t, qs in quotes_by_tradition.items()}
+TRAD_MIN = 2  # tradition pages with fewer maxims than this are noindex until they fill out (SPEC §10: thin pages)
+
+
+def tradition_best(t, slug):
+    qs = [q for q in quotes_by_tradition[t] if q["concept"] == slug]
+    return min(qs, key=lambda q: (-weight(q), ERA_ORDER.index(q["era"]), qs.index(q)))
+
+
+for t, tr in TR.items():
+    if t not in quotes_by_tradition:
+        continue  # e.g. a tradition only a voice belongs to: no page until it has a quote
+    qs, ms = quotes_by_tradition[t], TRAD_MAXIMS[t]
+    path = f"traditions/{t}/"
+    voices = sorted({q["thinker"] for q in qs}, key=sort_key)
+    note = ""
+    if tr.get("derives_from"):
+        parents = [TR[p]["name"] for p in (tr["derives_from"] if isinstance(tr["derives_from"], list) else [tr["derives_from"]])]
+        note = (f'<p class="note">For scoring, {esc(tr["name"])} is treated as having grown out of {esc(and_list(parents))}, so on a maxim that '
+                f'{esc(and_list(parents))} also supports it counts at half weight (see <a href="../../method/">Method</a>).</p>')
+    lede = (f'Quotes from {tr["name"]} appear under {plural(len(ms), "maxim")} on 42 Maxims: {plural(len(qs), "quote")} '
+            f'from {and_list(voices[:6]) if len(voices) <= 6 else ", ".join(voices[:6]) + " and others"}.')
+    cards = ""
+    for m in ms:
+        n = sum(1 for q in qs if q["concept"] == m)
+        cards += maxim_card(m, tradition_best(t, m), f"This maxim across every tradition" + (f" ({plural(n, 'quote')} from {tr['name']})" if n > 1 else ""))
+    body = (f'<p class="label">Tradition</p><h1>{esc(tr["name"])}</h1><p class="lede">{esc(lede)}</p>{note}'
+            '<p class="note">Each maxim shows this tradition\'s strongest quote for it, strongest-supported maxims first. Moral Rank scores ideas, never traditions.</p>'
+            + cards + '<p><a href="../">All traditions</a></p>')
+    mnames = [CONCEPT[m]["maxim"].rstrip(".") for m in ms]
+    desc = fit_desc(lambda xs: f'What {tr["name"]} says on {plural(len(ms), "rule")} for life, such as {and_list([f"“{x}”" for x in xs])}: {plural(len(qs), "quote")}, each cited.',
+                    mnames[:2], f'What {tr["name"]} says on {plural(len(ms), "rule")} for life: {plural(len(qs), "quote")}, each cited and labelled.')
+    ldr = ld_page("CollectionPage", path, tr["name"], lede, about={"@type": "Thing", "name": tr["name"]},
+                  mainEntity=item_list(f'Maxims supported by {tr["name"]}', [(CONCEPT[m]["maxim"], f"maxims/{m}/") for m in ms]))
+    write(f"{path}index.html", page(fit_title(f'{tr["name"]}: {plural(len(ms), "rule")} for life, with sources'), body, 2, path, desc,
+                                    noindex=len(ms) < TRAD_MIN, jsonld=[ldr], crumbs=[("Traditions", "traditions/")], crumb=tr["name"]))
+
+intro = ("Every tradition the quotes come from, with the maxims each one supports. Many rules for life turn up in several traditions "
+         "that never met; that convergence is what Moral Rank measures.")
+rows = "".join(f'<li><a href="{t}/">{esc(TR[t]["name"])}</a><div class="chips"><span class="chip">{plural(len(TRAD_MAXIMS.get(t, [])), "maxim")}</span>'
+               f'<span class="chip">{plural(len(quotes_by_tradition.get(t, [])), "quote")}</span></div></li>'
+               for t in sorted(TRAD_MAXIMS, key=lambda t: (-len(TRAD_MAXIMS[t]), sort_key(TR[t]["name"]))))
+write("traditions/index.html", page("Traditions — 42 Maxims", f'<h1>Traditions</h1><p>{intro}</p><ul class="index">{rows}</ul>', 1, "traditions/", intro,
+                                    jsonld=[ld_page("CollectionPage", "traditions/", "Traditions", intro, mainEntity=item_list(
+                                        "Traditions", [(TR[t]["name"], f"traditions/{t}/") for t in TR if len(TRAD_MAXIMS.get(t, [])) >= TRAD_MIN]))],
+                                    crumbs=[]))
+
 legend = "".join(f"<dt>{pill(k)}</dt><dd>{d}</dd>" for k, d in [
     ("verified", "Wording checked against a primary text, a reputable or public-domain translation, or the author's own book, site or recorded talk."),
     ("probable", "Wording found only in a reliable secondary source, such as Wikipedia or Wikiquote with a cited work. Counts at 0.6."),
@@ -730,5 +981,48 @@ write("404.html", page("Not found — 42 Maxims", "<h1>Page not found</h1><p>Tha
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "".join(f"<url><loc>{SITE_URL}/{p}</loc></url>\n" for p in sorted(SITEMAP)) + "</urlset>\n")
 write("CNAME", CUSTOM_DOMAIN)
-write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+# ---- robots.txt (AI crawlers welcome, named so the intent is explicit) and llms.txt / llms-full.txt (llmstxt.org) ----
+AI_CRAWLERS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User",
+               "Google-Extended", "Applebot-Extended", "CCBot"]
+write("robots.txt", "User-agent: *\nAllow: /\n\n# AI search and assistant crawlers are welcome: the content is CC BY-SA 4.0 and built to be cited.\n"
+      + "".join(f"User-agent: {b}\n" for b in AI_CRAWLERS) + f"Allow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+
+
+def md_line(c):
+    b = BD[c["slug"]]
+    return f'- [{c["maxim"]}]({SITE_URL}/maxims/{c["slug"]}/): {plural(b["traditions"], "tradition")}, {plural(len(quotes_by.get(c["slug"], [])), "quote")}'
+
+
+ABOUT_MD = ("42 Maxims collects short rules for life that recur across religions, philosophies and periods. Every maxim lists exact quotes, "
+            "each with its voice, work and locus (chapter, verse or page), translation, tradition, period and a verification label "
+            "(verified, probable, disputed, unverified, misattributed). Maxims are ranked by Moral Rank, which measures how widely and "
+            "independently traditions arrived at an idea (convergence, not truth or moral worth); ranks shift as sources are added.")
+CITE_MD = ("When citing, link the maxim page and quote the wording exactly as shown there, with its source. Treat `probable` quotes as "
+           "checked only against a secondary source, and do not attribute `unverified` or `misattributed` quotes to the people they are popularly credited to. "
+           "The project's own writing and data are CC BY-SA 4.0; quotes remain the property of their authors and translators.")
+llms = (f"# {SITE_NAME}\n\n> {ABOUT_MD}\n\n{CITE_MD}\n\n## Data\n\n"
+        + "".join(f"- [{f}]({SITE_URL}/{f}): {d}\n" for f, d in DATA_FILES)
+        + f"- [llms-full.txt]({SITE_URL}/llms-full.txt): every maxim with all its quotes and citations as plain text\n\n## Key pages\n\n"
+        f"- [The 42]({SITE_URL}/): the 42 highest-ranked maxims, then Emerging\n- [Method]({SITE_URL}/method/): how Moral Rank and verification labels work\n"
+        f"- [Themes]({SITE_URL}/themes/): maxims grouped by topic\n- [Traditions]({SITE_URL}/traditions/): the maxims each tradition supports\n"
+        f"- [Voices]({SITE_URL}/voices/) and [Sources]({SITE_URL}/sources/): who said it and which work it is from\n\n## The 42\n\n"
+        + "\n".join(md_line(c) for c in main) + "\n\n## Themes\n\n"
+        + "\n".join(f'- [{th["title"]}]({SITE_URL}/themes/{k}/)' for k, th in THEMES.items())
+        + "\n\n## Optional\n\n" + "\n".join(md_line(c) + " (Emerging)" for c in emerging) + "\n")
+write("llms.txt", llms)
+
+
+def full_quote(q):
+    src = f' Read it at: {q["source"]}' if q["source"] else " No source yet."
+    tr = f' Translation: {q["translation"]}.' if q.get("translation") else ""
+    return (f'- "{q["text"]}" — {q["thinker"]}, {q["work"]}. {TR[q["tradition"]]["name"]}; {ERA_LABEL[q["era"]]}; '
+            f'relation: {q["rel"]}; {VER_LABEL[q["ver"]].lower()}.{tr}{src}')
+
+
+full = f"# {SITE_NAME}: every maxim and quote\n\n> {ABOUT_MD}\n\n{CITE_MD}\n\nMaxims appear in Moral Rank order (The 42 first, then Emerging).\n"
+for c in main + emerging:
+    qs = quotes_by.get(c["slug"], [])
+    full += (f'\n## {c["maxim"]}\n\n{SITE_URL}/maxims/{c["slug"]}/ · Moral Rank {MR[c["slug"]]:.1f} · {plural(BD[c["slug"]]["traditions"], "tradition")}'
+             + (" · The 42" if c in main else " · Emerging") + f'\n\n{c["summary"]}\n\n' + "\n".join(full_quote(q) for q in qs) + "\n")
+write("llms-full.txt", full)
 print("built", len(D["concepts"]), "maxims,", len(VOICES), "voices,", len(SOURCES), "sources")
