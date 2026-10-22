@@ -106,3 +106,16 @@
 - Branch protection on `master`: the CI check must pass on PRs; no required reviews; not enforced for admins, so maintainer direct pushes continue.
 - Issue labels `quote`, `proposal`, `bug` created and applied by the issue templates.
 - OPS.md trimmed to public, contributor-useful notes; machine- and account-specific operating notes now live outside the repo.
+
+## 2026-10-22: Four new maxims and two folds (branch `new-maxims-oct22`)
+- The owner approved four candidates from the curation runs as new maxims. Every quote was re-read in its cited source during this run (Gutenberg KJV, Dhammapada and Meditations texts, Rodwell's Qur'an, sunnah.com, archive.sacred-texts.com). Scoring constants are unchanged, Judaism and Ancient Egypt stay independent, and no new traditions were added.
+- **be-kind-to-animals** ("Be kind to animals."): Proverbs 12:10 (expresses), Dhammapada 270, Sahih al-Bukhari 2363 and Acaranga Sutra I.1.6 (Jacobi). Dhammapada 270 replaces the candidate Dhammapada 130, whose Müller wording speaks of "all men", not animals.
+- **rise-to-your-work** ("Rise to your work."): Meditations V.1 (expresses), Dhammapada 280 and Proverbs 6:6. Ecclesiastes 9:10 already sits under `mastery`, so it was not repeated.
+- **you-reap-what-you-sow** ("You reap what you sow."): Galatians 6:7 (expresses), Proverbs 22:8, Brihadaranyaka Upanishad IV.4.5 (the "according as he acts" sentence, not the desire/will line already under `thoughts-shape-life`), Yoruba proverb 81 (Ellis) and Taishang Ganying Pian §1 ("as the shadow follows the substance"). New source `galatians`.
+- **deal-honestly-in-trade** ("Give full measure: deal honestly in trade."): Proverbs 11:1 (expresses), Qur'an 17:35 (Rodwell) and Taishang Ganying Pian §4 (short cubit, light weights).
+- One `expresses` per new maxim, for the quote the maxim's wording follows; everything else is `similar` (SPEC §6). The `expresses` choices need owner confirmation.
+- Folds: Taittiriya Upanishad I.11.2 (teacher), Leviticus 19:32 and Yoruba couplet 9 (elders) under `honour-your-parents`; Ptahhotep §19 (covetousness) under `desire-is-the-root-of-suffering`, all `similar`.
+- Videos (each maxim needs one; whole-video `discussed` links, ids, titles and channels checked via oEmbed): Christopher Key Chapple on Jain nonviolence (Theosophical Society), Ryan Holiday's "A Day In The Life Of A Stoic" (Daily Stoic), BibleProject's Galatians and Proverbs overviews.
+- Fix: the existing Acaranga quote under `do-no-harm` pointed to sacred-texts.com/jai/sbe22/sbe2219.htm, which now redirects to Lecture 3, Lesson 4. It now points to archive.sacred-texts.com/jai/sbe22/sbe2220.htm (Lecture 4, Lesson 1), where the wording appears.
+- Result: all four new maxims qualify. you-reap-what-you-sow enters The 42 at #19, be-kind-to-animals at #38 and rise-to-your-work at #41. deal-honestly-in-trade is Emerging #2 (Islam counts at half weight next to Judaism). Folds lift honour-your-parents 29→17 and desire-is-the-root-of-suffering 31→23. Leaving The 42: know-yourself (40), peter-principle (41) and keep-it-simple (42), now Emerging #1, #3 and #4. Quotes 262→281, maxims 48→52.
+- Not added: seek-counsel (sources still being gathered, notes kept off-repo), Ubuntu (held: no citable primary source). `docs/proposals.md` still lists these candidates as open and needs a refresh on the branch that owns it.

@@ -850,7 +850,7 @@
   "confidence": "solid",
   "refs": [
    "https://en.wikipedia.org/wiki/Acaranga_Sutra",
-   "https://sacred-texts.com/jai/sbe22/index.htm"
+   "https://archive.sacred-texts.com/jai/sbe22/index.htm"
   ]
  },
  "essay-on-criticism": {
@@ -1490,6 +1490,19 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Seventeen-article_constitution",
    "https://en.wikisource.org/wiki/Nihongi/Book_XXII"
+  ]
+ },
+ "galatians": {
+  "title": "Epistle to the Galatians",
+  "voice": "paul-the-apostle",
+  "kind": "scripture",
+  "dates": "late 40s–early 50s CE (majority scholarly view)",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "A letter of the New Testament from Paul the Apostle to early Christian communities in Galatia, in Anatolia. It argues that non-Jewish followers of Jesus need not keep the Mosaic Law, especially circumcision, and closes with counsel on living by the Spirit. Scholars agree it is Paul's own writing.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Epistle_to_the_Galatians"
   ]
  }
 }

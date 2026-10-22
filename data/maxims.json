@@ -591,6 +591,39 @@
           "label": "Malcolm Gladwell, Outliers (Open Library)"
         }
       ]
+    },
+    {
+      "slug": "be-kind-to-animals",
+      "maxim": "Be kind to animals.",
+      "summary": "Animals feel hunger, fear and pain, and many of them live in our care or at our mercy. Traditions far apart treat the way we treat them as a quiet measure of our character, and kindness to a thirsty creature as a good deed in its own right.",
+      "links": [
+        "https://en.wikipedia.org/wiki/Animal_welfare",
+        "https://en.wikipedia.org/wiki/Ahimsa"
+      ]
+    },
+    {
+      "slug": "rise-to-your-work",
+      "maxim": "Rise to your work.",
+      "summary": "On the mornings when we would rather stay in bed, the work in front of us is still ours to do. Many traditions treat idleness as a slow loss and honest effort as part of what it means to live fully.",
+      "links": [
+        "https://en.wikipedia.org/wiki/Sloth_(deadly_sin)"
+      ]
+    },
+    {
+      "slug": "you-reap-what-you-sow",
+      "maxim": "You reap what you sow.",
+      "summary": "What we do does not simply vanish; it comes back to shape our own lives. Traditions across the world picture our deeds returning to us, as surely as a harvest follows the seed or a shadow follows its body.",
+      "links": [
+        "https://en.wikipedia.org/wiki/Karma"
+      ]
+    },
+    {
+      "slug": "deal-honestly-in-trade",
+      "maxim": "Give full measure: deal honestly in trade.",
+      "summary": "Fair weights and honest measures are among the oldest moral rules we know. Cheating in small ways, a short measure here or a fake mixed in with the genuine there, wears away the trust that every exchange depends on.",
+      "links": [
+        "https://en.wikipedia.org/wiki/Business_ethics"
+      ]
     }
   ],
   "quotes": [
@@ -3572,7 +3605,7 @@
       "work": "Acaranga Sutra, Book I, Lecture 4, Lesson 1, tr. Hermann Jacobi (Sacred Books of the East 22)",
       "source_id": "acaranga-sutra",
       "translation": "public-domain translation (Hermann Jacobi)",
-      "source": "https://sacred-texts.com/jai/sbe22/sbe2219.htm",
+      "source": "https://archive.sacred-texts.com/jai/sbe22/sbe2220.htm",
       "clips": [
         {
           "id": "gmQkhTHb5aQ",
@@ -5488,6 +5521,331 @@
       "source_id": "seventeen-article-constitution",
       "translation": "public-domain translation (W. G. Aston)",
       "source": "https://en.wikisource.org/wiki/Nihongi/Book_XXII"
+    },
+    {
+      "concept": "be-kind-to-animals",
+      "rel": "expresses",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "A righteous man regardeth the life of his beast: but the tender mercies of the wicked are cruel.",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 12:10 (KJV)",
+      "source_id": "proverbs",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "be-kind-to-animals",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "A man is not an elect (Ariya) because he injures living creatures; because he has pity on all living creatures, therefore is a man called Ariya.",
+      "thinker": "The Buddha",
+      "voice": "the-buddha",
+      "tradition": "buddhism",
+      "era": "axial",
+      "work": "Dhammapada 270, tr. F. Max Müller",
+      "source_id": "dhammapada",
+      "translation": "public-domain translation (Müller)",
+      "source": "https://www.gutenberg.org/ebooks/2017"
+    },
+    {
+      "concept": "be-kind-to-animals",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "\"Is there a reward for us in serving (the) animals?\" He replied, \"Yes, there is a reward for serving any animate.\"",
+      "thinker": "The Prophet Muhammad",
+      "voice": "muhammad",
+      "tradition": "islam",
+      "era": "medieval",
+      "work": "Sahih al-Bukhari 2363 (narrated by Abu Huraira), the Prophet's answer after telling of a man forgiven for giving water to a thirsty dog",
+      "source_id": "sahih-al-bukhari",
+      "translation": "Muhsin Khan translation, as given on sunnah.com",
+      "source": "https://sunnah.com/bukhari:2363"
+    },
+    {
+      "concept": "be-kind-to-animals",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "Knowing them, a wise man should not act sinfully towards animals, nor cause others to act so, nor allow others to act so.",
+      "thinker": "Mahavira",
+      "voice": "mahavira",
+      "tradition": "jainism",
+      "era": "axial",
+      "work": "Acaranga Sutra, Book I, Lecture 1, Lesson 6, tr. Hermann Jacobi (Sacred Books of the East 22)",
+      "source_id": "acaranga-sutra",
+      "translation": "public-domain translation (Hermann Jacobi)",
+      "source": "https://archive.sacred-texts.com/jai/sbe22/sbe2208.htm",
+      "clips": [
+        {
+          "id": "iM3t0aoPiAg",
+          "label": "Jain Teachings on Nonviolence (Christopher Key Chapple)",
+          "title": "Jain Teachings on Nonviolence | Christopher Key Chapple, Ph.D.",
+          "channel": "Theosophical Society",
+          "kind": "discussed",
+          "note": "Christopher Key Chapple discusses Jain nonviolence"
+        }
+      ]
+    },
+    {
+      "concept": "rise-to-your-work",
+      "rel": "expresses",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "In the morning when thou risest unwillingly, let this thought be present,--I am rising to the work of a human being.",
+      "thinker": "Marcus Aurelius",
+      "voice": "marcus-aurelius",
+      "tradition": "stoicism",
+      "era": "classical",
+      "work": "Meditations, Book V.1, tr. George Long",
+      "source_id": "meditations",
+      "translation": "public-domain translation (George Long)",
+      "source": "https://www.gutenberg.org/ebooks/15877",
+      "clips": [
+        {
+          "id": "epQId4GsUtY",
+          "label": "A Day In The Life Of A Stoic (Ryan Holiday)",
+          "title": "A Day In The Life Of A Stoic | Ryan Holiday | Stoicism",
+          "channel": "Daily Stoic",
+          "kind": "discussed",
+          "note": "Ryan Holiday discusses this idea"
+        }
+      ]
+    },
+    {
+      "concept": "rise-to-your-work",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "He who does not rouse himself when it is time to rise, who, though young and strong, is full of sloth, whose will and thought are weak, that lazy and idle man will never find the way to knowledge.",
+      "thinker": "The Buddha",
+      "voice": "the-buddha",
+      "tradition": "buddhism",
+      "era": "axial",
+      "work": "Dhammapada 280, tr. F. Max Müller",
+      "source_id": "dhammapada",
+      "translation": "public-domain translation (Müller)",
+      "source": "https://www.gutenberg.org/ebooks/2017"
+    },
+    {
+      "concept": "rise-to-your-work",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "Go to the ant, thou sluggard; consider her ways, and be wise:",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 6:6 (KJV)",
+      "source_id": "proverbs",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "you-reap-what-you-sow",
+      "rel": "expresses",
+      "conf": 0.95,
+      "ver": "verified",
+      "text": "Be not deceived; God is not mocked: for whatsoever a man soweth, that shall he also reap.",
+      "thinker": "Paul the Apostle",
+      "voice": "paul-the-apostle",
+      "tradition": "christianity",
+      "era": "classical",
+      "work": "Galatians 6:7 (KJV)",
+      "source_id": "galatians",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10",
+      "clips": [
+        {
+          "id": "vmx4UjRFp0M",
+          "label": "BibleProject: Galatians overview",
+          "title": "Book of Galatians Summary: A Complete Animated Overview",
+          "channel": "BibleProject",
+          "kind": "discussed",
+          "note": "BibleProject introduces Galatians, the letter this verse is from"
+        }
+      ]
+    },
+    {
+      "concept": "you-reap-what-you-sow",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "He that soweth iniquity shall reap vanity: and the rod of his anger shall fail.",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 22:8 (KJV)",
+      "source_id": "proverbs",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "you-reap-what-you-sow",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "according as he acts and according as he behaves, so will he be:--a man of good acts will become good, a man of bad acts, bad. He becomes pure by pure deeds, bad by bad deeds.",
+      "thinker": "Brihadaranyaka Upanishad",
+      "voice": "upanishads",
+      "tradition": "hinduism",
+      "era": "axial",
+      "work": "Brihadaranyaka Upanishad IV.4.5, tr. F. Max Müller (Sacred Books of the East 15, 1884)",
+      "source_id": "brihadaranyaka-upanishad",
+      "translation": "public-domain translation (F. Max Müller)",
+      "source": "https://archive.sacred-texts.com/hin/sbe15/sbe15076.htm"
+    },
+    {
+      "concept": "you-reap-what-you-sow",
+      "rel": "similar",
+      "conf": 0.75,
+      "ver": "verified",
+      "text": "Ashes fly back in the face of him who throws them.",
+      "thinker": "Yoruba proverb",
+      "voice": "yoruba-proverbs",
+      "tradition": "yoruba",
+      "era": "modern",
+      "work": "Yoruba proverb 81, as recorded and translated by A. B. Ellis, The Yoruba-Speaking Peoples of the Slave Coast of West Africa (1894), ch. XIII; Ellis glosses it as our \"Curses come home to roost\". The saying is older than its 1894 recording.",
+      "source_id": "yoruba-speaking-peoples",
+      "translation": "public-domain translation (A. B. Ellis)",
+      "source": "https://archive.sacred-texts.com/afr/yor/yor11.htm"
+    },
+    {
+      "concept": "you-reap-what-you-sow",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "There are no special doors for calamity and happiness (in men's lot); they come as men themselves call them. Their recompenses follow good and evil as the shadow follows the substance.",
+      "thinker": "Treatise of the Most Exalted One on Action and Response",
+      "voice": "taishang-ganying-pian",
+      "tradition": "taoism",
+      "era": "medieval",
+      "work": "The Thai-Shang Tractate of Actions and Their Retributions (Taishang Ganying Pian), 1, tr. James Legge (Sacred Books of the East 40, 1891); Legge's margin heading and footnote marker omitted",
+      "source_id": "taishang-ganying-pian",
+      "translation": "public-domain translation (James Legge)",
+      "source": "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
+    },
+    {
+      "concept": "deal-honestly-in-trade",
+      "rel": "expresses",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "A false balance is abomination to the LORD: but a just weight is his delight.",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 11:1 (KJV)",
+      "source_id": "proverbs",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10",
+      "clips": [
+        {
+          "id": "AzmYV8GNAIM",
+          "label": "BibleProject: Proverbs overview",
+          "title": "Book of Proverbs Summary: A Complete Animated Overview",
+          "channel": "BibleProject",
+          "kind": "discussed",
+          "note": "BibleProject introduces Proverbs, the book this verse is from"
+        }
+      ]
+    },
+    {
+      "concept": "deal-honestly-in-trade",
+      "rel": "similar",
+      "conf": 0.85,
+      "ver": "verified",
+      "text": "And give full measure when you measure, and weigh with just balance.",
+      "thinker": "The Qur'an",
+      "voice": "quran",
+      "tradition": "islam",
+      "era": "medieval",
+      "work": "Qur'an 17:35 (Sura Al-Isra, 'The Night Journey'), tr. J. M. Rodwell",
+      "source_id": "quran",
+      "translation": "public-domain translation (J. M. Rodwell)",
+      "source": "https://www.gutenberg.org/ebooks/2800"
+    },
+    {
+      "concept": "deal-honestly-in-trade",
+      "rel": "similar",
+      "conf": 0.7,
+      "ver": "verified",
+      "text": "if he uses a short cubit, a narrow measure, light weights, and a small pint; mixes spurious articles with the genuine; and (thus) amasses illicit gain;",
+      "thinker": "Treatise of the Most Exalted One on Action and Response",
+      "voice": "taishang-ganying-pian",
+      "tradition": "taoism",
+      "era": "medieval",
+      "work": "The Thai-Shang Tractate of Actions and Their Retributions (Taishang Ganying Pian), 4 (from its list of wrong deeds), tr. James Legge (Sacred Books of the East 40, 1891)",
+      "source_id": "taishang-ganying-pian",
+      "translation": "public-domain translation (James Legge)",
+      "source": "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
+    },
+    {
+      "concept": "honour-your-parents",
+      "rel": "similar",
+      "conf": 0.7,
+      "ver": "verified",
+      "text": "Let thy teacher be to thee like unto a god!",
+      "thinker": "Taittiriya Upanishad",
+      "voice": "upanishads",
+      "tradition": "hinduism",
+      "era": "axial",
+      "work": "Taittiriya Upanishad I.11.2, tr. F. Max Müller (Sacred Books of the East 15, 1884); the same charge honours mother, father and guest",
+      "source_id": "taittiriya-upanishad",
+      "translation": "public-domain translation (F. Max Müller)",
+      "source": "https://archive.sacred-texts.com/hin/sbe15/sbe15032.htm"
+    },
+    {
+      "concept": "honour-your-parents",
+      "rel": "similar",
+      "conf": 0.75,
+      "ver": "verified",
+      "text": "Thou shalt rise up before the hoary head, and honour the face of the old man, and fear thy God: I am the LORD.",
+      "thinker": "Authors of the Torah",
+      "voice": "torah-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Leviticus 19:32 (KJV)",
+      "source_id": "leviticus",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
+      "concept": "honour-your-parents",
+      "rel": "similar",
+      "conf": 0.6,
+      "ver": "verified",
+      "text": "When there are no elders the town is ruined, / And when the master dies the house is desolate.",
+      "thinker": "Yoruba proverb",
+      "voice": "yoruba-proverbs",
+      "tradition": "yoruba",
+      "era": "modern",
+      "work": "Yoruba aphorism 9 (couplet sayings), as recorded and translated by A. B. Ellis, The Yoruba-Speaking Peoples of the Slave Coast of West Africa (1894), ch. XIII; line breaks shown as /. The saying is older than its 1894 recording.",
+      "source_id": "yoruba-speaking-peoples",
+      "translation": "public-domain translation (A. B. Ellis)",
+      "source": "https://archive.sacred-texts.com/afr/yor/yor11.htm"
+    },
+    {
+      "concept": "desire-is-the-root-of-suffering",
+      "rel": "similar",
+      "conf": 0.7,
+      "ver": "verified",
+      "text": "beware of the quality of covetousness, which is a grievous inner (?) malady. Let it not chance that thou fall thereinto. It setteth at variance fathers-in-law and the kinsmen of the daughter-in-law; it sundereth the wife and the husband. It gathereth unto itself all evils; it is the girdle of all wickedness.",
+      "thinker": "Ptahhotep",
+      "voice": "ptahhotep",
+      "tradition": "ancient-egypt",
+      "era": "axial",
+      "work": "The Instruction of Ptah-hotep, §19, tr. Battiscombe G. Gunn (1906); the \"(?)\" is the translator's",
+      "source_id": "instruction-of-ptahhotep",
+      "translation": "public-domain translation (Battiscombe G. Gunn)",
+      "source": "https://www.gutenberg.org/ebooks/30508"
     }
   ]
 }
