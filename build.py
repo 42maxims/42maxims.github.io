@@ -125,16 +125,21 @@ SITEMAP = []  # canonical paths of indexable pages, collected as pages are writt
 PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
 SCRIPT_ID = re.compile(r"^pa-[A-Za-z0-9_-]+$")
 GOOGLE_SITE_VERIFICATION = "KciBKHM1FLesIdzjoS5AjOy1-xuLPMgKGVx2BBv3w9s"  # Search Console HTML-tag token; empty = no tag
+YANDEX_SITE_VERIFICATION = "b8e229513ca91bd4"  # Yandex Webmaster HTML-tag token; empty = no tag
 VERIFICATION_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
 
 
 def verification_tag():
-    """Google Search Console verification meta tag, or "" when GOOGLE_SITE_VERIFICATION is empty."""
-    if not GOOGLE_SITE_VERIFICATION:
-        return ""
-    if not VERIFICATION_TOKEN.match(GOOGLE_SITE_VERIFICATION):
-        raise ValueError(f"GOOGLE_SITE_VERIFICATION must match ^[A-Za-z0-9_-]+$, got {GOOGLE_SITE_VERIFICATION!r}")
-    return f'<meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}" />'
+    """Search Console and Yandex Webmaster verification meta tags; each is omitted when its constant is empty."""
+    out = ""
+    for const, name, token in (("GOOGLE_SITE_VERIFICATION", "google-site-verification", GOOGLE_SITE_VERIFICATION),
+                               ("YANDEX_SITE_VERIFICATION", "yandex-verification", YANDEX_SITE_VERIFICATION)):
+        if not token:
+            continue
+        if not VERIFICATION_TOKEN.match(token):
+            raise ValueError(f"{const} must match ^[A-Za-z0-9_-]+$, got {token!r}")
+        out += f'<meta name="{name}" content="{token}" />'
+    return out
 
 
 def analytics_snippet():

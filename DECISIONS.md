@@ -200,3 +200,4 @@
   - `llms.txt` asks readers to cite the maxim page, keep the exact wording, and not credit unverified or misattributed sayings to their popular authors.
   - `llms-full.txt` (~145 KB) carries every quote with its citation.
 - **Nav:** added Themes and Traditions after Sources (eight links; it wraps on phones, as before).
+- 2026-10-22 **Yandex Webmaster verification** via HTML meta tag: `YANDEX_SITE_VERIFICATION` in `build.py` (same validation; empty = no tag) emits `<meta name="yandex-verification">` in `<head>` next to the Google tag, on every generated page including the homepage.
