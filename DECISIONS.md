@@ -128,3 +128,9 @@
 - New voices `hesiod` and `book-of-documents-authors` (collective, confidence uncertain). New sources `works-and-days` and `book-of-documents`.
 - Video: BibleProject's Proverbs overview (whole-video `discussed` link, id/title/channel checked via oEmbed), the same video already linked from Proverbs 11:1.
 - Result: seek-counsel enters The 42 at #10 (moral rank 84.8, eight traditions). rise-to-your-work moves 41→42. growth-mindset (#42) leaves The 42 and is now Emerging #1. Quotes 281→292, maxims 52→53. `docs/proposals.md` updated.
+
+## 2026-10-22: Bible verses suggested by the owner (branch `bible-adds`)
+- The owner suggested five verses. All were checked in the Gutenberg KJV; the owner's NIV wording was not used. No new maxims, no new traditions, and scoring constants are unchanged.
+- Already present, so nothing was added: Proverbs 11:1 (`deal-honestly-in-trade`, expresses) and Matthew 25:29 (`matthew-effect`, expresses).
+- Added as `similar`: Leviticus 19:35–36 under `deal-honestly-in-trade`. Proverbs 16:28 ("a whisperer separateth chief friends") under `guard-your-tongue`, because gossip is a form of the unkind speech that maxim warns against, so a separate gossip maxim would be a near-duplicate. Luke 12:15 ("beware of covetousness") under `desire-is-the-root-of-suffering`, next to 1 Timothy 6:10 and Ptahhotep §19 on covetousness; `generosity` is about giving, not wanting less.
+- These quotes add no new tradition, so the effect is small. deal-honestly-in-trade goes from 40.2 to 41.7 (Emerging #3 → #1), still below The 42 cut-off (44.1). desire-is-the-root-of-suffering goes from 63.5 to 64.4 (#24 → #23, swapping with own-your-mistakes). guard-your-tongue goes from 94.0 to 94.3 and stays #4.

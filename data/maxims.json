@@ -5262,6 +5262,21 @@
       "source": "https://en.wikisource.org/wiki/Tirukural/Chapter_10"
     },
     {
+      "concept": "guard-your-tongue",
+      "rel": "similar",
+      "conf": 0.7,
+      "ver": "verified",
+      "text": "A froward man soweth strife: and a whisperer separateth chief friends.",
+      "thinker": "Book of Proverbs",
+      "voice": "hebrew-wisdom-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Proverbs 16:28 (KJV); on gossip (\"a whisperer\")",
+      "source_id": "proverbs",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
       "concept": "keep-learning",
       "rel": "similar",
       "conf": 0.7,
@@ -5797,6 +5812,21 @@
       "source": "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
     },
     {
+      "concept": "deal-honestly-in-trade",
+      "rel": "similar",
+      "conf": 0.9,
+      "ver": "verified",
+      "text": "Ye shall do no unrighteousness in judgment, in meteyard, in weight, or in measure. Just balances, just weights, a just ephah, and a just hin, shall ye have: I am the LORD your God, which brought you out of the land of Egypt.",
+      "thinker": "Authors of the Torah",
+      "voice": "torah-writers",
+      "tradition": "judaism",
+      "era": "axial",
+      "work": "Leviticus 19:35–36 (KJV)",
+      "source_id": "leviticus",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
+    },
+    {
       "concept": "seek-counsel",
       "rel": "expresses",
       "conf": 0.9,
@@ -6030,6 +6060,21 @@
       "source_id": "instruction-of-ptahhotep",
       "translation": "public-domain translation (Battiscombe G. Gunn)",
       "source": "https://www.gutenberg.org/ebooks/30508"
+    },
+    {
+      "concept": "desire-is-the-root-of-suffering",
+      "rel": "similar",
+      "conf": 0.7,
+      "ver": "verified",
+      "text": "Take heed, and beware of covetousness: for a man's life consisteth not in the abundance of the things which he possesseth.",
+      "thinker": "Jesus",
+      "voice": "jesus",
+      "tradition": "christianity",
+      "era": "classical",
+      "work": "Luke 12:15 (KJV)",
+      "source_id": "gospel-of-luke",
+      "translation": "King James Version (public domain)",
+      "source": "https://www.gutenberg.org/ebooks/10"
     }
   ]
 }
