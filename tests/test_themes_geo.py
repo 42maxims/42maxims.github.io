@@ -62,7 +62,7 @@ class Themes(unittest.TestCase):
     def test_nav_links_themes_and_traditions(self):
         for rel in ("index.html", "maxims/golden-rule/index.html", "themes/kindness/index.html"):
             h = read(rel)
-            self.assertRegex(h, r'<a href="[^"]*sources/">Sources</a><a href="[^"]*themes/">Themes</a><a href="[^"]*traditions/">Traditions</a>')
+            self.assertRegex(h, r'<a href="[^"]*sources/">Sources</a><a href="[^"]*themes/"(?: aria-current="true")?>Themes</a><a href="[^"]*traditions/">Traditions</a>')
 
 
 class Geo(unittest.TestCase):

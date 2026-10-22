@@ -50,6 +50,7 @@ header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-be
 padding-bottom:1rem;margin-bottom:2rem;border-bottom:1px solid var(--line)}
 .brand{font-size:1.5rem;line-height:1.25;margin:0;letter-spacing:.02em}.brand a{text-decoration:none;color:inherit}
 nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent)}
+header nav a[aria-current]{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.4em}
 .lede{font-size:1.1rem}.note{color:var(--muted);font-size:.9rem}.sub{color:var(--muted);margin-top:-.25rem}
 table{width:100%;border-collapse:collapse;margin:1rem 0}
 th{font-weight:normal;font-variant:small-caps;letter-spacing:.05em;color:var(--muted);text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line)}
@@ -58,7 +59,12 @@ td.n{color:var(--muted);width:2.5rem}td.s{text-align:right;white-space:nowrap;fo
 td.m a{text-decoration:none;color:var(--fg);font-size:1.05rem}td.m a:hover{color:var(--accent)}
 .chips{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.35rem}
 .chip{font-size:.75rem;background:var(--chip);color:var(--muted);border-radius:1rem;padding:.05rem .55rem;white-space:nowrap}
-@media (max-width:30rem){html{font-size:17px}nav{gap:.25rem .65rem;font-size:.9rem}header{gap:.5rem .65rem}body{padding:1.25rem 1rem 2rem}
+@media (max-width:37.5em){header{display:block;padding-bottom:.25rem}.brand{margin-bottom:.25rem}
+header nav{flex-wrap:nowrap;gap:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;margin-right:-1.25rem;
+-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 2.5rem),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 2.5rem),transparent)}
+header nav::-webkit-scrollbar{display:none}
+header nav a{flex:none;white-space:nowrap;display:flex;align-items:center;min-height:44px;padding:0 .6rem}header nav a:first-child{padding-left:0}header nav a:last-child{padding-right:2.5rem}}
+@media (max-width:30rem){html{font-size:17px}header nav{font-size:.95rem;margin-right:-1rem}header{gap:.5rem .65rem}body{padding:1.25rem 1rem 2rem}
 table,tbody,tr,td{display:block}tr:first-child{display:none}tr{position:relative;padding:.75rem 0;border-bottom:1px solid var(--line)}
 td{border:0;padding:0}td.n{position:absolute;left:0;top:.75rem}td.m{padding-left:2rem}td.s{text-align:left;padding-left:2rem;color:var(--muted);font-size:.9rem}
 td.s::before{content:"Moral Rank "}}
@@ -267,6 +273,27 @@ def fit_desc(make, names, short, n=155):
     return blurb(short, n)
 
 
+NAV = [("", "Home", ' aria-label="Home"'), ("voices/", "Voices", ""), ("sources/", "Sources", ""), ("themes/", "Themes", ""),
+       ("traditions/", "Traditions", ""), ("maxim-of-the-day/", "Daily", ' aria-label="Maxim of the day" title="Maxim of the day"'),
+       ("method/", "Method", ""), ("about/", "About", "")]
+NAV_SECTION = {"maxims": ""}  # maxim pages belong to the home list of the 42
+
+
+def nav_section(path):
+    """Nav href ('' = Home) for the section a page belongs to, or None (e.g. 404)."""
+    if path is None:
+        return None
+    top = path.split("/")[0]
+    return NAV_SECTION.get(top, top + "/" if top else "")
+
+
+def nav_html(up, path):
+    cur = nav_section(path)
+    here = ' aria-current="page"' if path == cur else ' aria-current="true"'  # exact page vs. a page inside the section
+    links = "".join(f'<a href="{up}{h}"{here if h == cur else ""}{extra}>{label}</a>' for h, label, extra in NAV)
+    return f'<nav aria-label="Main">{links}</nav>'
+
+
 def page(title, body, depth, path=None, desc=None, kind="website", noindex=False, jsonld=(), crumbs=None, crumb=None):
     """path: canonical path ("" = home, "voices/x/"); None means no canonical or sitemap entry (e.g. 404)."""
     up = "../" * depth
@@ -300,7 +327,7 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
 <meta name="color-scheme" content="light dark">
 {head}
 <link rel="stylesheet" href="{up}style.css">{analytics_snippet()}</head><body>
-<header><p class="brand"><a href="{up}">42 Maxims</a></p><nav aria-label="Main"><a href="{up}" aria-label="Home">Home</a><a href="{up}voices/">Voices</a><a href="{up}sources/">Sources</a><a href="{up}themes/">Themes</a><a href="{up}traditions/">Traditions</a><a href="{up}maxim-of-the-day/" aria-label="Maxim of the day" title="Maxim of the day">Daily</a><a href="{up}method/">Method</a><a href="{up}about/">About</a></nav></header>
+<header><p class="brand"><a href="{up}">42 Maxims</a></p>{nav_html(up, path)}</header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
 Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
