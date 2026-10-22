@@ -1,0 +1,18 @@
+name: Bug or site problem
+description: Something on 42maxims.com or in the build is broken or wrong.
+title: "[bug] "
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / command output
+      description: For build or test failures, paste the output of python3 scripts/validate.py, python3 build.py or the unittest run.

@@ -1,0 +1,31 @@
+name: Propose a new maxim
+description: A rule for life that recurs across independent traditions and isn't on the site yet. Needs owner approval before any PR.
+title: "[maxim] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please read docs/proposals.md first. New maxims are approved by the project owner; don't open a PR adding one until this issue is accepted."
+  - type: input
+    id: maxim
+    attributes:
+      label: Draft maxim (one line) and slug idea
+    validations: {required: true}
+  - type: textarea
+    id: distinct
+    attributes:
+      label: Why it is distinct
+      description: Nearest existing maxims and why this isn't a near-duplicate of them.
+    validations: {required: true}
+  - type: textarea
+    id: quotes
+    attributes:
+      label: Quotes from at least three independent traditions
+      description: For each - tradition, exact wording, work and locus, source URL you have read.
+      value: |
+        1. Tradition:
+           Quote:
+           Work/locus:
+           Source URL:
+        2.
+        3.
+    validations: {required: true}

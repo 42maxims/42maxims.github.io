@@ -106,7 +106,7 @@ Git is the database and the audit trail. Generated output (`data/generated/`, al
 
 **`data/sources.json`**: `{"<slug>": {"title", "voice": "<voice slug> or null", "kind": "book|scripture|talk|article|other", "dates", "tradition", "period", "summary", "confidence", "refs": [...]}}`
 
-Tests fail on unknown slugs, missing fields, empty summaries, or voice/source entries nothing uses. Full contributor rules are in CLAUDE.md.
+Tests fail on unknown slugs, missing fields, empty summaries, or voice/source entries nothing uses. Full contributor rules are in AGENTS.md (agents) and CONTRIBUTING.md; `scripts/validate.py` checks the schema with fix-it messages.
 
 ### 4.2 Link relation types
 | Link | Relation | Meaning | Weight in score | Status |
@@ -219,7 +219,7 @@ MoralRank(c) = 100 × r_c / max(r)
 4. **Cite scripture exactly**: book, chapter and verse plus the translation; prefer public-domain translations widely accepted by the tradition.
 5. **Never rank traditions or thinkers.** Moral Rank scores ideas only.
 6. **Default to `similar`** for cross-tradition links; `expresses` needs a reason and the project owner's confirmation.
-7. **Disputed authorship** is stated neutrally ("traditionally attributed to X") with the scholarly view (see CLAUDE.md, Voices and sources).
+7. **Disputed authorship** is stated neutrally ("traditionally attributed to X") with the scholarly view (see AGENTS.md, Voices and sources).
 
 ---
 
@@ -235,7 +235,7 @@ MoralRank(c) = 100 × r_c / max(r)
 ## 8. Agent pipeline
 
 ### 8.1 Built (manual, agent-assisted)
-Agents (Claude Code, briefed by oo-42maxims) follow the content workflow in CLAUDE.md and OPS.md: pick a maxim, find exact wording at a primary or reputable source, fetch the URL to confirm, set `ver`/`rel`/`conf`, add voice and source entries, run `python3 build.py && python3 -m unittest discover tests`, and open a small PR. The project owner approves new maxims, merges and scoring changes.
+Agents (Claude Code, briefed by oo-42maxims) follow the content workflow in AGENTS.md and OPS.md: pick a maxim, find exact wording at a primary or reputable source, fetch the URL to confirm, set `ver`/`rel`/`conf`, add voice and source entries, run `python3 scripts/validate.py && python3 build.py && python3 -m unittest discover -s tests`, and open a small PR. Outside contributors and their agents follow the same rules (CONTRIBUTING.md, PR and issue templates). The project owner approves new maxims, merges and scoring changes.
 
 ### 8.2 Planned (automated)
 ```
@@ -272,8 +272,9 @@ Repo layout:
 build.py  scoring.py  style.css  index.html  404.html
 data/{maxims,voices,sources}.json  data/generated/scores.json
 maxims/<slug>/  voices/<slug>/  sources/<slug>/  method/  about/   (generated)
-tests/  .github/workflows/ci.yml
-SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  CLAUDE.md  CONTRIBUTING.md  README.md  LICENSE
+tests/  scripts/validate.py  docs/proposals.md
+.github/{workflows/ci.yml, pull_request_template.md, ISSUE_TEMPLATE/, copilot-instructions.md}  .cursor/rules/
+SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  AGENTS.md  CLAUDE.md  CONTRIBUTING.md  README.md  LICENSE
 ```
 
 ---

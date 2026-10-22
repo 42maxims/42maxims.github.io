@@ -3,7 +3,7 @@ _Owner: oo-42maxims. Accounts listed by name only; no secrets in this repo._
 
 ## Services and costs
 - **Hosting:** GitHub Pages user site `42maxims.github.io`, branch `master`, repo root (legacy build, `.nojekyll`). Free.
-- **CI:** GitHub Actions `.github/workflows/ci.yml`: runs tests and checks committed HTML matches `build.py` output. Free.
+- **CI:** GitHub Actions `.github/workflows/ci.yml`: runs `scripts/validate.py`, the build and the tests on every PR and push to master, and fails if committed HTML differs from `build.py` output or generated files are uncommitted. Free.
 - **Domain:** 42maxims.com, registered at Cloudflare (DNS only, not proxied; WHOIS privacy on), GitHub Pages custom domain with HTTPS enforced. `build.py` writes `CNAME`. `42maxims.github.io` redirects to it. Plausible site is 42maxims.com. Search Console needs a property for `https://42maxims.com/`.
 - **Data sources:** public texts (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Wikisource), Wikiquote/Wikipedia for probable labels, Quote Investigator for misattributions. No scheduled refresh; content is added in batches.
 
@@ -23,7 +23,7 @@ Pushing to `master` deploys; check `gh api repos/42maxims/42maxims.github.io/pag
 
 ## Claude Code
 - `~/.local/bin/claude -p "<brief>"` (always the full path). Node 22 via nvm: `unset NPM_CONFIG_PREFIX` first.
-- Brief it as the expert curator; it must follow CLAUDE.md (never fabricate, honest labels, short attributed modern quotes). Work in small batches; build, test, commit and verify after each.
+- Brief it as the expert curator; it must follow AGENTS.md (CLAUDE.md just points there; never fabricate, honest labels, short attributed modern quotes). Work in small batches; build, test, commit and verify after each.
 
 ## Approvals
 - **oo-42maxims may:** add/relabel quotes, add voices/sources, fix bugs, merge roadmap-aligned PRs (including outside contributors' after review), close duplicates, open issues.
@@ -32,5 +32,5 @@ Pushing to `master` deploys; check `gh api repos/42maxims/42maxims.github.io/pag
 ## Content pipeline
 1. Pick an open issue or a weak maxim (Emerging, or quotes labelled probable).
 2. Source exact wording at a primary or reputable source; fetch the URL and confirm the text.
-3. Label `ver`, `rel`, `conf` per CLAUDE.md. Attach voice and source slugs.
+3. Label `ver`, `rel`, `conf` per AGENTS.md. Attach voice and source slugs.
 4. Build and test; one small batch per commit or PR; note ranking changes to The 42.

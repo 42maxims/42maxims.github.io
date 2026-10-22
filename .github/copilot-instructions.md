@@ -1,0 +1,2 @@
+# Copilot instructions
+Follow [AGENTS.md](../AGENTS.md) at the repo root: it is the single source of instructions for this repo (data schema, source-verification rules, owner approvals, anonymity, build and test commands). Never fabricate quotes or citations. Before finishing: `python3 scripts/validate.py && python3 build.py && python3 -m unittest discover -s tests`, and commit the regenerated files.

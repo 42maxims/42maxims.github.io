@@ -1,0 +1,43 @@
+name: Add or correct a quote
+description: Suggest a sourced quote for an existing maxim, or report a wrong quote or attribution.
+title: "[quote] "
+body:
+  - type: input
+    id: maxim
+    attributes:
+      label: Maxim
+      description: Slug or title of the existing maxim (see https://42maxims.com).
+    validations: {required: true}
+  - type: textarea
+    id: quote
+    attributes:
+      label: Exact wording
+      description: Copied exactly from the source, no paraphrase.
+    validations: {required: true}
+  - type: input
+    id: who
+    attributes:
+      label: Who said or wrote it, and tradition
+    validations: {required: true}
+  - type: input
+    id: work
+    attributes:
+      label: Work and locus
+      description: Title, chapter/verse, translator.
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes:
+      label: Source URL where the exact wording can be read
+      description: Public-domain text, the author's own site/book page, or an official recording. Popular "Rumi" or "Native American proverb" quotes need a traceable original.
+  - type: dropdown
+    id: ver
+    attributes:
+      label: Verification
+      options: [verified (I read it at the source), probable (secondary source only), unverified (no traceable origin), misattributed or disputed (correction)]
+    validations: {required: true}
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Corrections, true origin, translation licence.

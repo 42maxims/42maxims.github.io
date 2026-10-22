@@ -8,6 +8,7 @@ _Owner: oo-42maxims (from 14 Oct 2026). Update after every PR._
 - **M0.3:** voice and source pages with summaries and caution notes; maxim quotes link to them.
 - **M0.4 Content:** 48 maxims, 215 quotes (203 verified, 7 probable, 3 unverified, 2 misattributed), 29 traditions, 72 voices, 92 sources. Modern self-help/podcast voices attached as "echoes" of older maxims; Solzhenitsyn and major philosophers; Joseph Campbell / hero's journey under Courage.
 - **Anonymity:** repo docs anonymised; history rewritten to remove the owner's name (14 Oct 2026).
+- **Agent-friendly repo (22 Oct 2026):** AGENTS.md as the single agent guide (CLAUDE.md, Cursor and Copilot point to it), CONTRIBUTING.md, `scripts/validate.py`, PR and issue templates, CI validate step, new-maxim proposals via issues (docs/proposals.md).
 
 ## Next (GitHub issues)
 - [#1](https://github.com/42maxims/42maxims.github.io/issues/1) YouTube clip embeds (start/end, no timeline)
