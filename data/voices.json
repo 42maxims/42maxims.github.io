@@ -949,5 +949,189 @@
    "https://en.wikipedia.org/wiki/William_Shakespeare",
    "https://www.britannica.com/biography/William-Shakespeare"
   ]
+ },
+ "ptahhotep": {
+  "name": "Ptahhotep",
+  "kind": "legendary",
+  "dates": "set in the 5th Dynasty (c. 25th–24th century BCE); surviving copies date from the Middle Kingdom (c. 20th–19th century BCE)",
+  "tradition": "ancient-egypt",
+  "period": "axial",
+  "summary": "Ptahhotep was a vizier of the Egyptian Old Kingdom to whom The Instruction of Ptahhotep, one of the oldest surviving works of wisdom literature, is credited. Most Egyptologists think the attribution is a literary device and that the text was written down later, in the Middle Kingdom.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Ptahhotep",
+   "https://en.wikipedia.org/wiki/The_Maxims_of_Ptahhotep"
+  ]
+ },
+ "ohiyesa": {
+  "name": "Ohiyesa (Charles A. Eastman)",
+  "kind": "person",
+  "dates": "1858–1939",
+  "tradition": "dakota",
+  "period": "modern",
+  "summary": "Charles Alexander Eastman, born Ohiyesa, was a Santee Dakota physician, writer and reformer. Raised in the traditional Dakota way until about fifteen, he later trained in medicine at Boston University and wrote some of the first books by a Native American author about Native life. He had become a Christian, and his accounts of Dakota belief are written from that later vantage and sometimes speak of 'the Indian' in general.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Charles_Eastman",
+   "https://www.britannica.com/biography/Charles-Alexander-Eastman"
+  ]
+ },
+ "upanishads": {
+  "name": "Upanishadic sages",
+  "kind": "collective",
+  "label": "Scripture",
+  "dates": "oldest Upanishads c. 8th–5th century BCE",
+  "tradition": "hinduism",
+  "period": "axial",
+  "summary": "The Upanishads are the late Vedic texts in which teachers and students explore the self, Brahman and right conduct. They were composed and handed down orally by many hands over centuries; the Brihadaranyaka and Taittiriya are among the oldest. Teachers named in them, such as Yajnavalkya, are known only from the texts themselves.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Upanishads",
+   "https://www.britannica.com/topic/Upanishad"
+  ]
+ },
+ "vyasa": {
+  "name": "Vyasa",
+  "kind": "legendary",
+  "dates": "traditional; the Mahabharata grew between about the 4th century BCE and the 4th century CE",
+  "tradition": "hinduism",
+  "period": "classical",
+  "summary": "Vyasa is the sage traditionally credited with composing the Mahabharata, in which he also appears as a character. Scholars see the epic as the work of many poets and editors over several centuries, so Vyasa stands for that tradition rather than a single datable author.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Vyasa",
+   "https://www.britannica.com/biography/Vyasa"
+  ]
+ },
+ "tiruvalluvar": {
+  "name": "Tiruvalluvar",
+  "kind": "legendary",
+  "dates": "variously dated between about the 1st century BCE and the 5th century CE",
+  "tradition": "tamil-ethics",
+  "period": "classical",
+  "summary": "Tiruvalluvar is the poet traditionally credited with the Tirukkural, the classic Tamil book of 1,330 short couplets on virtue, wealth and love. Almost nothing reliable is known of his life, and both Jain and Hindu traditions have claimed him.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Valluvar",
+   "https://www.britannica.com/biography/Tiruvalluvar"
+  ]
+ },
+ "saadi": {
+  "name": "Saadi",
+  "kind": "person",
+  "dates": "c. 1210–1291/92",
+  "tradition": "persian-literature",
+  "period": "medieval",
+  "summary": "Saadi of Shiraz was a Persian poet and prose writer, one of the major figures of classical Persian literature. After years of travel he wrote the Bustan (1257) and the Gulistan (1258), collections of stories, verses and moral sayings that were long used to teach Persian across the Islamic world.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Saadi_Shirazi",
+   "https://www.britannica.com/biography/Sadi"
+  ]
+ },
+ "bahaullah": {
+  "name": "Bahá’u’lláh",
+  "kind": "person",
+  "dates": "1817–1892",
+  "tradition": "bahai",
+  "period": "modern",
+  "summary": "Bahá’u’lláh, born Mírzá Ḥusayn-ʻAlí Núrí in Tehran, founded the Bahá’í Faith. Exiled from Persia and imprisoned by the Ottoman authorities, he wrote extensively, and The Hidden Words, composed in Baghdad around 1858, is one of his best-known works.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Bahá'u'lláh",
+   "https://www.britannica.com/biography/Bahaullah"
+  ]
+ },
+ "avesta-authors": {
+  "name": "Authors of the Avesta",
+  "kind": "collective",
+  "label": "Scripture",
+  "dates": "Younger Avestan texts, perhaps 6th–4th century BCE; written down much later",
+  "tradition": "zoroastrianism",
+  "period": "axial",
+  "summary": "The Avesta is the body of Zoroastrian sacred texts. Apart from the Gathas ascribed to Zarathustra, its hymns, including the Yashts to individual divinities such as Mithra, were composed by generations of priests and handed down orally before being written down in the Sasanian period.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Avesta",
+   "https://iranicaonline.org/articles/avesta-holy-book"
+  ]
+ },
+ "yoruba-proverbs": {
+  "name": "Yoruba proverbs",
+  "kind": "collective",
+  "dates": "oral tradition of uncertain age; the sayings here were recorded in 1894",
+  "tradition": "yoruba",
+  "period": "modern",
+  "summary": "Proverbs (owe) are a central part of Yoruba speech and teaching in what is now south-western Nigeria, Benin and Togo. The sayings quoted here were collected and translated by the British colonial officer A. B. Ellis, so the English wording is his and the sayings are older than their recording.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Yoruba_people",
+   "https://archive.sacred-texts.com/afr/yor/index.htm"
+  ]
+ },
+ "akan-proverbs": {
+  "name": "Akan (Ashanti) proverbs",
+  "kind": "collective",
+  "dates": "oral tradition of uncertain age; collected in 1879 and translated in 1916",
+  "tradition": "akan",
+  "period": "modern",
+  "summary": "Proverbs (ebe) carry much of the moral teaching of the Akan peoples of present-day Ghana, including the Asante (Ashanti). The sayings quoted here come from J. G. Christaller's 1879 Twi collection as translated and annotated by the colonial anthropologist R. S. Rattray in 1916.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Akan_people",
+   "https://en.wikipedia.org/wiki/Robert_Sutherland_Rattray"
+  ]
+ },
+ "mozi": {
+  "name": "Mozi",
+  "kind": "person",
+  "dates": "c. 470–391 BCE",
+  "tradition": "mohism",
+  "period": "axial",
+  "summary": "Mozi (Mo Di) was a Chinese thinker of the Warring States period and founder of the Mohist school. Against the graded loyalties of the Confucians he argued for impartial care (jian ai) for all people, and against offensive war. The book that bears his name was compiled by his followers.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mozi",
+   "https://plato.stanford.edu/entries/mohism/"
+  ]
+ },
+ "taishang-ganying-pian": {
+  "name": "Treatise on Action and Response",
+  "kind": "scripture",
+  "dates": "12th century (Song dynasty)",
+  "tradition": "taoism",
+  "period": "medieval",
+  "summary": "The Taishang Ganying Pian is an anonymous Daoist morality book that teaches that good and bad deeds bring due reward and punishment. It blends Daoist, Confucian and Buddhist ethics and became one of the most widely printed religious tracts in late imperial China.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Treatise_On_Response_And_Retribution",
+   "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
+  ]
+ },
+ "zhuangzi": {
+  "name": "Zhuangzi",
+  "kind": "person",
+  "dates": "c. 369–286 BCE (traditional)",
+  "tradition": "taoism",
+  "period": "axial",
+  "summary": "Zhuang Zhou, known as Zhuangzi, was a Chinese thinker of the Warring States period and, with Laozi, the main early voice of Taoism. The book named after him mixes stories, dialogues and jokes; scholars usually credit him with the Inner Chapters and see the rest, including the story of his wife's death, as the work of later followers.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Zhuangzi_(philosopher)",
+   "https://plato.stanford.edu/entries/zhuangzi/"
+  ]
+ },
+ "prince-shotoku": {
+  "name": "Prince Shōtoku",
+  "kind": "person",
+  "dates": "574–622",
+  "tradition": "japanese-thought",
+  "period": "medieval",
+  "summary": "Prince Shōtoku was regent of Japan under Empress Suiko and a great patron of Buddhism. The Nihongi (720) credits him with the Seventeen-Article Constitution of 604, which draws on Confucian and Buddhist ideals; some historians doubt that he wrote it himself.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Prince_Shōtoku",
+   "https://en.wikipedia.org/wiki/Seventeen-article_constitution"
+  ]
  }
 }

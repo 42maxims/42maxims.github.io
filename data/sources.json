@@ -1267,5 +1267,229 @@
    "https://en.wikipedia.org/wiki/The_Merchant_of_Venice",
    "https://www.gutenberg.org/ebooks/1515"
   ]
+ },
+ "instruction-of-ptahhotep": {
+  "title": "The Instruction of Ptahhotep",
+  "voice": "ptahhotep",
+  "kind": "book",
+  "dates": "Middle Kingdom copies, c. 20th–19th century BCE",
+  "tradition": "ancient-egypt",
+  "period": "axial",
+  "summary": "An Egyptian wisdom text in which an aged vizier gives his son advice on conduct, speech, humility and justice. It survives mainly in the Prisse Papyrus and is among the oldest books of moral instruction in the world.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Maxims_of_Ptahhotep",
+   "https://www.gutenberg.org/ebooks/30508"
+  ]
+ },
+ "soul-of-the-indian": {
+  "title": "The Soul of the Indian",
+  "voice": "ohiyesa",
+  "kind": "book",
+  "dates": "1911",
+  "tradition": "dakota",
+  "period": "modern",
+  "summary": "Charles Eastman's short account of the religion and moral life of the Dakota as he knew it before contact with white culture. He writes as both an insider and a convert to Christianity, and often generalises about Native peoples as a whole.",
+  "confidence": "solid",
+  "refs": [
+   "https://www.gutenberg.org/ebooks/340",
+   "https://en.wikipedia.org/wiki/Charles_Eastman"
+  ]
+ },
+ "taittiriya-upanishad": {
+  "title": "Taittiriya Upanishad",
+  "voice": "upanishads",
+  "kind": "scripture",
+  "dates": "c. 6th–5th century BCE",
+  "tradition": "hinduism",
+  "period": "axial",
+  "summary": "One of the principal Upanishads, attached to the Black Yajurveda. Its first part ends with a teacher's famous charge to the graduating student: speak the truth, do your duty, and honour mother, father, teacher and guest.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Taittiriya_Upanishad",
+   "https://archive.sacred-texts.com/hin/sbe15/index.htm"
+  ]
+ },
+ "brihadaranyaka-upanishad": {
+  "title": "Brihadaranyaka Upanishad",
+  "voice": "upanishads",
+  "kind": "scripture",
+  "dates": "c. 7th–6th century BCE",
+  "tradition": "hinduism",
+  "period": "axial",
+  "summary": "One of the oldest and longest Upanishads, attached to the White Yajurveda. It contains the dialogues of the sage Yajnavalkya on the self and the parable of the thunder's 'Da Da Da': self-restraint, giving and compassion.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Brihadaranyaka_Upanishad",
+   "https://archive.sacred-texts.com/hin/sbe15/index.htm"
+  ]
+ },
+ "mahabharata": {
+  "title": "Mahabharata",
+  "voice": "vyasa",
+  "kind": "scripture",
+  "dates": "c. 4th century BCE – 4th century CE",
+  "tradition": "hinduism",
+  "period": "classical",
+  "summary": "The great Sanskrit epic of the war between the Pandavas and the Kauravas, and one of the longest poems ever composed. Besides the story it holds long teachings on dharma, including the Bhagavad Gita and the Anusasana Parva on duty and conduct.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mahabharata",
+   "https://www.britannica.com/topic/Mahabharata"
+  ]
+ },
+ "uttaradhyayana-sutra": {
+  "title": "Uttaradhyayana Sutra",
+  "voice": "mahavira",
+  "kind": "scripture",
+  "dates": "c. 3rd–1st century BCE (oldest parts); the Svetambara canon was fixed in the 5th century CE",
+  "tradition": "jainism",
+  "period": "axial",
+  "summary": "A Svetambara Jain scripture of 36 lectures, traditionally held to be Mahavira's last sermon. It teaches the monastic life through verses, parables and dialogues, with frequent reminders of how short life is.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Uttaradhyayana",
+   "https://archive.sacred-texts.com/jai/sbe45/index.htm"
+  ]
+ },
+ "tirukkural": {
+  "title": "Tirukkural",
+  "voice": "tiruvalluvar",
+  "kind": "book",
+  "dates": "c. 1st century BCE – 5th century CE (estimates vary)",
+  "tradition": "tamil-ethics",
+  "period": "classical",
+  "summary": "A classic Tamil work of 1,330 two-line couplets arranged in 133 chapters on virtue, wealth and love. It is valued for its broad, largely non-sectarian ethics and is one of the most translated works in Indian literature.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Kural",
+   "https://en.wikisource.org/wiki/Tirukural"
+  ]
+ },
+ "gulistan": {
+  "title": "Gulistan (The Rose Garden)",
+  "voice": "saadi",
+  "kind": "book",
+  "dates": "1258",
+  "tradition": "persian-literature",
+  "period": "medieval",
+  "summary": "Saadi's collection of short stories, verses and maxims in eight chapters, on kings, dervishes, contentment, silence, youth, old age, education and conduct. For centuries it was a standard school text in the Persian-speaking world.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Gulistan_(book)",
+   "https://www.gutenberg.org/ebooks/13060"
+  ]
+ },
+ "hidden-words": {
+  "title": "The Hidden Words",
+  "voice": "bahaullah",
+  "kind": "scripture",
+  "dates": "c. 1858",
+  "tradition": "bahai",
+  "period": "modern",
+  "summary": "A short collection of 71 Arabic and 82 Persian aphorisms by Bahá’u’lláh, written in Baghdad, on the spiritual and moral life. The standard English translation is by Shoghi Effendi.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/The_Hidden_Words",
+   "https://www.bahai.org/library/authoritative-texts/bahaullah/hidden-words/"
+  ]
+ },
+ "avesta": {
+  "title": "Avesta",
+  "voice": "avesta-authors",
+  "kind": "scripture",
+  "dates": "composed c. 1500–400 BCE; written down c. 5th–6th century CE",
+  "tradition": "zoroastrianism",
+  "period": "axial",
+  "summary": "The sacred texts of Zoroastrianism, in the Avestan language. Besides the Gathas and the liturgy it includes the Yashts, hymns to individual divinities; the Mihr Yasht praises Mithra as guardian of contracts and of the truth.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Avesta",
+   "https://www.avesta.org/"
+  ]
+ },
+ "yoruba-speaking-peoples": {
+  "title": "The Yoruba-Speaking Peoples of the Slave Coast of West Africa",
+  "voice": null,
+  "kind": "book",
+  "dates": "1894",
+  "tradition": "yoruba",
+  "period": "modern",
+  "summary": "An ethnography by A. B. Ellis, a British army officer in West Africa. Its chapter on proverbs gives several hundred Yoruba sayings in English translation; the framing reflects colonial attitudes of its time, but the proverbs are recorded with their Yoruba originals.",
+  "confidence": "thin",
+  "refs": [
+   "https://archive.sacred-texts.com/afr/yor/index.htm",
+   "https://en.wikipedia.org/wiki/Alfred_Burdon_Ellis"
+  ]
+ },
+ "ashanti-proverbs": {
+  "title": "Ashanti Proverbs",
+  "voice": null,
+  "kind": "book",
+  "dates": "1916",
+  "tradition": "akan",
+  "period": "modern",
+  "summary": "R. S. Rattray's English translation, with Twi text and notes, of over 800 proverbs chosen from J. G. Christaller's 1879 Twi collection. Its subtitle reflects colonial attitudes of the time, but it remains a standard early record of Akan proverbs.",
+  "confidence": "thin",
+  "refs": [
+   "https://archive.org/details/ashantiproverbst00rattuoft",
+   "https://en.wikipedia.org/wiki/Robert_Sutherland_Rattray"
+  ]
+ },
+ "mozi": {
+  "title": "Mozi",
+  "voice": "mozi",
+  "kind": "book",
+  "dates": "c. 5th–3rd century BCE",
+  "tradition": "mohism",
+  "period": "axial",
+  "summary": "The collected writings of the Mohist school, named after its founder. Its core chapters argue for impartial care for all, against aggressive war and against waste, often in three versions that may come from different branches of the school.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Mozi_(book)",
+   "https://ctext.org/mozi"
+  ]
+ },
+ "taishang-ganying-pian": {
+  "title": "Treatise of the Most Exalted One on Action and Response (Taishang Ganying Pian)",
+  "voice": "taishang-ganying-pian",
+  "kind": "book",
+  "dates": "12th century",
+  "tradition": "taoism",
+  "period": "medieval",
+  "summary": "A short Daoist tract listing good and bad deeds and the rewards and punishments they bring. Widely printed and given away as an act of merit, it was translated by James Legge as 'The Thai-Shang Tractate of Actions and Their Retributions'.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Treatise_On_Response_And_Retribution",
+   "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
+  ]
+ },
+ "zhuangzi": {
+  "title": "Zhuangzi",
+  "voice": "zhuangzi",
+  "kind": "book",
+  "dates": "c. 4th–2nd century BCE",
+  "tradition": "taoism",
+  "period": "axial",
+  "summary": "The second great classic of Taoism, in 33 chapters of stories, dialogues and reflections on freedom, change and the limits of knowledge. Only the Inner Chapters are usually credited to Zhuangzi himself.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Zhuangzi_(book)",
+   "https://archive.sacred-texts.com/tao/sbe39/index.htm"
+  ]
+ },
+ "seventeen-article-constitution": {
+  "title": "Seventeen-Article Constitution",
+  "voice": "prince-shotoku",
+  "kind": "other",
+  "dates": "604 (as dated in the Nihongi, 720)",
+  "tradition": "japanese-thought",
+  "period": "medieval",
+  "summary": "A set of seventeen moral precepts for officials, recorded in the Nihongi and credited to Prince Shōtoku. It opens by valuing harmony and draws on Confucian ideas of order and Buddhist reverence; it was guidance for conduct rather than a constitution in the modern sense.",
+  "confidence": "thin",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Seventeen-article_constitution",
+   "https://en.wikisource.org/wiki/Nihongi/Book_XXII"
+  ]
  }
 }
