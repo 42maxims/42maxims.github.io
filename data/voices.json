@@ -1159,5 +1159,18 @@
    "https://en.wikipedia.org/wiki/Book_of_Documents",
    "https://en.wikipedia.org/wiki/Emperor_Shun"
   ]
+ },
+ "great-law-of-peace": {
+  "name": "The Great Law of Peace (Haudenosaunee)",
+  "kind": "collective",
+  "dates": "oral tradition, often dated to the 12th–15th century; written versions from the late 19th century",
+  "tradition": "haudenosaunee",
+  "period": "modern",
+  "summary": "The Great Law of Peace (Gayanashagowa) is the oral constitution of the Haudenosaunee (Iroquois) Confederacy, traditionally attributed to the Peacemaker Dekanawidah and his spokesman Hiawatha and kept through wampum and recitation. Its founding date is disputed; English versions were written down in the 19th and early 20th centuries.",
+  "confidence": "uncertain",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Great_Law_of_Peace",
+   "https://en.wikipedia.org/wiki/Iroquois"
+  ]
  }
 }

@@ -1530,5 +1530,33 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Book_of_Documents"
   ]
+ },
+ "genesis": {
+  "title": "Genesis",
+  "voice": "torah-writers",
+  "kind": "scripture",
+  "dates": "final form c. 5th century BCE (scholarly estimate)",
+  "tradition": "judaism",
+  "period": "axial",
+  "summary": "The first book of the Torah, telling of the creation of the world, the first humans in the garden of Eden, and the stories of Noah, Abraham, Isaac, Jacob and Joseph. In its second creation account the first human is placed in the garden to tend and keep it.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Book_of_Genesis"
+  ]
+ },
+ "constitution-of-the-five-nations": {
+  "title": "The Constitution of the Five Nations",
+  "voice": "great-law-of-peace",
+  "kind": "book",
+  "dates": "1916",
+  "tradition": "haudenosaunee",
+  "period": "modern",
+  "summary": "Arthur C. Parker's edition of the Great Law of the Haudenosaunee (Iroquois) Confederacy, published by the New York State Museum in 1916. It is based chiefly on a manuscript compiled by the Mohawk Seth Newhouse and revised by Albert Cusick, together with a version prepared by a committee of Six Nations chiefs.",
+  "confidence": "solid",
+  "refs": [
+   "https://archive.org/details/constitutionoffi00parkuoft",
+   "https://en.wikipedia.org/wiki/Arthur_C._Parker",
+   "https://en.wikipedia.org/wiki/Great_Law_of_Peace"
+  ]
  }
 }
