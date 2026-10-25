@@ -1,4 +1,4 @@
-"""Further-reading media: whole-video references across maxims, and book links (str or {url,label}) on concepts."""
+"""Further-reading media: whole-video references across maxims, and plain links on concepts (books: tests/test_books.py)."""
 import html, json, os, re, unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,30 +44,15 @@ class Refs(unittest.TestCase):
         self.assertEqual(seen, fan)
 
     def test_concept_links_well_formed(self):
-        n_books = 0
+        # plain further-reading links (Wikipedia etc.); books live in `books` (tests/test_books.py)
         for c in D["concepts"]:
             seen = set()
-            for l in c.get("links", []):
-                u, label = (l["url"], l["label"]) if isinstance(l, dict) else (l, None)
-                self.assertTrue(u.startswith("https://"), u)
-                self.assertNotIn(u, seen, f"{c['slug']}: duplicate link"); seen.add(u)
-                if label is not None:
-                    n_books += 1
-                    self.assertTrue(label.strip() and len(label) <= 110, u)
-                    self.assertEqual(set(l), {"url", "label"})
             h = page("maxims", c["slug"])
             for l in c.get("links", []):
-                if isinstance(l, dict):
-                    self.assertIn(f'<a href="{l["url"]}">', h)
-                    self.assertIn(html.escape(l["label"]), h)
-        self.assertGreaterEqual(n_books, 25)
-
-    def test_book_links_not_already_a_quote_source(self):
-        for c in D["concepts"]:
-            srcs = {q["source"] for q in D["quotes"] if q["concept"] == c["slug"]}
-            for l in c.get("links", []):
-                if isinstance(l, dict):
-                    self.assertNotIn(l["url"], srcs, c["slug"])
+                u = l["url"] if isinstance(l, dict) else l
+                self.assertTrue(u.startswith("https://"), u)
+                self.assertNotIn(u, seen, f"{c['slug']}: duplicate link"); seen.add(u)
+                self.assertIn(f'<a href="{html.escape(u)}">', h)
 
 
 if __name__ == "__main__":
