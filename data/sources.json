@@ -1625,5 +1625,44 @@
   "refs": [
    "https://en.wikipedia.org/wiki/Teaching_for_King_Merykara"
   ]
+ },
+ "gospel-of-john": {
+  "title": "Gospel of John",
+  "voice": null,
+  "kind": "scripture",
+  "dates": "c. 90–100 CE (scholarly estimate)",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "The fourth gospel of the New Testament, telling of the life, teaching, death and resurrection of Jesus. It is traditionally attributed to the apostle John; the text itself names an unnamed 'disciple whom Jesus loved' as its source, and most scholars date its completion to around 90–100 CE.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Gospel_of_John"
+  ]
+ },
+ "1-corinthians": {
+  "title": "First Epistle to the Corinthians",
+  "voice": "paul-the-apostle",
+  "kind": "scripture",
+  "dates": "c. 53–57 CE",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "Paul's letter to the Christian congregation at Corinth, in Greece, written to address problems that had arisen there, probably from Ephesus in the mid-50s CE. It includes the well-known passage on love in chapter 13. Scholars agree that Paul wrote it.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/First_Epistle_to_the_Corinthians"
+  ]
+ },
+ "2-corinthians": {
+  "title": "Second Epistle to the Corinthians",
+  "voice": "paul-the-apostle",
+  "kind": "scripture",
+  "dates": "mid-50s CE (scholarly estimate)",
+  "tradition": "christianity",
+  "period": "classical",
+  "summary": "A further letter from Paul, with Timothy named as co-sender, to the Christians at Corinth, usually dated after Paul left Ephesus for Macedonia. Scholars have little doubt that Paul wrote it, though they discuss whether it was first a single letter or was put together from two or more of his letters.",
+  "confidence": "solid",
+  "refs": [
+   "https://en.wikipedia.org/wiki/Second_Epistle_to_the_Corinthians"
+  ]
  }
 }

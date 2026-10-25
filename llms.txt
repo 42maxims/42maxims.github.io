@@ -34,36 +34,36 @@ When citing, link the maxim page and quote the wording exactly as shown there, w
 - [Seek counsel: don't decide big things alone.](https://42maxims.com/maxims/seek-counsel/): 8 traditions, 11 quotes
 - [Look to your own faults before judging others.](https://42maxims.com/maxims/examine-yourself-first/): 6 traditions, 7 quotes
 - [Welcome the stranger.](https://42maxims.com/maxims/welcome-the-stranger/): 6 traditions, 6 quotes
+- [Remember that you will die, and live well today.](https://42maxims.com/maxims/remember-death/): 6 traditions, 6 quotes
 - [Give thanks.](https://42maxims.com/maxims/gratitude/): 7 traditions, 8 quotes
-- [Remember that you will die, and live well today.](https://42maxims.com/maxims/remember-death/): 5 traditions, 5 quotes
+- [Everything passes; hold things lightly.](https://42maxims.com/maxims/everything-passes/): 7 traditions, 7 quotes
+- [Admit your mistakes and put them right.](https://42maxims.com/maxims/own-your-mistakes/): 6 traditions, 6 quotes
+- [Be present: the here and now is where life happens.](https://42maxims.com/maxims/be-present/): 6 traditions, 7 quotes
 - [Make time for stillness.](https://42maxims.com/maxims/be-still/): 6 traditions, 7 quotes
 - [Don't speak ill of people behind their backs.](https://42maxims.com/maxims/dont-backbite/): 7 traditions, 9 quotes
 - [Defend the widow, the orphan and the poor.](https://42maxims.com/maxims/defend-the-vulnerable/): 6 traditions, 11 quotes
-- [Everything passes; hold things lightly.](https://42maxims.com/maxims/everything-passes/): 6 traditions, 6 quotes
 - [Let your actions match your words.](https://42maxims.com/maxims/actions-over-words/): 5 traditions, 6 quotes
+- [Choose your companions wisely.](https://42maxims.com/maxims/choose-your-friends/): 5 traditions, 5 quotes
 - [Honour your father and your mother.](https://42maxims.com/maxims/honour-your-parents/): 5 traditions, 7 quotes
+- [When you fall, get back up.](https://42maxims.com/maxims/get-back-up/): 5 traditions, 6 quotes
 - [Be humble; pride goes before a fall.](https://42maxims.com/maxims/humility/): 5 traditions, 5 quotes
 - [Leave things better than you found them.](https://42maxims.com/maxims/leave-it-better/): 7 traditions, 8 quotes
+- [Pursue what is meaningful, not what is merely profitable.](https://42maxims.com/maxims/pursue-meaning/): 5 traditions, 7 quotes
 - [You reap what you sow.](https://42maxims.com/maxims/you-reap-what-you-sow/): 5 traditions, 5 quotes
-- [Be present: the here and now is where life happens.](https://42maxims.com/maxims/be-present/): 5 traditions, 6 quotes
+- [First, do no harm.](https://42maxims.com/maxims/do-no-harm/): 5 traditions, 5 quotes
 - [Seek peace, and pursue it.](https://42maxims.com/maxims/be-a-peacemaker/): 6 traditions, 7 quotes
 - [Craving is the root of suffering.](https://42maxims.com/maxims/desire-is-the-root-of-suffering/): 5 traditions, 7 quotes
-- [Admit your mistakes and put them right.](https://42maxims.com/maxims/own-your-mistakes/): 5 traditions, 5 quotes
 - [Keep your promises; let your yes mean yes.](https://42maxims.com/maxims/keep-your-word/): 5 traditions, 5 quotes
+- [Seek the middle way; avoid extremes.](https://42maxims.com/maxims/moderation/): 5 traditions, 6 quotes
 - [Listen more than you speak.](https://42maxims.com/maxims/listen-first/): 4 traditions, 5 quotes
-- [First, do no harm.](https://42maxims.com/maxims/do-no-harm/): 4 traditions, 4 quotes
-- [Choose your companions wisely.](https://42maxims.com/maxims/choose-your-friends/): 4 traditions, 4 quotes
+- [Find meaning in the struggle itself.](https://42maxims.com/maxims/embrace-the-struggle/): 5 traditions, 6 quotes
 - [Keep learning, all your life.](https://42maxims.com/maxims/keep-learning/): 4 traditions, 6 quotes
 - [Be patient; endure, and let things ripen.](https://42maxims.com/maxims/patience/): 5 traditions, 6 quotes
-- [Find meaning in the struggle itself.](https://42maxims.com/maxims/embrace-the-struggle/): 5 traditions, 5 quotes
-- [When you fall, get back up.](https://42maxims.com/maxims/get-back-up/): 4 traditions, 4 quotes
-- [Pursue what is meaningful, not what is merely profitable.](https://42maxims.com/maxims/pursue-meaning/): 4 traditions, 5 quotes
+- [Great things begin with small steps.](https://42maxims.com/maxims/small-beginnings/): 4 traditions, 5 quotes
 - [Do your work wholeheartedly and with skill.](https://42maxims.com/maxims/mastery/): 5 traditions, 7 quotes
-- [Great things begin with small steps.](https://42maxims.com/maxims/small-beginnings/): 4 traditions, 4 quotes
 - [Do what is just, even when it costs you.](https://42maxims.com/maxims/justice/): 4 traditions, 5 quotes
-- [There is a time for everything; give your days a rhythm.](https://42maxims.com/maxims/a-time-for-everything/): 3 traditions, 4 quotes
-- [Seek the middle way; avoid extremes.](https://42maxims.com/maxims/moderation/): 4 traditions, 4 quotes
-- [Be kind to animals.](https://42maxims.com/maxims/be-kind-to-animals/): 4 traditions, 4 quotes
+- [There is a time for everything; give your days a rhythm.](https://42maxims.com/maxims/a-time-for-everything/): 3 traditions, 5 quotes
+- [Happiness is reality minus expectations.](https://42maxims.com/maxims/happiness-and-expectations/): 6 traditions, 7 quotes
 
 ## Themes
 
@@ -80,16 +80,16 @@ When citing, link the maxim page and quote the wording exactly as shown there, w
 
 ## Optional
 
-- [Your thoughts shape your life.](https://42maxims.com/maxims/thoughts-shape-life/): 5 traditions, 5 quotes (Emerging)
-- [Happiness is reality minus expectations.](https://42maxims.com/maxims/happiness-and-expectations/): 5 traditions, 6 quotes (Emerging)
-- [Rise to your work.](https://42maxims.com/maxims/rise-to-your-work/): 3 traditions, 3 quotes (Emerging)
+- [Ability grows with effort; measure yourself against who you were yesterday.](https://42maxims.com/maxims/growth-mindset/): 4 traditions, 5 quotes (Emerging)
+- [Your thoughts shape your life.](https://42maxims.com/maxims/thoughts-shape-life/): 6 traditions, 7 quotes (Emerging)
+- [Be kind to animals.](https://42maxims.com/maxims/be-kind-to-animals/): 4 traditions, 5 quotes (Emerging)
+- [Know yourself.](https://42maxims.com/maxims/know-yourself/): 5 traditions, 5 quotes (Emerging)
+- [Rise to your work.](https://42maxims.com/maxims/rise-to-your-work/): 4 traditions, 5 quotes (Emerging)
+- [Life contains suffering; begin by accepting it.](https://42maxims.com/maxims/life-is-suffering/): 3 traditions, 4 quotes (Emerging)
 - [Give full measure: deal honestly in trade.](https://42maxims.com/maxims/deal-honestly-in-trade/): 3 traditions, 4 quotes (Emerging)
-- [Ability grows with effort; measure yourself against who you were yesterday.](https://42maxims.com/maxims/growth-mindset/): 3 traditions, 4 quotes (Emerging)
-- [Know yourself.](https://42maxims.com/maxims/know-yourself/): 3 traditions, 3 quotes (Emerging)
+- [Keep it simple.](https://42maxims.com/maxims/keep-it-simple/): 4 traditions, 5 quotes (Emerging)
 - [People rise to their level of incompetence.](https://42maxims.com/maxims/peter-principle/): 3 traditions, 3 quotes (Emerging)
-- [Keep it simple.](https://42maxims.com/maxims/keep-it-simple/): 3 traditions, 4 quotes (Emerging)
-- [Treat yourself like someone you are responsible for helping.](https://42maxims.com/maxims/take-care-of-yourself/): 2 traditions, 2 quotes (Emerging)
-- [Life contains suffering; begin by accepting it.](https://42maxims.com/maxims/life-is-suffering/): 2 traditions, 2 quotes (Emerging)
+- [Treat yourself like someone you are responsible for helping.](https://42maxims.com/maxims/take-care-of-yourself/): 3 traditions, 3 quotes (Emerging)
 - [A few causes drive most results (the 80/20 rule).](https://42maxims.com/maxims/vital-few/): 4 traditions, 4 quotes (Emerging)
 - [More choice does not always mean more happiness.](https://42maxims.com/maxims/paradox-of-choice/): 3 traditions, 3 quotes (Emerging)
 - [Advantage tends to compound: those who have, get more.](https://42maxims.com/maxims/matthew-effect/): 2 traditions, 3 quotes (Emerging)
