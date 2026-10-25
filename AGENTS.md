@@ -88,6 +88,6 @@ Each quote points to one **voice** (who said it) and one **source** (which work 
 - A voice may have no quotes of its own if it is the author of a source (e.g. `plato` for the Apology). Tests fail on unknown slugs, missing fields, empty summaries, or entries nothing uses.
 
 ## Page model (since M0.1)
-- Each maxim page shows a **seed** expression at the top: the oldest-period quote, then the best verified one. Set `"seed": <index into that concept's quotes>` on the concept to override it. All other quotes follow under "Related expressions".
+- Each maxim page shows a **seed** expression at the top: the oldest-period quote, then the best verified one. Set `"seed": <index into that concept's quotes>` on the concept to override it. All other quotes follow under "Related expressions": one per tradition (the strongest: highest weight, then oldest period, then file order), the rest folded under "More from <tradition> (N)" (`tradition_folds()` in build.py). The seed's tradition folds all its other quotes; a tradition with one remaining quote shows it unfolded. Display only: every quote still counts.
 - Near-duplicate sayings belong under the existing maxim as `similar`/`partial` quotes. Don't create a new concept for them.
 - Don't use the Guardian "digested read" as a source; it's satire. Use Wikipedia or the book for Peterson's rule titles.

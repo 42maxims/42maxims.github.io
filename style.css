@@ -41,6 +41,9 @@ td.s::before{content:"Moral Rank "}}
 .quotes{list-style:none;padding:0;margin:1rem 0;max-height:36rem;overflow-y:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .quotes li{padding:1.1rem .25rem;border-bottom:1px solid var(--line)}.quotes li:last-child{border-bottom:0}
 .quotes blockquote{margin:0 0 .4rem}
+.quotes li.fold{padding:0}.fold summary{cursor:pointer;padding:.7rem .25rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;color:var(--accent)}
+.fold summary:hover{text-decoration:underline}.fold summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.fold .quotes{margin:0;max-height:none;overflow:visible;border-bottom:0}
 .meta{font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.25rem .6rem;align-items:center}
 .pill{display:inline-block;font-size:.72rem;line-height:1.5;padding:.05rem .6rem;border-radius:1rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em;white-space:nowrap;vertical-align:.1em}
 .v-verified{background:var(--ok-bg);color:var(--ok-fg)}.v-probable{background:var(--warn-bg);color:var(--warn-fg)}
