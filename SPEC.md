@@ -63,7 +63,7 @@ The long-term feel is a mix of Wikipedia (sourced, neutral, readable), Obsidian 
    - the maxim;
    - the **seed** expression at the top: the quote from the oldest time period, then the best-verified one; the concept's `"seed": <index>` overrides the choice;
    - a short warm summary in our own words, and the hold note if any;
-   - **Related expressions**: a scrolling list of all other quotes, each with voice, work, tradition, period, relation, verification label and source link;
+   - **Related expressions**: a scrolling list of all other quotes, each with voice, work, tradition, period, relation, verification label and source link. One quote per tradition shows (its strongest); the rest of that tradition fold under a native "More from <tradition> (N)" disclosure (the seed's tradition folds all its others, since the seed already shows it). Display only;
    - **Score**: Moral Rank and the evidence equation with this maxim's numbers filled in, plus a link to the Method page (no long explanation on the maxim page);
    - **Go deeper** (optional): books that teach how to live the maxim (title, author, optional chapter, a 1–2 sentence note in our own words, and a "Read free ↗" link to a public-domain text or "More info ↗" to Open Library), then any plain links. Display only; books never affect Moral Rank.
 3. **Voices** (`/voices/` and `/voices/<slug>/`): who said it. Kind (person, collective, scripture, traditional or legendary figure), dates, tradition, period, a 2–3 sentence factual summary, references, a caution note when `confidence` is `thin` or `uncertain`, and every quote by that voice.

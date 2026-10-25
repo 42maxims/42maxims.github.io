@@ -77,6 +77,9 @@ td.s::before{content:"Moral Rank "}}
 .quotes{list-style:none;padding:0;margin:1rem 0;max-height:36rem;overflow-y:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .quotes li{padding:1.1rem .25rem;border-bottom:1px solid var(--line)}.quotes li:last-child{border-bottom:0}
 .quotes blockquote{margin:0 0 .4rem}
+.quotes li.fold{padding:0}.fold summary{cursor:pointer;padding:.7rem .25rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;color:var(--accent)}
+.fold summary:hover{text-decoration:underline}.fold summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.fold .quotes{margin:0;max-height:none;overflow:visible;border-bottom:0}
 .meta{font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.25rem .6rem;align-items:center}
 .pill{display:inline-block;font-size:.72rem;line-height:1.5;padding:.05rem .6rem;border-radius:1rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em;white-space:nowrap;vertical-align:.1em}
 .v-verified{background:var(--ok-bg);color:var(--ok-fg)}.v-probable{background:var(--warn-bg);color:var(--warn-fg)}
@@ -354,6 +357,33 @@ def pill(ver):
 
 def weight(q):
     return VER[q["ver"]] * REL[q["rel"]] * q["conf"]
+
+
+def strength_key(q, i):
+    """Ranks quotes of one tradition: heaviest first, then oldest period, then file order i. Display only, never scored."""
+    return (-weight(q), ERA_ORDER.index(q["era"]), i)
+
+
+def tradition_folds(qs, si):
+    """Related expressions as (tradition, visible quote or None, folded quotes), groups ordered by their strongest quote.
+    One visible quote per tradition; the rest fold. The seed already shows its tradition, so if that tradition has two or
+    more other quotes they all fold; a tradition with a single remaining quote shows it without a fold."""
+    groups = {}
+    for i, q in enumerate(qs):
+        if i != si:
+            groups.setdefault(q["tradition"], []).append((strength_key(q, i), q))
+    out = []
+    for t, g in groups.items():
+        g.sort(key=lambda x: x[0])
+        ranked = [q for _, q in g]
+        if len(ranked) == 1:
+            out.append((g[0][0], t, ranked[0], []))
+        elif si is not None and t == qs[si]["tradition"]:
+            out.append((g[0][0], t, None, ranked))
+        else:
+            out.append((g[0][0], t, ranked[0], ranked[1:]))
+    out.sort(key=lambda x: x[0])
+    return [(t, vis, fold) for _, t, vis, fold in out]
 
 
 def seed_index(c, qs):
@@ -666,9 +696,16 @@ for c in D["concepts"]:
     body += share_block(c["maxim"], f"maxims/{c['slug']}/")
     if c.get("hold"):
         body += f'<p class="note"><strong>On hold for The 42:</strong> {esc(c["hold"])}</p>'
-    rest = [q for i, q in enumerate(qs) if i != si]
+    rest, items = [], ""
+    for t, vis, fold in tradition_folds(qs, si):
+        if vis:
+            rest.append(vis); items += related(vis)
+        if fold:
+            rest += fold
+            items += (f'<li class="fold"><details><summary>More from {esc(TR[t]["name"])} ({len(fold)})</summary>'
+                      f'<ul class="quotes">{"".join(related(q) for q in fold)}</ul></details></li>')
     if rest:
-        body += f'<h2>Related expressions</h2><ul class="quotes">{"".join(related(q) for q in rest)}</ul>'
+        body += f'<h2>Related expressions</h2><ul class="quotes">{items}</ul>'
     body += (f'<h2>Score</h2><p>Moral Rank <strong>{MR[c["slug"]]:.1f}</strong> · Evidence E = {b["E"]:.2f}</p>'
              + f'<p class="formula"><code>E = ln(1+{b["Q"]:.2f}) + √{b["K"]:.2f} + 3·{b["T"]:.2f} + 1.5·{b["R"]} = {b["E"]:.2f}</code></p>'
              + '<p class="howto"><small><a href="../../method/">How this is scored</a></small></p>')
@@ -947,7 +984,7 @@ TRAD_MIN = 2  # tradition pages with fewer maxims than this are noindex until th
 
 def tradition_best(t, slug):
     qs = [q for q in quotes_by_tradition[t] if q["concept"] == slug]
-    return min(qs, key=lambda q: (-weight(q), ERA_ORDER.index(q["era"]), qs.index(q)))
+    return min(enumerate(qs), key=lambda x: strength_key(x[1], x[0]))[1]
 
 
 for t, tr in TR.items():
