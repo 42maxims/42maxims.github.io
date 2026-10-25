@@ -26,7 +26,7 @@ B_OPTIONAL = ("voice", "source_id", "where", "why", "rel", "access", "url", "tra
 B_RELS = ("core", "practice", "background")
 B_ACCESS = ("free", "buy")
 FREE_HOSTS = ("gutenberg.org", "sacred-texts.com", "wikisource.org", "archive.org", "accesstoinsight.org", "suttacentral.net",
-              "sefaria.org", "ctext.org")
+              "sefaria.org", "ctext.org", "biblegateway.com")
 BUY_HOSTS = ("openlibrary.org",)
 BOOK_LINK_HOSTS = FREE_HOSTS[:3] + BUY_HOSTS  # in `links` these are books: they belong in `books`
 BANNED_HOSTS = ("amazon.", "amzn.")  # no shop or affiliate links
