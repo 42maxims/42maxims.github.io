@@ -78,7 +78,8 @@ class Pages(unittest.TestCase):
                     self.assertIn(f'data-src="https://www.youtube-nocookie.com/embed/{i}?start={a}&amp;end={b}&amp;rel=0&amp;modestbranding=1&amp;controls=1', h, path)
                     self.assertIn(f"Watch on YouTube ({a//60}:{a%60:02d}–{b//60}:{b%60:02d}) ↗", h)
                     self.assertNotIn("Hear it spoken", h)
-                    self.assertNotIn("Go deeper", h); self.assertNotIn("clip-credit", h)
+                    clips = "".join(re.findall(r'<div class="clip">.*?</div></div>', h, re.S))  # the old clip label, not the books section
+                    self.assertNotIn("Go deeper", clips); self.assertNotIn("clip-credit", h)
                     if i == "ljqra3BcqWM":
                         self.assertNotIn("Amara", h) if not path.startswith("sources/") else self.assertIn("Amara", h)
 

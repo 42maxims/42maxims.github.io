@@ -112,6 +112,10 @@ main h2.entry-title{margin:2rem 0 .75rem;font-size:1.25rem}.entry-title a{color:
 .entry .seed{margin-bottom:.75rem}.entry-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1rem}.entry-foot .chips{margin:0}
 .more{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.8rem;color:var(--muted);text-decoration:none}.more:hover{color:var(--accent);text-decoration:underline}
 .more:focus-visible,.entry-title a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.books{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}.books li{padding:.9rem .25rem;border-bottom:1px solid var(--line)}
+.books p{margin:0}.book cite{font-style:italic;font-size:1.05rem}.book a{text-decoration:none}.book a:hover{text-decoration:underline}
+.book-where{font-size:.9rem;color:var(--muted)}.books .why{margin:.3rem 0 .4rem}.books .meta a{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.books .meta a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.deeper .label{margin-top:1.25rem}.deeper .links{font-size:.9rem}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}"""
 
 
@@ -592,6 +596,61 @@ def maxim_desc(c):
                     f'{c["maxim"]} What {n} traditions say: {tail}')
 
 
+BOOK_REL = {"core": "Core text", "practice": "Practice", "background": "Background"}
+BOOK_ACCESS = {"free": "Read free", "buy": "More info"}  # "buy" books link Open Library, never a shop
+
+
+def book_year(y):
+    return f"{-y} BCE" if y < 0 else str(y)
+
+
+def go_deeper(c, up="../../"):
+    """'Go deeper' on a maxim page: books that teach how to live the maxim (display only; never scored), then any plain links."""
+    items = ""
+    for bk in c.get("books", []):
+        title = f'<cite>{esc(bk["title"])}</cite>'
+        if bk.get("source_id"):
+            title = f'<a href="{up}sources/{bk["source_id"]}/">{title}</a>'
+        if "year" in bk:
+            title += f' ({book_year(bk["year"])})'
+        who = f'<a href="{up}voices/{bk["voice"]}/">{esc(bk["author"])}</a>' if bk.get("voice") else esc(bk["author"])
+        meta = [f'<span class="chip">{BOOK_REL[bk["rel"]]}</span>'] if bk.get("rel") else []
+        if bk.get("translation"):
+            meta.append(f'<span>Translation: {esc(bk["translation"])}</span>')
+        if bk.get("url"):
+            lab = BOOK_ACCESS[bk["access"]]
+            meta.append(f'<a href="{esc(bk["url"])}" target="_blank" rel="noopener noreferrer" '
+                        f'aria-label="{lab}: {esc(bk["title"])} (opens in a new tab)">{lab} ↗</a>')
+        items += (f'<li><p class="book">{title} · {who}</p>'
+                  + (f'<p class="book-where">{esc(bk["where"])}</p>' if bk.get("where") else "")
+                  + (f'<p class="why">{esc(bk["why"])}</p>' if bk.get("why") else "")
+                  + (f'<div class="meta">{"".join(meta)}</div>' if meta else "") + "</li>")
+    links = "".join(f'<li><a href="{esc(l["url"])}">{esc(l["label"])}</a></li>' if isinstance(l, dict)
+                    else f'<li><a href="{esc(l)}">{esc(l)}</a></li>' for l in c.get("links", []))
+    if not (items or links):
+        return ""
+    return ('<section class="deeper"><h2>Go deeper</h2>' + (f'<ul class="books">{items}</ul>' if items else "")
+            + (f'<p class="label">Links</p><ul class="links">{links}</ul>' if links else "") + "</section>")
+
+
+def book_ld(bk):
+    """schema.org Book for a Go deeper entry. Our source page is its url when we have one; the external page is sameAs
+    (Open Library search pages are not an identity, so they are left out). Authors are Persons only for person voices."""
+    o = {"@type": "Book", "name": bk["title"]}
+    if bk.get("source_id"):
+        o["url"] = f"{SITE_URL}/sources/{bk['source_id']}/"
+    who = person_ld(bk["voice"]) if bk.get("voice") else None
+    if who:
+        o["author"] = who
+    else:
+        o["creditText"] = bk["author"]
+    if bk.get("url") and "/search" not in bk["url"]:
+        o["sameAs"] = bk["url"]
+    if bk.get("why"):
+        o["description"] = bk["why"]
+    return o
+
+
 for c in D["concepts"]:
     b = BD[c["slug"]]; qs = quotes_by.get(c["slug"], [])
     body = f'<p class="label">Maxim</p><h1 class="maxim">{esc(c["maxim"])}</h1>'
@@ -613,15 +672,14 @@ for c in D["concepts"]:
     body += (f'<h2>Score</h2><p>Moral Rank <strong>{MR[c["slug"]]:.1f}</strong> · Evidence E = {b["E"]:.2f}</p>'
              + f'<p class="formula"><code>E = ln(1+{b["Q"]:.2f}) + √{b["K"]:.2f} + 3·{b["T"]:.2f} + 1.5·{b["R"]} = {b["E"]:.2f}</code></p>'
              + '<p class="howto"><small><a href="../../method/">How this is scored</a></small></p>')
-    links = "".join(f'<li><a href="{esc(l["url"])}">{esc(l["label"])}</a></li>' if isinstance(l, dict)
-                    else f'<li><a href="{esc(l)}">{esc(l)}</a></li>' for l in c.get("links", []))
-    if links:
-        body += f"<h2>Further reading</h2><ul>{links}</ul>"
+    body += go_deeper(c)
     path = f"maxims/{c['slug']}/"
     shown = ([qs[si]] if qs else []) + rest  # page order: seed first
-    ldm = ld_page("ItemPage", path, c["maxim"], c["summary"], mainEntity={
-        "@type": "CreativeWork", "@id": f"{SITE_URL}/{path}#maxim", "name": c["maxim"], "description": c["summary"],
-        "keywords": best_traditions(qs), "hasPart": [quotation_ld(q) for q in shown if q["ver"] in LD_VER]})
+    main_ld = {"@type": "CreativeWork", "@id": f"{SITE_URL}/{path}#maxim", "name": c["maxim"], "description": c["summary"],
+               "keywords": best_traditions(qs), "hasPart": [quotation_ld(q) for q in shown if q["ver"] in LD_VER]}
+    if c.get("books"):
+        main_ld["citation"] = [book_ld(bk) for bk in c["books"]]
+    ldm = ld_page("ItemPage", path, c["maxim"], c["summary"], mainEntity=main_ld)
     write(f"maxims/{c['slug']}/index.html", page(maxim_title(c), body, 2, path, maxim_desc(c), "article", jsonld=[ldm],
           crumbs=[], crumb=c["maxim"]))
 
@@ -1060,10 +1118,17 @@ def full_quote(q):
             f'relation: {q["rel"]}; {VER_LABEL[q["ver"]].lower()}.{tr}{src}')
 
 
+def full_book(bk):
+    parts = [f'{bk["title"]}' + (f' ({book_year(bk["year"])})' if "year" in bk else "") + f', {bk["author"]}']
+    parts += [bk[k] for k in ("where", "translation") if bk.get(k)]
+    return f'- {"; ".join(parts)}.' + (f' {bk["why"]}' if bk.get("why") else "") + (f' {bk["url"]}' if bk.get("url") else "")
+
+
 full = f"# {SITE_NAME}: every maxim and quote\n\n> {ABOUT_MD}\n\n{CITE_MD}\n\nMaxims appear in Moral Rank order (The 42 first, then Emerging).\n"
 for c in main + emerging:
     qs = quotes_by.get(c["slug"], [])
     full += (f'\n## {c["maxim"]}\n\n{SITE_URL}/maxims/{c["slug"]}/ · Moral Rank {MR[c["slug"]]:.1f} · {plural(BD[c["slug"]]["traditions"], "tradition")}'
-             + (" · The 42" if c in main else " · Emerging") + f'\n\n{c["summary"]}\n\n' + "\n".join(full_quote(q) for q in qs) + "\n")
+             + (" · The 42" if c in main else " · Emerging") + f'\n\n{c["summary"]}\n\n' + "\n".join(full_quote(q) for q in qs) + "\n"
+             + ("\nGo deeper (further reading, not evidence):\n" + "\n".join(full_book(bk) for bk in c["books"]) + "\n" if c.get("books") else ""))
 write("llms-full.txt", full)
 print("built", len(D["concepts"]), "maxims,", len(VOICES), "voices,", len(SOURCES), "sources")

@@ -158,16 +158,49 @@
       "summary": "Perhaps the most widely shared rule for living. Long before these traditions could read one another, each arrived at the same quiet test: before you act, put yourself in the other person's place.",
       "links": [
         "https://en.wikipedia.org/wiki/Golden_Rule"
+      ],
+      "books": [
+        {
+          "title": "Gospel of Matthew",
+          "author": "Traditionally attributed to Matthew",
+          "source_id": "gospel-of-matthew",
+          "where": "Chapter 7",
+          "why": "The Sermon on the Mount ends its teaching on how to treat others with the Golden Rule (7:12).",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "The Analects (Lunyu)",
+          "author": "Confucius",
+          "voice": "confucius",
+          "source_id": "analects",
+          "where": "Book XV",
+          "why": "Confucius names reciprocity as the one word to live by all one's life.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/4094",
+          "translation": "public-domain translation (James Legge)"
+        }
       ]
     },
     {
       "slug": "life-is-suffering",
       "maxim": "Life contains suffering; begin by accepting it.",
       "summary": "Not a counsel of despair, but a starting point. Naming the hardness of life honestly frees us to respond to it with courage rather than surprise.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "why": "Short verses that return again and again to suffering, its causes and the way out of it; easy to read a few at a time.",
+          "rel": "background",
+          "access": "free",
           "url": "https://www.sacred-texts.com/bud/sbe10/index.htm",
-          "label": "The Dhammapada, tr. F. Max Müller (free text, Sacred Texts)"
+          "translation": "public-domain translation (F. Max Müller)"
         }
       ]
     },
@@ -175,10 +208,19 @@
       "slug": "desire-is-the-root-of-suffering",
       "maxim": "Craving is the root of suffering.",
       "summary": "Much of our pain comes not from what happens, but from our grasping for things to be otherwise. Loosen the grip and the weight lightens.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "where": "Verse 215",
+          "why": "The Buddha's verses on how clinging to what we love and crave brings grief, and how letting go brings freedom from fear.",
+          "rel": "core",
+          "access": "free",
           "url": "https://www.sacred-texts.com/bud/sbe10/index.htm",
-          "label": "The Dhammapada, tr. F. Max Müller (free text, Sacred Texts)"
+          "translation": "public-domain translation (F. Max Müller)"
         }
       ]
     },
@@ -186,10 +228,18 @@
       "slug": "be-present",
       "maxim": "Be present: the here and now is where life happens.",
       "summary": "The past has gone and the future has not arrived. The present moment is the only place we can actually live, act and enjoy.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "The Power of Now",
+          "author": "Eckhart Tolle",
+          "voice": "eckhart-tolle",
+          "source_id": "the-power-of-now",
+          "why": "A modern guide to stepping out of anxious thinking about past and future and paying attention to the present moment.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL5727686W",
-          "label": "Eckhart Tolle, The Power of Now (Open Library)"
+          "year": 1997
         }
       ]
     },
@@ -197,10 +247,19 @@
       "slug": "take-care-of-yourself",
       "maxim": "Treat yourself like someone you are responsible for helping.",
       "summary": "We often care better for others than for ourselves. Extend the same kindness and discipline inward.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "12 Rules for Life",
+          "author": "Jordan B. Peterson",
+          "voice": "jordan-peterson",
+          "source_id": "12-rules-for-life",
+          "where": "Rule 2",
+          "why": "Rule 2 starts from the observation that people often care for others more faithfully than for themselves, and asks the reader to extend that care inward.",
+          "rel": "core",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL17837119W",
-          "label": "Jordan B. Peterson, 12 Rules for Life (Open Library)"
+          "year": 2018
         }
       ]
     },
@@ -209,18 +268,42 @@
       "maxim": "Find meaning in the struggle itself.",
       "summary": "Sisyphus pushes his boulder up the hill forever. The ancient myth was a punishment; the modern reading asks whether the effort itself can be enough.",
       "links": [
-        "https://en.wikipedia.org/wiki/Sisyphus",
+        "https://en.wikipedia.org/wiki/Sisyphus"
+      ],
+      "books": [
         {
+          "title": "The Obstacle Is the Way",
+          "author": "Ryan Holiday",
+          "voice": "ryan-holiday",
+          "source_id": "the-obstacle-is-the-way",
+          "why": "Stoic ideas retold for modern readers: treat each obstacle as material for action rather than a reason to stop.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL19977665W",
-          "label": "Ryan Holiday, The Obstacle Is the Way (Open Library)"
+          "year": 2014
         },
         {
+          "title": "The Myth of Sisyphus",
+          "author": "Albert Camus",
+          "voice": "albert-camus",
+          "source_id": "myth-of-sisyphus",
+          "where": "The title essay",
+          "why": "Camus's essay on living fully without final answers; it ends with Sisyphus at his rock.",
+          "rel": "core",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL1230690W",
-          "label": "Albert Camus, The Myth of Sisyphus (Open Library)"
+          "year": 1942
         },
         {
+          "title": "The Hero with a Thousand Faces",
+          "author": "Joseph Campbell",
+          "voice": "joseph-campbell",
+          "source_id": "the-hero-with-a-thousand-faces",
+          "why": "A study of the hero's journey in myths worldwide, where trial and ordeal are the road to transformation.",
+          "rel": "background",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL2497175W",
-          "label": "Joseph Campbell, The Hero with a Thousand Faces (Open Library)"
+          "year": 1949
         }
       ],
       "seed": 0
@@ -229,7 +312,32 @@
       "slug": "leave-it-better",
       "maxim": "Leave things better than you found them.",
       "summary": "A simple measure for a day, a campsite or a life: did the world come out a little ahead for your having passed through?",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "12 Rules for Life",
+          "author": "Jordan B. Peterson",
+          "voice": "jordan-peterson",
+          "source_id": "12-rules-for-life",
+          "where": "Rule 6",
+          "why": "Rule 6 asks readers to set their own house in order before trying to fix the world: improvement that starts close to home.",
+          "rel": "background",
+          "access": "buy",
+          "url": "https://openlibrary.org/works/OL17837119W",
+          "year": 2018
+        },
+        {
+          "title": "The Constitution of the Five Nations",
+          "author": "Arthur C. Parker (ed.)",
+          "source_id": "constitution-of-the-five-nations",
+          "where": "§28",
+          "why": "Parker's 1916 printing of the Haudenosaunee Great Law, which asks leaders to keep in view generations not yet born.",
+          "rel": "background",
+          "access": "free",
+          "url": "https://archive.org/details/constitutionoffi00parkuoft",
+          "year": 1916
+        }
+      ]
     },
     {
       "slug": "keep-it-simple",
@@ -237,6 +345,20 @@
       "summary": "Complexity is costly and fragile. The simplest design that works is usually the one that lasts.",
       "links": [
         "https://en.wikipedia.org/wiki/KISS_principle"
+      ],
+      "books": [
+        {
+          "title": "Walden; or, Life in the Woods",
+          "author": "Henry David Thoreau",
+          "voice": "henry-david-thoreau",
+          "source_id": "walden",
+          "where": "Chapter 2, “Where I Lived, and What I Lived For”",
+          "why": "Thoreau's account of two years of plain living by a pond; chapter 2 is his call to simplify.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/205",
+          "year": 1854
+        }
       ]
     },
     {
@@ -244,10 +366,17 @@
       "maxim": "A few causes drive most results (the 80/20 rule).",
       "summary": "Effort and outcome are rarely in proportion. Find the vital few things that matter and give them your best attention.",
       "links": [
-        "https://en.wikipedia.org/wiki/Pareto_principle",
+        "https://en.wikipedia.org/wiki/Pareto_principle"
+      ],
+      "books": [
         {
+          "title": "Essentialism",
+          "author": "Greg McKeown",
+          "why": "A practical case for doing fewer things better: find the few efforts that matter most and decline the rest.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL17043626W",
-          "label": "Greg McKeown, Essentialism (Open Library)"
+          "year": 2014
         }
       ]
     },
@@ -256,10 +385,19 @@
       "maxim": "People rise to their level of incompetence.",
       "summary": "A gently humbling observation about organisations: we tend to be promoted until we land in a role we no longer do well. Know your strengths.",
       "links": [
-        "https://en.wikipedia.org/wiki/Peter_principle",
+        "https://en.wikipedia.org/wiki/Peter_principle"
+      ],
+      "books": [
         {
+          "title": "The Peter Principle",
+          "author": "Laurence J. Peter and Raymond Hull",
+          "voice": "laurence-j-peter",
+          "source_id": "peter-principle",
+          "why": "The half-serious, half-satirical book that named the principle, with case after case of promotion past competence.",
+          "rel": "core",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL5095341W",
-          "label": "Laurence J. Peter and Raymond Hull, The Peter Principle (Open Library)"
+          "year": 1969
         }
       ]
     },
@@ -267,10 +405,18 @@
       "slug": "happiness-and-expectations",
       "maxim": "Happiness is reality minus expectations.",
       "summary": "A popular modern formula. When expectations outrun reality, disappointment fills the gap; holding them lightly leaves room for contentment.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "The Subtle Art of Not Giving a F*ck",
+          "author": "Mark Manson",
+          "voice": "mark-manson",
+          "source_id": "subtle-art",
+          "why": "A blunt modern argument for choosing carefully what to care about and letting go of inflated expectations.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL17590212W",
-          "label": "Mark Manson, The Subtle Art of Not Giving a F*ck (Open Library)"
+          "year": 2016
         }
       ],
       "seed": 2
@@ -279,14 +425,27 @@
       "slug": "mastery",
       "maxim": "Do your work wholeheartedly and with skill.",
       "summary": "Whatever is in front of you, give it your full strength. Skill grows quietly out of repeated, careful effort, and in time it opens doors.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Atomic Habits",
+          "author": "James Clear",
+          "voice": "james-clear",
+          "source_id": "atomic-habits",
+          "why": "How small, repeated improvements in daily habits add up to real skill over time.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL17930368W",
-          "label": "James Clear, Atomic Habits (Open Library)"
+          "year": 2018
         },
         {
+          "title": "The Art of Learning",
+          "author": "Josh Waitzkin",
+          "why": "A chess and martial-arts champion on how deep skill is learned, practised and kept under pressure.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL16028366W",
-          "label": "Josh Waitzkin, The Art of Learning (Open Library)"
+          "year": 2007
         }
       ]
     },
@@ -294,14 +453,30 @@
       "slug": "pursue-meaning",
       "maxim": "Pursue what is meaningful, not what is merely profitable.",
       "summary": "Chase the thing that matters to you rather than the quick reward. A life built around meaning tends to carry its own momentum.",
-      "links": [
+      "links": [],
+      "books": [
         {
-          "url": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
-          "label": "Viktor Frankl, Man's Search for Meaning (Wikipedia)"
+          "title": "Man's Search for Meaning",
+          "author": "Viktor Frankl",
+          "voice": "viktor-frankl",
+          "source_id": "mans-search-for-meaning",
+          "why": "Frankl's account of the camps and of his logotherapy: people can bear almost anything when they have something to live for.",
+          "rel": "core",
+          "access": "buy",
+          "url": "https://openlibrary.org/search?q=Man%27s+Search+for+Meaning+Viktor+Frankl",
+          "year": 1946
         },
         {
+          "title": "12 Rules for Life",
+          "author": "Jordan B. Peterson",
+          "voice": "jordan-peterson",
+          "source_id": "12-rules-for-life",
+          "where": "Rule 7",
+          "why": "Rule 7 sets pursuing what is meaningful against doing what is merely expedient.",
+          "rel": "core",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL17837119W",
-          "label": "Jordan B. Peterson, 12 Rules for Life (Open Library)"
+          "year": 2018
         }
       ]
     },
@@ -310,10 +485,19 @@
       "maxim": "Ability grows with effort; measure yourself against who you were yesterday.",
       "summary": "Talents are a starting point, not a verdict. The useful comparison is with your own past self, and every honest effort moves the line.",
       "links": [
-        "https://en.wikipedia.org/wiki/Mindset_(book)",
+        "https://en.wikipedia.org/wiki/Mindset_(book)"
+      ],
+      "books": [
         {
+          "title": "Mindset",
+          "author": "Carol S. Dweck",
+          "voice": "carol-dweck",
+          "source_id": "mindset",
+          "why": "Dweck's research-based account of fixed and growth mindsets, and how praise and practice shape them.",
+          "rel": "core",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL2003465W",
-          "label": "Carol S. Dweck, Mindset (Open Library)"
+          "year": 2006
         }
       ]
     },
@@ -322,10 +506,19 @@
       "maxim": "More choice does not always mean more happiness.",
       "summary": "An endless menu can leave us anxious and second-guessing. Sometimes choosing 'good enough' and letting go is the wiser path.",
       "links": [
-        "https://en.wikipedia.org/wiki/The_Paradox_of_Choice",
+        "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+      ],
+      "books": [
         {
+          "title": "The Paradox of Choice",
+          "author": "Barry Schwartz",
+          "voice": "barry-schwartz",
+          "source_id": "paradox-of-choice",
+          "why": "Psychology research on why a flood of options can leave us less satisfied, and how to choose well enough.",
+          "rel": "core",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL272375W",
-          "label": "Barry Schwartz, The Paradox of Choice (Open Library)"
+          "year": 2004
         }
       ]
     },
@@ -333,10 +526,16 @@
       "slug": "a-time-for-everything",
       "maxim": "There is a time for everything; give your days a rhythm.",
       "summary": "Life moves in seasons and cycles. A steady rhythm of rising, working, eating and resting makes room for everything else.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Four Thousand Weeks",
+          "author": "Oliver Burkeman",
+          "why": "On accepting the limits of an ordinary lifespan and choosing deliberately what to spend our time on.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL22355777W",
-          "label": "Oliver Burkeman, Four Thousand Weeks (Open Library)"
+          "year": 2021
         }
       ]
     },
@@ -344,20 +543,62 @@
       "slug": "tell-the-truth",
       "maxim": "Tell the truth, or at least don't lie.",
       "summary": "Honesty keeps our footing sure. Each small truth makes the world, and ourselves, a little easier to trust.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapter 12",
+          "why": "A chapter of short contrasts between truthful and lying lips, among the Bible's densest teaching on honest speech.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "The Brothers Karamazov",
+          "author": "Fyodor Dostoevsky",
+          "voice": "fyodor-dostoevsky",
+          "source_id": "brothers-karamazov",
+          "where": "Book II, ch. 2",
+          "why": "Father Zossima's counsel against lying to oneself, set inside a great novel about conscience and faith.",
+          "rel": "background",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/28054",
+          "translation": "public-domain translation (Constance Garnett)"
+        }
+      ]
     },
     {
       "slug": "thoughts-shape-life",
       "maxim": "Your thoughts shape your life.",
       "summary": "What we dwell on becomes the lens we see through, and then the ground we stand on. Tending the mind is tending the life.",
-      "links": [
+      "links": [],
+      "books": [
         {
-          "url": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
-          "label": "Viktor Frankl, Man's Search for Meaning (Wikipedia)"
+          "title": "Man's Search for Meaning",
+          "author": "Viktor Frankl",
+          "voice": "viktor-frankl",
+          "source_id": "mans-search-for-meaning",
+          "why": "Frankl argues that even when everything else is taken, we keep the freedom to choose our attitude.",
+          "rel": "core",
+          "access": "buy",
+          "url": "https://openlibrary.org/search?q=Man%27s+Search+for+Meaning+Viktor+Frankl",
+          "year": 1946
         },
         {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "where": "Verse 1 (the Twin-Verses)",
+          "why": "The Dhammapada opens with the teaching that all we are is the result of what we have thought.",
+          "rel": "core",
+          "access": "free",
           "url": "https://www.sacred-texts.com/bud/sbe10/index.htm",
-          "label": "The Dhammapada, tr. F. Max Müller (free text, Sacred Texts)"
+          "translation": "public-domain translation (F. Max Müller)"
         }
       ]
     },
@@ -367,13 +608,52 @@
       "summary": "Too much and too little both lead us astray. Again and again the old teachers point to a balanced path between the extremes, harder to find than either, but steadier to walk.",
       "links": [
         "https://en.wikipedia.org/wiki/Golden_mean_(philosophy)"
+      ],
+      "books": [
+        {
+          "title": "Nicomachean Ethics",
+          "author": "Aristotle",
+          "voice": "aristotle",
+          "source_id": "nicomachean-ethics",
+          "where": "Book II",
+          "why": "Aristotle's account of virtue as a mean between too much and too little.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/8438",
+          "translation": "public-domain translation (D. P. Chase)"
+        }
       ]
     },
     {
       "slug": "overcome-hatred-with-love",
       "maxim": "Meet hatred with love and evil with good.",
       "summary": "Answering harm with harm only keeps the wheel turning. Many traditions ask something harder and braver: to break the cycle by returning kindness, even to an enemy.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "where": "Verse 5 and chapter XVII, Anger (verse 223)",
+          "why": "The Buddha's verses on ending hatred by non-hatred and overcoming anger with gentleness.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/2017",
+          "translation": "public-domain translation (F. Max Müller)"
+        },
+        {
+          "title": "Gospel of Matthew",
+          "author": "Traditionally attributed to Matthew",
+          "source_id": "gospel-of-matthew",
+          "where": "Chapter 5",
+          "why": "The Sermon on the Mount, where Jesus teaches turning the other cheek and loving one's enemies.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "know-yourself",
@@ -382,16 +662,38 @@
       "links": [
         "https://en.wikipedia.org/wiki/Know_thyself"
       ],
+      "books": [
+        {
+          "title": "Apology",
+          "author": "Plato",
+          "voice": "plato",
+          "source_id": "apology",
+          "where": "38a",
+          "why": "Socrates' defence at his trial, where he says the unexamined life is not worth living.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/1656",
+          "translation": "public-domain translation (Benjamin Jowett)"
+        }
+      ],
       "seed": 1
     },
     {
       "slug": "humility",
       "maxim": "Be humble; pride goes before a fall.",
       "summary": "Those who lift themselves up tend to be brought low, while those who hold themselves lightly are trusted and remembered. Humility is not thinking less of ourselves, but seeing ourselves truly.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Ego Is the Enemy",
+          "author": "Ryan Holiday",
+          "voice": "ryan-holiday",
+          "source_id": "ego-is-the-enemy",
+          "why": "Stories from history about how pride and self-importance undermine good work, and how to keep them in check.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL20033244W",
-          "label": "Ryan Holiday, Ego Is the Enemy (Open Library)"
+          "year": 2016
         }
       ]
     },
@@ -399,17 +701,53 @@
       "slug": "master-your-anger",
       "maxim": "Be slow to anger; master yourself.",
       "summary": "Anger arrives quickly and leaves damage behind it. Real strength, these voices agree, lies less in overpowering others than in holding the reins of our own temper.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "where": "Chapter XVII, Anger (verses 221–234)",
+          "why": "A short chapter of verses on letting go of anger and holding it back like a charioteer holds a rolling chariot.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/2017",
+          "translation": "public-domain translation (F. Max Müller)"
+        },
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapters 15–16",
+          "why": "From “a soft answer turneth away wrath” to “he that is slow to anger is better than the mighty”: practical wisdom on cooling a temper.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "remember-death",
       "maxim": "Remember that you will die, and live well today.",
       "summary": "Our days are numbered, and remembering it is not morbid but clarifying. Keeping death in view shrinks petty quarrels and turns us back towards what is good while we still can.",
       "links": [
-        "https://en.wikipedia.org/wiki/Memento_mori",
+        "https://en.wikipedia.org/wiki/Memento_mori"
+      ],
+      "books": [
         {
+          "title": "Meditations",
+          "author": "Marcus Aurelius",
+          "voice": "marcus-aurelius",
+          "source_id": "meditations",
+          "where": "Book IV",
+          "why": "The emperor's private notebook, which keeps returning to the shortness of life as a reason to act well today.",
+          "rel": "core",
+          "access": "free",
           "url": "https://www.gutenberg.org/ebooks/2680",
-          "label": "Marcus Aurelius, Meditations (free text, Project Gutenberg)"
+          "translation": "public-domain translation (Meric Casaubon)"
         }
       ]
     },
@@ -417,28 +755,110 @@
       "slug": "guard-your-tongue",
       "maxim": "Speak kindly, or keep silent.",
       "summary": "Words can heal or wound, and once spoken they cannot be taken back. A little restraint in speech spares others pain and spares us a good deal of trouble.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Enchiridion (Handbook)",
+          "author": "Epictetus",
+          "voice": "epictetus",
+          "source_id": "enchiridion",
+          "where": "XXXIII",
+          "why": "Epictetus's short handbook; section XXXIII sets plain rules for speech: say little, and avoid idle talk and talk about other people.",
+          "rel": "practice",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/45109",
+          "translation": "public-domain translation (Thomas Wentworth Higginson)"
+        },
+        {
+          "title": "Epistle of James",
+          "author": "James",
+          "voice": "james",
+          "source_id": "epistle-of-james",
+          "where": "Chapter 3",
+          "why": "James's long warning about the tongue: a small fire that can set a whole forest ablaze.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "gratitude",
       "maxim": "Give thanks.",
       "summary": "Gratitude turns what we have into enough, and it notices the kindness we would otherwise take for granted. Saying thank you, to people and to life, softens the heart and makes room for joy.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Tirukkural",
+          "author": "Tiruvalluvar",
+          "voice": "tiruvalluvar",
+          "source_id": "tirukkural",
+          "where": "Chapter 11 (kurals 101–110)",
+          "why": "Ten couplets on gratitude for help received, from the classic Tamil book of ethics.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://en.wikisource.org/wiki/Tirukural/Chapter_11",
+          "translation": "public-domain translation (G. U. Pope, 1886)"
+        },
+        {
+          "title": "Book of Psalms",
+          "author": "The Psalmists",
+          "voice": "psalmists",
+          "source_id": "psalms",
+          "where": "Psalm 118",
+          "why": "A psalm of thanksgiving that begins and ends with “O give thanks unto the LORD”.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "forgiveness",
       "maxim": "Forgive, and keep forgiving.",
       "summary": "Everyone stumbles, and everyone needs pardon at some point. Letting go of a grievance frees the one who forgives as much as the one forgiven.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Gospel of Matthew",
+          "author": "Traditionally attributed to Matthew",
+          "source_id": "gospel-of-matthew",
+          "where": "Chapter 18",
+          "why": "Jesus's answer of “seventy times seven”, followed by the parable of the servant who was forgiven a great debt but would not forgive a small one.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "Works of Love",
+          "author": "Søren Kierkegaard",
+          "voice": "soren-kierkegaard",
+          "source_id": "works-of-love",
+          "why": "Kierkegaard's long reflections on what it means to love one's neighbour, forgiving included.",
+          "rel": "background",
+          "access": "buy",
+          "url": "https://openlibrary.org/search?q=Works+of+Love+Kierkegaard",
+          "year": 1847
+        }
+      ]
     },
     {
       "slug": "generosity",
       "maxim": "Give freely; generosity enriches the giver.",
       "summary": "What we give away has a strange way of coming back as a fuller life. An open hand makes room for connection, and it loosens the grip that possessions can have on us.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Give and Take",
+          "author": "Adam Grant",
+          "why": "Workplace research on givers, takers and matchers, and on why thoughtful givers so often do well in the long run.",
+          "rel": "background",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL17312332W",
-          "label": "Adam Grant, Give and Take (Open Library)"
+          "year": 2013
         }
       ]
     },
@@ -446,10 +866,19 @@
       "slug": "everything-passes",
       "maxim": "Everything passes; hold things lightly.",
       "summary": "Nothing we see stays the same, not our troubles, our triumphs or the world around us. Remembering this can steady us in hard times and keep us gentle in good ones.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Meditations",
+          "author": "Marcus Aurelius",
+          "voice": "marcus-aurelius",
+          "source_id": "meditations",
+          "where": "Book IV",
+          "why": "Marcus returns often to change and impermanence, time as a river, as a reason for calm.",
+          "rel": "core",
+          "access": "free",
           "url": "https://www.gutenberg.org/ebooks/2680",
-          "label": "Marcus Aurelius, Meditations (free text, Project Gutenberg)"
+          "translation": "public-domain translation (Meric Casaubon)"
         }
       ]
     },
@@ -457,10 +886,17 @@
       "slug": "courage",
       "maxim": "Do what is right, even when you are afraid.",
       "summary": "Courage is not the absence of fear but the choice to act well in its presence. Most of the good we do asks a little bravery of us.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Daring Greatly",
+          "author": "Brené Brown",
+          "voice": "brene-brown",
+          "why": "Brown's research on vulnerability: showing up and taking risks without knowing the outcome as the heart of courage.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL16664399W",
-          "label": "Brené Brown, Daring Greatly (Open Library)"
+          "year": 2012
         }
       ]
     },
@@ -468,16 +904,47 @@
       "slug": "patience",
       "maxim": "Be patient; endure, and let things ripen.",
       "summary": "Much of what matters grows slowly and cannot be hurried. Patience is the quiet strength that holds steady through difficulty and waits for the right moment.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Epistle of James",
+          "author": "James",
+          "voice": "james",
+          "source_id": "epistle-of-james",
+          "where": "Chapter 1",
+          "why": "James opens by asking readers to let trials work patience in them, “that ye may be perfect and entire, wanting nothing”.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "Gulistan (The Rose Garden)",
+          "author": "Saadi",
+          "voice": "saadi",
+          "source_id": "gulistan",
+          "why": "Saadi's Persian collection of short stories and maxims on conduct, rich in practical wisdom about restraint and good timing.",
+          "rel": "background",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/13060",
+          "translation": "public-domain translation (James Ross, 1823), in Persian Literature, vol. 2"
+        }
+      ]
     },
     {
       "slug": "small-beginnings",
       "maxim": "Great things begin with small steps.",
       "summary": "Every large work starts as something tiny and easy to overlook. Taking the next small step, and being faithful in little things, is how anything worthwhile gets built.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Tiny Habits",
+          "author": "BJ Fogg",
+          "why": "A behaviour scientist's method for starting with very small actions and letting them grow.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL20641940W",
-          "label": "BJ Fogg, Tiny Habits (Open Library)"
+          "year": 2019
         }
       ]
     },
@@ -485,19 +952,96 @@
       "slug": "examine-yourself-first",
       "maxim": "Look to your own faults before judging others.",
       "summary": "It is easy to see what others get wrong and hard to see our own failings. Turning the light on ourselves first makes us both wiser and kinder.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Gospel of Matthew",
+          "author": "Traditionally attributed to Matthew",
+          "source_id": "gospel-of-matthew",
+          "where": "Chapter 7",
+          "why": "The mote and the beam: Jesus's warning to see to our own faults before judging anyone else.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "Enchiridion (Handbook)",
+          "author": "Epictetus",
+          "voice": "epictetus",
+          "source_id": "enchiridion",
+          "where": "V",
+          "why": "Epictetus: we are troubled not by things but by our judgements of them, so the work starts with ourselves, not with blaming others.",
+          "rel": "practice",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/45109",
+          "translation": "public-domain translation (Thomas Wentworth Higginson)"
+        }
+      ]
     },
     {
       "slug": "choose-your-friends",
       "maxim": "Choose your companions wisely.",
       "summary": "We slowly become like the people we spend our days with. Seeking out good, honest friends is one of the surest ways to grow into a better person.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "where": "Chapter VI, The Wise Man (verses 76–89)",
+          "why": "Verses on seeking out wise companions who correct us and keeping away from foolish ones.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/2017",
+          "translation": "public-domain translation (F. Max Müller)"
+        },
+        {
+          "title": "The Analects (Lunyu)",
+          "author": "Confucius",
+          "voice": "confucius",
+          "source_id": "analects",
+          "where": "Book XVI (16.4)",
+          "why": "Confucius on the three kinds of friend who help us and the three kinds who do harm.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/4094",
+          "translation": "public-domain translation (James Legge)"
+        }
+      ]
     },
     {
       "slug": "welcome-the-stranger",
       "maxim": "Welcome the stranger.",
       "summary": "Almost every tradition treats the guest and the traveller as someone to honour. Opening our door, and our table, reminds us that we too have been strangers somewhere.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Odyssey",
+          "author": "Homer",
+          "voice": "homer",
+          "source_id": "odyssey",
+          "where": "Book XIV",
+          "why": "Odysseus, disguised as a beggar, is taken in by the swineherd Eumaeus: one of literature's great scenes of hospitality to a stranger.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/1727",
+          "translation": "public-domain translation (Samuel Butler)"
+        },
+        {
+          "title": "Leviticus",
+          "author": "Authors of the Torah",
+          "voice": "torah-writers",
+          "source_id": "leviticus",
+          "where": "Chapter 19",
+          "why": "Part of the Holiness Code: love the stranger as yourself, “for ye were strangers in the land of Egypt”.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "honour-your-parents",
@@ -505,28 +1049,103 @@
       "summary": "The people who raised us gave us our first world, however imperfectly. Many traditions ask us to meet them with care and respect, not just duty, and to let that gratitude show in how we treat them as they grow older.",
       "links": [
         "https://en.wikipedia.org/wiki/Filial_piety"
+      ],
+      "books": [
+        {
+          "title": "Exodus",
+          "author": "Authors of the Torah",
+          "voice": "torah-writers",
+          "source_id": "exodus",
+          "where": "Chapter 20",
+          "why": "The Ten Commandments, where honouring father and mother is the first command about other people.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
       ]
     },
     {
       "slug": "actions-over-words",
       "maxim": "Let your actions match your words.",
       "summary": "Fine words cost little; what we do shows what we really believe. Living out what we say, quietly and first, is how trust is built, in others and in ourselves.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Epistle of James",
+          "author": "James",
+          "voice": "james",
+          "source_id": "epistle-of-james",
+          "where": "Chapters 1–2",
+          "why": "Be doers of the word, not hearers only; faith without works is dead.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "The Analects (Lunyu)",
+          "author": "Confucius",
+          "voice": "confucius",
+          "source_id": "analects",
+          "where": "Book II (2.13)",
+          "why": "Confucius: the superior man acts first, then speaks in keeping with what he has done.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/4094",
+          "translation": "public-domain translation (James Legge)"
+        }
+      ]
     },
     {
       "slug": "keep-learning",
       "maxim": "Keep learning, all your life.",
       "summary": "Learning is not a stage we finish but a way of staying awake to the world. Traditions far apart describe it as a quiet pleasure, the mark of someone wise enough to know there is always more to hear.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "The Analects (Lunyu)",
+          "author": "Confucius",
+          "voice": "confucius",
+          "source_id": "analects",
+          "where": "Book I (1.1) and Book II (2.15)",
+          "why": "The Analects open with the pleasure of learning and practising what one has learned.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/4094",
+          "translation": "public-domain translation (James Legge)"
+        },
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapters 1–4",
+          "why": "The opening chapters of Proverbs: a father's repeated call to get wisdom and keep listening to instruction.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "listen-first",
       "maxim": "Listen more than you speak.",
       "summary": "Real listening is a kind of generosity, and a kind of humility too. When we assume the other person may know something we don't, conversations stop being contests and start teaching us.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "The 7 Habits of Highly Effective People",
+          "author": "Stephen R. Covey",
+          "voice": "stephen-covey",
+          "source_id": "7-habits",
+          "where": "Habit 5",
+          "why": "Habit 5, “Seek first to understand, then to be understood”, teaches listening to understand before making your own case.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL2629977W",
-          "label": "Stephen R. Covey, The 7 Habits of Highly Effective People (Open Library)"
+          "year": 1989
         }
       ]
     },
@@ -534,19 +1153,94 @@
       "slug": "justice",
       "maxim": "Do what is just, even when it costs you.",
       "summary": "Justice asks us to be fair when fairness is inconvenient: to our rivals, to strangers, and against our own interest. Many traditions hold that it is better to suffer a wrong than to do one, and that a fair heart is worth more than any advantage.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Gorgias",
+          "author": "Plato",
+          "voice": "plato",
+          "source_id": "gorgias",
+          "where": "469c",
+          "why": "Socrates argues that doing injustice is worse than suffering it.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/1672",
+          "translation": "public-domain translation (Benjamin Jowett)"
+        },
+        {
+          "title": "Micah",
+          "author": "Micah",
+          "voice": "micah",
+          "source_id": "micah",
+          "where": "Chapter 6",
+          "why": "The prophet's summary of what is asked of us: to do justly, love mercy and walk humbly.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "be-merciful",
       "maxim": "Be merciful to every living being.",
       "summary": "Mercy is kindness offered where it was not earned. Traditions across the world ask us to widen our care, from family to stranger to every creature that breathes, and find that a softer heart is also a freer one.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Gospel of Luke",
+          "author": "Traditionally attributed to Luke",
+          "source_id": "gospel-of-luke",
+          "where": "Chapter 6",
+          "why": "The Sermon on the Plain: love your enemies, judge not, and be merciful as your Father is merciful.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "The Merchant of Venice",
+          "author": "William Shakespeare",
+          "voice": "william-shakespeare",
+          "source_id": "merchant-of-venice",
+          "where": "Act 4, Scene 1",
+          "why": "Portia's speech on the quality of mercy, at the heart of a play about justice and revenge.",
+          "rel": "background",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/1515"
+        }
+      ]
     },
     {
       "slug": "be-a-peacemaker",
       "maxim": "Seek peace, and pursue it.",
       "summary": "Peace rarely arrives by itself; it is something we go after, in quarrels at home as much as between nations. To be the one who lowers the temperature, and who takes the offered hand, is honoured in nearly every tradition.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Gospel of Matthew",
+          "author": "Traditionally attributed to Matthew",
+          "source_id": "gospel-of-matthew",
+          "where": "Chapter 5",
+          "why": "The Beatitudes, including “Blessed are the peacemakers”, open the Sermon on the Mount.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "Book of Psalms",
+          "author": "The Psalmists",
+          "voice": "psalmists",
+          "source_id": "psalms",
+          "where": "Psalm 34",
+          "why": "A psalm on fearing God and living well, with the charge to “seek peace, and pursue it”.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "do-no-harm",
@@ -555,28 +1249,100 @@
       "links": [
         "https://en.wikipedia.org/wiki/Ahimsa",
         "https://en.wikipedia.org/wiki/Primum_non_nocere"
+      ],
+      "books": [
+        {
+          "title": "Dhammapada",
+          "author": "The Buddha",
+          "voice": "the-buddha",
+          "source_id": "dhammapada",
+          "where": "Chapter X, Punishment (verses 129–145)",
+          "why": "Verses on not harming living beings, because all of them tremble at punishment and fear death.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/2017",
+          "translation": "public-domain translation (F. Max Müller)"
+        }
       ]
     },
     {
       "slug": "keep-your-word",
       "maxim": "Keep your promises; let your yes mean yes.",
       "summary": "A promise is a small piece of the future we give to someone else. Keeping it, or not making it lightly, is how trust grows, and how our words come to carry weight.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Ecclesiastes",
+          "author": "Qoheleth (the Preacher)",
+          "voice": "qoheleth",
+          "source_id": "ecclesiastes",
+          "where": "Chapter 5",
+          "why": "Qoheleth's counsel on vows: better not to promise than to promise and not pay.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "Gospel of Matthew",
+          "author": "Traditionally attributed to Matthew",
+          "source_id": "gospel-of-matthew",
+          "where": "Chapter 5",
+          "why": "In the Sermon on the Mount, Jesus asks for plain speech instead of oaths: let your yes be yes, and your no, no.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
+      ]
     },
     {
       "slug": "be-still",
       "maxim": "Make time for stillness.",
       "summary": "Much of our restlessness comes from never stopping. Contemplatives, philosophers and psalmists alike point to a quiet place within, always available, where we can rest, see clearly and return refreshed.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Tao Te Ching (Daodejing)",
+          "author": "Laozi",
+          "voice": "laozi",
+          "source_id": "tao-te-ching",
+          "where": "Chapter 16",
+          "why": "Laozi on emptiness and stillness, and on returning to the root of things.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/216",
+          "translation": "public-domain translation (James Legge)"
+        },
+        {
+          "title": "Pensées",
+          "author": "Blaise Pascal",
+          "voice": "blaise-pascal",
+          "source_id": "pensees",
+          "where": "No. 139",
+          "why": "Pascal's famous diagnosis that our restlessness comes from being unable to sit quietly in a room.",
+          "rel": "background",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/18269",
+          "translation": "public-domain translation (W. F. Trotter)"
+        }
+      ]
     },
     {
       "slug": "own-your-mistakes",
       "maxim": "Admit your mistakes and put them right.",
       "summary": "Everyone falls short; what matters is what we do next. Owning a fault, rather than hiding it, is the first step to mending it, and a mended fault can leave us brighter than before.",
-      "links": [
+      "links": [],
+      "books": [
         {
+          "title": "Extreme Ownership",
+          "author": "Jocko Willink and Leif Babin",
+          "voice": "jocko-willink",
+          "why": "Two former Navy SEAL officers argue that leaders own every outcome, mistakes included, and fix them rather than assign blame.",
+          "rel": "practice",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL20017105W",
-          "label": "Jocko Willink and Leif Babin, Extreme Ownership (Open Library)"
+          "year": 2015
         }
       ]
     },
@@ -584,17 +1350,49 @@
       "slug": "get-back-up",
       "maxim": "When you fall, get back up.",
       "summary": "Falling is not the failure; staying down is. Traditions far apart in time and place honour the person who stumbles, gathers themselves, and rises again, as many times as it takes.",
-      "links": []
+      "links": [],
+      "books": [
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapter 24",
+          "why": "Among its sayings: a just man falls seven times and rises up again.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        },
+        {
+          "title": "The Citizen of the World",
+          "author": "Oliver Goldsmith",
+          "source_id": "citizen-of-the-world",
+          "where": "Vol. 1, Letter VII",
+          "why": "Goldsmith's letters from an imagined Chinese philosopher in London; Letter VII holds the line about rising every time we fall.",
+          "rel": "background",
+          "access": "free",
+          "url": "https://archive.org/details/bim_eighteenth-century_the-citizen-of-the-world_goldsmith-oliver_1762_1_0",
+          "year": 1762
+        }
+      ]
     },
     {
       "slug": "matthew-effect",
       "maxim": "Advantage tends to compound: those who have, get more.",
       "summary": "Early advantages (a head start, a good name, a little capital) tend to attract more of the same, while those with little often find even that slipping away. The Gospel of Matthew states the pattern twice, and in 1968 the sociologists Robert K. Merton and Harriet Zuckerman named it the Matthew effect. Seeing it clearly invites us to share a head start generously and to lift up those who begin behind.",
       "links": [
-        "https://en.wikipedia.org/wiki/Matthew_effect",
+        "https://en.wikipedia.org/wiki/Matthew_effect"
+      ],
+      "books": [
         {
+          "title": "Outliers",
+          "author": "Malcolm Gladwell",
+          "why": "A popular account of how small early advantages compound into outsized success.",
+          "rel": "background",
+          "access": "buy",
           "url": "https://openlibrary.org/works/OL5749847W",
-          "label": "Malcolm Gladwell, Outliers (Open Library)"
+          "year": 2008
         }
       ]
     },
@@ -605,6 +1403,20 @@
       "links": [
         "https://en.wikipedia.org/wiki/Animal_welfare",
         "https://en.wikipedia.org/wiki/Ahimsa"
+      ],
+      "books": [
+        {
+          "title": "Acaranga Sutra",
+          "author": "Mahavira",
+          "voice": "mahavira",
+          "source_id": "acaranga-sutra",
+          "where": "Book I, Lecture 1",
+          "why": "The Jain scripture's opening lecture on not harming any living being, down to the smallest.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://archive.sacred-texts.com/jai/sbe22/sbe2208.htm",
+          "translation": "public-domain translation (Hermann Jacobi)"
+        }
       ]
     },
     {
@@ -613,6 +1425,32 @@
       "summary": "On the mornings when we would rather stay in bed, the work in front of us is still ours to do. Many traditions treat idleness as a slow loss and honest effort as part of what it means to live fully.",
       "links": [
         "https://en.wikipedia.org/wiki/Sloth_(deadly_sin)"
+      ],
+      "books": [
+        {
+          "title": "Meditations",
+          "author": "Marcus Aurelius",
+          "voice": "marcus-aurelius",
+          "source_id": "meditations",
+          "where": "Book V.1",
+          "why": "Marcus's dawn talk to himself about getting out of bed to do the work of a human being.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/15877",
+          "translation": "public-domain translation (George Long)"
+        },
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapter 6",
+          "why": "“Go to the ant, thou sluggard”: the Bible's best-known lesson against idleness.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
       ]
     },
     {
@@ -621,6 +1459,20 @@
       "summary": "What we do does not simply vanish; it comes back to shape our own lives. Traditions across the world picture our deeds returning to us, as surely as a harvest follows the seed or a shadow follows its body.",
       "links": [
         "https://en.wikipedia.org/wiki/Karma"
+      ],
+      "books": [
+        {
+          "title": "Epistle to the Galatians",
+          "author": "Paul the Apostle",
+          "voice": "paul-the-apostle",
+          "source_id": "galatians",
+          "where": "Chapter 6",
+          "why": "Paul on sowing and reaping, and on not growing weary in doing good.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
       ]
     },
     {
@@ -629,6 +1481,20 @@
       "summary": "Fair weights and honest measures are among the oldest moral rules we know. Cheating in small ways, a short measure here or a fake mixed in with the genuine there, wears away the trust that every exchange depends on.",
       "links": [
         "https://en.wikipedia.org/wiki/Business_ethics"
+      ],
+      "books": [
+        {
+          "title": "Leviticus",
+          "author": "Authors of the Torah",
+          "voice": "torah-writers",
+          "source_id": "leviticus",
+          "where": "Chapter 19",
+          "why": "The Holiness Code includes just balances, just weights and honest measures (19:35–36).",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
       ]
     },
     {
@@ -638,6 +1504,20 @@
       "links": [
         "https://en.wikipedia.org/wiki/Advice_(opinion)",
         "https://en.wikipedia.org/wiki/Shura"
+      ],
+      "books": [
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapter 15",
+          "why": "Proverbs often praises counsel; 15:22 says plans fail without it and stand with many advisers.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
       ]
     },
     {
@@ -647,6 +1527,20 @@
       "links": [
         "https://en.wikipedia.org/wiki/Gossip",
         "https://en.wikipedia.org/wiki/Gheebah"
+      ],
+      "books": [
+        {
+          "title": "Tirukkural",
+          "author": "Tiruvalluvar",
+          "voice": "tiruvalluvar",
+          "source_id": "tirukkural",
+          "where": "Chapter 19 (kurals 181–190)",
+          "why": "A whole chapter of the Tamil classic devoted to the wrong of speaking ill of people behind their backs.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://en.wikisource.org/wiki/Tirukural/Chapter_19",
+          "translation": "public-domain translation (G. U. Pope, 1886)"
+        }
       ]
     },
     {
@@ -656,6 +1550,20 @@
       "links": [
         "https://en.wikipedia.org/wiki/Social_justice",
         "https://en.wikipedia.org/wiki/Orphan"
+      ],
+      "books": [
+        {
+          "title": "Book of Proverbs",
+          "author": "Hebrew wisdom writers",
+          "voice": "hebrew-wisdom-writers",
+          "source_id": "proverbs",
+          "where": "Chapter 31",
+          "why": "Opens with a mother's advice to a king: speak up for those who cannot, and plead the cause of the poor and needy.",
+          "rel": "core",
+          "access": "free",
+          "url": "https://www.gutenberg.org/ebooks/10",
+          "translation": "King James Version (public domain)"
+        }
       ]
     }
   ],

@@ -20,6 +20,78 @@ CONFIDENCE = ("solid", "thin", "uncertain")
 Q_REQUIRED = ("concept", "rel", "conf", "ver", "text", "thinker", "voice", "tradition", "era", "work", "source_id", "source")
 Q_OPTIONAL = ("translation", "echoes", "clips")
 NEEDS_URL = ("verified", "probable")  # unverified / misattributed / disputed may use "" when no source exists
+# "Go deeper" books on concepts (display only, never scored). Free = a public-domain text host; buy = an Open Library page.
+B_REQUIRED = ("title", "author")
+B_OPTIONAL = ("voice", "source_id", "where", "why", "rel", "access", "url", "translation", "year")
+B_RELS = ("core", "practice", "background")
+B_ACCESS = ("free", "buy")
+FREE_HOSTS = ("gutenberg.org", "sacred-texts.com", "wikisource.org", "archive.org", "accesstoinsight.org", "suttacentral.net",
+              "sefaria.org", "ctext.org")
+BUY_HOSTS = ("openlibrary.org",)
+BOOK_LINK_HOSTS = FREE_HOSTS[:3] + BUY_HOSTS  # in `links` these are books: they belong in `books`
+BANNED_HOSTS = ("amazon.", "amzn.")  # no shop or affiliate links
+
+
+def host(url):
+    return re.sub(r"^https?://", "", url).split("/")[0].split(":")[0].lower()
+
+
+def on(url, hosts):
+    h = host(url)
+    return any(h == d or h.endswith("." + d) for d in hosts)
+
+
+def banned(url):
+    h = host(url)
+    return any(h.startswith(b) or ("." + b) in h for b in BANNED_HOSTS)
+
+
+def check_books(where, books, V, S, err):
+    """Errors for a concept's optional `books` list (see AGENTS.md, "Go deeper")."""
+    if not isinstance(books, list):
+        err(f"{where}: 'books' must be a list of book objects")
+        return
+    for j, b in enumerate(books):
+        w = f"{where} books[{j}]"
+        if not isinstance(b, dict):
+            err(f"{w}: must be an object with at least 'title' and 'author'")
+            continue
+        w = f"{w} ('{short(b.get('title', '?'), 40)}')"
+        for f in B_REQUIRED:
+            if not (isinstance(b.get(f), str) and b[f].strip()):
+                err(f"{w}: missing '{f}'")
+        extra = [f for f in b if f not in B_REQUIRED + B_OPTIONAL]
+        if extra:
+            err(f"{w}: unknown field(s) {', '.join(extra)}; allowed optional fields: {', '.join(B_OPTIONAL)}")
+        for f in ("where", "why", "translation"):
+            if f in b and not (isinstance(b[f], str) and b[f].strip()):
+                err(f"{w}: '{f}' must be a non-empty string (or leave it out)")
+        if "voice" in b and b["voice"] not in V:
+            err(f"{w}: unknown voice '{b['voice']}'; use a slug from data/voices.json or leave it out")
+        if "source_id" in b and b["source_id"] not in S:
+            err(f"{w}: unknown source_id '{b['source_id']}'; use a slug from data/sources.json or leave it out")
+        if "rel" in b and b["rel"] not in B_RELS:
+            err(f"{w}: rel '{b['rel']}' must be one of {', '.join(B_RELS)}")
+        if "access" in b and b["access"] not in B_ACCESS:
+            err(f"{w}: access '{b['access']}' must be one of {', '.join(B_ACCESS)}")
+        if "year" in b and (isinstance(b["year"], bool) or not isinstance(b["year"], int)):
+            err(f"{w}: year must be a whole number (negative for BCE), or leave it out")
+        url = b.get("url")
+        if url is None:
+            if "access" in b:
+                err(f"{w}: 'access' needs a 'url'")
+            continue
+        if not (isinstance(url, str) and url.startswith("https://")):
+            err(f"{w}: url must start with https://")
+            continue
+        if banned(url):
+            err(f"{w}: no Amazon or shop links; use Open Library (openlibrary.org) for modern books")
+        elif "access" not in b:
+            err(f"{w}: a book with a url needs 'access': \"free\" (public-domain text) or \"buy\" (Open Library page)")
+        elif b["access"] == "free" and not on(url, FREE_HOSTS):
+            err(f"{w}: a free book must link a public-domain text host ({', '.join(FREE_HOSTS)}), got {host(url)}")
+        elif b["access"] == "buy" and not on(url, BUY_HOSTS):
+            err(f"{w}: a modern book must link Open Library (openlibrary.org/works/... or openlibrary.org/search?q=...), got {host(url)}")
 
 
 def norm(text):
@@ -100,6 +172,12 @@ def validate(root=ROOT):
                 err(f"{where}: links[{j}] must be an https URL string or {{\"url\": \"https://...\", \"label\": \"...\"}}")
             if isinstance(l, dict) and not str(l.get("label", "")).strip():
                 err(f"{where}: links[{j}] object needs a 'label'")
+            if isinstance(url, str) and banned(url):
+                err(f"{where}: links[{j}]: no Amazon or shop links")
+            elif isinstance(url, str) and on(url, BOOK_LINK_HOSTS):
+                err(f"{where}: links[{j}] ({host(url)}) is a book; move it to 'books' with title, author, why, access and url")
+        if "books" in c:
+            check_books(where, c["books"], V, S, err)
         if "hold" in c and not (isinstance(c["hold"], str) and c["hold"].strip()):
             err(f"{where}: 'hold' must be a short reason string (or remove it)")
 

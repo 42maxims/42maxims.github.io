@@ -36,7 +36,7 @@ CI runs the same on every PR and fails if the committed HTML differs from `build
 ## How to add a maxim or quote (content workflow)
 1. **Check for an existing concept** in `data/maxims.json` → `concepts`. If the idea is already there (even in other words), add a quote to it; don't create a near-duplicate.
 2. **New concept** (needs the project owner's approval in the PR): add to `concepts`:
-   `{"slug": "kebab-case", "maxim": "One-line rule, imperative or plain statement.", "summary": "2–3 warm, reflective sentences in our own words.", "links": ["optional further-reading: a URL string, or {\"url\": \"https://...\", \"label\": \"Author, Title (Open Library)\"} for a book (prefer Project Gutenberg / Sacred Texts for public-domain texts, Open Library works pages for modern books; do not repeat a quote's own source URL)"]}`
+   `{"slug": "kebab-case", "maxim": "One-line rule, imperative or plain statement.", "summary": "2–3 warm, reflective sentences in our own words.", "links": ["optional plain URL strings (Wikipedia etc.); books go in books"], "books": [optional, see "Go deeper books" below]}`
 3. **Add the quote** to `quotes`:
    ```json
    {"concept": "<concept slug>", "rel": "expresses|similar|partial|contrasts", "conf": 0.0-1.0,
@@ -53,6 +53,19 @@ CI runs the same on every PR and fails if the committed HTML differs from `build
 4. **Link a voice and a source** (see "Voices and sources" below): reuse an existing slug if there is one, otherwise add an entry.
 5. **Verify the source** (rules below), set `ver` honestly.
 6. `python3 scripts/validate.py && python3 build.py && python3 -m unittest discover -s tests`, commit data + generated HTML together, open a PR (one concept or a small batch per PR). Merging to `master` deploys.
+
+### Go deeper books
+Optional `books` on a concept: books that teach how to live the maxim, shown as **Go deeper** after the score on the maxim page (with any plain `links` under a small "Links" label) and as schema.org `Book` entries in the page's `citation`. Display only: books never affect Moral Rank.
+```json
+{"title": "Meditations", "author": "Marcus Aurelius", "voice": "marcus-aurelius", "source_id": "meditations",
+ "where": "Book V.1", "why": "1–2 sentences in our own words: how it teaches the maxim.", "rel": "core|practice|background",
+ "access": "free|buy", "url": "https://www.gutenberg.org/ebooks/15877", "translation": "public-domain translation (George Long)", "year": 180}
+```
+- `title` and `author` are required; everything else is optional. `voice`/`source_id` must be existing slugs (they link the author and title to their pages).
+- `access: "free"` = a public-domain text on Project Gutenberg, Sacred Texts, Wikisource, Internet Archive (public-domain scans only), Access to Insight, SuttaCentral, Sefaria or ctext; shown as "Read free ↗". `access: "buy"` = a modern book's Open Library page (a `works/OL…W` id you have opened, or `openlibrary.org/search?q=…` if unsure); shown as "More info ↗". No Amazon or shop links. A `url` needs `access`; the validator checks the domain.
+- `rel`: `core` (a primary text of the maxim), `practice` (a how-to), `background` (context).
+- **Never invent a locus.** Give `where` only when you are sure: from a quote's own citation in the data, or well-known canonical structure (Bible chapter, Dhammapada chapter). Otherwise leave it out. Bible chapters are fine as entries (`"title": "Book of Proverbs", "where": "Chapters 15–16", "translation": "King James Version (public domain)"`, KJV on Gutenberg ebook 10). `year` only when certain (first publication).
+- Old-style book links (`{"url", "label"}` objects, or Open Library / Gutenberg / Sacred Texts / Wikisource URLs) in `links` fail validation: move them to `books`.
 
 ### Source verification rules
 - **verified**: you fetched the source URL and the exact wording appears there; source is a primary text, a reputable/public-domain translation (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Bible Gateway, ctext), or the author's own book/site/recorded talk.

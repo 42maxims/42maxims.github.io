@@ -65,7 +65,7 @@ The long-term feel is a mix of Wikipedia (sourced, neutral, readable), Obsidian 
    - a short warm summary in our own words, and the hold note if any;
    - **Related expressions**: a scrolling list of all other quotes, each with voice, work, tradition, period, relation, verification label and source link;
    - **Score**: Moral Rank and the evidence equation with this maxim's numbers filled in, plus a link to the Method page (no long explanation on the maxim page);
-   - optional further-reading links.
+   - **Go deeper** (optional): books that teach how to live the maxim (title, author, optional chapter, a 1–2 sentence note in our own words, and a "Read free ↗" link to a public-domain text or "More info ↗" to Open Library), then any plain links. Display only; books never affect Moral Rank.
 3. **Voices** (`/voices/` and `/voices/<slug>/`): who said it. Kind (person, collective, scripture, traditional or legendary figure), dates, tradition, period, a 2–3 sentence factual summary, references, a caution note when `confidence` is `thin` or `uncertain`, and every quote by that voice.
 4. **Sources** (`/sources/<slug>/` and `/sources/`): which work it is from. One source per book whatever the chapter or translation (each Bible book, each hadith or Pali collection, each Plato dialogue is one source). Same layout as voices, plus a link to the source's voice.
 5. **Method** (`/method/`): the Moral Rank equation, a plain-words bullet for each term, the time periods with dates, the verification-label legend, and the translation policy.
@@ -93,7 +93,7 @@ Git is the database and the audit trail. Generated output (`data/generated/`, al
 
 **`data/maxims.json`**
 - `traditions`: `{"<key>": {"name": "...", "derives_from": ["<key>", ...]}}`. `derives_from` records historical influence and is used to discount non-independent evidence (§5).
-- `concepts` (maxims): `{"slug", "maxim", "summary", "links": [...], "seed"?: <int>, "hold"?: "<reason>"}`.
+- `concepts` (maxims): `{"slug", "maxim", "summary", "links": [...], "books"?: [...], "seed"?: <int>, "hold"?: "<reason>"}`. `links` are plain URL strings; `books` are Go deeper entries `{"title", "author", "voice"?, "source_id"?, "where"?, "why"?, "rel"?: "core|practice|background", "access"?: "free|buy", "url"?, "translation"?, "year"?}` (AGENTS.md, "Go deeper books").
 - `quotes`:
 ```json
 {"concept": "golden-rule", "rel": "expresses|similar|partial|contrasts", "conf": 0.95,
@@ -305,7 +305,7 @@ SPEC.md  ROADMAP.md  DECISIONS.md  OPS.md  AGENTS.md  CLAUDE.md  CONTRIBUTING.md
 1. **Newsletter "A maxim a week"**: one maxim with 3–4 quotes from different traditions, generated from the repo, each issue approved by the project owner.
 2. **Book and prints**: a "42 Maxims" book (The 42, each with cross-tradition quotes), typographic prints via print-on-demand; check translation licences for print.
 3. **App (later)**: maxim of the day, reflection prompts, once the newsletter shows traction.
-4. **Ads last, if ever**: none on religious-text pages; affiliate links to good editions as a softer option.
+4. **Ads last, if ever**: none on religious-text pages; affiliate links to good editions as a softer option (needs owner approval; today Go deeper links only public-domain hosts and Open Library, never a shop).
 
 ---
 

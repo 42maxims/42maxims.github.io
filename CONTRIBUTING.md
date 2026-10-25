@@ -25,6 +25,7 @@ Thank you for helping. Humans and AI agents (Claude Code, Cursor, Codex, Copilot
 Full field reference: [AGENTS.md](AGENTS.md#how-to-add-a-maxim-or-quote-content-workflow).
 - **Quote:** add an object to `quotes` in `data/maxims.json` under an existing `concept` slug, with `rel` (`similar` is the default for a new tradition; `expresses` across traditions needs owner approval), `conf` (0 to 1), `ver`, `era`, `voice`, `source_id`, `tradition`, `work` and `source`.
 - **Voice** (who said it) or **source** (which work): reuse an existing slug in `data/voices.json` / `data/sources.json` if there is one; otherwise add an entry with a factual 2–3 sentence summary and `refs` (Wikipedia, Britannica, SEP, IEP). One source per book, whatever the chapter or translation.
+- **Go deeper book:** add an entry to a maxim's `books` (title, author, our own 1–2 sentence `why`, `access` and `url`; see [AGENTS.md](AGENTS.md#go-deeper-books)). Public-domain texts link Gutenberg, Sacred Texts or Wikisource; modern books link Open Library, never Amazon or another shop. Only give a chapter (`where`) you have checked. Books are display only and never change Moral Rank.
 - **Tradition:** add a key under `traditions` with a `name`. If it grew out of another tradition, propose `derives_from` in the PR description; the project owner decides it because it changes scoring (SPEC.md §12).
 
 ## Needs the project owner's approval
