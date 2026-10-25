@@ -149,8 +149,12 @@ class Folds(unittest.TestCase):
 
     def test_no_javascript_in_folds(self):
         for c, _ in MAXIMS:
-            for d in re.findall(r"<details>.*?</details>", read(ROOT, c["slug"]), re.S):
-                self.assertNotIn("onclick", d); self.assertNotIn(" open", d)
+            h = read(ROOT, c["slug"])
+            # check tags, not quote text (a verse may say "open thine eyes")
+            for tag in re.findall(r"<details\b[^>]*>", h):
+                self.assertEqual(tag, "<details>")
+            for d in re.findall(r"<details>.*?</details>", h, re.S):
+                self.assertNotRegex(d, r"<[^>]*\bonclick\b")
 
 
 class Deterministic(unittest.TestCase):
