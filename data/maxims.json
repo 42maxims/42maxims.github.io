@@ -7644,6 +7644,34 @@
       "source": "https://www.biblegateway.com/passage/?search=Philippians+4%3A8&version=KJV"
     },
     {
+      "concept": "thoughts-shape-life",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "probable",
+      "text": "We have two natures within us, both struggling for mastery. Which one will dominate us? It depends on which one we feed.",
+      "thinker": "Billy Graham",
+      "voice": "billy-graham",
+      "tradition": "christianity",
+      "era": "contemporary",
+      "work": "The Holy Spirit: Activating God's Power in Your Life (1978), ch. 7 \"The Christian's Inner Struggle\", p. 92; wording checked via Wikipedia's quotation of Graham (book page not opened). The popular 'two wolves' Cherokee version is a later retelling of this dogs parable.",
+      "source_id": "holy-spirit-activating-gods-power",
+      "source": "https://en.wikipedia.org/wiki/Two_Wolves"
+    },
+    {
+      "concept": "thoughts-shape-life",
+      "rel": "similar",
+      "conf": 0.55,
+      "ver": "unverified",
+      "text": "There are two wolves inside you — one good, one bad. Which one wins? The one you feed.",
+      "thinker": "Anonymous / popular saying (often misattributed to Cherokee tradition)",
+      "voice": "popular-saying",
+      "tradition": "popular",
+      "era": "contemporary",
+      "work": "Popular 'two wolves' internet form; often credited to Cherokee tradition, but that attribution is not supported. The print ancestor is Billy Graham's 1978 two-dogs parable (also on this maxim). Wolves framing origin not established; see https://en.wikipedia.org/wiki/Two_Wolves",
+      "source_id": "popular-sayings",
+      "source": "https://en.wikipedia.org/wiki/Two_Wolves"
+    },
+    {
       "concept": "moderation",
       "rel": "similar",
       "conf": 0.75,
