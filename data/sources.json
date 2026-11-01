@@ -1,1668 +1,1682 @@
 {
- "analects": {
-  "title": "The Analects (Lunyu)",
-  "voice": "confucius",
-  "kind": "book",
-  "dates": "compiled c. 5th–3rd century BCE; final form c. 2nd century BCE (Han dynasty)",
-  "tradition": "confucianism",
-  "period": "axial",
-  "summary": "A collection of short sayings and conversations of Confucius and his disciples, put together by later generations of his followers. It is the most direct record of his teaching and one of the Four Books of the Confucian canon.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Analects",
-   "https://www.britannica.com/topic/Lunyu"
-  ]
- },
- "babylonian-talmud": {
-  "title": "Babylonian Talmud",
-  "voice": "talmudic-sages",
-  "kind": "scripture",
-  "dates": "compiled c. 3rd–6th century CE",
-  "tradition": "judaism",
-  "period": "classical",
-  "summary": "The central text of rabbinic Judaism after the Hebrew Bible: the Mishnah together with the Gemara, the discussions of generations of rabbis in Babylonia. It was shaped over several centuries and reached its final form around the 6th century CE.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Talmud",
-   "https://www.britannica.com/topic/Talmud",
-   "https://www.britannica.com/topic/Bavli"
-  ]
- },
- "pirkei-avot": {
-  "title": "Pirkei Avot (Ethics of the Fathers)",
-  "voice": null,
-  "kind": "scripture",
-  "dates": "compiled c. 200 CE",
-  "tradition": "judaism",
-  "period": "classical",
-  "summary": "A tractate of the Mishnah gathering the ethical sayings of the early rabbis, from the Men of the Great Assembly to the generations after the Second Temple, with a sixth chapter added later. The Mishnah was compiled under Rabbi Judah ha-Nasi around 200 CE.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Pirkei_Avot",
-   "https://en.wikipedia.org/wiki/Mishnah"
-  ]
- },
- "gospel-of-matthew": {
-  "title": "Gospel of Matthew",
-  "voice": null,
-  "kind": "scripture",
-  "dates": "c. 80–90 CE (scholarly estimate)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "The first book of the New Testament, telling of the life, teaching, death and resurrection of Jesus, including the Sermon on the Mount. It is traditionally attributed to the apostle Matthew; most scholars think it was written anonymously around 80–90 CE, drawing on the Gospel of Mark.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Gospel_of_Matthew",
-   "https://www.britannica.com/topic/Gospel-According-to-Matthew"
-  ]
- },
- "gospel-of-luke": {
-  "title": "Gospel of Luke",
-  "voice": null,
-  "kind": "scripture",
-  "dates": "c. 80–90 CE (most common scholarly estimate)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "The third Gospel of the New Testament, which tells the story of Jesus and includes parables found nowhere else, such as the Good Samaritan and the Prodigal Son. It is traditionally attributed to Luke, a companion of Paul, and forms a two-part work with the Acts of the Apostles.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Gospel_of_Luke",
-   "https://www.britannica.com/topic/biblical-literature/The-Gospel-According-to-Luke"
-  ]
- },
- "acts-of-the-apostles": {
-  "title": "Acts of the Apostles",
-  "voice": null,
-  "kind": "scripture",
-  "dates": "c. 80–90 CE (most common scholarly estimate)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "The continuation of Luke's Gospel, telling of the first Christian communities and the journeys of Paul. Like the Gospel, it is traditionally attributed to Luke.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Acts_of_the_Apostles",
-   "https://www.britannica.com/topic/The-Acts-of-the-Apostles-New-Testament"
-  ]
- },
- "romans": {
-  "title": "Epistle to the Romans",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 57 CE",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "Paul's letter to the Christians in Rome, written around 57 CE, is the longest and most systematic of his letters. Scholars agree that Paul wrote it.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_to_the_Romans",
-   "https://www.britannica.com/topic/Letter-of-Paul-to-the-Romans"
-  ]
- },
- "philippians": {
-  "title": "Epistle to the Philippians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 50s–early 60s CE",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "A warm letter from Paul to the church he founded at Philippi in Macedonia, written while he was in prison. It is one of the letters scholars agree Paul wrote himself.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_to_the_Philippians"
-  ]
- },
- "1-thessalonians": {
-  "title": "First Epistle to the Thessalonians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 50 CE",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "Paul's letter to the young church at Thessalonica in Macedonia. It is generally considered the earliest of his surviving letters and possibly the oldest book of the New Testament.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/First_Epistle_to_the_Thessalonians"
-  ]
- },
- "colossians": {
-  "title": "Epistle to the Colossians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 60–80 CE (disputed)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "A letter to the church at Colossae in Asia Minor, written in Paul's name. It is traditionally attributed to Paul; many scholars think a follower wrote it after his death, while others defend Paul's authorship.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_to_the_Colossians"
-  ]
- },
- "ephesians": {
-  "title": "Epistle to the Ephesians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 62 CE (traditional) or c. 70–100 CE (many scholars)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "A letter on the unity of the church, written in Paul's name and traditionally addressed to Christians at Ephesus; some scholars see it as a circular letter. It is traditionally attributed to Paul; many modern scholars think it was written by a later follower.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_to_the_Ephesians"
-  ]
- },
- "1-timothy": {
-  "title": "First Epistle to Timothy",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 60s CE (traditional) or late 1st–early 2nd century CE (many scholars)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "One of the three 'Pastoral Epistles', giving guidance to Paul's co-worker Timothy on leading a church. It is traditionally attributed to Paul; most critical scholars think it was written in his name some decades after his death.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/First_Epistle_to_Timothy",
-   "https://en.wikipedia.org/wiki/Pastoral_epistles"
-  ]
- },
- "2-timothy": {
-  "title": "Second Epistle to Timothy",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 60s CE (traditional) or c. 90–140 CE (many scholars)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "One of the 'Pastoral Epistles', presented as Paul's last letter to Timothy, written from prison. It is traditionally attributed to Paul; many scholars think it was written in his name after his death.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Second_Epistle_to_Timothy",
-   "https://en.wikipedia.org/wiki/Pastoral_epistles"
-  ]
- },
- "hebrews": {
-  "title": "Epistle to the Hebrews",
-  "voice": "author-of-hebrews",
-  "kind": "scripture",
-  "dates": "c. 60–95 CE (scholarly estimate)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "An early Christian sermon in letter form, encouraging its readers to hold fast to their faith. Its author is unknown; it was long attributed to Paul, which most scholars now doubt.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_to_the_Hebrews"
-  ]
- },
- "epistle-of-james": {
-  "title": "Epistle of James",
-  "voice": "james",
-  "kind": "scripture",
-  "dates": "mid-1st to mid-2nd century CE (date disputed)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "A short New Testament letter of practical wisdom, urging its readers to put faith into action. It is traditionally attributed to James the brother of Jesus; its authorship and date are debated.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_of_James",
-   "https://www.britannica.com/topic/Letter-of-James"
-  ]
- },
- "leviticus": {
-  "title": "Leviticus",
-  "voice": "torah-writers",
-  "kind": "scripture",
-  "dates": "final form c. 5th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "The third book of the Torah, setting out laws of worship, purity and holiness for ancient Israel. Its Holiness Code includes the command to love your neighbour as yourself, and to love the stranger.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Leviticus",
-   "https://en.wikipedia.org/wiki/Holiness_code"
-  ]
- },
- "exodus": {
-  "title": "Exodus",
-  "voice": "torah-writers",
-  "kind": "scripture",
-  "dates": "final form c. 5th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "The second book of the Torah, telling of Israel's liberation from slavery in Egypt under Moses and the covenant made at Mount Sinai. It contains the Ten Commandments.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Exodus",
-   "https://en.wikipedia.org/wiki/Ten_Commandments"
-  ]
- },
- "deuteronomy": {
-  "title": "Deuteronomy",
-  "voice": "torah-writers",
-  "kind": "scripture",
-  "dates": "core c. 7th century BCE; final form c. 5th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "The fifth book of the Torah, presented as Moses' farewell speeches to Israel before it enters the promised land. Many scholars link its core to religious reforms in Judah in the 7th century BCE.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Deuteronomy"
-  ]
- },
- "joshua": {
-  "title": "Book of Joshua",
-  "voice": "author-of-joshua",
-  "kind": "scripture",
-  "dates": "c. 7th–6th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "The sixth book of the Hebrew Bible, telling of Israel's entry into Canaan under Joshua. Tradition attributes it to Joshua; modern scholars see it as part of a history edited over the 7th and 6th centuries BCE.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Joshua"
-  ]
- },
- "job": {
-  "title": "Book of Job",
-  "voice": "author-of-job",
-  "kind": "scripture",
-  "dates": "c. 6th–4th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "A poetic book of the Hebrew Bible in which a righteous man who loses everything wrestles with God and his friends over why the innocent suffer. Its author is unknown.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Job"
-  ]
- },
- "psalms": {
-  "title": "Book of Psalms",
-  "voice": "psalmists",
-  "kind": "scripture",
-  "dates": "composed c. 10th–4th century BCE or later; collection fixed c. 1st century CE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "A collection of 150 songs and prayers of praise, lament and thanksgiving (in the Jewish and Western Christian numbering; Eastern churches include a few more), used in Jewish and Christian worship to this day. Many psalms are traditionally attributed to King David.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Psalms"
-  ]
- },
- "proverbs": {
-  "title": "Book of Proverbs",
-  "voice": "hebrew-wisdom-writers",
-  "kind": "scripture",
-  "dates": "collected over centuries; final form c. 5th–4th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "A collection of short sayings on wisdom, work, speech and right living, in the wisdom literature of the Hebrew Bible. It is traditionally attributed to King Solomon, though it gathers material from several sources and periods.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Proverbs"
-  ]
- },
- "ecclesiastes": {
-  "title": "Ecclesiastes",
-  "voice": "qoheleth",
-  "kind": "scripture",
-  "dates": "c. 5th–3rd century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "A book of the Hebrew Bible's wisdom literature in which Qoheleth, 'the Preacher', reflects on the brevity of life and the vanity of striving. It is traditionally attributed to Solomon; most scholars date it to the Persian or Hellenistic period.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Ecclesiastes"
-  ]
- },
- "micah": {
-  "title": "Book of Micah",
-  "voice": "micah",
-  "kind": "scripture",
-  "dates": "core late 8th century BCE; edited later",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "One of the twelve Minor Prophets of the Hebrew Bible, named for Micah of Moresheth. It condemns injustice and contains the well-known summary 'to do justly, and to love mercy, and to walk humbly with thy God'.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Micah"
-  ]
- },
- "zechariah": {
-  "title": "Book of Zechariah",
-  "voice": "zechariah",
-  "kind": "scripture",
-  "dates": "chapters 1–8 c. 520–518 BCE; chapters 9–14 later",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "One of the twelve Minor Prophets of the Hebrew Bible. Its first eight chapters record the visions of the prophet Zechariah as the Temple was being rebuilt after the exile.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Zechariah"
-  ]
- },
- "samyutta-nikaya": {
-  "title": "Samyutta Nikaya (Connected Discourses)",
-  "voice": "the-buddha",
-  "kind": "scripture",
-  "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
-  "tradition": "buddhism",
-  "period": "axial",
-  "summary": "The third of the five collections of discourses in the Pali Canon, grouping the Buddha's teachings by theme. It includes the Dhammacakkappavattana Sutta, traditionally the Buddha's first sermon, on the Four Noble Truths.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Samyutta_Nikaya",
-   "https://www.accesstoinsight.org/tipitaka/sn/index.html"
-  ]
- },
- "sutta-nipata": {
-  "title": "Sutta Nipata",
-  "voice": "the-buddha",
-  "kind": "scripture",
-  "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
-  "tradition": "buddhism",
-  "period": "axial",
-  "summary": "A collection of discourses in verse and prose in the Pali Canon, widely regarded as containing some of its oldest material. It includes the Metta Sutta on loving-kindness and the Mangala Sutta on the highest blessings.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Sutta_Nipata",
-   "https://www.accesstoinsight.org/tipitaka/kn/snp/index.html"
-  ]
- },
- "dhammapada": {
-  "title": "Dhammapada",
-  "voice": "the-buddha",
-  "kind": "scripture",
-  "dates": "compiled c. 3rd century BCE (estimates vary)",
-  "tradition": "buddhism",
-  "period": "axial",
-  "summary": "A collection of 423 verses of the Buddha's teaching in Pali, part of the Pali Canon. It is one of the most widely read and translated Buddhist texts.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Dhammapada",
-   "https://www.britannica.com/topic/Dhammapada"
-  ]
- },
- "essence-of-alan-watts": {
-  "title": "The Essence of Alan Watts",
-  "voice": "alan-watts",
-  "kind": "book",
-  "dates": "1977",
-  "tradition": "zen-western",
-  "period": "contemporary",
-  "summary": "A collection based on Alan Watts's 1971 television series, published in 1977, a few years after his death, and later reissued as 'You Are the Universe in Motion'. The quotation shown here was checked in the Internet Archive scan of The Essential Alan Watts (Celestial Arts), a reissue of the 1977 edition; the 1977 Millbrae edition reads \"realize that it is play\" where the reissue reads \"realize it is play\".",
-  "confidence": "thin",
-  "refs": [
-   "https://archive.org/details/essentialalanwat0000watt",
-   "https://en.wikiquote.org/wiki/Alan_Watts",
-   "https://penguinrandomhouse.com/books/818062/you-are-the-universe-in-motion-by-alan-watts"
-  ]
- },
- "the-book-watts": {
-  "title": "The Book: On the Taboo Against Knowing Who You Are",
-  "voice": "alan-watts",
-  "kind": "book",
-  "dates": "1966",
-  "tradition": "zen-western",
-  "period": "contemporary",
-  "summary": "A short book by Alan Watts, published in 1966, which draws on Vedanta and Zen to question the sense of being a separate self. The quotation shown here was checked in the Internet Archive scan of the 1966 Pantheon edition.",
-  "confidence": "thin",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Alan_Watts",
-   "https://en.wikiquote.org/wiki/Alan_Watts"
-  ]
- },
- "what-if-money-talk": {
-  "title": "'What if money was no object?' (lecture excerpt)",
-  "voice": "alan-watts",
-  "kind": "talk",
-  "dates": "unknown",
-  "tradition": "zen-western",
-  "period": "contemporary",
-  "summary": "A short recorded excerpt from one of Alan Watts's lectures, widely shared online under this title. We have not traced the original lecture or its date, and the wording quoted here is a popular paraphrase rather than a transcript.",
-  "confidence": "uncertain",
-  "refs": [
-   "https://www.themarginalian.org/2012/10/10/if-money-were-no-object-alan-watts/",
-   "https://en.wikipedia.org/wiki/Alan_Watts"
-  ]
- },
- "meditations": {
-  "title": "Meditations",
-  "voice": "marcus-aurelius",
-  "kind": "book",
-  "dates": "c. 170–180 CE",
-  "tradition": "stoicism",
-  "period": "classical",
-  "summary": "Private notes that Marcus Aurelius wrote in Greek as reflections to himself, some of them while on military campaign. Divided into twelve books, they were probably never meant for publication.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Meditations",
-   "https://www.britannica.com/topic/Meditations-by-Marcus-Aurelius"
-  ]
- },
- "enchiridion": {
-  "title": "Enchiridion (Handbook)",
-  "voice": "epictetus",
-  "kind": "book",
-  "dates": "early 2nd century CE",
-  "tradition": "stoicism",
-  "period": "classical",
-  "summary": "A short handbook of Epictetus's central teachings, compiled by his student Arrian. It opens by distinguishing what is within our control from what is not.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Enchiridion_of_Epictetus"
-  ]
- },
- "lives-of-eminent-philosophers": {
-  "title": "Lives of Eminent Philosophers",
-  "voice": "diogenes-laertius",
-  "kind": "book",
-  "dates": "probably first half of the 3rd century CE",
-  "tradition": "greek-philosophy",
-  "period": "classical",
-  "summary": "Ten books of biographies and sayings of Greek philosophers, from the earliest sages to Epicurus. Book VII covers Zeno of Citium and the Stoics; for many thinkers it is our main surviving source.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Diogenes_La%C3%ABrtius"
-  ]
- },
- "12-rules-for-life": {
-  "title": "12 Rules for Life: An Antidote to Chaos",
-  "voice": "jordan-peterson",
-  "kind": "book",
-  "dates": "2018",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "A self-help book by Jordan B. Peterson, published in 2018, offering twelve practical rules for living that draw on psychology, mythology, religion and personal stories. It became an international bestseller.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/12_Rules_for_Life"
-  ]
- },
- "myth-of-sisyphus": {
-  "title": "The Myth of Sisyphus",
-  "voice": "albert-camus",
-  "kind": "book",
-  "dates": "1942",
-  "tradition": "existentialism",
-  "period": "modern",
-  "summary": "A philosophical essay by Albert Camus, first published in French in 1942, which asks whether life is worth living if it has no ultimate meaning. It ends with Sisyphus pushing his rock up the hill forever, and Camus's conclusion that we must imagine him happy.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus"
-  ]
- },
- "baden-powell-last-message": {
-  "title": "Last message to Scouts",
-  "voice": "robert-baden-powell",
-  "kind": "article",
-  "dates": "written before 1941; published after his death in 1941",
-  "tradition": "scouting",
-  "period": "modern",
-  "summary": "A farewell letter that Robert Baden-Powell prepared for the Scouts of the world, to be published after his death; it appeared after he died in Kenya in January 1941. It contains his advice to try to leave the world a little better than you found it.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikiquote.org/wiki/Robert_Baden-Powell",
-   "https://en.wikipedia.org/wiki/Robert_Baden-Powell,_1st_Baron_Baden-Powell"
-  ]
- },
- "kiss-principle": {
-  "title": "KISS principle",
-  "voice": "kelly-johnson",
-  "kind": "other",
-  "dates": "c. 1960",
-  "tradition": "management",
-  "period": "contemporary",
-  "summary": "The design rule 'keep it simple, stupid', noted in the U.S. Navy around 1960 and commonly credited to Lockheed engineer Kelly Johnson. It holds that most systems work best when kept simple.",
-  "confidence": "thin",
-  "refs": [
-   "https://en.wikipedia.org/wiki/KISS_principle"
-  ]
- },
- "pareto-principle": {
-  "title": "Pareto principle (the 80/20 rule)",
-  "voice": "joseph-juran",
-  "kind": "other",
-  "dates": "Pareto's work on distribution 1896–1906; developed and named by Juran from 1941",
-  "tradition": "management",
-  "period": "modern",
-  "summary": "The observation that, for many outcomes, roughly 80% of effects come from 20% of causes. It is named after the Italian economist Vilfredo Pareto, who noted that about 80% of the land in Italy was owned by 20% of the people; Joseph Juran generalised the idea and gave it its name.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Pareto_principle"
-  ]
- },
- "peter-principle": {
-  "title": "The Peter Principle",
-  "voice": "laurence-j-peter",
-  "kind": "book",
-  "dates": "1969",
-  "tradition": "management",
-  "period": "contemporary",
-  "summary": "A humorous book by Laurence J. Peter and Raymond Hull, published in 1969, on how organisations work. Its central claim is that in a hierarchy every employee tends to rise to their level of incompetence.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Peter_principle"
-  ]
- },
- "popular-sayings": {
-  "title": "Popular sayings (origin unknown)",
-  "voice": "popular-saying",
-  "kind": "other",
-  "dates": "unknown",
-  "tradition": "popular",
-  "period": "contemporary",
-  "summary": "Sayings and attributions that circulate widely, today mostly online, without a traceable original source. Quotes from here are labelled unverified or misattributed and carry no weight in the scores until an origin is found.",
-  "confidence": "uncertain",
-  "refs": [
-   "https://quoteinvestigator.com/"
-  ]
- },
- "discourse-on-method": {
-  "title": "Discourse on the Method",
-  "voice": "rene-descartes",
-  "kind": "book",
-  "dates": "1637",
-  "tradition": "rationalism",
-  "period": "early-modern",
-  "summary": "René Descartes's short work, published in French in 1637, describing how he sought certain knowledge by doubting everything that could be doubted. Part IV contains the famous 'I think, therefore I am'.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Discourse_on_the_Method",
-   "https://www.britannica.com/topic/The-Discourse-on-Method"
-  ]
- },
- "walden": {
-  "title": "Walden; or, Life in the Woods",
-  "voice": "henry-david-thoreau",
-  "kind": "book",
-  "dates": "1854",
-  "tradition": "transcendentalism",
-  "period": "modern",
-  "summary": "Henry David Thoreau's account, published in 1854, of the two years he spent living in a cabin near Walden Pond in Massachusetts. It is a reflection on simple living, self-reliance and attention to nature.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Walden",
-   "https://www.britannica.com/topic/Walden"
-  ]
- },
- "story-of-philosophy": {
-  "title": "The Story of Philosophy",
-  "voice": "will-durant",
-  "kind": "book",
-  "dates": "1926",
-  "tradition": "philosophy-history",
-  "period": "modern",
-  "summary": "Will Durant's popular survey of Western philosophers from Plato to Dewey, published in 1926. Its chapter on Aristotle contains the line 'We are what we repeatedly do', Durant's own summary, which is often quoted as Aristotle's words.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Story_of_Philosophy",
-   "https://en.wikiquote.org/wiki/Aristotle"
-  ]
- },
- "mindset": {
-  "title": "Mindset: The New Psychology of Success",
-  "voice": "carol-dweck",
-  "kind": "book",
-  "dates": "2006",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Carol S. Dweck's book, published in 2006, on the difference between a 'fixed' mindset, which sees ability as set, and a 'growth' mindset, which sees it as something that can be developed.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Mindset_(book)"
-  ]
- },
- "paradox-of-choice": {
-  "title": "The Paradox of Choice: Why More Is Less",
-  "voice": "barry-schwartz",
-  "kind": "book",
-  "dates": "2004",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Barry Schwartz's book, published in 2004, arguing that an abundance of options can bring anxiety and regret rather than satisfaction.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
-  ]
- },
- "monastic-routine-video": {
-  "title": "Why You Should Wake Up And Eat At The Same Time Everyday (Improvement Pill, YouTube)",
-  "voice": "buddhist-monastic-routine",
-  "kind": "talk",
-  "dates": "unknown",
-  "tradition": "popular",
-  "period": "contemporary",
-  "summary": "A video on the self-improvement YouTube channel Improvement Pill, noted in the project's seed notes as the origin of this popular summary of monastic daily routine. Its contents have not yet been checked against a Buddhist text, so the quote is labelled unverified.",
-  "confidence": "uncertain",
-  "refs": [
-   "https://youtu.be/OevzUnEY5KQ"
-  ]
- },
- "bhagavad-gita": {
-  "title": "Bhagavad Gita",
-  "voice": "krishna",
-  "kind": "scripture",
-  "dates": "c. 2nd–1st century BCE (estimates range from the 5th century BCE to the 2nd century CE)",
-  "tradition": "hinduism",
-  "period": "axial",
-  "summary": "A 700-verse Sanskrit dialogue between the prince Arjuna and Krishna, his charioteer, set within the epic Mahabharata. Traditionally attributed to the sage Vyasa, it is one of the most revered texts of Hinduism.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Bhagavad_Gita",
-   "https://www.britannica.com/topic/Bhagavad-Gita"
-  ]
- },
- "tao-te-ching": {
-  "title": "Tao Te Ching (Daodejing)",
-  "voice": "laozi",
-  "kind": "scripture",
-  "dates": "c. 4th century BCE (estimates range from the 6th to the 3rd century BCE)",
-  "tradition": "taoism",
-  "period": "axial",
-  "summary": "A short classic of 81 chapters on the Tao, the Way, and its power or virtue, traditionally attributed to Laozi. It is the founding text of Taoism and one of the most translated books in the world.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Tao_Te_Ching",
-   "https://www.britannica.com/topic/Tao-te-Ching"
-  ]
- },
- "great-learning": {
-  "title": "The Great Learning (Daxue)",
-  "voice": null,
-  "kind": "book",
-  "dates": "c. 5th–2nd century BCE (date debated)",
-  "tradition": "confucianism",
-  "period": "axial",
-  "summary": "A short Confucian text on self-cultivation and good government, originally a chapter of the Book of Rites. The Neo-Confucian scholar Zhu Xi made it one of the Four Books in the 12th century; tradition links it to Confucius and his disciple Zengzi.",
-  "confidence": "thin",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Great_Learning",
-   "https://www.britannica.com/topic/Sishu",
-   "https://www.britannica.com/biography/Zengzi"
-  ]
- },
- "quran": {
-  "title": "The Qur'an",
-  "voice": "quran",
-  "kind": "scripture",
-  "dates": "revealed c. 610–632 CE; standard text compiled c. 650 CE",
-  "tradition": "islam",
-  "period": "medieval",
-  "summary": "The central scripture of Islam, in 114 suras (chapters), believed by Muslims to be the word of God revealed to the Prophet Muhammad. Translations used here are by J. M. Rodwell and Marmaduke Pickthall.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Quran",
-   "https://www.britannica.com/topic/Quran"
-  ]
- },
- "sahih-al-bukhari": {
-  "title": "Sahih al-Bukhari",
-  "voice": "muhammad",
-  "kind": "scripture",
-  "dates": "compiled 9th century CE",
-  "tradition": "islam",
-  "period": "medieval",
-  "summary": "A collection of hadith, reports of the Prophet Muhammad's words and deeds, compiled by Muhammad al-Bukhari (810–870 CE). Sunni Muslims regard it as the most authentic of the hadith collections.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Sahih_al-Bukhari",
-   "https://www.britannica.com/topic/al-kutub-as-sittah"
-  ]
- },
- "sahih-muslim": {
-  "title": "Sahih Muslim",
-  "voice": "muhammad",
-  "kind": "scripture",
-  "dates": "compiled 9th century CE",
-  "tradition": "islam",
-  "period": "medieval",
-  "summary": "A collection of hadith compiled by Muslim ibn al-Hajjaj (c. 815–875 CE; his birth year is uncertain). Sunni Muslims regard it, with Sahih al-Bukhari, as one of the two most authentic collections.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Sahih_Muslim"
-  ]
- },
- "sunan-abi-dawud": {
-  "title": "Sunan Abi Dawud",
-  "voice": "muhammad",
-  "kind": "scripture",
-  "dates": "compiled 9th century CE",
-  "tradition": "islam",
-  "period": "medieval",
-  "summary": "A collection of hadith compiled by Abu Dawud al-Sijistani (817–889 CE), one of the six major hadith collections of Sunni Islam.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Sunan_Abi_Dawud"
-  ]
- },
- "jami-at-tirmidhi": {
-  "title": "Jami' at-Tirmidhi",
-  "voice": "muhammad",
-  "kind": "scripture",
-  "dates": "compiled 9th century CE",
-  "tradition": "islam",
-  "period": "medieval",
-  "summary": "A collection of hadith compiled by Muhammad ibn Isa al-Tirmidhi (824–892 CE), one of the six major hadith collections of Sunni Islam. Al-Tirmidhi notes his own assessment of the reliability of many reports.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Sunan_al-Tirmidhi"
-  ]
- },
- "sunan-ibn-majah": {
-  "title": "Sunan Ibn Majah",
-  "voice": "muhammad",
-  "kind": "scripture",
-  "dates": "compiled 9th century CE",
-  "tradition": "islam",
-  "period": "medieval",
-  "summary": "A collection of hadith compiled by Ibn Majah (824–887 CE), counted as the sixth of the six major hadith collections of Sunni Islam. It contains some reports graded weak, so each narration is assessed individually.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Sunan_Ibn_Majah"
-  ]
- },
- "nicomachean-ethics": {
-  "title": "Nicomachean Ethics",
-  "voice": "aristotle",
-  "kind": "book",
-  "dates": "c. 4th century BCE",
-  "tradition": "greek-philosophy",
-  "period": "axial",
-  "summary": "Aristotle's main work on ethics, probably based on his lectures at the Lyceum. It asks what makes a human life go well and describes virtue as a habit of choosing the mean between excess and deficiency.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Nicomachean_Ethics",
-   "https://www.britannica.com/topic/Nicomachean-Ethics"
-  ]
- },
- "apology": {
-  "title": "Apology",
-  "voice": "plato",
-  "kind": "book",
-  "dates": "c. 399–390 BCE",
-  "tradition": "greek-philosophy",
-  "period": "axial",
-  "summary": "Plato's account of the speech Socrates gave in his own defence at his trial in Athens in 399 BCE. It contains his declaration that the unexamined life is not worth living.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Apology_(Plato)"
-  ]
- },
- "gorgias": {
-  "title": "Gorgias",
-  "voice": "plato",
-  "kind": "book",
-  "dates": "c. 380s BCE",
-  "tradition": "greek-philosophy",
-  "period": "axial",
-  "summary": "A dialogue by Plato in which Socrates questions the orator Gorgias and his followers about rhetoric, power and justice. In it Socrates argues that it is better to suffer wrong than to do it.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Gorgias_(dialogue)"
-  ]
- },
- "cratylus": {
-  "title": "Cratylus",
-  "voice": "plato",
-  "kind": "book",
-  "dates": "c. 4th century BCE",
-  "tradition": "greek-philosophy",
-  "period": "axial",
-  "summary": "A dialogue by Plato on whether names belong to things by nature or by convention. In it Socrates reports Heraclitus's saying that you cannot step into the same river twice.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Cratylus_(dialogue)"
-  ]
- },
- "odyssey": {
-  "title": "Odyssey",
-  "voice": "homer",
-  "kind": "book",
-  "dates": "c. 8th century BCE (estimates vary)",
-  "tradition": "greek-epic",
-  "period": "axial",
-  "summary": "An epic poem in 24 books attributed to Homer, telling of Odysseus's ten-year journey home after the Trojan War. In Book XIV the swineherd Eumaeus welcomes him, disguised as a beggar, as an honoured guest.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Odyssey",
-   "https://www.britannica.com/topic/Odyssey-epic-by-Homer"
-  ]
- },
- "epidemics": {
-  "title": "Epidemics",
-  "voice": "hippocrates",
-  "kind": "book",
-  "dates": "c. late 5th – 4th century BCE",
-  "tradition": "hippocratic",
-  "period": "axial",
-  "summary": "Seven books of case notes and observations on illness in the Hippocratic Corpus. They are traditionally attributed to Hippocrates, though their authorship is uncertain; Book I contains the advice to the physician to help, or at least to do no harm.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Hippocratic_Corpus",
-   "https://en.wikipedia.org/wiki/Primum_non_nocere"
-  ]
- },
- "acaranga-sutra": {
-  "title": "Acaranga Sutra",
-  "voice": "mahavira",
-  "kind": "scripture",
-  "dates": "c. 5th–3rd century BCE (first book c. 5th–4th century BCE; second book later)",
-  "tradition": "jainism",
-  "period": "axial",
-  "summary": "The first of the twelve Angas, the core scriptures of Svetambara Jainism (eleven of which survive), and generally considered the oldest. It sets out the conduct of Jain monks and nuns, with a strong emphasis on non-violence towards all living beings.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Acaranga_Sutra",
-   "https://archive.sacred-texts.com/jai/sbe22/index.htm"
-  ]
- },
- "essay-on-criticism": {
-  "title": "An Essay on Criticism",
-  "voice": "alexander-pope",
-  "kind": "book",
-  "dates": "1711",
-  "tradition": "english-poetry",
-  "period": "early-modern",
-  "summary": "A poem in rhyming couplets by Alexander Pope, published in 1711, on the art of writing and judging literature. Many of its lines became proverbs, including 'a little learning is a dangerous thing'.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/An_Essay_on_Criticism"
-  ]
- },
- "pensees": {
-  "title": "Pensées",
-  "voice": "blaise-pascal",
-  "kind": "book",
-  "dates": "written 1650s–1662; published 1670",
-  "tradition": "christianity",
-  "period": "early-modern",
-  "summary": "Fragments that Blaise Pascal wrote towards a defence of the Christian faith, left unfinished at his death in 1662 and published in 1670. They reflect on human restlessness, the limits of reason and the search for God.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Pens%C3%A9es",
-   "https://www.britannica.com/topic/Pensees"
-  ]
- },
- "franklin-autobiography": {
-  "title": "The Autobiography of Benjamin Franklin",
-  "voice": "benjamin-franklin",
-  "kind": "book",
-  "dates": "written 1771–1790; first published 1791",
-  "tradition": "enlightenment",
-  "period": "early-modern",
-  "summary": "Benjamin Franklin's unfinished account of his life, written in several stages from 1771 and first published, in French, in 1791. It includes his plan of thirteen virtues, practised one week at a time.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin"
-  ]
- },
- "citizen-of-the-world": {
-  "title": "The Citizen of the World",
-  "voice": "oliver-goldsmith",
-  "kind": "book",
-  "dates": "1762 (as a book; letters first printed 1760–61)",
-  "tradition": "english-poetry",
-  "period": "early-modern",
-  "summary": "A series of letters by Oliver Goldsmith, written in the voice of a fictional Chinese philosopher in London and first printed in a newspaper, then collected as a book in 1762. Through his visitor's eyes, Goldsmith gently satirises English life.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Oliver_Goldsmith",
-   "https://quoteinvestigator.com/2014/05/27/rising/"
-  ]
- },
- "gulag-archipelago": {
-  "title": "The Gulag Archipelago",
-  "voice": "aleksandr-solzhenitsyn",
-  "kind": "book",
-  "dates": "written 1958–1968; published 1973",
-  "tradition": "russian-literature",
-  "period": "contemporary",
-  "summary": "Solzhenitsyn's three-volume history of the Soviet forced-labour camp system, built from his own imprisonment and the testimony of many former prisoners. It was first published in Paris in 1973 and was not openly published in the Soviet Union until 1989.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Gulag_Archipelago"
-  ]
- },
- "live-not-by-lies": {
-  "title": "Live Not by Lies",
-  "voice": "aleksandr-solzhenitsyn",
-  "kind": "article",
-  "dates": "1974",
-  "tradition": "russian-literature",
-  "period": "contemporary",
-  "summary": "A short essay Solzhenitsyn released on 12 February 1974, the day of his arrest, just before he was exiled from the Soviet Union. It asks ordinary people not to overthrow anything, only to refuse, each personally, to take part in lies.",
-  "confidence": "solid",
-  "refs": [
-   "https://www.solzhenitsyncenter.org/live-not-by-lies",
-   "https://en.wikipedia.org/wiki/Aleksandr_Solzhenitsyn"
-  ]
- },
- "brothers-karamazov": {
-  "title": "The Brothers Karamazov",
-  "voice": "fyodor-dostoevsky",
-  "kind": "book",
-  "dates": "1879–1880",
-  "tradition": "russian-literature",
-  "period": "modern",
-  "summary": "Dostoevsky's last novel, first published in instalments in 1879–80. Through three brothers, their father's murder and the elder Zossima, it weighs faith and doubt, freedom and responsibility.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Brothers_Karamazov"
-  ]
- },
- "essays-of-montaigne": {
-  "title": "Essays",
-  "voice": "michel-de-montaigne",
-  "kind": "book",
-  "dates": "1580; expanded 1588",
-  "tradition": "renaissance-humanism",
-  "period": "early-modern",
-  "summary": "Montaigne's Essais, a collection of 107 essays in three books, first published in 1580 and expanded in 1588. Drawing on classical authors and his own experience, they range from friendship and solitude to death and the limits of knowledge.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Essays_(Montaigne)",
-   "https://plato.stanford.edu/entries/montaigne/"
-  ]
- },
- "spinoza-ethics": {
-  "title": "Ethics",
-  "voice": "baruch-spinoza",
-  "kind": "book",
-  "dates": "completed c. 1675; published 1677",
-  "tradition": "rationalism",
-  "period": "early-modern",
-  "summary": "Spinoza's main work, set out in the manner of geometry with definitions, propositions and proofs. It moves from God and nature to the human emotions and argues that freedom and blessedness come through understanding. It was published shortly after his death in 1677.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Ethics_(Spinoza_book)",
-   "https://plato.stanford.edu/entries/spinoza/"
-  ]
- },
- "groundwork-metaphysic-of-morals": {
-  "title": "Groundwork of the Metaphysic of Morals",
-  "voice": "immanuel-kant",
-  "kind": "book",
-  "dates": "1785",
-  "tradition": "enlightenment",
-  "period": "early-modern",
-  "summary": "A short work in which Kant seeks the supreme principle of morality and states it as the categorical imperative, including the formulas of universal law and of humanity as an end in itself. The public-domain English translation by T. K. Abbott is titled Fundamental Principles of the Metaphysic of Morals.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Groundwork_of_the_Metaphysics_of_Morals",
-   "https://plato.stanford.edu/entries/kant-moral/"
-  ]
- },
- "counsels-and-maxims": {
-  "title": "Counsels and Maxims",
-  "voice": "arthur-schopenhauer",
-  "kind": "book",
-  "dates": "1851",
-  "tradition": "german-philosophy",
-  "period": "modern",
-  "summary": "Practical advice on living well, part of the 'Aphorisms on the Wisdom of Life' in Schopenhauer's Parerga and Paralipomena (1851). T. Bailey Saunders published it in English under this title.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Parerga_and_Paralipomena",
-   "https://www.gutenberg.org/ebooks/10715"
-  ]
- },
- "twilight-of-the-idols": {
-  "title": "Twilight of the Idols",
-  "voice": "friedrich-nietzsche",
-  "kind": "book",
-  "dates": "written 1888; published 1889",
-  "tradition": "german-philosophy",
-  "period": "modern",
-  "summary": "A short book Nietzsche wrote in 1888 and published in January 1889, subtitled 'How to Philosophize with a Hammer'. It opens with a series of sharp aphorisms, 'Maxims and Arrows' (titled 'Maxims and Missiles' in Ludovici's translation), before turning to Socrates, morality and the culture of his day.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Twilight_of_the_Idols",
-   "https://plato.stanford.edu/entries/nietzsche/"
-  ]
- },
- "works-of-love": {
-  "title": "Works of Love",
-  "voice": "soren-kierkegaard",
-  "kind": "book",
-  "dates": "1847",
-  "tradition": "existentialism",
-  "period": "modern",
-  "summary": "A series of Christian reflections that Kierkegaard published under his own name in 1847. They take the command to love one's neighbour as their theme and ask what it means for love to be a duty and a deed.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Works_of_Love",
-   "https://plato.stanford.edu/entries/kierkegaard/"
-  ]
- },
- "the-hero-with-a-thousand-faces": {
-  "title": "The Hero with a Thousand Faces",
-  "voice": "joseph-campbell",
-  "kind": "book",
-  "dates": "1949",
-  "tradition": "comparative-mythology",
-  "period": "modern",
-  "summary": "Campbell's 1949 study of comparative mythology, first published in the Bollingen Series. It argues that hero stories from many cultures, including those of Osiris, the Buddha and Moses, share one underlying pattern of departure, initiation and return, which he called the monomyth.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces",
-   "https://en.wikipedia.org/wiki/Hero%27s_journey"
-  ]
- },
- "the-power-of-myth": {
-  "title": "The Power of Myth",
-  "voice": "joseph-campbell",
-  "kind": "book",
-  "dates": "1988",
-  "tradition": "comparative-mythology",
-  "period": "contemporary",
-  "summary": "The companion book to Joseph Campbell and the Power of Myth, six conversations with the journalist Bill Moyers filmed in the last two summers of Campbell's life and broadcast on PBS in 1988. In them Campbell talks about the hero's journey, the place of myth in modern life and his advice to 'follow your bliss'.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Joseph_Campbell_and_the_Power_of_Myth",
-   "https://www.jcf.org/learn/joseph-campbell-follow-your-bliss"
-  ]
- },
- "a-joseph-campbell-companion": {
-  "title": "A Joseph Campbell Companion: Reflections on the Art of Living",
-  "voice": "joseph-campbell",
-  "kind": "book",
-  "dates": "1991",
-  "tradition": "comparative-mythology",
-  "period": "contemporary",
-  "summary": "A posthumous collection of short sayings, published in 1991 from material gathered by Diane K. Osbon, who said she wrote them down in her journals over years in Campbell's company. Because the lines were recorded by a listener rather than written by Campbell, their exact wording rests on her notes.",
-  "confidence": "thin",
-  "refs": [
-   "https://quoteinvestigator.com/2013/05/23/campbell-treasure/",
-   "https://en.wikipedia.org/wiki/Joseph_Campbell"
-  ]
- },
- "7-habits": {
-  "title": "The 7 Habits of Highly Effective People",
-  "voice": "stephen-covey",
-  "kind": "book",
-  "dates": "1989",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Stephen R. Covey's self-help and business book, first published in 1989. It sets out seven habits for personal and working effectiveness and puts character ahead of technique.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People",
-   "https://www.franklincovey.com/habit-5/"
-  ]
- },
- "atomic-habits": {
-  "title": "Atomic Habits",
-  "voice": "james-clear",
-  "kind": "book",
-  "dates": "2018",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "James Clear's 2018 book on building good habits and breaking bad ones. Its central idea is that small, easy changes, repeated daily, add up to large ones and gradually reshape how we see ourselves.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Atomic_Habits",
-   "https://jamesclear.com/atomic-habits-summary"
-  ]
- },
- "the-obstacle-is-the-way": {
-  "title": "The Obstacle Is the Way",
-  "voice": "ryan-holiday",
-  "kind": "book",
-  "dates": "2014",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Ryan Holiday's 2014 book on turning obstacles into opportunities. Its title and theme come from a line in Marcus Aurelius's Meditations (V.20) about what stands in the way becoming the way.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way",
-   "https://dailystoic.com/obstacle-is-the-way/"
-  ]
- },
- "ego-is-the-enemy": {
-  "title": "Ego Is the Enemy",
-  "voice": "ryan-holiday",
-  "kind": "book",
-  "dates": "2016",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Ryan Holiday's fourth book, published in 2016, about how ego gets in the way of ambition, success and recovery from failure.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Ego_Is_the_Enemy"
-  ]
- },
- "subtle-art": {
-  "title": "The Subtle Art of Not Giving a F*ck",
-  "voice": "mark-manson",
-  "kind": "book",
-  "dates": "2016",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Mark Manson's 2016 self-help bestseller. It argues that struggle gives life its meaning and that chasing constant positivity only makes us feel worse.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Subtle_Art_of_Not_Giving_a_Fuck",
-   "https://en.wikiquote.org/wiki/Mark_Manson"
-  ]
- },
- "ted-radio-hour-shame": {
-  "title": "'Can We Gain Strength From Shame?' (TED Radio Hour)",
-  "voice": "brene-brown",
-  "kind": "talk",
-  "dates": "2013",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "A segment of NPR's TED Radio Hour, aired on 11 March 2013, in which Brené Brown talks with host Guy Raz about her research on shame and vulnerability. NPR publishes a transcript.",
-  "confidence": "solid",
-  "refs": [
-   "https://www.npr.org/transcripts/174033560"
-  ]
- },
- "mans-search-for-meaning": {
-  "title": "Man's Search for Meaning",
-  "voice": "viktor-frankl",
-  "kind": "book",
-  "dates": "1946",
-  "tradition": "modern-psychology",
-  "period": "modern",
-  "summary": "Viktor Frankl's 1946 account of his years as a prisoner in Nazi concentration camps, followed by an outline of logotherapy. It describes finding meaning through work, through love for another person, and through facing unavoidable suffering with dignity.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
-   "https://en.wikiquote.org/wiki/Man%27s_Search_for_Meaning"
-  ]
- },
- "the-power-of-now": {
-  "title": "The Power of Now",
-  "voice": "eckhart-tolle",
-  "kind": "book",
-  "dates": "1997",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Eckhart Tolle's 1997 guide to living in the present moment, with simple exercises in self-observation. Oprah Winfrey recommended it, and it has been translated into 33 languages.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Power_of_Now",
-   "https://en.wikiquote.org/wiki/The_Power_of_Now"
-  ]
- },
- "naval-podcast": {
-  "title": "Naval (podcast)",
-  "voice": "naval-ravikant",
-  "kind": "talk",
-  "dates": "2018–present",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Naval Ravikant's podcast, published with transcripts at nav.al, with short episodes on happiness, wealth and philosophy. The 2020 series on happiness includes the episode 'Desire Is a Contract You Make to Be Unhappy'.",
-  "confidence": "thin",
-  "refs": [
-   "https://nav.al/desire",
-   "https://en.wikipedia.org/wiki/Naval_Ravikant"
-  ]
- },
- "fear-setting": {
-  "title": "'Fear-Setting' (blog post)",
-  "voice": "tim-ferriss",
-  "kind": "article",
-  "dates": "2017",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "A 2017 post on Tim Ferriss's blog, adapted from chapters of The 4-Hour Workweek (2007) and Tools of Titans (2016). It sets out his 'fear-setting' exercise of naming the worst case, accepting it and acting anyway.",
-  "confidence": "solid",
-  "refs": [
-   "https://tim.blog/2017/05/15/fear-setting/",
-   "https://en.wikipedia.org/wiki/The_4-Hour_Workweek"
-  ]
- },
- "huberman-lab": {
-  "title": "Huberman Lab (podcast)",
-  "voice": "andrew-huberman",
-  "kind": "talk",
-  "dates": "2021–present",
-  "tradition": "modern-psychology",
-  "period": "contemporary",
-  "summary": "Andrew Huberman's health and science podcast, which began in 2021. Episodes come with show notes, timestamps and transcripts on hubermanlab.com; the 22 November 2021 solo episode covers the science of gratitude.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Andrew_Huberman",
-   "https://www.hubermanlab.com/episode/the-science-of-gratitude-and-how-to-build-a-gratitude-practice"
-  ]
- },
- "extreme-ownership-tedx": {
-  "title": "'Extreme Ownership' (TEDxUniversityofNevada talk)",
-  "voice": "jocko-willink",
-  "kind": "talk",
-  "dates": "2017",
-  "tradition": "management",
-  "period": "contemporary",
-  "summary": "Jocko Willink's TEDx talk at the University of Nevada, published in February 2017. He describes a confused 2006 operation in Ramadi, Iraq, and how taking full responsibility for it, rather than blaming others, earned his commander's trust.",
-  "confidence": "solid",
-  "verification": "Quote checked in TED's official English subtitles for the talk (hosted on Amara by the TED team).",
-  "refs": [
-   "https://singjupost.com/jocko-willink-on-extreme-ownership-at-tedxuniversityofnevada-transcript/",
-   "https://en.wikipedia.org/wiki/Jocko_Willink"
-  ]
- },
- "structured-programming-with-go-to-statements": {
-  "title": "Structured Programming with go to Statements",
-  "voice": "donald-knuth",
-  "kind": "article",
-  "dates": "1974",
-  "tradition": "computer-science",
-  "period": "contemporary",
-  "summary": "A paper by Donald Knuth published in ACM Computing Surveys in December 1974, on program structure and efficiency. It is the source of his often-quoted remark that premature optimization is the root of all evil, together with his advice not to neglect the critical few per cent of a program.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Program_optimization",
-   "https://en.wikiquote.org/wiki/Donald_Knuth"
-  ]
- },
- "merchant-of-venice": {
-  "title": "The Merchant of Venice",
-  "voice": "william-shakespeare",
-  "kind": "book",
-  "dates": "c. 1596–1599",
-  "tradition": "english-poetry",
-  "period": "early-modern",
-  "summary": "A comedy by William Shakespeare, written in the late 1590s and first printed in 1600. In the trial scene (Act 4, Scene 1) Portia, disguised as a lawyer, pleads for mercy in a speech that became one of the best-known passages in English.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Merchant_of_Venice",
-   "https://www.gutenberg.org/ebooks/1515"
-  ]
- },
- "instruction-of-ptahhotep": {
-  "title": "The Instruction of Ptahhotep",
-  "voice": "ptahhotep",
-  "kind": "book",
-  "dates": "Middle Kingdom copies, c. 20th–19th century BCE",
-  "tradition": "ancient-egypt",
-  "period": "axial",
-  "summary": "An Egyptian wisdom text in which an aged vizier gives his son advice on conduct, speech, humility and justice. It survives mainly in the Prisse Papyrus and is among the oldest books of moral instruction in the world.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Maxims_of_Ptahhotep",
-   "https://www.gutenberg.org/ebooks/30508"
-  ]
- },
- "soul-of-the-indian": {
-  "title": "The Soul of the Indian",
-  "voice": "ohiyesa",
-  "kind": "book",
-  "dates": "1911",
-  "tradition": "dakota",
-  "period": "modern",
-  "summary": "Charles Eastman's short account of the religion and moral life of the Dakota as he knew it before contact with white culture. He writes as both an insider and a convert to Christianity, and often generalises about Native peoples as a whole.",
-  "confidence": "solid",
-  "refs": [
-   "https://www.gutenberg.org/ebooks/340",
-   "https://en.wikipedia.org/wiki/Charles_Eastman"
-  ]
- },
- "taittiriya-upanishad": {
-  "title": "Taittiriya Upanishad",
-  "voice": "upanishads",
-  "kind": "scripture",
-  "dates": "c. 6th–5th century BCE",
-  "tradition": "hinduism",
-  "period": "axial",
-  "summary": "One of the principal Upanishads, attached to the Black Yajurveda. Its first part ends with a teacher's famous charge to the graduating student: speak the truth, do your duty, and honour mother, father, teacher and guest.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Taittiriya_Upanishad",
-   "https://archive.sacred-texts.com/hin/sbe15/index.htm"
-  ]
- },
- "brihadaranyaka-upanishad": {
-  "title": "Brihadaranyaka Upanishad",
-  "voice": "upanishads",
-  "kind": "scripture",
-  "dates": "c. 7th–6th century BCE",
-  "tradition": "hinduism",
-  "period": "axial",
-  "summary": "One of the oldest and longest Upanishads, attached to the White Yajurveda. It contains the dialogues of the sage Yajnavalkya on the self and the parable of the thunder's 'Da Da Da': self-restraint, giving and compassion.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Brihadaranyaka_Upanishad",
-   "https://archive.sacred-texts.com/hin/sbe15/index.htm"
-  ]
- },
- "mahabharata": {
-  "title": "Mahabharata",
-  "voice": "vyasa",
-  "kind": "scripture",
-  "dates": "c. 4th century BCE – 4th century CE",
-  "tradition": "hinduism",
-  "period": "classical",
-  "summary": "The great Sanskrit epic of the war between the Pandavas and the Kauravas, and one of the longest poems ever composed. Besides the story it holds long teachings on dharma, including the Bhagavad Gita and the Anusasana Parva on duty and conduct.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Mahabharata",
-   "https://www.britannica.com/topic/Mahabharata"
-  ]
- },
- "uttaradhyayana-sutra": {
-  "title": "Uttaradhyayana Sutra",
-  "voice": "mahavira",
-  "kind": "scripture",
-  "dates": "c. 3rd–1st century BCE (oldest parts); the Svetambara canon was fixed in the 5th century CE",
-  "tradition": "jainism",
-  "period": "axial",
-  "summary": "A Svetambara Jain scripture of 36 lectures, traditionally held to be Mahavira's last sermon. It teaches the monastic life through verses, parables and dialogues, with frequent reminders of how short life is.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Uttaradhyayana",
-   "https://archive.sacred-texts.com/jai/sbe45/index.htm"
-  ]
- },
- "tirukkural": {
-  "title": "Tirukkural",
-  "voice": "tiruvalluvar",
-  "kind": "book",
-  "dates": "c. 1st century BCE – 5th century CE (estimates vary)",
-  "tradition": "tamil-ethics",
-  "period": "classical",
-  "summary": "A classic Tamil work of 1,330 two-line couplets arranged in 133 chapters on virtue, wealth and love. It is valued for its broad, largely non-sectarian ethics and is one of the most translated works in Indian literature.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Kural",
-   "https://en.wikisource.org/wiki/Tirukural"
-  ]
- },
- "gulistan": {
-  "title": "Gulistan (The Rose Garden)",
-  "voice": "saadi",
-  "kind": "book",
-  "dates": "1258",
-  "tradition": "persian-literature",
-  "period": "medieval",
-  "summary": "Saadi's collection of short stories, verses and maxims in eight chapters, on kings, dervishes, contentment, silence, youth, old age, education and conduct. For centuries it was a standard school text in the Persian-speaking world.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Gulistan_(book)",
-   "https://www.gutenberg.org/ebooks/13060"
-  ]
- },
- "hidden-words": {
-  "title": "The Hidden Words",
-  "voice": "bahaullah",
-  "kind": "scripture",
-  "dates": "c. 1858",
-  "tradition": "bahai",
-  "period": "modern",
-  "summary": "A short collection of 71 Arabic and 82 Persian aphorisms by Bahá’u’lláh, written in Baghdad, on the spiritual and moral life. The standard English translation is by Shoghi Effendi.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/The_Hidden_Words",
-   "https://www.bahai.org/library/authoritative-texts/bahaullah/hidden-words/"
-  ]
- },
- "avesta": {
-  "title": "Avesta",
-  "voice": "avesta-authors",
-  "kind": "scripture",
-  "dates": "composed c. 1500–400 BCE; written down c. 5th–6th century CE",
-  "tradition": "zoroastrianism",
-  "period": "axial",
-  "summary": "The sacred texts of Zoroastrianism, in the Avestan language. Besides the Gathas and the liturgy it includes the Yashts, hymns to individual divinities; the Mihr Yasht praises Mithra as guardian of contracts and of the truth.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Avesta",
-   "https://www.avesta.org/"
-  ]
- },
- "yoruba-speaking-peoples": {
-  "title": "The Yoruba-Speaking Peoples of the Slave Coast of West Africa",
-  "voice": null,
-  "kind": "book",
-  "dates": "1894",
-  "tradition": "yoruba",
-  "period": "modern",
-  "summary": "An ethnography by A. B. Ellis, a British army officer in West Africa. Its chapter on proverbs gives several hundred Yoruba sayings in English translation; the framing reflects colonial attitudes of its time, but the proverbs are recorded with their Yoruba originals.",
-  "confidence": "thin",
-  "refs": [
-   "https://archive.sacred-texts.com/afr/yor/index.htm",
-   "https://en.wikipedia.org/wiki/Alfred_Burdon_Ellis"
-  ]
- },
- "ashanti-proverbs": {
-  "title": "Ashanti Proverbs",
-  "voice": null,
-  "kind": "book",
-  "dates": "1916",
-  "tradition": "akan",
-  "period": "modern",
-  "summary": "R. S. Rattray's English translation, with Twi text and notes, of over 800 proverbs chosen from J. G. Christaller's 1879 Twi collection. Its subtitle reflects colonial attitudes of the time, but it remains a standard early record of Akan proverbs.",
-  "confidence": "thin",
-  "refs": [
-   "https://archive.org/details/ashantiproverbst00rattuoft",
-   "https://en.wikipedia.org/wiki/Robert_Sutherland_Rattray"
-  ]
- },
- "mozi": {
-  "title": "Mozi",
-  "voice": "mozi",
-  "kind": "book",
-  "dates": "c. 5th–3rd century BCE",
-  "tradition": "mohism",
-  "period": "axial",
-  "summary": "The collected writings of the Mohist school, named after its founder. Its core chapters argue for impartial care for all, against aggressive war and against waste, often in three versions that may come from different branches of the school.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Mozi_(book)",
-   "https://ctext.org/mozi"
-  ]
- },
- "taishang-ganying-pian": {
-  "title": "Treatise of the Most Exalted One on Action and Response (Taishang Ganying Pian)",
-  "voice": "taishang-ganying-pian",
-  "kind": "book",
-  "dates": "12th century",
-  "tradition": "taoism",
-  "period": "medieval",
-  "summary": "A short Daoist tract listing good and bad deeds and the rewards and punishments they bring. Widely printed and given away as an act of merit, it was translated by James Legge as 'The Thai-Shang Tractate of Actions and Their Retributions'.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Treatise_On_Response_And_Retribution",
-   "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
-  ]
- },
- "zhuangzi": {
-  "title": "Zhuangzi",
-  "voice": "zhuangzi",
-  "kind": "book",
-  "dates": "c. 4th–2nd century BCE",
-  "tradition": "taoism",
-  "period": "axial",
-  "summary": "The second great classic of Taoism, in 33 chapters of stories, dialogues and reflections on freedom, change and the limits of knowledge. Only the Inner Chapters are usually credited to Zhuangzi himself.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Zhuangzi_(book)",
-   "https://archive.sacred-texts.com/tao/sbe39/index.htm"
-  ]
- },
- "seventeen-article-constitution": {
-  "title": "Seventeen-Article Constitution",
-  "voice": "prince-shotoku",
-  "kind": "other",
-  "dates": "604 (as dated in the Nihongi, 720)",
-  "tradition": "japanese-thought",
-  "period": "medieval",
-  "summary": "A set of seventeen moral precepts for officials, recorded in the Nihongi and credited to Prince Shōtoku. It opens by valuing harmony and draws on Confucian ideas of order and Buddhist reverence; it was guidance for conduct rather than a constitution in the modern sense.",
-  "confidence": "thin",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Seventeen-article_constitution",
-   "https://en.wikisource.org/wiki/Nihongi/Book_XXII"
-  ]
- },
- "galatians": {
-  "title": "Epistle to the Galatians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "late 40s–early 50s CE (majority scholarly view)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "A letter of the New Testament from Paul the Apostle to early Christian communities in Galatia, in Anatolia. It argues that non-Jewish followers of Jesus need not keep the Mosaic Law, especially circumcision, and closes with counsel on living by the Spirit. Scholars agree it is Paul's own writing.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Epistle_to_the_Galatians"
-  ]
- },
- "works-and-days": {
-  "title": "Works and Days",
-  "voice": "hesiod",
-  "kind": "book",
-  "dates": "c. 700 BCE",
-  "tradition": "greek-epic",
-  "period": "axial",
-  "summary": "A didactic poem of 828 lines by Hesiod, written in dactylic hexameter around 700 BCE. At its centre is a farmer's almanac addressed to his brother Perses, set among myths such as Pandora and the ages of humankind and advice on work, justice and good sense.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Works_and_Days"
-  ]
- },
- "book-of-documents": {
-  "title": "Book of Documents (Shujing)",
-  "voice": "book-of-documents-authors",
-  "kind": "book",
-  "dates": "compiled over many centuries; the received text includes 'Old Text' chapters judged 3rd–4th-century CE reconstructions",
-  "tradition": "confucianism",
-  "period": "axial",
-  "summary": "One of the Five Classics of ancient Chinese literature, a collection of speeches and documents attributed to early rulers and ministers, and a foundation of Chinese political thought for over two millennia. In the 17th century the scholar Yan Ruoqu persuaded most scholars that the 'Old Text' chapters of the received text were fabricated in the 3rd or 4th century CE.",
-  "confidence": "uncertain",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Documents"
-  ]
- },
- "genesis": {
-  "title": "Genesis",
-  "voice": "torah-writers",
-  "kind": "scripture",
-  "dates": "final form c. 5th century BCE (scholarly estimate)",
-  "tradition": "judaism",
-  "period": "axial",
-  "summary": "The first book of the Torah, telling of the creation of the world, the first humans in the garden of Eden, and the stories of Noah, Abraham, Isaac, Jacob and Joseph. In its second creation account the first human is placed in the garden to tend and keep it.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Book_of_Genesis"
-  ]
- },
- "constitution-of-the-five-nations": {
-  "title": "The Constitution of the Five Nations",
-  "voice": "great-law-of-peace",
-  "kind": "book",
-  "dates": "1916",
-  "tradition": "haudenosaunee",
-  "period": "modern",
-  "summary": "Arthur C. Parker's edition of the Great Law of the Haudenosaunee (Iroquois) Confederacy, published by the New York State Museum in 1916. It is based chiefly on a manuscript compiled by the Mohawk Seth Newhouse and revised by Albert Cusick, together with a version prepared by a committee of Six Nations chiefs.",
-  "confidence": "solid",
-  "refs": [
-   "https://archive.org/details/constitutionoffi00parkuoft",
-   "https://en.wikipedia.org/wiki/Arthur_C._Parker",
-   "https://en.wikipedia.org/wiki/Great_Law_of_Peace"
-  ]
- },
- "anguttara-nikaya": {
-  "title": "Anguttara Nikaya (Numerical Discourses)",
-  "voice": "the-buddha",
-  "kind": "scripture",
-  "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
-  "tradition": "buddhism",
-  "period": "axial",
-  "summary": "The fourth of the five collections of discourses in the Pali Canon. Its several thousand discourses, ascribed to the Buddha and his chief disciples, are arranged in eleven books by the number of items each teaching lists.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/A%E1%B9%85guttara_Nik%C4%81ya",
-   "https://www.accesstoinsight.org/tipitaka/an/index.html"
-  ]
- },
- "mencius": {
-  "title": "Mencius",
-  "voice": "mencius",
-  "kind": "book",
-  "dates": "4th century BCE (compiled by disciples, scholarly view)",
-  "tradition": "confucianism",
-  "period": "axial",
-  "summary": "An anthology of conversations and anecdotes of the philosopher Mencius, many of them with rulers of the Warring States period. It is one of the Confucian classics and sets out his moral and political philosophy of benevolent government.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Mencius_(book)"
-  ]
- },
- "code-of-hammurabi": {
-  "title": "Code of Hammurabi",
-  "voice": "hammurabi",
-  "kind": "other",
-  "dates": "c. 1753 BCE",
-  "tradition": "mesopotamia",
-  "period": "axial",
-  "summary": "A Babylonian legal text in Old Babylonian Akkadian, issued in the name of King Hammurabi and inscribed on a basalt stele rediscovered at Susa in 1901. A prologue and epilogue frame some 280 laws, presenting the king as appointed to bring justice to the land.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Code_of_Hammurabi",
-   "https://avalon.law.yale.edu/ancient/hamframe.asp"
-  ]
- },
- "instruction-of-amenemope": {
-  "title": "Instruction of Amenemope",
-  "voice": "amenemope",
-  "kind": "book",
-  "dates": "probably Ramesside period, c. 1300–1075 BCE",
-  "tradition": "ancient-egypt",
-  "period": "axial",
-  "summary": "An Egyptian wisdom text of thirty chapters of advice, ostensibly from the scribe Amenemope to his son. It reflects the New Kingdom \"Age of Personal Piety\" and is known for its similarity to part of the Book of Proverbs.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Instruction_of_Amenemope"
-  ]
- },
- "teaching-for-merykara": {
-  "title": "Teaching for King Merykara",
-  "voice": "kheti",
-  "kind": "book",
-  "dates": "probably Middle Kingdom, c. 2025–1700 BCE",
-  "tradition": "ancient-egypt",
-  "period": "axial",
-  "summary": "A Middle Egyptian instruction in which a king of the First Intermediate Period advises his son Merykara on how to be a good king and avoid evil, including how to treat the weak and judge justly.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Teaching_for_King_Merykara"
-  ]
- },
- "gospel-of-john": {
-  "title": "Gospel of John",
-  "voice": null,
-  "kind": "scripture",
-  "dates": "c. 90–100 CE (scholarly estimate)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "The fourth gospel of the New Testament, telling of the life, teaching, death and resurrection of Jesus. It is traditionally attributed to the apostle John; the text itself names an unnamed 'disciple whom Jesus loved' as its source, and most scholars date its completion to around 90–100 CE.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Gospel_of_John"
-  ]
- },
- "1-corinthians": {
-  "title": "First Epistle to the Corinthians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "c. 53–57 CE",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "Paul's letter to the Christian congregation at Corinth, in Greece, written to address problems that had arisen there, probably from Ephesus in the mid-50s CE. It includes the well-known passage on love in chapter 13. Scholars agree that Paul wrote it.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/First_Epistle_to_the_Corinthians"
-  ]
- },
- "2-corinthians": {
-  "title": "Second Epistle to the Corinthians",
-  "voice": "paul-the-apostle",
-  "kind": "scripture",
-  "dates": "mid-50s CE (scholarly estimate)",
-  "tradition": "christianity",
-  "period": "classical",
-  "summary": "A further letter from Paul, with Timothy named as co-sender, to the Christians at Corinth, usually dated after Paul left Ephesus for Macedonia. Scholars have little doubt that Paul wrote it, though they discuss whether it was first a single letter or was put together from two or more of his letters.",
-  "confidence": "solid",
-  "refs": [
-   "https://en.wikipedia.org/wiki/Second_Epistle_to_the_Corinthians"
-  ]
- }
+  "analects": {
+    "title": "The Analects (Lunyu)",
+    "voice": "confucius",
+    "kind": "book",
+    "dates": "compiled c. 5th–3rd century BCE; final form c. 2nd century BCE (Han dynasty)",
+    "tradition": "confucianism",
+    "period": "axial",
+    "summary": "A collection of short sayings and conversations of Confucius and his disciples, put together by later generations of his followers. It is the most direct record of his teaching and one of the Four Books of the Confucian canon.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Analects",
+      "https://www.britannica.com/topic/Lunyu"
+    ]
+  },
+  "babylonian-talmud": {
+    "title": "Babylonian Talmud",
+    "voice": "talmudic-sages",
+    "kind": "scripture",
+    "dates": "compiled c. 3rd–6th century CE",
+    "tradition": "judaism",
+    "period": "classical",
+    "summary": "The central text of rabbinic Judaism after the Hebrew Bible: the Mishnah together with the Gemara, the discussions of generations of rabbis in Babylonia. It was shaped over several centuries and reached its final form around the 6th century CE.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Talmud",
+      "https://www.britannica.com/topic/Talmud",
+      "https://www.britannica.com/topic/Bavli"
+    ]
+  },
+  "pirkei-avot": {
+    "title": "Pirkei Avot (Ethics of the Fathers)",
+    "voice": null,
+    "kind": "scripture",
+    "dates": "compiled c. 200 CE",
+    "tradition": "judaism",
+    "period": "classical",
+    "summary": "A tractate of the Mishnah gathering the ethical sayings of the early rabbis, from the Men of the Great Assembly to the generations after the Second Temple, with a sixth chapter added later. The Mishnah was compiled under Rabbi Judah ha-Nasi around 200 CE.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Pirkei_Avot",
+      "https://en.wikipedia.org/wiki/Mishnah"
+    ]
+  },
+  "gospel-of-matthew": {
+    "title": "Gospel of Matthew",
+    "voice": null,
+    "kind": "scripture",
+    "dates": "c. 80–90 CE (scholarly estimate)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "The first book of the New Testament, telling of the life, teaching, death and resurrection of Jesus, including the Sermon on the Mount. It is traditionally attributed to the apostle Matthew; most scholars think it was written anonymously around 80–90 CE, drawing on the Gospel of Mark.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Gospel_of_Matthew",
+      "https://www.britannica.com/topic/Gospel-According-to-Matthew"
+    ]
+  },
+  "gospel-of-luke": {
+    "title": "Gospel of Luke",
+    "voice": null,
+    "kind": "scripture",
+    "dates": "c. 80–90 CE (most common scholarly estimate)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "The third Gospel of the New Testament, which tells the story of Jesus and includes parables found nowhere else, such as the Good Samaritan and the Prodigal Son. It is traditionally attributed to Luke, a companion of Paul, and forms a two-part work with the Acts of the Apostles.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Gospel_of_Luke",
+      "https://www.britannica.com/topic/biblical-literature/The-Gospel-According-to-Luke"
+    ]
+  },
+  "acts-of-the-apostles": {
+    "title": "Acts of the Apostles",
+    "voice": null,
+    "kind": "scripture",
+    "dates": "c. 80–90 CE (most common scholarly estimate)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "The continuation of Luke's Gospel, telling of the first Christian communities and the journeys of Paul. Like the Gospel, it is traditionally attributed to Luke.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Acts_of_the_Apostles",
+      "https://www.britannica.com/topic/The-Acts-of-the-Apostles-New-Testament"
+    ]
+  },
+  "romans": {
+    "title": "Epistle to the Romans",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 57 CE",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "Paul's letter to the Christians in Rome, written around 57 CE, is the longest and most systematic of his letters. Scholars agree that Paul wrote it.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_to_the_Romans",
+      "https://www.britannica.com/topic/Letter-of-Paul-to-the-Romans"
+    ]
+  },
+  "philippians": {
+    "title": "Epistle to the Philippians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 50s–early 60s CE",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "A warm letter from Paul to the church he founded at Philippi in Macedonia, written while he was in prison. It is one of the letters scholars agree Paul wrote himself.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_to_the_Philippians"
+    ]
+  },
+  "1-thessalonians": {
+    "title": "First Epistle to the Thessalonians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 50 CE",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "Paul's letter to the young church at Thessalonica in Macedonia. It is generally considered the earliest of his surviving letters and possibly the oldest book of the New Testament.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/First_Epistle_to_the_Thessalonians"
+    ]
+  },
+  "colossians": {
+    "title": "Epistle to the Colossians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 60–80 CE (disputed)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "A letter to the church at Colossae in Asia Minor, written in Paul's name. It is traditionally attributed to Paul; many scholars think a follower wrote it after his death, while others defend Paul's authorship.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_to_the_Colossians"
+    ]
+  },
+  "ephesians": {
+    "title": "Epistle to the Ephesians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 62 CE (traditional) or c. 70–100 CE (many scholars)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "A letter on the unity of the church, written in Paul's name and traditionally addressed to Christians at Ephesus; some scholars see it as a circular letter. It is traditionally attributed to Paul; many modern scholars think it was written by a later follower.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_to_the_Ephesians"
+    ]
+  },
+  "1-timothy": {
+    "title": "First Epistle to Timothy",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 60s CE (traditional) or late 1st–early 2nd century CE (many scholars)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "One of the three 'Pastoral Epistles', giving guidance to Paul's co-worker Timothy on leading a church. It is traditionally attributed to Paul; most critical scholars think it was written in his name some decades after his death.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/First_Epistle_to_Timothy",
+      "https://en.wikipedia.org/wiki/Pastoral_epistles"
+    ]
+  },
+  "2-timothy": {
+    "title": "Second Epistle to Timothy",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 60s CE (traditional) or c. 90–140 CE (many scholars)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "One of the 'Pastoral Epistles', presented as Paul's last letter to Timothy, written from prison. It is traditionally attributed to Paul; many scholars think it was written in his name after his death.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Second_Epistle_to_Timothy",
+      "https://en.wikipedia.org/wiki/Pastoral_epistles"
+    ]
+  },
+  "hebrews": {
+    "title": "Epistle to the Hebrews",
+    "voice": "author-of-hebrews",
+    "kind": "scripture",
+    "dates": "c. 60–95 CE (scholarly estimate)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "An early Christian sermon in letter form, encouraging its readers to hold fast to their faith. Its author is unknown; it was long attributed to Paul, which most scholars now doubt.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_to_the_Hebrews"
+    ]
+  },
+  "epistle-of-james": {
+    "title": "Epistle of James",
+    "voice": "james",
+    "kind": "scripture",
+    "dates": "mid-1st to mid-2nd century CE (date disputed)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "A short New Testament letter of practical wisdom, urging its readers to put faith into action. It is traditionally attributed to James the brother of Jesus; its authorship and date are debated.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_of_James",
+      "https://www.britannica.com/topic/Letter-of-James"
+    ]
+  },
+  "leviticus": {
+    "title": "Leviticus",
+    "voice": "torah-writers",
+    "kind": "scripture",
+    "dates": "final form c. 5th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "The third book of the Torah, setting out laws of worship, purity and holiness for ancient Israel. Its Holiness Code includes the command to love your neighbour as yourself, and to love the stranger.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Leviticus",
+      "https://en.wikipedia.org/wiki/Holiness_code"
+    ]
+  },
+  "exodus": {
+    "title": "Exodus",
+    "voice": "torah-writers",
+    "kind": "scripture",
+    "dates": "final form c. 5th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "The second book of the Torah, telling of Israel's liberation from slavery in Egypt under Moses and the covenant made at Mount Sinai. It contains the Ten Commandments.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Exodus",
+      "https://en.wikipedia.org/wiki/Ten_Commandments"
+    ]
+  },
+  "deuteronomy": {
+    "title": "Deuteronomy",
+    "voice": "torah-writers",
+    "kind": "scripture",
+    "dates": "core c. 7th century BCE; final form c. 5th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "The fifth book of the Torah, presented as Moses' farewell speeches to Israel before it enters the promised land. Many scholars link its core to religious reforms in Judah in the 7th century BCE.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Deuteronomy"
+    ]
+  },
+  "joshua": {
+    "title": "Book of Joshua",
+    "voice": "author-of-joshua",
+    "kind": "scripture",
+    "dates": "c. 7th–6th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "The sixth book of the Hebrew Bible, telling of Israel's entry into Canaan under Joshua. Tradition attributes it to Joshua; modern scholars see it as part of a history edited over the 7th and 6th centuries BCE.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Joshua"
+    ]
+  },
+  "job": {
+    "title": "Book of Job",
+    "voice": "author-of-job",
+    "kind": "scripture",
+    "dates": "c. 6th–4th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "A poetic book of the Hebrew Bible in which a righteous man who loses everything wrestles with God and his friends over why the innocent suffer. Its author is unknown.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Job"
+    ]
+  },
+  "psalms": {
+    "title": "Book of Psalms",
+    "voice": "psalmists",
+    "kind": "scripture",
+    "dates": "composed c. 10th–4th century BCE or later; collection fixed c. 1st century CE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "A collection of 150 songs and prayers of praise, lament and thanksgiving (in the Jewish and Western Christian numbering; Eastern churches include a few more), used in Jewish and Christian worship to this day. Many psalms are traditionally attributed to King David.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Psalms"
+    ]
+  },
+  "proverbs": {
+    "title": "Book of Proverbs",
+    "voice": "hebrew-wisdom-writers",
+    "kind": "scripture",
+    "dates": "collected over centuries; final form c. 5th–4th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "A collection of short sayings on wisdom, work, speech and right living, in the wisdom literature of the Hebrew Bible. It is traditionally attributed to King Solomon, though it gathers material from several sources and periods.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Proverbs"
+    ]
+  },
+  "ecclesiastes": {
+    "title": "Ecclesiastes",
+    "voice": "qoheleth",
+    "kind": "scripture",
+    "dates": "c. 5th–3rd century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "A book of the Hebrew Bible's wisdom literature in which Qoheleth, 'the Preacher', reflects on the brevity of life and the vanity of striving. It is traditionally attributed to Solomon; most scholars date it to the Persian or Hellenistic period.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Ecclesiastes"
+    ]
+  },
+  "micah": {
+    "title": "Book of Micah",
+    "voice": "micah",
+    "kind": "scripture",
+    "dates": "core late 8th century BCE; edited later",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "One of the twelve Minor Prophets of the Hebrew Bible, named for Micah of Moresheth. It condemns injustice and contains the well-known summary 'to do justly, and to love mercy, and to walk humbly with thy God'.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Micah"
+    ]
+  },
+  "zechariah": {
+    "title": "Book of Zechariah",
+    "voice": "zechariah",
+    "kind": "scripture",
+    "dates": "chapters 1–8 c. 520–518 BCE; chapters 9–14 later",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "One of the twelve Minor Prophets of the Hebrew Bible. Its first eight chapters record the visions of the prophet Zechariah as the Temple was being rebuilt after the exile.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Zechariah"
+    ]
+  },
+  "samyutta-nikaya": {
+    "title": "Samyutta Nikaya (Connected Discourses)",
+    "voice": "the-buddha",
+    "kind": "scripture",
+    "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
+    "tradition": "buddhism",
+    "period": "axial",
+    "summary": "The third of the five collections of discourses in the Pali Canon, grouping the Buddha's teachings by theme. It includes the Dhammacakkappavattana Sutta, traditionally the Buddha's first sermon, on the Four Noble Truths.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Samyutta_Nikaya",
+      "https://www.accesstoinsight.org/tipitaka/sn/index.html"
+    ]
+  },
+  "sutta-nipata": {
+    "title": "Sutta Nipata",
+    "voice": "the-buddha",
+    "kind": "scripture",
+    "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
+    "tradition": "buddhism",
+    "period": "axial",
+    "summary": "A collection of discourses in verse and prose in the Pali Canon, widely regarded as containing some of its oldest material. It includes the Metta Sutta on loving-kindness and the Mangala Sutta on the highest blessings.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Sutta_Nipata",
+      "https://www.accesstoinsight.org/tipitaka/kn/snp/index.html"
+    ]
+  },
+  "dhammapada": {
+    "title": "Dhammapada",
+    "voice": "the-buddha",
+    "kind": "scripture",
+    "dates": "compiled c. 3rd century BCE (estimates vary)",
+    "tradition": "buddhism",
+    "period": "axial",
+    "summary": "A collection of 423 verses of the Buddha's teaching in Pali, part of the Pali Canon. It is one of the most widely read and translated Buddhist texts.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Dhammapada",
+      "https://www.britannica.com/topic/Dhammapada"
+    ]
+  },
+  "essence-of-alan-watts": {
+    "title": "The Essence of Alan Watts",
+    "voice": "alan-watts",
+    "kind": "book",
+    "dates": "1977",
+    "tradition": "zen-western",
+    "period": "contemporary",
+    "summary": "A collection based on Alan Watts's 1971 television series, published in 1977, a few years after his death, and later reissued as 'You Are the Universe in Motion'. The quotation shown here was checked in the Internet Archive scan of The Essential Alan Watts (Celestial Arts), a reissue of the 1977 edition; the 1977 Millbrae edition reads \"realize that it is play\" where the reissue reads \"realize it is play\".",
+    "confidence": "thin",
+    "refs": [
+      "https://archive.org/details/essentialalanwat0000watt",
+      "https://en.wikiquote.org/wiki/Alan_Watts",
+      "https://penguinrandomhouse.com/books/818062/you-are-the-universe-in-motion-by-alan-watts"
+    ]
+  },
+  "the-book-watts": {
+    "title": "The Book: On the Taboo Against Knowing Who You Are",
+    "voice": "alan-watts",
+    "kind": "book",
+    "dates": "1966",
+    "tradition": "zen-western",
+    "period": "contemporary",
+    "summary": "A short book by Alan Watts, published in 1966, which draws on Vedanta and Zen to question the sense of being a separate self. The quotation shown here was checked in the Internet Archive scan of the 1966 Pantheon edition.",
+    "confidence": "thin",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Alan_Watts",
+      "https://en.wikiquote.org/wiki/Alan_Watts"
+    ]
+  },
+  "what-if-money-talk": {
+    "title": "'What if money was no object?' (lecture excerpt)",
+    "voice": "alan-watts",
+    "kind": "talk",
+    "dates": "unknown",
+    "tradition": "zen-western",
+    "period": "contemporary",
+    "summary": "A short recorded excerpt from one of Alan Watts's lectures, widely shared online under this title. We have not traced the original lecture or its date, and the wording quoted here is a popular paraphrase rather than a transcript.",
+    "confidence": "uncertain",
+    "refs": [
+      "https://www.themarginalian.org/2012/10/10/if-money-were-no-object-alan-watts/",
+      "https://en.wikipedia.org/wiki/Alan_Watts"
+    ]
+  },
+  "meditations": {
+    "title": "Meditations",
+    "voice": "marcus-aurelius",
+    "kind": "book",
+    "dates": "c. 170–180 CE",
+    "tradition": "stoicism",
+    "period": "classical",
+    "summary": "Private notes that Marcus Aurelius wrote in Greek as reflections to himself, some of them while on military campaign. Divided into twelve books, they were probably never meant for publication.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Meditations",
+      "https://www.britannica.com/topic/Meditations-by-Marcus-Aurelius"
+    ]
+  },
+  "enchiridion": {
+    "title": "Enchiridion (Handbook)",
+    "voice": "epictetus",
+    "kind": "book",
+    "dates": "early 2nd century CE",
+    "tradition": "stoicism",
+    "period": "classical",
+    "summary": "A short handbook of Epictetus's central teachings, compiled by his student Arrian. It opens by distinguishing what is within our control from what is not.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Enchiridion_of_Epictetus"
+    ]
+  },
+  "lives-of-eminent-philosophers": {
+    "title": "Lives of Eminent Philosophers",
+    "voice": "diogenes-laertius",
+    "kind": "book",
+    "dates": "probably first half of the 3rd century CE",
+    "tradition": "greek-philosophy",
+    "period": "classical",
+    "summary": "Ten books of biographies and sayings of Greek philosophers, from the earliest sages to Epicurus. Book VII covers Zeno of Citium and the Stoics; for many thinkers it is our main surviving source.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Diogenes_La%C3%ABrtius"
+    ]
+  },
+  "12-rules-for-life": {
+    "title": "12 Rules for Life: An Antidote to Chaos",
+    "voice": "jordan-peterson",
+    "kind": "book",
+    "dates": "2018",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "A self-help book by Jordan B. Peterson, published in 2018, offering twelve practical rules for living that draw on psychology, mythology, religion and personal stories. It became an international bestseller.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/12_Rules_for_Life"
+    ]
+  },
+  "myth-of-sisyphus": {
+    "title": "The Myth of Sisyphus",
+    "voice": "albert-camus",
+    "kind": "book",
+    "dates": "1942",
+    "tradition": "existentialism",
+    "period": "modern",
+    "summary": "A philosophical essay by Albert Camus, first published in French in 1942, which asks whether life is worth living if it has no ultimate meaning. It ends with Sisyphus pushing his rock up the hill forever, and Camus's conclusion that we must imagine him happy.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus"
+    ]
+  },
+  "baden-powell-last-message": {
+    "title": "Last message to Scouts",
+    "voice": "robert-baden-powell",
+    "kind": "article",
+    "dates": "written before 1941; published after his death in 1941",
+    "tradition": "scouting",
+    "period": "modern",
+    "summary": "A farewell letter that Robert Baden-Powell prepared for the Scouts of the world, to be published after his death; it appeared after he died in Kenya in January 1941. It contains his advice to try to leave the world a little better than you found it.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikiquote.org/wiki/Robert_Baden-Powell",
+      "https://en.wikipedia.org/wiki/Robert_Baden-Powell,_1st_Baron_Baden-Powell"
+    ]
+  },
+  "kiss-principle": {
+    "title": "KISS principle",
+    "voice": "kelly-johnson",
+    "kind": "other",
+    "dates": "c. 1960",
+    "tradition": "management",
+    "period": "contemporary",
+    "summary": "The design rule 'keep it simple, stupid', noted in the U.S. Navy around 1960 and commonly credited to Lockheed engineer Kelly Johnson. It holds that most systems work best when kept simple.",
+    "confidence": "thin",
+    "refs": [
+      "https://en.wikipedia.org/wiki/KISS_principle"
+    ]
+  },
+  "pareto-principle": {
+    "title": "Pareto principle (the 80/20 rule)",
+    "voice": "joseph-juran",
+    "kind": "other",
+    "dates": "Pareto's work on distribution 1896–1906; developed and named by Juran from 1941",
+    "tradition": "management",
+    "period": "modern",
+    "summary": "The observation that, for many outcomes, roughly 80% of effects come from 20% of causes. It is named after the Italian economist Vilfredo Pareto, who noted that about 80% of the land in Italy was owned by 20% of the people; Joseph Juran generalised the idea and gave it its name.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Pareto_principle"
+    ]
+  },
+  "peter-principle": {
+    "title": "The Peter Principle",
+    "voice": "laurence-j-peter",
+    "kind": "book",
+    "dates": "1969",
+    "tradition": "management",
+    "period": "contemporary",
+    "summary": "A humorous book by Laurence J. Peter and Raymond Hull, published in 1969, on how organisations work. Its central claim is that in a hierarchy every employee tends to rise to their level of incompetence.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Peter_principle"
+    ]
+  },
+  "popular-sayings": {
+    "title": "Popular sayings (origin unknown)",
+    "voice": "popular-saying",
+    "kind": "other",
+    "dates": "unknown",
+    "tradition": "popular",
+    "period": "contemporary",
+    "summary": "Sayings and attributions that circulate widely, today mostly online, without a traceable original source. Quotes from here are labelled unverified or misattributed and carry no weight in the scores until an origin is found.",
+    "confidence": "uncertain",
+    "refs": [
+      "https://quoteinvestigator.com/"
+    ]
+  },
+  "discourse-on-method": {
+    "title": "Discourse on the Method",
+    "voice": "rene-descartes",
+    "kind": "book",
+    "dates": "1637",
+    "tradition": "rationalism",
+    "period": "early-modern",
+    "summary": "René Descartes's short work, published in French in 1637, describing how he sought certain knowledge by doubting everything that could be doubted. Part IV contains the famous 'I think, therefore I am'.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Discourse_on_the_Method",
+      "https://www.britannica.com/topic/The-Discourse-on-Method"
+    ]
+  },
+  "walden": {
+    "title": "Walden; or, Life in the Woods",
+    "voice": "henry-david-thoreau",
+    "kind": "book",
+    "dates": "1854",
+    "tradition": "transcendentalism",
+    "period": "modern",
+    "summary": "Henry David Thoreau's account, published in 1854, of the two years he spent living in a cabin near Walden Pond in Massachusetts. It is a reflection on simple living, self-reliance and attention to nature.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Walden",
+      "https://www.britannica.com/topic/Walden"
+    ]
+  },
+  "story-of-philosophy": {
+    "title": "The Story of Philosophy",
+    "voice": "will-durant",
+    "kind": "book",
+    "dates": "1926",
+    "tradition": "philosophy-history",
+    "period": "modern",
+    "summary": "Will Durant's popular survey of Western philosophers from Plato to Dewey, published in 1926. Its chapter on Aristotle contains the line 'We are what we repeatedly do', Durant's own summary, which is often quoted as Aristotle's words.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Story_of_Philosophy",
+      "https://en.wikiquote.org/wiki/Aristotle"
+    ]
+  },
+  "mindset": {
+    "title": "Mindset: The New Psychology of Success",
+    "voice": "carol-dweck",
+    "kind": "book",
+    "dates": "2006",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Carol S. Dweck's book, published in 2006, on the difference between a 'fixed' mindset, which sees ability as set, and a 'growth' mindset, which sees it as something that can be developed.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Mindset_(book)"
+    ]
+  },
+  "paradox-of-choice": {
+    "title": "The Paradox of Choice: Why More Is Less",
+    "voice": "barry-schwartz",
+    "kind": "book",
+    "dates": "2004",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Barry Schwartz's book, published in 2004, arguing that an abundance of options can bring anxiety and regret rather than satisfaction.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Paradox_of_Choice"
+    ]
+  },
+  "monastic-routine-video": {
+    "title": "Why You Should Wake Up And Eat At The Same Time Everyday (Improvement Pill, YouTube)",
+    "voice": "buddhist-monastic-routine",
+    "kind": "talk",
+    "dates": "unknown",
+    "tradition": "popular",
+    "period": "contemporary",
+    "summary": "A video on the self-improvement YouTube channel Improvement Pill, noted in the project's seed notes as the origin of this popular summary of monastic daily routine. Its contents have not yet been checked against a Buddhist text, so the quote is labelled unverified.",
+    "confidence": "uncertain",
+    "refs": [
+      "https://youtu.be/OevzUnEY5KQ"
+    ]
+  },
+  "bhagavad-gita": {
+    "title": "Bhagavad Gita",
+    "voice": "krishna",
+    "kind": "scripture",
+    "dates": "c. 2nd–1st century BCE (estimates range from the 5th century BCE to the 2nd century CE)",
+    "tradition": "hinduism",
+    "period": "axial",
+    "summary": "A 700-verse Sanskrit dialogue between the prince Arjuna and Krishna, his charioteer, set within the epic Mahabharata. Traditionally attributed to the sage Vyasa, it is one of the most revered texts of Hinduism.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Bhagavad_Gita",
+      "https://www.britannica.com/topic/Bhagavad-Gita"
+    ]
+  },
+  "tao-te-ching": {
+    "title": "Tao Te Ching (Daodejing)",
+    "voice": "laozi",
+    "kind": "scripture",
+    "dates": "c. 4th century BCE (estimates range from the 6th to the 3rd century BCE)",
+    "tradition": "taoism",
+    "period": "axial",
+    "summary": "A short classic of 81 chapters on the Tao, the Way, and its power or virtue, traditionally attributed to Laozi. It is the founding text of Taoism and one of the most translated books in the world.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Tao_Te_Ching",
+      "https://www.britannica.com/topic/Tao-te-Ching"
+    ]
+  },
+  "great-learning": {
+    "title": "The Great Learning (Daxue)",
+    "voice": null,
+    "kind": "book",
+    "dates": "c. 5th–2nd century BCE (date debated)",
+    "tradition": "confucianism",
+    "period": "axial",
+    "summary": "A short Confucian text on self-cultivation and good government, originally a chapter of the Book of Rites. The Neo-Confucian scholar Zhu Xi made it one of the Four Books in the 12th century; tradition links it to Confucius and his disciple Zengzi.",
+    "confidence": "thin",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Great_Learning",
+      "https://www.britannica.com/topic/Sishu",
+      "https://www.britannica.com/biography/Zengzi"
+    ]
+  },
+  "quran": {
+    "title": "The Qur'an",
+    "voice": "quran",
+    "kind": "scripture",
+    "dates": "revealed c. 610–632 CE; standard text compiled c. 650 CE",
+    "tradition": "islam",
+    "period": "medieval",
+    "summary": "The central scripture of Islam, in 114 suras (chapters), believed by Muslims to be the word of God revealed to the Prophet Muhammad. Translations used here are by J. M. Rodwell and Marmaduke Pickthall.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Quran",
+      "https://www.britannica.com/topic/Quran"
+    ]
+  },
+  "sahih-al-bukhari": {
+    "title": "Sahih al-Bukhari",
+    "voice": "muhammad",
+    "kind": "scripture",
+    "dates": "compiled 9th century CE",
+    "tradition": "islam",
+    "period": "medieval",
+    "summary": "A collection of hadith, reports of the Prophet Muhammad's words and deeds, compiled by Muhammad al-Bukhari (810–870 CE). Sunni Muslims regard it as the most authentic of the hadith collections.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Sahih_al-Bukhari",
+      "https://www.britannica.com/topic/al-kutub-as-sittah"
+    ]
+  },
+  "sahih-muslim": {
+    "title": "Sahih Muslim",
+    "voice": "muhammad",
+    "kind": "scripture",
+    "dates": "compiled 9th century CE",
+    "tradition": "islam",
+    "period": "medieval",
+    "summary": "A collection of hadith compiled by Muslim ibn al-Hajjaj (c. 815–875 CE; his birth year is uncertain). Sunni Muslims regard it, with Sahih al-Bukhari, as one of the two most authentic collections.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Sahih_Muslim"
+    ]
+  },
+  "sunan-abi-dawud": {
+    "title": "Sunan Abi Dawud",
+    "voice": "muhammad",
+    "kind": "scripture",
+    "dates": "compiled 9th century CE",
+    "tradition": "islam",
+    "period": "medieval",
+    "summary": "A collection of hadith compiled by Abu Dawud al-Sijistani (817–889 CE), one of the six major hadith collections of Sunni Islam.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Sunan_Abi_Dawud"
+    ]
+  },
+  "jami-at-tirmidhi": {
+    "title": "Jami' at-Tirmidhi",
+    "voice": "muhammad",
+    "kind": "scripture",
+    "dates": "compiled 9th century CE",
+    "tradition": "islam",
+    "period": "medieval",
+    "summary": "A collection of hadith compiled by Muhammad ibn Isa al-Tirmidhi (824–892 CE), one of the six major hadith collections of Sunni Islam. Al-Tirmidhi notes his own assessment of the reliability of many reports.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Sunan_al-Tirmidhi"
+    ]
+  },
+  "sunan-ibn-majah": {
+    "title": "Sunan Ibn Majah",
+    "voice": "muhammad",
+    "kind": "scripture",
+    "dates": "compiled 9th century CE",
+    "tradition": "islam",
+    "period": "medieval",
+    "summary": "A collection of hadith compiled by Ibn Majah (824–887 CE), counted as the sixth of the six major hadith collections of Sunni Islam. It contains some reports graded weak, so each narration is assessed individually.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Sunan_Ibn_Majah"
+    ]
+  },
+  "nicomachean-ethics": {
+    "title": "Nicomachean Ethics",
+    "voice": "aristotle",
+    "kind": "book",
+    "dates": "c. 4th century BCE",
+    "tradition": "greek-philosophy",
+    "period": "axial",
+    "summary": "Aristotle's main work on ethics, probably based on his lectures at the Lyceum. It asks what makes a human life go well and describes virtue as a habit of choosing the mean between excess and deficiency.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Nicomachean_Ethics",
+      "https://www.britannica.com/topic/Nicomachean-Ethics"
+    ]
+  },
+  "apology": {
+    "title": "Apology",
+    "voice": "plato",
+    "kind": "book",
+    "dates": "c. 399–390 BCE",
+    "tradition": "greek-philosophy",
+    "period": "axial",
+    "summary": "Plato's account of the speech Socrates gave in his own defence at his trial in Athens in 399 BCE. It contains his declaration that the unexamined life is not worth living.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Apology_(Plato)"
+    ]
+  },
+  "gorgias": {
+    "title": "Gorgias",
+    "voice": "plato",
+    "kind": "book",
+    "dates": "c. 380s BCE",
+    "tradition": "greek-philosophy",
+    "period": "axial",
+    "summary": "A dialogue by Plato in which Socrates questions the orator Gorgias and his followers about rhetoric, power and justice. In it Socrates argues that it is better to suffer wrong than to do it.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Gorgias_(dialogue)"
+    ]
+  },
+  "cratylus": {
+    "title": "Cratylus",
+    "voice": "plato",
+    "kind": "book",
+    "dates": "c. 4th century BCE",
+    "tradition": "greek-philosophy",
+    "period": "axial",
+    "summary": "A dialogue by Plato on whether names belong to things by nature or by convention. In it Socrates reports Heraclitus's saying that you cannot step into the same river twice.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Cratylus_(dialogue)"
+    ]
+  },
+  "odyssey": {
+    "title": "Odyssey",
+    "voice": "homer",
+    "kind": "book",
+    "dates": "c. 8th century BCE (estimates vary)",
+    "tradition": "greek-epic",
+    "period": "axial",
+    "summary": "An epic poem in 24 books attributed to Homer, telling of Odysseus's ten-year journey home after the Trojan War. In Book XIV the swineherd Eumaeus welcomes him, disguised as a beggar, as an honoured guest.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Odyssey",
+      "https://www.britannica.com/topic/Odyssey-epic-by-Homer"
+    ]
+  },
+  "epidemics": {
+    "title": "Epidemics",
+    "voice": "hippocrates",
+    "kind": "book",
+    "dates": "c. late 5th – 4th century BCE",
+    "tradition": "hippocratic",
+    "period": "axial",
+    "summary": "Seven books of case notes and observations on illness in the Hippocratic Corpus. They are traditionally attributed to Hippocrates, though their authorship is uncertain; Book I contains the advice to the physician to help, or at least to do no harm.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Hippocratic_Corpus",
+      "https://en.wikipedia.org/wiki/Primum_non_nocere"
+    ]
+  },
+  "acaranga-sutra": {
+    "title": "Acaranga Sutra",
+    "voice": "mahavira",
+    "kind": "scripture",
+    "dates": "c. 5th–3rd century BCE (first book c. 5th–4th century BCE; second book later)",
+    "tradition": "jainism",
+    "period": "axial",
+    "summary": "The first of the twelve Angas, the core scriptures of Svetambara Jainism (eleven of which survive), and generally considered the oldest. It sets out the conduct of Jain monks and nuns, with a strong emphasis on non-violence towards all living beings.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Acaranga_Sutra",
+      "https://archive.sacred-texts.com/jai/sbe22/index.htm"
+    ]
+  },
+  "essay-on-criticism": {
+    "title": "An Essay on Criticism",
+    "voice": "alexander-pope",
+    "kind": "book",
+    "dates": "1711",
+    "tradition": "english-poetry",
+    "period": "early-modern",
+    "summary": "A poem in rhyming couplets by Alexander Pope, published in 1711, on the art of writing and judging literature. Many of its lines became proverbs, including 'a little learning is a dangerous thing'.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/An_Essay_on_Criticism"
+    ]
+  },
+  "pensees": {
+    "title": "Pensées",
+    "voice": "blaise-pascal",
+    "kind": "book",
+    "dates": "written 1650s–1662; published 1670",
+    "tradition": "christianity",
+    "period": "early-modern",
+    "summary": "Fragments that Blaise Pascal wrote towards a defence of the Christian faith, left unfinished at his death in 1662 and published in 1670. They reflect on human restlessness, the limits of reason and the search for God.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Pens%C3%A9es",
+      "https://www.britannica.com/topic/Pensees"
+    ]
+  },
+  "franklin-autobiography": {
+    "title": "The Autobiography of Benjamin Franklin",
+    "voice": "benjamin-franklin",
+    "kind": "book",
+    "dates": "written 1771–1790; first published 1791",
+    "tradition": "enlightenment",
+    "period": "early-modern",
+    "summary": "Benjamin Franklin's unfinished account of his life, written in several stages from 1771 and first published, in French, in 1791. It includes his plan of thirteen virtues, practised one week at a time.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin"
+    ]
+  },
+  "citizen-of-the-world": {
+    "title": "The Citizen of the World",
+    "voice": "oliver-goldsmith",
+    "kind": "book",
+    "dates": "1762 (as a book; letters first printed 1760–61)",
+    "tradition": "english-poetry",
+    "period": "early-modern",
+    "summary": "A series of letters by Oliver Goldsmith, written in the voice of a fictional Chinese philosopher in London and first printed in a newspaper, then collected as a book in 1762. Through his visitor's eyes, Goldsmith gently satirises English life.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Oliver_Goldsmith",
+      "https://quoteinvestigator.com/2014/05/27/rising/"
+    ]
+  },
+  "gulag-archipelago": {
+    "title": "The Gulag Archipelago",
+    "voice": "aleksandr-solzhenitsyn",
+    "kind": "book",
+    "dates": "written 1958–1968; published 1973",
+    "tradition": "russian-literature",
+    "period": "contemporary",
+    "summary": "Solzhenitsyn's three-volume history of the Soviet forced-labour camp system, built from his own imprisonment and the testimony of many former prisoners. It was first published in Paris in 1973 and was not openly published in the Soviet Union until 1989.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Gulag_Archipelago"
+    ]
+  },
+  "live-not-by-lies": {
+    "title": "Live Not by Lies",
+    "voice": "aleksandr-solzhenitsyn",
+    "kind": "article",
+    "dates": "1974",
+    "tradition": "russian-literature",
+    "period": "contemporary",
+    "summary": "A short essay Solzhenitsyn released on 12 February 1974, the day of his arrest, just before he was exiled from the Soviet Union. It asks ordinary people not to overthrow anything, only to refuse, each personally, to take part in lies.",
+    "confidence": "solid",
+    "refs": [
+      "https://www.solzhenitsyncenter.org/live-not-by-lies",
+      "https://en.wikipedia.org/wiki/Aleksandr_Solzhenitsyn"
+    ]
+  },
+  "brothers-karamazov": {
+    "title": "The Brothers Karamazov",
+    "voice": "fyodor-dostoevsky",
+    "kind": "book",
+    "dates": "1879–1880",
+    "tradition": "russian-literature",
+    "period": "modern",
+    "summary": "Dostoevsky's last novel, first published in instalments in 1879–80. Through three brothers, their father's murder and the elder Zossima, it weighs faith and doubt, freedom and responsibility.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Brothers_Karamazov"
+    ]
+  },
+  "essays-of-montaigne": {
+    "title": "Essays",
+    "voice": "michel-de-montaigne",
+    "kind": "book",
+    "dates": "1580; expanded 1588",
+    "tradition": "renaissance-humanism",
+    "period": "early-modern",
+    "summary": "Montaigne's Essais, a collection of 107 essays in three books, first published in 1580 and expanded in 1588. Drawing on classical authors and his own experience, they range from friendship and solitude to death and the limits of knowledge.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Essays_(Montaigne)",
+      "https://plato.stanford.edu/entries/montaigne/"
+    ]
+  },
+  "spinoza-ethics": {
+    "title": "Ethics",
+    "voice": "baruch-spinoza",
+    "kind": "book",
+    "dates": "completed c. 1675; published 1677",
+    "tradition": "rationalism",
+    "period": "early-modern",
+    "summary": "Spinoza's main work, set out in the manner of geometry with definitions, propositions and proofs. It moves from God and nature to the human emotions and argues that freedom and blessedness come through understanding. It was published shortly after his death in 1677.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Ethics_(Spinoza_book)",
+      "https://plato.stanford.edu/entries/spinoza/"
+    ]
+  },
+  "groundwork-metaphysic-of-morals": {
+    "title": "Groundwork of the Metaphysic of Morals",
+    "voice": "immanuel-kant",
+    "kind": "book",
+    "dates": "1785",
+    "tradition": "enlightenment",
+    "period": "early-modern",
+    "summary": "A short work in which Kant seeks the supreme principle of morality and states it as the categorical imperative, including the formulas of universal law and of humanity as an end in itself. The public-domain English translation by T. K. Abbott is titled Fundamental Principles of the Metaphysic of Morals.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Groundwork_of_the_Metaphysics_of_Morals",
+      "https://plato.stanford.edu/entries/kant-moral/"
+    ]
+  },
+  "counsels-and-maxims": {
+    "title": "Counsels and Maxims",
+    "voice": "arthur-schopenhauer",
+    "kind": "book",
+    "dates": "1851",
+    "tradition": "german-philosophy",
+    "period": "modern",
+    "summary": "Practical advice on living well, part of the 'Aphorisms on the Wisdom of Life' in Schopenhauer's Parerga and Paralipomena (1851). T. Bailey Saunders published it in English under this title.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Parerga_and_Paralipomena",
+      "https://www.gutenberg.org/ebooks/10715"
+    ]
+  },
+  "twilight-of-the-idols": {
+    "title": "Twilight of the Idols",
+    "voice": "friedrich-nietzsche",
+    "kind": "book",
+    "dates": "written 1888; published 1889",
+    "tradition": "german-philosophy",
+    "period": "modern",
+    "summary": "A short book Nietzsche wrote in 1888 and published in January 1889, subtitled 'How to Philosophize with a Hammer'. It opens with a series of sharp aphorisms, 'Maxims and Arrows' (titled 'Maxims and Missiles' in Ludovici's translation), before turning to Socrates, morality and the culture of his day.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Twilight_of_the_Idols",
+      "https://plato.stanford.edu/entries/nietzsche/"
+    ]
+  },
+  "works-of-love": {
+    "title": "Works of Love",
+    "voice": "soren-kierkegaard",
+    "kind": "book",
+    "dates": "1847",
+    "tradition": "existentialism",
+    "period": "modern",
+    "summary": "A series of Christian reflections that Kierkegaard published under his own name in 1847. They take the command to love one's neighbour as their theme and ask what it means for love to be a duty and a deed.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Works_of_Love",
+      "https://plato.stanford.edu/entries/kierkegaard/"
+    ]
+  },
+  "the-hero-with-a-thousand-faces": {
+    "title": "The Hero with a Thousand Faces",
+    "voice": "joseph-campbell",
+    "kind": "book",
+    "dates": "1949",
+    "tradition": "comparative-mythology",
+    "period": "modern",
+    "summary": "Campbell's 1949 study of comparative mythology, first published in the Bollingen Series. It argues that hero stories from many cultures, including those of Osiris, the Buddha and Moses, share one underlying pattern of departure, initiation and return, which he called the monomyth.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces",
+      "https://en.wikipedia.org/wiki/Hero%27s_journey"
+    ]
+  },
+  "the-power-of-myth": {
+    "title": "The Power of Myth",
+    "voice": "joseph-campbell",
+    "kind": "book",
+    "dates": "1988",
+    "tradition": "comparative-mythology",
+    "period": "contemporary",
+    "summary": "The companion book to Joseph Campbell and the Power of Myth, six conversations with the journalist Bill Moyers filmed in the last two summers of Campbell's life and broadcast on PBS in 1988. In them Campbell talks about the hero's journey, the place of myth in modern life and his advice to 'follow your bliss'.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Joseph_Campbell_and_the_Power_of_Myth",
+      "https://www.jcf.org/learn/joseph-campbell-follow-your-bliss"
+    ]
+  },
+  "a-joseph-campbell-companion": {
+    "title": "A Joseph Campbell Companion: Reflections on the Art of Living",
+    "voice": "joseph-campbell",
+    "kind": "book",
+    "dates": "1991",
+    "tradition": "comparative-mythology",
+    "period": "contemporary",
+    "summary": "A posthumous collection of short sayings, published in 1991 from material gathered by Diane K. Osbon, who said she wrote them down in her journals over years in Campbell's company. Because the lines were recorded by a listener rather than written by Campbell, their exact wording rests on her notes.",
+    "confidence": "thin",
+    "refs": [
+      "https://quoteinvestigator.com/2013/05/23/campbell-treasure/",
+      "https://en.wikipedia.org/wiki/Joseph_Campbell"
+    ]
+  },
+  "7-habits": {
+    "title": "The 7 Habits of Highly Effective People",
+    "voice": "stephen-covey",
+    "kind": "book",
+    "dates": "1989",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Stephen R. Covey's self-help and business book, first published in 1989. It sets out seven habits for personal and working effectiveness and puts character ahead of technique.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People",
+      "https://www.franklincovey.com/habit-5/"
+    ]
+  },
+  "atomic-habits": {
+    "title": "Atomic Habits",
+    "voice": "james-clear",
+    "kind": "book",
+    "dates": "2018",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "James Clear's 2018 book on building good habits and breaking bad ones. Its central idea is that small, easy changes, repeated daily, add up to large ones and gradually reshape how we see ourselves.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Atomic_Habits",
+      "https://jamesclear.com/atomic-habits-summary"
+    ]
+  },
+  "the-obstacle-is-the-way": {
+    "title": "The Obstacle Is the Way",
+    "voice": "ryan-holiday",
+    "kind": "book",
+    "dates": "2014",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Ryan Holiday's 2014 book on turning obstacles into opportunities. Its title and theme come from a line in Marcus Aurelius's Meditations (V.20) about what stands in the way becoming the way.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way",
+      "https://dailystoic.com/obstacle-is-the-way/"
+    ]
+  },
+  "ego-is-the-enemy": {
+    "title": "Ego Is the Enemy",
+    "voice": "ryan-holiday",
+    "kind": "book",
+    "dates": "2016",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Ryan Holiday's fourth book, published in 2016, about how ego gets in the way of ambition, success and recovery from failure.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Ego_Is_the_Enemy"
+    ]
+  },
+  "subtle-art": {
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "voice": "mark-manson",
+    "kind": "book",
+    "dates": "2016",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Mark Manson's 2016 self-help bestseller. It argues that struggle gives life its meaning and that chasing constant positivity only makes us feel worse.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Subtle_Art_of_Not_Giving_a_Fuck",
+      "https://en.wikiquote.org/wiki/Mark_Manson"
+    ]
+  },
+  "ted-radio-hour-shame": {
+    "title": "'Can We Gain Strength From Shame?' (TED Radio Hour)",
+    "voice": "brene-brown",
+    "kind": "talk",
+    "dates": "2013",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "A segment of NPR's TED Radio Hour, aired on 11 March 2013, in which Brené Brown talks with host Guy Raz about her research on shame and vulnerability. NPR publishes a transcript.",
+    "confidence": "solid",
+    "refs": [
+      "https://www.npr.org/transcripts/174033560"
+    ]
+  },
+  "mans-search-for-meaning": {
+    "title": "Man's Search for Meaning",
+    "voice": "viktor-frankl",
+    "kind": "book",
+    "dates": "1946",
+    "tradition": "modern-psychology",
+    "period": "modern",
+    "summary": "Viktor Frankl's 1946 account of his years as a prisoner in Nazi concentration camps, followed by an outline of logotherapy. It describes finding meaning through work, through love for another person, and through facing unavoidable suffering with dignity.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
+      "https://en.wikiquote.org/wiki/Man%27s_Search_for_Meaning"
+    ]
+  },
+  "the-power-of-now": {
+    "title": "The Power of Now",
+    "voice": "eckhart-tolle",
+    "kind": "book",
+    "dates": "1997",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Eckhart Tolle's 1997 guide to living in the present moment, with simple exercises in self-observation. Oprah Winfrey recommended it, and it has been translated into 33 languages.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Power_of_Now",
+      "https://en.wikiquote.org/wiki/The_Power_of_Now"
+    ]
+  },
+  "naval-podcast": {
+    "title": "Naval (podcast)",
+    "voice": "naval-ravikant",
+    "kind": "talk",
+    "dates": "2018–present",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Naval Ravikant's podcast, published with transcripts at nav.al, with short episodes on happiness, wealth and philosophy. The 2020 series on happiness includes the episode 'Desire Is a Contract You Make to Be Unhappy'.",
+    "confidence": "thin",
+    "refs": [
+      "https://nav.al/desire",
+      "https://en.wikipedia.org/wiki/Naval_Ravikant"
+    ]
+  },
+  "fear-setting": {
+    "title": "'Fear-Setting' (blog post)",
+    "voice": "tim-ferriss",
+    "kind": "article",
+    "dates": "2017",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "A 2017 post on Tim Ferriss's blog, adapted from chapters of The 4-Hour Workweek (2007) and Tools of Titans (2016). It sets out his 'fear-setting' exercise of naming the worst case, accepting it and acting anyway.",
+    "confidence": "solid",
+    "refs": [
+      "https://tim.blog/2017/05/15/fear-setting/",
+      "https://en.wikipedia.org/wiki/The_4-Hour_Workweek"
+    ]
+  },
+  "huberman-lab": {
+    "title": "Huberman Lab (podcast)",
+    "voice": "andrew-huberman",
+    "kind": "talk",
+    "dates": "2021–present",
+    "tradition": "modern-psychology",
+    "period": "contemporary",
+    "summary": "Andrew Huberman's health and science podcast, which began in 2021. Episodes come with show notes, timestamps and transcripts on hubermanlab.com; the 22 November 2021 solo episode covers the science of gratitude.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Andrew_Huberman",
+      "https://www.hubermanlab.com/episode/the-science-of-gratitude-and-how-to-build-a-gratitude-practice"
+    ]
+  },
+  "extreme-ownership-tedx": {
+    "title": "'Extreme Ownership' (TEDxUniversityofNevada talk)",
+    "voice": "jocko-willink",
+    "kind": "talk",
+    "dates": "2017",
+    "tradition": "management",
+    "period": "contemporary",
+    "summary": "Jocko Willink's TEDx talk at the University of Nevada, published in February 2017. He describes a confused 2006 operation in Ramadi, Iraq, and how taking full responsibility for it, rather than blaming others, earned his commander's trust.",
+    "confidence": "solid",
+    "verification": "Quote checked in TED's official English subtitles for the talk (hosted on Amara by the TED team).",
+    "refs": [
+      "https://singjupost.com/jocko-willink-on-extreme-ownership-at-tedxuniversityofnevada-transcript/",
+      "https://en.wikipedia.org/wiki/Jocko_Willink"
+    ]
+  },
+  "structured-programming-with-go-to-statements": {
+    "title": "Structured Programming with go to Statements",
+    "voice": "donald-knuth",
+    "kind": "article",
+    "dates": "1974",
+    "tradition": "computer-science",
+    "period": "contemporary",
+    "summary": "A paper by Donald Knuth published in ACM Computing Surveys in December 1974, on program structure and efficiency. It is the source of his often-quoted remark that premature optimization is the root of all evil, together with his advice not to neglect the critical few per cent of a program.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Program_optimization",
+      "https://en.wikiquote.org/wiki/Donald_Knuth"
+    ]
+  },
+  "merchant-of-venice": {
+    "title": "The Merchant of Venice",
+    "voice": "william-shakespeare",
+    "kind": "book",
+    "dates": "c. 1596–1599",
+    "tradition": "english-poetry",
+    "period": "early-modern",
+    "summary": "A comedy by William Shakespeare, written in the late 1590s and first printed in 1600. In the trial scene (Act 4, Scene 1) Portia, disguised as a lawyer, pleads for mercy in a speech that became one of the best-known passages in English.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Merchant_of_Venice",
+      "https://www.gutenberg.org/ebooks/1515"
+    ]
+  },
+  "instruction-of-ptahhotep": {
+    "title": "The Instruction of Ptahhotep",
+    "voice": "ptahhotep",
+    "kind": "book",
+    "dates": "Middle Kingdom copies, c. 20th–19th century BCE",
+    "tradition": "ancient-egypt",
+    "period": "axial",
+    "summary": "An Egyptian wisdom text in which an aged vizier gives his son advice on conduct, speech, humility and justice. It survives mainly in the Prisse Papyrus and is among the oldest books of moral instruction in the world.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Maxims_of_Ptahhotep",
+      "https://www.gutenberg.org/ebooks/30508"
+    ]
+  },
+  "soul-of-the-indian": {
+    "title": "The Soul of the Indian",
+    "voice": "ohiyesa",
+    "kind": "book",
+    "dates": "1911",
+    "tradition": "dakota",
+    "period": "modern",
+    "summary": "Charles Eastman's short account of the religion and moral life of the Dakota as he knew it before contact with white culture. He writes as both an insider and a convert to Christianity, and often generalises about Native peoples as a whole.",
+    "confidence": "solid",
+    "refs": [
+      "https://www.gutenberg.org/ebooks/340",
+      "https://en.wikipedia.org/wiki/Charles_Eastman"
+    ]
+  },
+  "taittiriya-upanishad": {
+    "title": "Taittiriya Upanishad",
+    "voice": "upanishads",
+    "kind": "scripture",
+    "dates": "c. 6th–5th century BCE",
+    "tradition": "hinduism",
+    "period": "axial",
+    "summary": "One of the principal Upanishads, attached to the Black Yajurveda. Its first part ends with a teacher's famous charge to the graduating student: speak the truth, do your duty, and honour mother, father, teacher and guest.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Taittiriya_Upanishad",
+      "https://archive.sacred-texts.com/hin/sbe15/index.htm"
+    ]
+  },
+  "brihadaranyaka-upanishad": {
+    "title": "Brihadaranyaka Upanishad",
+    "voice": "upanishads",
+    "kind": "scripture",
+    "dates": "c. 7th–6th century BCE",
+    "tradition": "hinduism",
+    "period": "axial",
+    "summary": "One of the oldest and longest Upanishads, attached to the White Yajurveda. It contains the dialogues of the sage Yajnavalkya on the self and the parable of the thunder's 'Da Da Da': self-restraint, giving and compassion.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Brihadaranyaka_Upanishad",
+      "https://archive.sacred-texts.com/hin/sbe15/index.htm"
+    ]
+  },
+  "mahabharata": {
+    "title": "Mahabharata",
+    "voice": "vyasa",
+    "kind": "scripture",
+    "dates": "c. 4th century BCE – 4th century CE",
+    "tradition": "hinduism",
+    "period": "classical",
+    "summary": "The great Sanskrit epic of the war between the Pandavas and the Kauravas, and one of the longest poems ever composed. Besides the story it holds long teachings on dharma, including the Bhagavad Gita and the Anusasana Parva on duty and conduct.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Mahabharata",
+      "https://www.britannica.com/topic/Mahabharata"
+    ]
+  },
+  "uttaradhyayana-sutra": {
+    "title": "Uttaradhyayana Sutra",
+    "voice": "mahavira",
+    "kind": "scripture",
+    "dates": "c. 3rd–1st century BCE (oldest parts); the Svetambara canon was fixed in the 5th century CE",
+    "tradition": "jainism",
+    "period": "axial",
+    "summary": "A Svetambara Jain scripture of 36 lectures, traditionally held to be Mahavira's last sermon. It teaches the monastic life through verses, parables and dialogues, with frequent reminders of how short life is.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Uttaradhyayana",
+      "https://archive.sacred-texts.com/jai/sbe45/index.htm"
+    ]
+  },
+  "tirukkural": {
+    "title": "Tirukkural",
+    "voice": "tiruvalluvar",
+    "kind": "book",
+    "dates": "c. 1st century BCE – 5th century CE (estimates vary)",
+    "tradition": "tamil-ethics",
+    "period": "classical",
+    "summary": "A classic Tamil work of 1,330 two-line couplets arranged in 133 chapters on virtue, wealth and love. It is valued for its broad, largely non-sectarian ethics and is one of the most translated works in Indian literature.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Kural",
+      "https://en.wikisource.org/wiki/Tirukural"
+    ]
+  },
+  "gulistan": {
+    "title": "Gulistan (The Rose Garden)",
+    "voice": "saadi",
+    "kind": "book",
+    "dates": "1258",
+    "tradition": "persian-literature",
+    "period": "medieval",
+    "summary": "Saadi's collection of short stories, verses and maxims in eight chapters, on kings, dervishes, contentment, silence, youth, old age, education and conduct. For centuries it was a standard school text in the Persian-speaking world.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Gulistan_(book)",
+      "https://www.gutenberg.org/ebooks/13060"
+    ]
+  },
+  "hidden-words": {
+    "title": "The Hidden Words",
+    "voice": "bahaullah",
+    "kind": "scripture",
+    "dates": "c. 1858",
+    "tradition": "bahai",
+    "period": "modern",
+    "summary": "A short collection of 71 Arabic and 82 Persian aphorisms by Bahá’u’lláh, written in Baghdad, on the spiritual and moral life. The standard English translation is by Shoghi Effendi.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Hidden_Words",
+      "https://www.bahai.org/library/authoritative-texts/bahaullah/hidden-words/"
+    ]
+  },
+  "avesta": {
+    "title": "Avesta",
+    "voice": "avesta-authors",
+    "kind": "scripture",
+    "dates": "composed c. 1500–400 BCE; written down c. 5th–6th century CE",
+    "tradition": "zoroastrianism",
+    "period": "axial",
+    "summary": "The sacred texts of Zoroastrianism, in the Avestan language. Besides the Gathas and the liturgy it includes the Yashts, hymns to individual divinities; the Mihr Yasht praises Mithra as guardian of contracts and of the truth.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Avesta",
+      "https://www.avesta.org/"
+    ]
+  },
+  "yoruba-speaking-peoples": {
+    "title": "The Yoruba-Speaking Peoples of the Slave Coast of West Africa",
+    "voice": null,
+    "kind": "book",
+    "dates": "1894",
+    "tradition": "yoruba",
+    "period": "modern",
+    "summary": "An ethnography by A. B. Ellis, a British army officer in West Africa. Its chapter on proverbs gives several hundred Yoruba sayings in English translation; the framing reflects colonial attitudes of its time, but the proverbs are recorded with their Yoruba originals.",
+    "confidence": "thin",
+    "refs": [
+      "https://archive.sacred-texts.com/afr/yor/index.htm",
+      "https://en.wikipedia.org/wiki/Alfred_Burdon_Ellis"
+    ]
+  },
+  "ashanti-proverbs": {
+    "title": "Ashanti Proverbs",
+    "voice": null,
+    "kind": "book",
+    "dates": "1916",
+    "tradition": "akan",
+    "period": "modern",
+    "summary": "R. S. Rattray's English translation, with Twi text and notes, of over 800 proverbs chosen from J. G. Christaller's 1879 Twi collection. Its subtitle reflects colonial attitudes of the time, but it remains a standard early record of Akan proverbs.",
+    "confidence": "thin",
+    "refs": [
+      "https://archive.org/details/ashantiproverbst00rattuoft",
+      "https://en.wikipedia.org/wiki/Robert_Sutherland_Rattray"
+    ]
+  },
+  "mozi": {
+    "title": "Mozi",
+    "voice": "mozi",
+    "kind": "book",
+    "dates": "c. 5th–3rd century BCE",
+    "tradition": "mohism",
+    "period": "axial",
+    "summary": "The collected writings of the Mohist school, named after its founder. Its core chapters argue for impartial care for all, against aggressive war and against waste, often in three versions that may come from different branches of the school.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Mozi_(book)",
+      "https://ctext.org/mozi"
+    ]
+  },
+  "taishang-ganying-pian": {
+    "title": "Treatise of the Most Exalted One on Action and Response (Taishang Ganying Pian)",
+    "voice": "taishang-ganying-pian",
+    "kind": "book",
+    "dates": "12th century",
+    "tradition": "taoism",
+    "period": "medieval",
+    "summary": "A short Daoist tract listing good and bad deeds and the rewards and punishments they bring. Widely printed and given away as an act of merit, it was translated by James Legge as 'The Thai-Shang Tractate of Actions and Their Retributions'.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Treatise_On_Response_And_Retribution",
+      "https://archive.sacred-texts.com/tao/sbe40/sbe4018.htm"
+    ]
+  },
+  "zhuangzi": {
+    "title": "Zhuangzi",
+    "voice": "zhuangzi",
+    "kind": "book",
+    "dates": "c. 4th–2nd century BCE",
+    "tradition": "taoism",
+    "period": "axial",
+    "summary": "The second great classic of Taoism, in 33 chapters of stories, dialogues and reflections on freedom, change and the limits of knowledge. Only the Inner Chapters are usually credited to Zhuangzi himself.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Zhuangzi_(book)",
+      "https://archive.sacred-texts.com/tao/sbe39/index.htm"
+    ]
+  },
+  "seventeen-article-constitution": {
+    "title": "Seventeen-Article Constitution",
+    "voice": "prince-shotoku",
+    "kind": "other",
+    "dates": "604 (as dated in the Nihongi, 720)",
+    "tradition": "japanese-thought",
+    "period": "medieval",
+    "summary": "A set of seventeen moral precepts for officials, recorded in the Nihongi and credited to Prince Shōtoku. It opens by valuing harmony and draws on Confucian ideas of order and Buddhist reverence; it was guidance for conduct rather than a constitution in the modern sense.",
+    "confidence": "thin",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Seventeen-article_constitution",
+      "https://en.wikisource.org/wiki/Nihongi/Book_XXII"
+    ]
+  },
+  "galatians": {
+    "title": "Epistle to the Galatians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "late 40s–early 50s CE (majority scholarly view)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "A letter of the New Testament from Paul the Apostle to early Christian communities in Galatia, in Anatolia. It argues that non-Jewish followers of Jesus need not keep the Mosaic Law, especially circumcision, and closes with counsel on living by the Spirit. Scholars agree it is Paul's own writing.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Epistle_to_the_Galatians"
+    ]
+  },
+  "works-and-days": {
+    "title": "Works and Days",
+    "voice": "hesiod",
+    "kind": "book",
+    "dates": "c. 700 BCE",
+    "tradition": "greek-epic",
+    "period": "axial",
+    "summary": "A didactic poem of 828 lines by Hesiod, written in dactylic hexameter around 700 BCE. At its centre is a farmer's almanac addressed to his brother Perses, set among myths such as Pandora and the ages of humankind and advice on work, justice and good sense.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Works_and_Days"
+    ]
+  },
+  "book-of-documents": {
+    "title": "Book of Documents (Shujing)",
+    "voice": "book-of-documents-authors",
+    "kind": "book",
+    "dates": "compiled over many centuries; the received text includes 'Old Text' chapters judged 3rd–4th-century CE reconstructions",
+    "tradition": "confucianism",
+    "period": "axial",
+    "summary": "One of the Five Classics of ancient Chinese literature, a collection of speeches and documents attributed to early rulers and ministers, and a foundation of Chinese political thought for over two millennia. In the 17th century the scholar Yan Ruoqu persuaded most scholars that the 'Old Text' chapters of the received text were fabricated in the 3rd or 4th century CE.",
+    "confidence": "uncertain",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Documents"
+    ]
+  },
+  "genesis": {
+    "title": "Genesis",
+    "voice": "torah-writers",
+    "kind": "scripture",
+    "dates": "final form c. 5th century BCE (scholarly estimate)",
+    "tradition": "judaism",
+    "period": "axial",
+    "summary": "The first book of the Torah, telling of the creation of the world, the first humans in the garden of Eden, and the stories of Noah, Abraham, Isaac, Jacob and Joseph. In its second creation account the first human is placed in the garden to tend and keep it.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Book_of_Genesis"
+    ]
+  },
+  "constitution-of-the-five-nations": {
+    "title": "The Constitution of the Five Nations",
+    "voice": "great-law-of-peace",
+    "kind": "book",
+    "dates": "1916",
+    "tradition": "haudenosaunee",
+    "period": "modern",
+    "summary": "Arthur C. Parker's edition of the Great Law of the Haudenosaunee (Iroquois) Confederacy, published by the New York State Museum in 1916. It is based chiefly on a manuscript compiled by the Mohawk Seth Newhouse and revised by Albert Cusick, together with a version prepared by a committee of Six Nations chiefs.",
+    "confidence": "solid",
+    "refs": [
+      "https://archive.org/details/constitutionoffi00parkuoft",
+      "https://en.wikipedia.org/wiki/Arthur_C._Parker",
+      "https://en.wikipedia.org/wiki/Great_Law_of_Peace"
+    ]
+  },
+  "anguttara-nikaya": {
+    "title": "Anguttara Nikaya (Numerical Discourses)",
+    "voice": "the-buddha",
+    "kind": "scripture",
+    "dates": "oral tradition from c. 5th century BCE; written down c. 1st century BCE",
+    "tradition": "buddhism",
+    "period": "axial",
+    "summary": "The fourth of the five collections of discourses in the Pali Canon. Its several thousand discourses, ascribed to the Buddha and his chief disciples, are arranged in eleven books by the number of items each teaching lists.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/A%E1%B9%85guttara_Nik%C4%81ya",
+      "https://www.accesstoinsight.org/tipitaka/an/index.html"
+    ]
+  },
+  "mencius": {
+    "title": "Mencius",
+    "voice": "mencius",
+    "kind": "book",
+    "dates": "4th century BCE (compiled by disciples, scholarly view)",
+    "tradition": "confucianism",
+    "period": "axial",
+    "summary": "An anthology of conversations and anecdotes of the philosopher Mencius, many of them with rulers of the Warring States period. It is one of the Confucian classics and sets out his moral and political philosophy of benevolent government.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Mencius_(book)"
+    ]
+  },
+  "code-of-hammurabi": {
+    "title": "Code of Hammurabi",
+    "voice": "hammurabi",
+    "kind": "other",
+    "dates": "c. 1753 BCE",
+    "tradition": "mesopotamia",
+    "period": "axial",
+    "summary": "A Babylonian legal text in Old Babylonian Akkadian, issued in the name of King Hammurabi and inscribed on a basalt stele rediscovered at Susa in 1901. A prologue and epilogue frame some 280 laws, presenting the king as appointed to bring justice to the land.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Code_of_Hammurabi",
+      "https://avalon.law.yale.edu/ancient/hamframe.asp"
+    ]
+  },
+  "instruction-of-amenemope": {
+    "title": "Instruction of Amenemope",
+    "voice": "amenemope",
+    "kind": "book",
+    "dates": "probably Ramesside period, c. 1300–1075 BCE",
+    "tradition": "ancient-egypt",
+    "period": "axial",
+    "summary": "An Egyptian wisdom text of thirty chapters of advice, ostensibly from the scribe Amenemope to his son. It reflects the New Kingdom \"Age of Personal Piety\" and is known for its similarity to part of the Book of Proverbs.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Instruction_of_Amenemope"
+    ]
+  },
+  "teaching-for-merykara": {
+    "title": "Teaching for King Merykara",
+    "voice": "kheti",
+    "kind": "book",
+    "dates": "probably Middle Kingdom, c. 2025–1700 BCE",
+    "tradition": "ancient-egypt",
+    "period": "axial",
+    "summary": "A Middle Egyptian instruction in which a king of the First Intermediate Period advises his son Merykara on how to be a good king and avoid evil, including how to treat the weak and judge justly.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Teaching_for_King_Merykara"
+    ]
+  },
+  "gospel-of-john": {
+    "title": "Gospel of John",
+    "voice": null,
+    "kind": "scripture",
+    "dates": "c. 90–100 CE (scholarly estimate)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "The fourth gospel of the New Testament, telling of the life, teaching, death and resurrection of Jesus. It is traditionally attributed to the apostle John; the text itself names an unnamed 'disciple whom Jesus loved' as its source, and most scholars date its completion to around 90–100 CE.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Gospel_of_John"
+    ]
+  },
+  "1-corinthians": {
+    "title": "First Epistle to the Corinthians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "c. 53–57 CE",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "Paul's letter to the Christian congregation at Corinth, in Greece, written to address problems that had arisen there, probably from Ephesus in the mid-50s CE. It includes the well-known passage on love in chapter 13. Scholars agree that Paul wrote it.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/First_Epistle_to_the_Corinthians"
+    ]
+  },
+  "2-corinthians": {
+    "title": "Second Epistle to the Corinthians",
+    "voice": "paul-the-apostle",
+    "kind": "scripture",
+    "dates": "mid-50s CE (scholarly estimate)",
+    "tradition": "christianity",
+    "period": "classical",
+    "summary": "A further letter from Paul, with Timothy named as co-sender, to the Christians at Corinth, usually dated after Paul left Ephesus for Macedonia. Scholars have little doubt that Paul wrote it, though they discuss whether it was first a single letter or was put together from two or more of his letters.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Second_Epistle_to_the_Corinthians"
+    ]
+  },
+  "holy-spirit-activating-gods-power": {
+    "title": "The Holy Spirit: Activating God's Power in Your Life",
+    "voice": "billy-graham",
+    "kind": "book",
+    "dates": "1978",
+    "tradition": "christianity",
+    "period": "contemporary",
+    "summary": "A 1978 book by Billy Graham on the work of the Holy Spirit in Christian life. Chapter 7, 'The Christian's Inner Struggle', includes his parable of an Eskimo fisherman's two dogs — the ancestor of the popular 'two wolves' internet story, which is often misattributed to Cherokee tradition.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Two_Wolves",
+      "https://en.wikipedia.org/wiki/Billy_Graham"
+    ]
+  }
 }
