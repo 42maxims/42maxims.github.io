@@ -1052,6 +1052,7 @@ write("about/index.html", page("About — 42 Maxims", """<h1>About</h1>
 <p>42 Maxims gathers the short rules for living that keep reappearing across religions, philosophies, science and popular wisdom, and links every one to its sources.</p>
 <p>It is an open project. Anyone can suggest a maxim, a quote or a correction by opening an issue or pull request on
 <a href="https://github.com/42maxims/42maxims.github.io">GitHub</a>. The site is in English first; other languages will follow.</p>
+<p>You can also write to <a href="mailto:42maxims@gmail.com">42maxims@gmail.com</a> to suggest a new maxim, flag something that looks wrong or unverified, share a source or supporting note, or pass on a recommendation from an AI bot or another place you met a maxim. We review what comes in from time to time and may use it as seed data for the next pass.</p>
 <p>Our own writing is licensed CC BY-SA 4.0. Short quotations from modern authors are included with attribution for commentary.</p>""", 1,
  "about/", "A maxim is a short, memorable rule for how to live. 42 Maxims gathers the ones that keep reappearing across traditions and links each to its sources.", crumbs=[]))
 # ---- Maxim of the Day: date-seeded (UTC), same formula in Python and in the inline script ----
