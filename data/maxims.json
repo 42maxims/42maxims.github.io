@@ -7658,6 +7658,20 @@
       "source": "https://en.wikipedia.org/wiki/Two_Wolves"
     },
     {
+      "concept": "thoughts-shape-life",
+      "rel": "similar",
+      "conf": 0.55,
+      "ver": "unverified",
+      "text": "There are two wolves inside you — one good, one bad. Which one wins? The one you feed.",
+      "thinker": "Anonymous / popular saying (often misattributed to Cherokee tradition)",
+      "voice": "popular-saying",
+      "tradition": "popular",
+      "era": "contemporary",
+      "work": "Popular 'two wolves' internet form; often credited to Cherokee tradition, but that attribution is not supported. The print ancestor is Billy Graham's 1978 two-dogs parable (also on this maxim). Wolves framing origin not established; see https://en.wikipedia.org/wiki/Two_Wolves",
+      "source_id": "popular-sayings",
+      "source": "https://en.wikipedia.org/wiki/Two_Wolves"
+    },
+    {
       "concept": "moderation",
       "rel": "similar",
       "conf": 0.75,
