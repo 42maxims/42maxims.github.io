@@ -7672,6 +7672,21 @@
       "source": "https://en.wikipedia.org/wiki/Two_Wolves"
     },
     {
+      "concept": "thoughts-shape-life",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
+      "thinker": "Seneca",
+      "voice": "seneca",
+      "tradition": "stoicism",
+      "era": "classical",
+      "work": "Moral Letters to Lucilius, Letter 13 \"On Groundless Fears\", §4, tr. Richard M. Gummere (Loeb, 1917)",
+      "source_id": "letters-to-lucilius",
+      "translation": "public-domain translation (Richard M. Gummere)",
+      "source": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_13"
+    },
+    {
       "concept": "moderation",
       "rel": "similar",
       "conf": 0.75,
@@ -7715,6 +7730,21 @@
       "source_id": "epistle-of-james",
       "translation": "King James Version (public domain)",
       "source": "https://www.biblegateway.com/passage/?search=James+4%3A14&version=KJV"
+    },
+    {
+      "concept": "remember-death",
+      "rel": "similar",
+      "conf": 0.8,
+      "ver": "verified",
+      "text": "… if thou shalt be afraid not because thou must some time cease to live, but if thou shalt fear never to have begun to live according to nature—then thou wilt be a man worthy of the universe which has produced thee.",
+      "thinker": "Marcus Aurelius",
+      "voice": "marcus-aurelius",
+      "tradition": "stoicism",
+      "era": "classical",
+      "work": "Meditations, Book XII.1, tr. George Long (excerpt from the middle of a longer sentence). The popular line \"It is not death that a man should fear, but he should fear never beginning to live\" is a shortened paraphrase of this passage, usually dropping \"according to nature\".",
+      "source_id": "meditations",
+      "translation": "public-domain translation (George Long)",
+      "source": "https://www.gutenberg.org/ebooks/15877"
     },
     {
       "concept": "everything-passes",
