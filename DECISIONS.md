@@ -222,3 +222,11 @@
 - New sources: `gospel-of-john`, `1-corinthians`, `2-corinthians` (summaries checked against Wikipedia).
 - **The 42:** happiness-and-expectations enters at #42 (Proverbs 13:12 adds Judaism) and be-kind-to-animals drops to Emerging #1 (overall #45). Order shifts within The 42 (e.g. own-your-mistakes 27→16, be-present 24→17, choose-your-friends 31→22, moderation 41→33).
 - `tests/test_folds.py`: the no-`open` check on folds now inspects the `<details>` tags rather than all of their text, since Proverbs 20:13 reads "open thine eyes"; it now also catches a `<details open>` tag, which the old pattern skipped.
+
+## 2026-11-06: Quotes from popular X posts (branch `add-seneca-13-marcus-12-1`)
+
+- **Standing practice:** widely shared quotes on X are a useful sourcing channel. For each one: check which maxim it fits, check whether it (or the same passage) is already in `data/maxims.json`, and add it only if it is missing and we can verify the exact wording in a primary or public-domain source. Viral misattributions and unsourced paraphrases are skipped (or, with owner approval, recorded as `misattributed`); the viral wording is never added as `verified`. Posters and accounts are not credited or named in the data.
+- Added Seneca, Letter 13 §4 (Gummere, checked on Wikisource) under thoughts-shape-life, `rel: similar`. New voice `seneca` and source `letters-to-lucilius`.
+- Added Marcus Aurelius, Meditations XII.1 (George Long, checked on Project Gutenberg #15877) under remember-death, `rel: similar`, as a contiguous excerpt that keeps "according to nature". The popular line "It is not death that a man should fear, but he should fear never beginning to live" is a shortened paraphrase of this passage, not Long's sentence; noted in the quote's `work`.
+- Reviewed and **not added** from the same batch: "Thou hast power over thy mind, not outside events" credited to Marcus (a modern paraphrase; the dichotomy of control is Epictetus, Enchiridion 1/8); an "imagined anxieties" line credited to Epictetus (no primary locus); an "eliminate two things" line credited to Seneca (unverified); and a "how many books" line credited to Seneca (no exact locus found; Letter 2 is the nearest idea).
+- **The 42:** membership unchanged. thoughts-shape-life rises 38→28 (Seneca adds a seventh tradition to its count, stoicism); remember-death stays at #13 (78.7→79.1).

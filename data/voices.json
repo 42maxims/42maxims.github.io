@@ -1234,5 +1234,18 @@
       "https://en.wikipedia.org/wiki/Billy_Graham",
       "https://en.wikipedia.org/wiki/Two_Wolves"
     ]
+  },
+  "seneca": {
+    "name": "Seneca",
+    "kind": "person",
+    "dates": "c. 4 BCE–65 CE",
+    "tradition": "stoicism",
+    "period": "classical",
+    "summary": "Lucius Annaeus Seneca, usually called Seneca or Seneca the Younger, was a Roman Stoic philosopher, statesman and dramatist who served for years as an adviser to the emperor Nero. His essays and his letters to his friend Lucilius are among the most widely read works of Roman Stoicism.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Seneca_the_Younger",
+      "https://iep.utm.edu/seneca/"
+    ]
   }
 }
