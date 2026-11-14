@@ -1691,5 +1691,19 @@
     "refs": [
       "https://en.wikipedia.org/wiki/Epistulae_Morales_ad_Lucilium"
     ]
+  },
+  "soul-of-man-under-socialism": {
+    "title": "The Soul of Man under Socialism",
+    "voice": "oscar-wilde",
+    "kind": "article",
+    "dates": "1891",
+    "tradition": "english-poetry",
+    "period": "modern",
+    "summary": "An essay by Oscar Wilde, first published in the Fortnightly Review in February 1891. It argues that abolishing private property would free people to develop themselves instead of spending their lives accumulating things.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/The_Soul_of_Man_Under_Socialism",
+      "https://www.gutenberg.org/ebooks/1017"
+    ]
   }
 }

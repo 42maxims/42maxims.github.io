@@ -230,3 +230,8 @@
 - Added Marcus Aurelius, Meditations XII.1 (George Long, checked on Project Gutenberg #15877) under remember-death, `rel: similar`, as a contiguous excerpt that keeps "according to nature". The popular line "It is not death that a man should fear, but he should fear never beginning to live" is a shortened paraphrase of this passage, not Long's sentence; noted in the quote's `work`.
 - Reviewed and **not added** from the same batch: "Thou hast power over thy mind, not outside events" credited to Marcus (a modern paraphrase; the dichotomy of control is Epictetus, Enchiridion 1/8); an "imagined anxieties" line credited to Epictetus (no primary locus); an "eliminate two things" line credited to Seneca (unverified); and a "how many books" line credited to Seneca (no exact locus found; Letter 2 is the nearest idea).
 - **The 42:** membership unchanged. thoughts-shape-life rises 38→28 (Seneca adds a seventh tradition to its count, stoicism); remember-death stays at #13 (78.7→79.1).
+
+## 2026-11-14: Oscar Wilde, The Soul of Man under Socialism (branch `add-wilde-pursue-meaning`)
+
+- Owner approved adding Oscar Wilde's line "To live is the rarest thing in the world. Most people exist, that is all." under pursue-meaning. Exact wording checked in Project Gutenberg ebook #1017 (1909 Arthur L. Humphreys edition transcription). New voice `oscar-wilde`, new source `soul-of-man-under-socialism` (`kind: article`), tradition `english-poetry`, `rel: similar`, `ver: verified`.
+- **The 42:** membership unchanged. pursue-meaning rises 27→19 (66.4→72.9) because the quote adds a sixth counted tradition (english-poetry). `scoring.py` is unchanged.

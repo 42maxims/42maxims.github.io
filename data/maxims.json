@@ -7895,6 +7895,20 @@
       "source_id": "job",
       "translation": "King James Version (public domain)",
       "source": "https://www.biblegateway.com/passage/?search=Job+8%3A7&version=KJV"
+    },
+    {
+      "concept": "pursue-meaning",
+      "rel": "similar",
+      "conf": 0.7,
+      "ver": "verified",
+      "text": "To live is the rarest thing in the world. Most people exist, that is all.",
+      "thinker": "Oscar Wilde",
+      "voice": "oscar-wilde",
+      "tradition": "english-poetry",
+      "era": "modern",
+      "work": "The Soul of Man under Socialism (1891)",
+      "source_id": "soul-of-man-under-socialism",
+      "source": "https://www.gutenberg.org/ebooks/1017"
     }
   ]
 }
