@@ -1247,5 +1247,18 @@
       "https://en.wikipedia.org/wiki/Seneca_the_Younger",
       "https://iep.utm.edu/seneca/"
     ]
+  },
+  "oscar-wilde": {
+    "name": "Oscar Wilde",
+    "kind": "person",
+    "dates": "1854–1900",
+    "tradition": "english-poetry",
+    "period": "modern",
+    "summary": "Oscar Wilde was an Irish poet, playwright and essayist, born in Dublin in 1854 and later active in London. He is known for the novel The Picture of Dorian Gray (1891), the play The Importance of Being Earnest (1895), and essays including The Soul of Man under Socialism (1891). He died in Paris in 1900.",
+    "confidence": "solid",
+    "refs": [
+      "https://en.wikipedia.org/wiki/Oscar_Wilde",
+      "https://www.britannica.com/biography/Oscar-Wilde"
+    ]
   }
 }
