@@ -4,7 +4,7 @@ _Run by the maintainers (the maintainer bot, under the project account). Public 
 ## Services and costs
 - **Hosting:** GitHub Pages user site `42maxims.github.io`, branch `master`, repo root (legacy build, `.nojekyll`). Free.
 - **CI:** GitHub Actions `.github/workflows/ci.yml`: runs `scripts/validate.py`, the build and the tests on every PR and push to master, and fails if committed HTML differs from `build.py` output or generated files are uncommitted. Required to pass before a PR can merge (branch protection on `master`). Free.
-- **Domain:** 42maxims.com (DNS only, WHOIS privacy on), GitHub Pages custom domain with HTTPS enforced. `build.py` writes `CNAME`. `42maxims.github.io` redirects to it. Analytics: Plausible (no cookies).
+- **Domain:** 42maxims.com (DNS only, WHOIS privacy on), GitHub Pages custom domain with HTTPS enforced. `build.py` writes `CNAME`. `42maxims.github.io` redirects to it. Analytics: Cloudflare Web Analytics (cookieless).
 - **Data sources:** public texts (Gutenberg, Sacred-texts, Sefaria, Access to Insight, Wikisource), Wikiquote/Wikipedia for probable labels, Quote Investigator for misattributions. No scheduled refresh; content is added in batches.
 
 ## Identity

@@ -32,5 +32,5 @@ class TestShare(unittest.TestCase):
     def test_no_external_scripts(self):
         for f in PAGES:
             h = open(f, encoding="utf-8").read()
-            for src in re.findall(r'<script[^>]*\ssrc="([^"]+)"', h):
-                self.assertTrue(src.startswith("https://plausible.io/"), (f, src))
+            for src in re.findall(r"""<script[^>]*\ssrc=["']([^"']+)["']""", h):
+                self.assertTrue(src.startswith("https://static.cloudflareinsights.com/"), (f, src))

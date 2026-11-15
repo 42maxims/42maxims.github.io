@@ -235,3 +235,8 @@
 
 - Owner approved adding Oscar Wilde's line "To live is the rarest thing in the world. Most people exist, that is all." under pursue-meaning. Exact wording checked in Project Gutenberg ebook #1017 (1909 Arthur L. Humphreys edition transcription). New voice `oscar-wilde`, new source `soul-of-man-under-socialism` (`kind: article`), tradition `english-poetry`, `rel: similar`, `ver: verified`.
 - **The 42:** membership unchanged. pursue-meaning rises 27→19 (66.4→72.9) because the quote adds a sixth counted tradition (english-poetry). `scoring.py` is unchanged.
+
+## 2026-11-15: Switch analytics from Plausible to Cloudflare Web Analytics (branch `analytics-cloudflare`)
+
+- Owner approved switching the site from Plausible to Cloudflare Web Analytics (cookieless). Site tag `593e785287c548ad874b775083c64a56`. Hosting is GitHub Pages, so the site uses the JS beacon (`CF_BEACON_TOKEN` in `build.py`) rather than a Cloudflare automatic proxy injection. The beacon is emitted just before `</body>` on every page.
+- The Plausible script and custom-event stub are removed. No Content-Security-Policy is in place, so none was updated.
