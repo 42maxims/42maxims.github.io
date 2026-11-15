@@ -139,8 +139,8 @@ class Pages(unittest.TestCase):
                     h = open(os.path.join(root, f), encoding="utf-8").read()
                     self.assertNotRegex(h, r"<iframe", f)
                     self.assertNotRegex(h, r"<(?:img|script|link)[^>]+(?:youtube\.com|ytimg\.com|youtube-nocookie\.com)", f)
-                    for s in re.findall(r'<script[^>]*\ssrc="([^"]+)"', h):
-                        self.assertTrue(s.startswith("https://plausible.io/"), (f, s))
+                    for s in re.findall(r"""<script[^>]*\ssrc=["']([^"']+)["']""", h):
+                        self.assertTrue(s.startswith("https://static.cloudflareinsights.com/"), (f, s))
 
     def test_pages_without_clips_have_no_clip_markup(self):
         """A voice page whose quotes carry no clips must have no clip markup."""

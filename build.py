@@ -130,8 +130,8 @@ OG_ALT = "42 Maxims: a sourced, ranked collection of rules for life"
 DEFAULT_DESC = "42 Maxims: the rules for life humanity keeps rediscovering, with sources."
 INDEXNOW_KEY = "ce7f27596a055176ddce9e6bfd652aca"  # public IndexNow key (indexnow.org); build writes /<key>.txt, scripts/indexnow.py submits URLs
 SITEMAP = []  # canonical paths of indexable pages, collected as pages are written
-PLAUSIBLE_SCRIPT_ID = "pa-z7AY9FcQwVk1RWlwwy4-D"  # owner's Plausible script id; empty = no analytics script
-SCRIPT_ID = re.compile(r"^pa-[A-Za-z0-9_-]+$")
+CF_BEACON_TOKEN = "651193c60bbd4449afee65f5a13cf014"  # Cloudflare Web Analytics JS beacon token; empty = no script
+BEACON_TOKEN = re.compile(r"^[0-9a-f]{32}$")
 GOOGLE_SITE_VERIFICATION = "KciBKHM1FLesIdzjoS5AjOy1-xuLPMgKGVx2BBv3w9s"  # Search Console HTML-tag token; empty = no tag
 YANDEX_SITE_VERIFICATION = "b8e229513ca91bd4"  # Yandex Webmaster HTML-tag token; empty = no tag
 VERIFICATION_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
@@ -151,18 +151,15 @@ def verification_tag():
 
 
 def analytics_snippet():
-    """Owner's Plausible snippet for <head>, or "" when PLAUSIBLE_SCRIPT_ID is empty."""
-    if not PLAUSIBLE_SCRIPT_ID:
+    """Cloudflare Web Analytics JS beacon, placed just before </body>, or "" when CF_BEACON_TOKEN is empty."""
+    if not CF_BEACON_TOKEN:
         return ""
-    if not SCRIPT_ID.match(PLAUSIBLE_SCRIPT_ID):
-        raise ValueError(f"PLAUSIBLE_SCRIPT_ID must match ^pa-[A-Za-z0-9_-]+$, got {PLAUSIBLE_SCRIPT_ID!r}")
+    if not BEACON_TOKEN.match(CF_BEACON_TOKEN):
+        raise ValueError(f"CF_BEACON_TOKEN must match ^[0-9a-f]{{32}}$, got {CF_BEACON_TOKEN!r}")
     return (
-        "<!-- Privacy-friendly analytics by Plausible -->\n"
-        f'<script async src="https://plausible.io/js/{PLAUSIBLE_SCRIPT_ID}.js"></script>\n'
-        "<script>\n"
-        "  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};\n"
-        "  plausible.init()\n"
-        "</script>\n"
+        "<!-- Cloudflare Web Analytics -->"
+        f"<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{\"token\": \"{CF_BEACON_TOKEN}\"}}'></script>"
+        "<!-- End Cloudflare Web Analytics -->"
     )
 
 
@@ -339,11 +336,11 @@ def page(title, body, depth, path=None, desc=None, kind="website", noindex=False
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 {head}
-<link rel="stylesheet" href="{up}style.css">{analytics_snippet()}</head><body>
+<link rel="stylesheet" href="{up}style.css"></head><body>
 <header><p class="brand"><a href="{up}">42 Maxims</a></p>{nav_html(up, path)}</header>
 <main>{body}</main>
 <footer>Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotes remain the property of their authors and translators.
-Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer></body></html>"""
+Found an error? <a href="https://github.com/42maxims/42maxims.github.io">Open an issue or pull request</a>.</footer>{analytics_snippet()}</body></html>"""
 
 
 def write(rel, txt):
